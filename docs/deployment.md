@@ -41,7 +41,9 @@ performance evidence. They do not enable chemistry ranking.
 ## Required Secrets
 
 No secrets are required for Pages, daily report, NASA NTRS, or OSTI metadata
-workflows.
+workflows to complete. If `MP_API_KEY` is present, Pages, daily report, and
+metadata refresh workflows also attach Materials Project metadata-only discovery
+records to the candidate dossiers.
 
 Materials Project metadata refresh requires:
 
@@ -51,9 +53,9 @@ Add it at:
 
 `Settings -> Secrets and variables -> Actions -> New repository secret`
 
-If the secret is absent, the metadata workflow skips Materials Project and still
-runs NASA NTRS and OSTI. Candidate dossiers will still be generated, but the
-Materials Project appendix will record `blocked_requires_key`.
+If the secret is absent, workflows still complete. Candidate dossiers will still
+be generated, but the Materials Project appendix will record
+`blocked_requires_key`.
 
 ## Current Scientific Boundary
 
