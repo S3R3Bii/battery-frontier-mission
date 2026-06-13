@@ -1,0 +1,90 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+records:
+  - id: datasource.materials_project
+    name: Materials Project
+    url: https://materialsproject.org/
+    access_date: 2026-06-12
+    license_status: review_required
+    license_note: API and redistribution terms must be recorded before snapshot publication.
+    variables: [composition, structure, density, formation_energy, electrochemical_metadata]
+    reliability_rating: 4
+    update_frequency: provider_managed
+    limitations: Computed properties are model-dependent and are not experimental validation.
+    ingestion_status: blocked_by_license_review
+    citation_ids: [source.materials_project_api]
+
+  - id: datasource.battery_archive
+    name: Battery Archive
+    url: https://www.batteryarchive.org/
+    access_date: 2026-06-12
+    license_status: review_required
+    license_note: Landing page does not provide a universal redistribution license; dataset-level permission is required.
+    variables: [cycling_data, voltage_curves, capacity_fade, test_conditions]
+    reliability_rating: 4
+    update_frequency: approximately_bimonthly_per_provider
+    limitations: Cross-institution protocols and metadata completeness may vary.
+    ingestion_status: blocked_by_license_review
+    citation_ids: [source.battery_archive]
+
+  - id: datasource.nasa_ntrs
+    name: NASA Technical Reports Server
+    url: https://ntrs.nasa.gov/
+    access_date: 2026-06-12
+    license_status: item_specific
+    license_note: Follow NASA terms and each record's public-availability and distribution markings.
+    variables: [aviation_reports, mission_assumptions, battery_system_studies, technical_metadata]
+    reliability_rating: 4
+    update_frequency: provider_managed
+    limitations: Repository records span different evidence levels and publication types.
+    ingestion_status: metadata_ready
+    citation_ids: [source.nasa_ntrs]
+
+  - id: datasource.nist_chemistry_webbook
+    name: NIST Chemistry WebBook
+    url: https://webbook.nist.gov/chemistry/
+    license_status: review_required
+    license_note: Review NIST usage terms and property-specific suitability before ingestion.
+    variables: [molecular_weight, thermochemistry, phase_change_data]
+    reliability_rating: 5
+    update_frequency: unknown
+    limitations: Coverage is compound-dependent and may not map directly to electrochemical operating states.
+    ingestion_status: planned
+    citation_ids: []
+
+  - id: datasource.pubchem
+    name: PubChem
+    url: https://pubchem.ncbi.nlm.nih.gov/
+    license_status: review_required
+    license_note: Record API usage and downstream source attribution for each extracted property.
+    variables: [identifiers, molecular_formula, molecular_weight, safety_metadata]
+    reliability_rating: 4
+    update_frequency: provider_managed
+    limitations: Aggregated records require property-level provenance and conflict handling.
+    ingestion_status: planned
+    citation_ids: []
+
+  - id: datasource.osti
+    name: DOE Office of Scientific and Technical Information
+    url: https://www.osti.gov/
+    license_status: item_specific
+    license_note: Retain report-level rights and distribution metadata.
+    variables: [battery_reports, project_results, technical_metadata]
+    reliability_rating: 4
+    update_frequency: provider_managed
+    limitations: Publication type and review status vary.
+    ingestion_status: planned
+    citation_ids: []
+
+  - id: datasource.faa_library
+    name: FAA research and technical reports
+    url: https://www.faa.gov/data_research/research
+    license_status: item_specific
+    license_note: Review document-level terms and applicability to certification claims.
+    variables: [safety_guidance, certification_research, battery_incident_research]
+    reliability_rating: 4
+    update_frequency: provider_managed
+    limitations: Regulatory applicability depends on aircraft category and date.
+    ingestion_status: planned
+    citation_ids: []
+

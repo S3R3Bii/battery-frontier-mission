@@ -1,0 +1,84 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+records:
+  - id: chemistry.lithium_ion_intercalation
+    name: Advanced lithium-ion intercalation
+    evidence_class: known_experimental
+    status: not_scored
+    scope: Rechargeable intercalation cells with explicitly identified electrode and electrolyte systems.
+    known_constraints: [inactive_cell_mass, thermal_safety, cycle_life_tradeoffs, critical_materials]
+    required_metrics: [cell_specific_energy, pack_specific_energy, power_density, cycle_life, thermal_runaway]
+    citation_ids: [lit.nitta_2015]
+
+  - id: chemistry.lithium_metal
+    name: Lithium-metal rechargeable cells
+    evidence_class: known_experimental
+    status: not_scored
+    scope: Cells using metallic lithium negative electrodes; electrolyte and positive electrode must be specified.
+    known_constraints: [dendrites, coulombic_efficiency, excess_lithium, safety, cycle_life]
+    required_metrics: [full_cell_specific_energy, lithium_inventory, cycle_life, abuse_response]
+    citation_ids: [lit.janek_2016]
+
+  - id: chemistry.solid_state_lithium
+    name: Solid-state lithium
+    evidence_class: known_experimental
+    status: not_scored
+    scope: Lithium cells with solid electrolytes, separated by electrolyte class and cell architecture.
+    known_constraints: [interface_resistance, pressure, dendrites, manufacturability, temperature_window]
+    required_metrics: [stack_pressure, areal_capacity, full_cell_specific_energy, cycle_life, safety]
+    citation_ids: [lit.janek_2016]
+
+  - id: chemistry.lithium_sulfur
+    name: Lithium-sulfur
+    evidence_class: known_experimental
+    status: not_scored
+    scope: Rechargeable sulfur conversion systems with complete electrolyte and lithium-excess accounting.
+    known_constraints: [polysulfide_shuttle, electrolyte_mass, lithium_excess, cycle_life, volumetric_energy]
+    required_metrics: [electrolyte_to_sulfur_ratio, sulfur_loading, full_cell_specific_energy, cycle_life]
+    citation_ids: [lit.manthiram_2014, lit.bruce_2012]
+
+  - id: chemistry.lithium_oxygen
+    name: Lithium-oxygen
+    evidence_class: literature_projection
+    status: not_scored
+    scope: Rechargeable lithium-oxygen systems with explicit open or closed oxygen-system mass boundaries.
+    known_constraints: [oxygen_management, parasitic_reactions, round_trip_efficiency, cycle_life, contamination]
+    required_metrics: [complete_system_specific_energy, oxygen_system_mass, efficiency, cycle_life, safety]
+    citation_ids: [lit.bruce_2012]
+
+  - id: chemistry.sodium_ion
+    name: Sodium-ion
+    evidence_class: known_experimental
+    status: not_scored
+    scope: Rechargeable sodium-ion intercalation or insertion systems with identified electrodes.
+    known_constraints: [lower_cell_voltage, material_density, first_cycle_loss, cell_design]
+    required_metrics: [cell_specific_energy, volumetric_energy, cycle_life, abundance, cost]
+    citation_ids: [lit.hwang_2017]
+
+  - id: chemistry.multivalent
+    name: Magnesium, calcium, and aluminum multivalent systems
+    evidence_class: literature_projection
+    status: not_scored
+    scope: Rechargeable multivalent-ion systems separated by carrier ion, host, and electrolyte.
+    known_constraints: [solid_state_diffusion, desolvation, electrolyte_compatibility, passivation, voltage]
+    required_metrics: [full_cell_voltage, reversible_capacity, rate_capability, cycle_life, electrolyte_stability]
+    citation_ids: [lit.muldoon_2014]
+
+  - id: chemistry.zinc_air
+    name: Rechargeable zinc-air
+    evidence_class: known_experimental
+    status: not_scored
+    scope: Electrically rechargeable zinc-air systems with complete air-management boundaries.
+    known_constraints: [air_cathode_durability, carbon_dioxide, electrolyte_management, power_density, cycle_life]
+    required_metrics: [system_specific_energy, air_system_mass, round_trip_efficiency, cycle_life, power_density]
+    citation_ids: []
+
+  - id: chemistry.structural_battery
+    name: Structural battery composites
+    evidence_class: known_experimental
+    status: not_scored
+    scope: Multifunctional structures evaluated on both mechanical and electrochemical performance.
+    known_constraints: [multifunctional_tradeoff, certification, damage_tolerance, manufacturing, repairability]
+    required_metrics: [effective_system_mass_saving, specific_energy, stiffness, strength, cycle_life, damage_response]
+    citation_ids: []
+

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Battery Frontier Mission Control</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Aviation Battery Frontier</p>
+          <h1>Mission Control</h1>
+        </div>
+        <div class="status-strip" aria-label="Program status">
+          <span id="phaseBadge">Phase 4</span>
+          <span>No audited measurements</span>
+          <span>Ranking disabled</span>
+        </div>
+      </header>
+
+      <section class="situation-grid" aria-label="Mission dashboard">
+        <section class="module frontier-module">
+          <div class="module-head">
+            <div>
+              <p class="eyebrow">Primary instrument</p>
+              <h2>Frontier Gap to Aviation-Grade Pack Energy</h2>
+            </div>
+            <p id="generatedAt" class="timestamp">Loading data</p>
+          </div>
+          <div id="frontierChart" class="frontier-chart" role="img"></div>
+          <p id="frontierNote" class="guardrail">
+            Fixture values are visible for system testing only; the audited measurement lane is empty.
+          </p>
+        </section>
+
+        <aside class="module command-module">
+          <div class="module-head">
+            <div>
+              <p class="eyebrow">Evidence gate</p>
+              <h2>Readiness Console</h2>
+            </div>
+          </div>
+          <div id="metricsGrid" class="metrics-grid"></div>
+          <div class="gate-panel">
+            <p class="label">Ranking gate</p>
+            <p id="rankingGate">No candidate assessments are available.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="module">
+        <div class="module-head">
+          <div>
+            <p class="eyebrow">Mission bands</p>
+            <h2>Configured Pack-Energy Inputs</h2>
+          </div>
+        </div>
+        <div id="missionBands" class="band-grid"></div>
+      </section>
+
+      <section class="lower-grid">
+        <section class="module">
+          <div class="module-head">
+            <div>
+              <p class="eyebrow">Audit trail</p>
+              <h2>Evidence Ledger</h2>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Record</th>
+                  <th>Domain</th>
+                  <th>Evidence</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="evidenceLedger"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="module">
+          <div class="module-head">
+            <div>
+              <p class="eyebrow">Source systems</p>
+              <h2>Connector Readiness</h2>
+            </div>
+          </div>
+          <div id="sourceReadiness" class="source-list"></div>
+        </section>
+      </section>
+
+      <section class="module artifact-module">
+        <div class="module-head">
+          <div>
+            <p class="eyebrow">Integrity</p>
+            <h2>Verified Artifacts</h2>
+          </div>
+        </div>
+        <div id="artifactList" class="artifact-list"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

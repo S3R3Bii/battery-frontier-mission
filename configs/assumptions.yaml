@@ -1,0 +1,251 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+records:
+  - id: constant.faraday
+    version: 1
+    name: Faraday constant
+    category: physical_constant
+    boundary: reaction
+    value: 96485.33212
+    unit: C/mol
+    evidence_class: theoretical_limit
+    status: active
+    uncertainty:
+      kind: fixed
+      note: CODATA constant used by the baseline equation; update only through a reviewed constants change.
+    citation_ids: []
+    rationale: Converts moles of transferred electrons to electric charge.
+    sensitivity: Linear scaling; uncertainty is negligible relative to material and system assumptions.
+    owner: physics
+    review_due: 2027-06-12
+    tags: [equation, electrochemistry]
+
+  - id: model.standard_gravity
+    version: 1
+    name: Standard gravitational acceleration
+    category: physical_constant
+    boundary: aircraft
+    value: 9.80665
+    unit: m/s^2
+    evidence_class: theoretical_limit
+    status: active
+    uncertainty:
+      kind: fixed
+      note: Conventional standard value for baseline calculations.
+    citation_ids: []
+    rationale: Converts aircraft mass to weight in the first-order cruise model.
+    sensitivity: Mission cruise energy scales linearly with this value.
+    owner: aviation
+    review_due: 2027-06-12
+    tags: [equation, aviation]
+
+  - id: derating.active_material_mass_fraction
+    version: 1
+    name: Active-material mass fraction of complete cell
+    category: cell_derating
+    boundary: cell
+    value: 0.60
+    unit: fraction
+    evidence_class: speculative_hypothesis
+    status: provisional
+    uncertainty:
+      kind: range
+      lower: 0.45
+      upper: 0.75
+      note: Illustrative sensitivity range only; replace per architecture with cited bill-of-materials data.
+    citation_ids: []
+    rationale: Prevents active-material theoretical energy from being mislabeled as complete-cell energy.
+    sensitivity: Cell specific energy scales linearly.
+    owner: cell_model
+    review_due: 2026-09-12
+    tags: [illustrative, sensitivity, replace_with_data]
+
+  - id: derating.active_material_utilization
+    version: 1
+    name: Active-material utilization
+    category: cell_derating
+    boundary: cell
+    value: 0.85
+    unit: fraction
+    evidence_class: speculative_hypothesis
+    status: provisional
+    uncertainty:
+      kind: range
+      lower: 0.65
+      upper: 0.98
+      note: Illustrative sensitivity range, not a chemistry-independent fact.
+    citation_ids: []
+    rationale: Represents reversible access to the theoretical reaction capacity.
+    sensitivity: Cell specific energy scales linearly.
+    owner: cell_model
+    review_due: 2026-09-12
+    tags: [illustrative, sensitivity, replace_with_data]
+
+  - id: derating.average_voltage_efficiency
+    version: 1
+    name: Average voltage efficiency relative to ideal reaction voltage
+    category: cell_derating
+    boundary: cell
+    value: 0.90
+    unit: fraction
+    evidence_class: speculative_hypothesis
+    status: provisional
+    uncertainty:
+      kind: range
+      lower: 0.75
+      upper: 0.98
+      note: Placeholder for polarization and profile effects; must become chemistry- and rate-specific.
+    citation_ids: []
+    rationale: Separates average deliverable voltage from an idealized equilibrium voltage.
+    sensitivity: Cell specific energy scales linearly.
+    owner: cell_model
+    review_due: 2026-09-12
+    tags: [illustrative, sensitivity, replace_with_data]
+
+  - id: derating.cell_mass_fraction_of_pack
+    version: 1
+    name: Cell mass divided by complete pack mass
+    category: pack_derating
+    boundary: pack
+    value: 0.70
+    unit: fraction
+    evidence_class: speculative_hypothesis
+    status: provisional
+    uncertainty:
+      kind: range
+      lower: 0.55
+      upper: 0.85
+      note: Illustrative range; safety and thermal architecture can materially change it.
+    citation_ids: []
+    rationale: Accounts for pack structure, interconnects, controls, and pack thermal hardware.
+    sensitivity: Pack specific energy scales linearly.
+    owner: pack_model
+    review_due: 2026-09-12
+    tags: [illustrative, sensitivity, replace_with_data]
+
+  - id: derating.pack_discharge_efficiency
+    version: 1
+    name: Pack electrical discharge efficiency
+    category: pack_derating
+    boundary: pack
+    value: 0.96
+    unit: fraction
+    evidence_class: speculative_hypothesis
+    status: provisional
+    uncertainty:
+      kind: range
+      lower: 0.90
+      upper: 0.99
+      note: Illustrative; must be conditioned on rate, temperature, state of charge, and architecture.
+    citation_ids: []
+    rationale: Accounts for electrical losses inside the pack boundary.
+    sensitivity: Pack deliverable energy scales linearly.
+    owner: pack_model
+    review_due: 2026-09-12
+    tags: [illustrative, sensitivity, replace_with_data]
+
+  - id: aviation.usable_depth_of_discharge
+    version: 1
+    name: Mission-usable depth of discharge
+    category: operations
+    boundary: aircraft_useful
+    value: 0.80
+    unit: fraction
+    evidence_class: speculative_hypothesis
+    status: provisional
+    uncertainty:
+      kind: range
+      lower: 0.65
+      upper: 0.90
+      note: Design-study value; certification, life, power, and diversion requirements may reduce it.
+    citation_ids: []
+    rationale: Withholds inaccessible or life-protecting state-of-charge windows.
+    sensitivity: Required nominal battery energy varies inversely.
+    owner: aviation
+    review_due: 2026-09-12
+    tags: [illustrative, mission, sensitivity]
+
+  - id: aviation.end_of_life_state_of_health
+    version: 1
+    name: Required end-of-life energy retention
+    category: degradation
+    boundary: aircraft_useful
+    value: 0.80
+    unit: fraction
+    evidence_class: speculative_hypothesis
+    status: provisional
+    uncertainty:
+      kind: range
+      lower: 0.70
+      upper: 0.90
+      note: Policy placeholder pending mission- and certification-specific requirements.
+    citation_ids: []
+    rationale: Sizes the mission at an explicit degraded state rather than beginning of life.
+    sensitivity: Required nominal battery energy varies inversely.
+    owner: aviation
+    review_due: 2026-09-12
+    tags: [illustrative, degradation, sensitivity]
+
+  - id: aviation.thermal_availability
+    version: 1
+    name: Energy availability after thermal derating
+    category: thermal
+    boundary: aircraft_useful
+    value: 0.95
+    unit: fraction
+    evidence_class: speculative_hypothesis
+    status: provisional
+    uncertainty:
+      kind: range
+      lower: 0.80
+      upper: 1.00
+      note: Placeholder until temperature- and chemistry-dependent behavior is modeled.
+    citation_ids: []
+    rationale: Prevents nominal energy from remaining fully available under all thermal conditions.
+    sensitivity: Required nominal battery energy varies inversely.
+    owner: thermal
+    review_due: 2026-09-12
+    tags: [illustrative, thermal, sensitivity]
+
+  - id: aviation.reserve_fraction
+    version: 1
+    name: Fraction of usable energy withheld for reserve
+    category: operations
+    boundary: mission
+    value: 0.20
+    unit: fraction
+    evidence_class: speculative_hypothesis
+    status: provisional
+    uncertainty:
+      kind: range
+      lower: 0.10
+      upper: 0.35
+      note: Scenario placeholder, not a statement of a universal regulatory reserve.
+    citation_ids: []
+    rationale: Makes reserve energy visible in every mission estimate.
+    sensitivity: Required nominal energy varies with one divided by one minus reserve fraction.
+    owner: aviation
+    review_due: 2026-09-12
+    tags: [illustrative, reserve, sensitivity]
+
+  - id: aviation.powertrain_efficiency
+    version: 1
+    name: Battery-to-propulsive-work efficiency
+    category: propulsion
+    boundary: aircraft_useful
+    value: 0.85
+    unit: fraction
+    evidence_class: speculative_hypothesis
+    status: provisional
+    uncertainty:
+      kind: range
+      lower: 0.75
+      upper: 0.92
+      note: System placeholder covering inverter, motor, wiring, and propulsive losses.
+    citation_ids: []
+    rationale: Prevents stored electrical energy from being equated to propulsive work.
+    sensitivity: Required nominal energy varies inversely.
+    owner: aviation
+    review_due: 2026-09-12
+    tags: [illustrative, propulsion, sensitivity]
+

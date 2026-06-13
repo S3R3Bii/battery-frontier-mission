@@ -1,0 +1,581 @@
+{
+  "artifact_verification": [
+    {
+      "artifact": "Phase 2 physics reference results",
+      "claim boundary": "calculation fixtures; not experimental benchmarks",
+      "evidence status": "verified_present",
+      "exists": true,
+      "hash_matches": true,
+      "path": "reports/reference/phase2_reference_cases.json",
+      "sha256": "a5b5df2a0ba00f8218474e1fb283afd5deb1dad00939edf7647135f8494ee75c",
+      "type": "json_results"
+    },
+    {
+      "artifact": "Phase 3 aviation mission results",
+      "claim boundary": "simulation estimates from speculative inputs",
+      "evidence status": "verified_present",
+      "exists": true,
+      "hash_matches": true,
+      "path": "reports/aviation/phase3_mission_cases.json",
+      "sha256": "f8c1c459bc1aed8f390591cb25fa09531605783f9b23da84848ee698dfd694ee",
+      "type": "json_results"
+    },
+    {
+      "artifact": "Phase 2 physics method card",
+      "claim boundary": "documents equations, guardrails, and limitations",
+      "evidence status": "public_method_document",
+      "exists": true,
+      "hash_matches": true,
+      "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
+      "sha256": "6776704ce64cbfbe6c540982b7cc638e4561a3f7f5ee925abdbeebfcb26e08e7",
+      "type": "method_card"
+    },
+    {
+      "artifact": "Phase 3 aviation method card",
+      "claim boundary": "documents equations, guardrails, and limitations",
+      "evidence status": "public_method_document",
+      "exists": true,
+      "hash_matches": true,
+      "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
+      "sha256": "72e29361aad7e89f502636c18d92697ffc778d746c0293613e1c8a37fbd73014",
+      "type": "method_card"
+    }
+  ],
+  "audited_measurements": 0,
+  "chemistry_readiness": [
+    {
+      "chemistry family": "Advanced lithium-ion intercalation",
+      "citations registered": 1,
+      "constraint count": 4,
+      "evidence context": "known_experimental",
+      "ranking status": "not_scored",
+      "required metric count": 5
+    },
+    {
+      "chemistry family": "Lithium-metal rechargeable cells",
+      "citations registered": 1,
+      "constraint count": 5,
+      "evidence context": "known_experimental",
+      "ranking status": "not_scored",
+      "required metric count": 4
+    },
+    {
+      "chemistry family": "Solid-state lithium",
+      "citations registered": 1,
+      "constraint count": 5,
+      "evidence context": "known_experimental",
+      "ranking status": "not_scored",
+      "required metric count": 5
+    },
+    {
+      "chemistry family": "Lithium-sulfur",
+      "citations registered": 2,
+      "constraint count": 5,
+      "evidence context": "known_experimental",
+      "ranking status": "not_scored",
+      "required metric count": 4
+    },
+    {
+      "chemistry family": "Lithium-oxygen",
+      "citations registered": 1,
+      "constraint count": 5,
+      "evidence context": "literature_projection",
+      "ranking status": "not_scored",
+      "required metric count": 5
+    },
+    {
+      "chemistry family": "Sodium-ion",
+      "citations registered": 1,
+      "constraint count": 4,
+      "evidence context": "known_experimental",
+      "ranking status": "not_scored",
+      "required metric count": 5
+    },
+    {
+      "chemistry family": "Magnesium, calcium, and aluminum multivalent systems",
+      "citations registered": 1,
+      "constraint count": 5,
+      "evidence context": "literature_projection",
+      "ranking status": "not_scored",
+      "required metric count": 5
+    },
+    {
+      "chemistry family": "Rechargeable zinc-air",
+      "citations registered": 0,
+      "constraint count": 5,
+      "evidence context": "known_experimental",
+      "ranking status": "not_scored",
+      "required metric count": 5
+    },
+    {
+      "chemistry family": "Structural battery composites",
+      "citations registered": 0,
+      "constraint count": 5,
+      "evidence context": "known_experimental",
+      "ranking status": "not_scored",
+      "required metric count": 6
+    }
+  ],
+  "connector_readiness": [
+    {
+      "connector": "Materials Project mp-api client",
+      "credential_available": false,
+      "execution_supported": false,
+      "ingestion_status": "blocked_by_license_review",
+      "key_env": "MP_API_KEY",
+      "license_status": "review_required",
+      "limitations": "Computed properties are model-dependent and are not experimental validation.",
+      "metadata_only": true,
+      "readiness": "requires `MP_API_KEY` before API execution",
+      "requires_key": true,
+      "source": "Materials Project",
+      "source_id": "datasource.materials_project",
+      "trusted_publication_allowed": false
+    },
+    {
+      "connector": "generic metadata connector",
+      "credential_available": true,
+      "execution_supported": false,
+      "ingestion_status": "blocked_by_license_review",
+      "key_env": null,
+      "license_status": "review_required",
+      "limitations": "Cross-institution protocols and metadata completeness may vary.",
+      "metadata_only": true,
+      "readiness": "request metadata only; execution is intentionally disabled",
+      "requires_key": false,
+      "source": "Battery Archive",
+      "source_id": "datasource.battery_archive",
+      "trusted_publication_allowed": false
+    },
+    {
+      "connector": "NASA NTRS metadata search",
+      "credential_available": true,
+      "execution_supported": true,
+      "ingestion_status": "metadata_ready",
+      "key_env": null,
+      "license_status": "item_specific",
+      "limitations": "Repository records span different evidence levels and publication types.",
+      "metadata_only": true,
+      "readiness": "ready for optional metadata fetch",
+      "requires_key": false,
+      "source": "NASA Technical Reports Server",
+      "source_id": "datasource.nasa_ntrs",
+      "trusted_publication_allowed": false
+    },
+    {
+      "connector": "generic metadata connector",
+      "credential_available": true,
+      "execution_supported": false,
+      "ingestion_status": "planned",
+      "key_env": null,
+      "license_status": "review_required",
+      "limitations": "Coverage is compound-dependent and may not map directly to electrochemical operating states.",
+      "metadata_only": true,
+      "readiness": "request metadata only; execution is intentionally disabled",
+      "requires_key": false,
+      "source": "NIST Chemistry WebBook",
+      "source_id": "datasource.nist_chemistry_webbook",
+      "trusted_publication_allowed": false
+    },
+    {
+      "connector": "PubChem PUG REST property lookup",
+      "credential_available": true,
+      "execution_supported": false,
+      "ingestion_status": "planned",
+      "key_env": null,
+      "license_status": "review_required",
+      "limitations": "Aggregated records require property-level provenance and conflict handling.",
+      "metadata_only": true,
+      "readiness": "request metadata only; execution is intentionally disabled",
+      "requires_key": false,
+      "source": "PubChem",
+      "source_id": "datasource.pubchem",
+      "trusted_publication_allowed": false
+    },
+    {
+      "connector": "DOE OSTI metadata search",
+      "credential_available": true,
+      "execution_supported": true,
+      "ingestion_status": "planned",
+      "key_env": null,
+      "license_status": "item_specific",
+      "limitations": "Publication type and review status vary.",
+      "metadata_only": true,
+      "readiness": "ready for optional metadata fetch",
+      "requires_key": false,
+      "source": "DOE Office of Scientific and Technical Information",
+      "source_id": "datasource.osti",
+      "trusted_publication_allowed": false
+    },
+    {
+      "connector": "generic metadata connector",
+      "credential_available": true,
+      "execution_supported": false,
+      "ingestion_status": "planned",
+      "key_env": null,
+      "license_status": "item_specific",
+      "limitations": "Regulatory applicability depends on aircraft category and date.",
+      "metadata_only": true,
+      "readiness": "request metadata only; execution is intentionally disabled",
+      "requires_key": false,
+      "source": "FAA research and technical reports",
+      "source_id": "datasource.faa_library",
+      "trusted_publication_allowed": false
+    }
+  ],
+  "dashboard_manifest": {
+    "artifacts": [
+      {
+        "artifact_id": "artifact.phase2.results",
+        "artifact_type": "json_results",
+        "evidence_status": "verified_present",
+        "path": "reports/reference/phase2_reference_cases.json",
+        "public_claim_boundary": "calculation fixtures; not experimental benchmarks",
+        "sha256": "a5b5df2a0ba00f8218474e1fb283afd5deb1dad00939edf7647135f8494ee75c",
+        "title": "Phase 2 physics reference results"
+      },
+      {
+        "artifact_id": "artifact.phase3.results",
+        "artifact_type": "json_results",
+        "evidence_status": "verified_present",
+        "path": "reports/aviation/phase3_mission_cases.json",
+        "public_claim_boundary": "simulation estimates from speculative inputs",
+        "sha256": "f8c1c459bc1aed8f390591cb25fa09531605783f9b23da84848ee698dfd694ee",
+        "title": "Phase 3 aviation mission results"
+      },
+      {
+        "artifact_id": "artifact.phase2.method_card",
+        "artifact_type": "method_card",
+        "evidence_status": "public_method_document",
+        "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
+        "public_claim_boundary": "documents equations, guardrails, and limitations",
+        "sha256": "6776704ce64cbfbe6c540982b7cc638e4561a3f7f5ee925abdbeebfcb26e08e7",
+        "title": "Phase 2 physics method card"
+      },
+      {
+        "artifact_id": "artifact.phase3.method_card",
+        "artifact_type": "method_card",
+        "evidence_status": "public_method_document",
+        "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
+        "public_claim_boundary": "documents equations, guardrails, and limitations",
+        "sha256": "72e29361aad7e89f502636c18d92697ffc778d746c0293613e1c8a37fbd73014",
+        "title": "Phase 3 aviation method card"
+      }
+    ],
+    "chemistry_ranking_enabled": false,
+    "dashboard_status": "prototype with traceable local simulation artifacts",
+    "experimental_measurements": 0,
+    "generated_at_utc": "2026-06-13T04:07:42.949716+00:00",
+    "package_version": "0.4.0",
+    "phase": "4"
+  },
+  "evidence_ledger": [
+    {
+      "boundary": "Mass of lithium metal only",
+      "domain": "physics",
+      "evidence class": "theoretical_limit",
+      "limitations": "The interval only demonstrates atomic-weight propagation. It excludes electrochemical utilization, excess lithium, and all complete-cell mass.",
+      "record": "Lithium-metal electrode capacity identity",
+      "status": "calculation_fixture"
+    },
+    {
+      "boundary": "Combined stoichiometric mass of lithium and sulfur reactants",
+      "domain": "physics",
+      "evidence class": "speculative_hypothesis",
+      "limitations": "Ranges demonstrate deterministic propagation only. They do not represent an audited confidence interval or a prediction of practical Li-S cells.",
+      "record": "Lithium-sulfur system-boundary demonstration",
+      "status": "illustrative_calculation"
+    },
+    {
+      "boundary": "segmented aircraft mission",
+      "domain": "aviation",
+      "evidence class": "simulation_estimate using speculative mission inputs",
+      "limitations": "Every aircraft and battery value is an illustrative design-study input. The case is not tied to a certified or proposed aircraft.",
+      "record": "Regional demonstrator segmented study",
+      "status": "feasible fixture"
+    },
+    {
+      "boundary": "segmented aircraft mission",
+      "domain": "aviation",
+      "evidence class": "simulation_estimate using speculative mission inputs",
+      "limitations": "Values are speculative stress-test inputs. A failed mass closure is an intended and reportable result, not a software error.",
+      "record": "Single-aisle long-range stress study",
+      "status": "infeasible fixture"
+    }
+  ],
+  "frontier": {
+    "audited_progress_fraction": null,
+    "best_fixture_pack_Wh_kg": 703.1225761471,
+    "fixture_overlay_fraction": 1.0,
+    "max_configured_mission_input_Wh_kg": 700.0,
+    "mission_bands": [
+      {
+        "claim_boundary": "configured Phase 3 input, not validated requirement",
+        "converged": true,
+        "evidence": "simulation_estimate using speculative mission inputs",
+        "feasible": true,
+        "label": "Regional demonstrator segmented study",
+        "pack_specific_energy_Wh_kg": 500.0,
+        "status": "illustrative_calculation"
+      },
+      {
+        "claim_boundary": "configured Phase 3 input, not validated requirement",
+        "converged": false,
+        "evidence": "simulation_estimate using speculative mission inputs",
+        "feasible": false,
+        "label": "Single-aisle long-range stress study",
+        "pack_specific_energy_Wh_kg": 700.0,
+        "status": "boundary_calculation"
+      }
+    ],
+    "points": [
+      {
+        "boundary": "cell or pack",
+        "evidence": "not_available",
+        "label": "Audited comparable measurements",
+        "lane": "audited measurements",
+        "publication_allowed": false,
+        "specific_energy_Wh_kg": null,
+        "status": "blocked until licensed records are ingested"
+      },
+      {
+        "boundary": "active reactants",
+        "evidence": "simulation_estimate using declared voltage-profile inputs",
+        "label": "Lithium-sulfur system-boundary demonstration",
+        "lane": "local calculation fixture",
+        "publication_allowed": true,
+        "specific_energy_Wh_kg": 2523.2130158842,
+        "status": "fixture only; not experimental evidence"
+      },
+      {
+        "boundary": "complete cell",
+        "evidence": "simulation_estimate using illustrative inputs",
+        "label": "Lithium-sulfur system-boundary demonstration",
+        "lane": "local calculation fixture",
+        "publication_allowed": true,
+        "specific_energy_Wh_kg": 1046.3133573618,
+        "status": "fixture only; not experimental evidence"
+      },
+      {
+        "boundary": "complete pack",
+        "evidence": "simulation_estimate using illustrative inputs",
+        "label": "Lithium-sulfur system-boundary demonstration",
+        "lane": "local calculation fixture",
+        "publication_allowed": true,
+        "specific_energy_Wh_kg": 703.1225761471,
+        "status": "fixture only; not experimental evidence"
+      },
+      {
+        "boundary": "pack-level mission input",
+        "evidence": "simulation_estimate using speculative mission inputs",
+        "label": "Regional demonstrator segmented study",
+        "lane": "mission pack input",
+        "publication_allowed": true,
+        "specific_energy_Wh_kg": 500.0,
+        "status": "feasible fixture"
+      },
+      {
+        "boundary": "pack-level mission input",
+        "evidence": "simulation_estimate using speculative mission inputs",
+        "label": "Single-aisle long-range stress study",
+        "lane": "mission pack input",
+        "publication_allowed": true,
+        "specific_energy_Wh_kg": 700.0,
+        "status": "infeasible fixture"
+      }
+    ],
+    "title": "Frontier Gap to Aviation-Grade Pack Energy",
+    "unknown_region_note": "The audited-measurement lane is empty; fixture values cannot be used as evidence of achieved aviation-grade storage."
+  },
+  "generated_at_utc": "2026-06-13T04:07:42.959071+00:00",
+  "latest_daily_manifest": {
+    "code_hashes": {
+      "dashboard/__init__.py": "ca7ad3f7fcca85ec861d51a44281942178cbab22a9889d96acba0c2f55f388ac",
+      "dashboard/app.py": "4b6401e85006dacb2252197bf0b2312e3edf69d6ac7c94a3d5912a80dbe7d05f",
+      "schemas/001_initial.sql": "a87055be60d192af6c01c9de9586bda87021f9b8b1cf22ba38e42b238d481563",
+      "src/battery_frontier/__init__.py": "cec7ca79471d68776bfbceb88b83350abbd7c4d5ce4ebe4cdf728dfff8255683",
+      "src/battery_frontier/aviation/__init__.py": "3b2a6a79b9af401677cf88a7c139f92fe87931e3d2f1a631a3441ca1b74ac2c4",
+      "src/battery_frontier/aviation/mission.py": "41818f9f1497189118859c62e348e3b139c2586bd9961e5d7a6a1f8b6956fc2f",
+      "src/battery_frontier/aviation/reference_cases.py": "01870fff17f00d0aba9459e2d855497f205dde649dec22ff6a1d10b6308ba219",
+      "src/battery_frontier/aviation/segmented.py": "e4961b5e99212e5b01ab2025f12e9da09af2aca3833fc464bb5ae7819e0026ec",
+      "src/battery_frontier/cli.py": "e41313cc2972fb2368e4eae869213fe6d15cd8e9e3672fba70c2e9a5065094df",
+      "src/battery_frontier/config.py": "8d5a63fb7c846e88b1ce20d7b5cf902cbd4a7f7a439f892dbaf4a0ba1a791872",
+      "src/battery_frontier/dashboards/__init__.py": "c9a7eeb33b2d54e64a7cbc32d13d3dceb7a1e9455f92b245b027c867cca8e25b",
+      "src/battery_frontier/dashboards/data.py": "c32b00c7ba318a5fa9069bd328e0fd82dcb00552c59a74acde1f25bb5e50d0a4",
+      "src/battery_frontier/data/__init__.py": "fba9754072f3a66bee5ea5d87020f7eba1eba7435302cc32d661bb094b6d4a22",
+      "src/battery_frontier/data/connectors.py": "b05c5abedc820d55bf11075566e8f308005dc0c34d75bf2abc365d61fd135570",
+      "src/battery_frontier/db.py": "da3c51c39e3a658272e4a6bd809398b0fef354b94a9c130ac5b39dd6340813c0",
+      "src/battery_frontier/literature/__init__.py": "e4672a02c8a9ffded13b0a7f1042b05965cd9c9c84bdf93f9d3db3426d3e7592",
+      "src/battery_frontier/ml/__init__.py": "c4974bae1fdf88064b2256af16ac8bb816bc0c86529db44dd810a4bb033e7e82",
+      "src/battery_frontier/optimization/__init__.py": "0035627d4673707b111f9f8b0adb3688457e6270769fce91529317d31a5ad556",
+      "src/battery_frontier/physics/__init__.py": "d497b8cb3d6dad60caf1096546cb1b9bf18a2ee7100a34d3e83907c9de36fa49",
+      "src/battery_frontier/physics/bom.py": "13373cb2cd3d502a96507310332526c45aec78d62095b041b154dd72014d46a1",
+      "src/battery_frontier/physics/derating.py": "fb6dd92107cf1f1a07fb847131915d1a8d7b0800a448ec7f0bbbd69558d89acc",
+      "src/battery_frontier/physics/electrochemistry.py": "8d2826b385d36da33c422268377cd4dab479f479d6992bb75454632ef1119e18",
+      "src/battery_frontier/physics/reference_cases.py": "ab7fcfe48da1a256b660c84f77f63d70220d02ad8fcfd4e53062a0f5decf03ab",
+      "src/battery_frontier/physics/stoichiometry.py": "ff6e9368a7c482525e3767c7047b49357ed4526317e31608b871c2239e2b4845",
+      "src/battery_frontier/physics/system_metrics.py": "ea6cbed9713428572ddabe0c19189bbd20c43fe1f2a0319077559e7fe4d4514d",
+      "src/battery_frontier/physics/uncertainty.py": "608a094e2a25d7b75a1acf253e029a003964ddd341cade57f724ba72e705dfc8",
+      "src/battery_frontier/physics/voltage.py": "56b785c9a8f842fb7dfc0d55540fb047137a214a853d81afd765400188f76feb",
+      "src/battery_frontier/provenance.py": "1e0a6838432114d4f1b06c4b236c95930b16ef0277922454b2de51d38752964a",
+      "src/battery_frontier/registry.py": "2f4c11ba1d0a0620b357519f001bac65b1553ffb7c97f265bf6021f7afb89159",
+      "src/battery_frontier/reporting/__init__.py": "986a03db761bca4771dbb9742fa7bed50c4104099a6c48ca10a48925763f774f",
+      "src/battery_frontier/reporting/daily.py": "9a24f67dd0fc50f3506ba5ea55e155d82a1bcc862ac15f29a7a464bbd718b8d2",
+      "src/battery_frontier/reporting/method_cards.py": "eec0cd2702e3536a1871c19ea03f23604310c86436b7f16176af5b00f6b51d8f",
+      "src/battery_frontier/schemas.py": "363dbc67938221435cb0ef87f3bbd70f4a28e45e884ec1a281b34bef8b5b21cd",
+      "src/battery_frontier/scientific_audit.py": "7c31e5985164c0abc8cd2fdf66303a9af6cc1e59a338dbbc166ce3ce318f58be",
+      "src/battery_frontier/utils/__init__.py": "9793f0bcab4321b5156ad18435a4fc585c46c5bca5b30e2f59bcda52e14b7c77",
+      "src/battery_frontier/website.py": "30cfb1fe4e463ccf592b8c5bef355bfa1e3d9febc4c4d8cee86d1a74549e028c"
+    },
+    "code_snapshot_sha256": "baedaa21885ea5b5da52bcac386751ace4a2dfc061638a7155e90a36db4763dc",
+    "config_hashes": {
+      "configs/assumptions.yaml": "63c51f3fbd90e4582d5b334b1552c006d63b89576d01f7f903ba1763ffbf45b8",
+      "configs/aviation_scenarios.yaml": "a3b15ca13fefc5f51ae237dbcf40d335c1dab630c8100b9bd1f44c4020989cce",
+      "configs/chemistry_families.yaml": "4486e9b73fd7c24d89892ea26e32a432e9a4e794b629fba5b07edd027d14fb1c",
+      "configs/citations.yaml": "f7b3ad9e33a99f171e332e62f8eb20cbb8a054f51244c3cf024966d4a27c7b12",
+      "configs/data_sources.yaml": "4153905f2a5d51237b76a47c00a037302bab05f76fff2cc22e3c489beece16bb",
+      "configs/physics_reference_cases.yaml": "8451321c4c1383b1258ebb06f0674030caac37244eab5efac43b100be90d7c10",
+      "configs/segmented_mission_cases.yaml": "6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2"
+    },
+    "dashboard_artifacts": 4,
+    "dashboard_manifest_sha256": "476323cd3213f58b9ab51c84d16d2e33d50ddf269f81b277381cd7b1338ddb8a",
+    "experimental_measurements": 0,
+    "generated_at_utc": "2026-06-13T04:05:26.481495+00:00",
+    "package_version": "0.4.0",
+    "python_version": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "ranking_enabled": false,
+    "registry_counts": {
+      "assumptions": 12,
+      "chemistry_families": 9,
+      "citations": 10,
+      "data_sources": 7,
+      "physics_reference_cases": 2,
+      "scenarios": 4,
+      "segmented_mission_cases": 2
+    },
+    "report_date": "2026-06-13",
+    "report_sha256": "0952434b1f6c39a801d3eaae1f89b3ae4c27155934cf33ecb20e6bff21c36458",
+    "simulations_completed": 2,
+    "summary_path": "reports/daily/2026-06-13-mission-summary.json",
+    "summary_sha256": "3b4cc7ba31d144aaea80ed31e704c4f93cc04a124bbd0847cfe00f4843920d22"
+  },
+  "metrics": {
+    "assumptions": 12,
+    "chemistry_families": 9,
+    "citations": 10,
+    "data_sources": 7,
+    "mission_fixtures": 2,
+    "physics_fixtures": 2,
+    "total_artifacts": 4,
+    "verified_artifacts": 4
+  },
+  "package_version": "0.4.0",
+  "phase": "4",
+  "phase_readiness": [
+    {
+      "component": "Scientific scope and boundaries",
+      "evidence gate": "documented and executable",
+      "phase": "0",
+      "status": "complete"
+    },
+    {
+      "component": "Schema and literature registry",
+      "evidence gate": "first licensed snapshot pending",
+      "phase": "1",
+      "status": "foundation complete"
+    },
+    {
+      "component": "Baseline physics",
+      "evidence gate": "audited literature validation pending",
+      "phase": "2",
+      "status": "local foundation complete"
+    },
+    {
+      "component": "Aviation mission simulator",
+      "evidence gate": "published-aircraft validation pending",
+      "phase": "3",
+      "status": "local foundation complete"
+    },
+    {
+      "component": "Scientific dashboard",
+      "evidence gate": "audited chemistry measurements pending",
+      "phase": "4",
+      "status": "prototype active"
+    },
+    {
+      "component": "ML screening",
+      "evidence gate": "validated training dataset required",
+      "phase": "5",
+      "status": "not started"
+    }
+  ],
+  "phase_status": "scientific dashboard prototype active",
+  "ranking_enabled": false,
+  "ranking_gate_reason": "No candidate assessments are available.",
+  "source_readiness": [
+    {
+      "ingestion status": "blocked_by_license_review",
+      "license status": "review_required",
+      "limitations": "Computed properties are model-dependent and are not experimental validation.",
+      "reliability rating": 4,
+      "source": "Materials Project",
+      "url": "https://materialsproject.org/",
+      "variables": "composition, structure, density, formation_energy, electrochemical_metadata"
+    },
+    {
+      "ingestion status": "blocked_by_license_review",
+      "license status": "review_required",
+      "limitations": "Cross-institution protocols and metadata completeness may vary.",
+      "reliability rating": 4,
+      "source": "Battery Archive",
+      "url": "https://www.batteryarchive.org/",
+      "variables": "cycling_data, voltage_curves, capacity_fade, test_conditions"
+    },
+    {
+      "ingestion status": "metadata_ready",
+      "license status": "item_specific",
+      "limitations": "Repository records span different evidence levels and publication types.",
+      "reliability rating": 4,
+      "source": "NASA Technical Reports Server",
+      "url": "https://ntrs.nasa.gov/",
+      "variables": "aviation_reports, mission_assumptions, battery_system_studies, technical_metadata"
+    },
+    {
+      "ingestion status": "planned",
+      "license status": "review_required",
+      "limitations": "Coverage is compound-dependent and may not map directly to electrochemical operating states.",
+      "reliability rating": 5,
+      "source": "NIST Chemistry WebBook",
+      "url": "https://webbook.nist.gov/chemistry/",
+      "variables": "molecular_weight, thermochemistry, phase_change_data"
+    },
+    {
+      "ingestion status": "planned",
+      "license status": "review_required",
+      "limitations": "Aggregated records require property-level provenance and conflict handling.",
+      "reliability rating": 4,
+      "source": "PubChem",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/",
+      "variables": "identifiers, molecular_formula, molecular_weight, safety_metadata"
+    },
+    {
+      "ingestion status": "planned",
+      "license status": "item_specific",
+      "limitations": "Publication type and review status vary.",
+      "reliability rating": 4,
+      "source": "DOE Office of Scientific and Technical Information",
+      "url": "https://www.osti.gov/",
+      "variables": "battery_reports, project_results, technical_metadata"
+    },
+    {
+      "ingestion status": "planned",
+      "license status": "item_specific",
+      "limitations": "Regulatory applicability depends on aircraft category and date.",
+      "reliability rating": 4,
+      "source": "FAA research and technical reports",
+      "url": "https://www.faa.gov/data_research/research",
+      "variables": "safety_guidance, certification_research, battery_incident_research"
+    }
+  ],
+  "technology_readiness_claim": false
+}

@@ -1,0 +1,87 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+records:
+  - id: scenario.regional_demonstrator
+    version: 1
+    name: Regional demonstrator sensitivity case
+    evidence_class: speculative_hypothesis
+    status: design_study
+    description: A short-route anchor for validating units and sensitivity behavior.
+    route_distance_km: 300
+    aircraft_mass_kg: 5700
+    payload_mass_kg: 800
+    battery_mass_fraction: 0.35
+    lift_to_drag_ratio: 14
+    propulsion_efficiency: 0.82
+    usable_depth_of_discharge: 0.80
+    end_of_life_state_of_health: 0.80
+    thermal_availability: 0.95
+    reserve_fraction: 0.20
+    non_cruise_energy_fraction: 0.20
+    cruise_speed_m_per_s: 90
+    uncertainty_note: All values are illustrative Phase 0 sensitivity inputs and require replacement or citation before external feasibility claims.
+    citation_ids: []
+
+  - id: scenario.regional_transport
+    version: 1
+    name: Regional transport sensitivity case
+    evidence_class: speculative_hypothesis
+    status: design_study
+    description: A medium-range anchor intended to expose payload and battery-mass pressure.
+    route_distance_km: 1000
+    aircraft_mass_kg: 23000
+    payload_mass_kg: 3000
+    battery_mass_fraction: 0.40
+    lift_to_drag_ratio: 16
+    propulsion_efficiency: 0.85
+    usable_depth_of_discharge: 0.80
+    end_of_life_state_of_health: 0.80
+    thermal_availability: 0.95
+    reserve_fraction: 0.20
+    non_cruise_energy_fraction: 0.18
+    cruise_speed_m_per_s: 125
+    uncertainty_note: All values are illustrative Phase 0 sensitivity inputs and require replacement or citation before external feasibility claims.
+    citation_ids: []
+
+  - id: scenario.single_aisle
+    version: 1
+    name: Single-aisle sensitivity case
+    evidence_class: speculative_hypothesis
+    status: design_study
+    description: A transcontinental-scale stress case, not a prediction of a buildable aircraft.
+    route_distance_km: 3000
+    aircraft_mass_kg: 70000
+    payload_mass_kg: 15000
+    battery_mass_fraction: 0.45
+    lift_to_drag_ratio: 18
+    propulsion_efficiency: 0.88
+    usable_depth_of_discharge: 0.80
+    end_of_life_state_of_health: 0.80
+    thermal_availability: 0.95
+    reserve_fraction: 0.20
+    non_cruise_energy_fraction: 0.15
+    cruise_speed_m_per_s: 220
+    uncertainty_note: All values are illustrative Phase 0 sensitivity inputs and require replacement or citation before external feasibility claims.
+    citation_ids: []
+
+  - id: scenario.extreme_long_range
+    version: 1
+    name: Extreme long-range boundary case
+    evidence_class: speculative_hypothesis
+    status: design_study
+    description: A deliberate boundary case for identifying physically and structurally prohibitive regions.
+    route_distance_km: 10000
+    aircraft_mass_kg: 250000
+    payload_mass_kg: 40000
+    battery_mass_fraction: 0.50
+    lift_to_drag_ratio: 20
+    propulsion_efficiency: 0.90
+    usable_depth_of_discharge: 0.80
+    end_of_life_state_of_health: 0.80
+    thermal_availability: 0.95
+    reserve_fraction: 0.20
+    non_cruise_energy_fraction: 0.12
+    cruise_speed_m_per_s: 240
+    uncertainty_note: All values are illustrative Phase 0 sensitivity inputs and require replacement or citation before external feasibility claims.
+    citation_ids: []
+

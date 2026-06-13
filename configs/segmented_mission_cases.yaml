@@ -1,0 +1,90 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+records:
+  - id: mission.regional_demonstrator
+    version: 1
+    name: Regional demonstrator segmented study
+    evidence_class: speculative_hypothesis
+    status: illustrative_calculation
+    description: >
+      A local Phase 3 calculation fixture for testing mission segmentation,
+      battery-mass closure, explicit reserve, and power constraints.
+    operating_empty_mass_excluding_battery_kg: 3000
+    maximum_takeoff_mass_kg: 5700
+    payload_mass_kg: 800
+    maximum_payload_kg: 1000
+    route_distance_km: 250
+    range_search_upper_km: 1200
+    cruise_altitude_m: 3000
+    cruise_speed_m_per_s: 90
+    climb_speed_m_per_s: 75
+    climb_rate_m_per_s: 4
+    descent_speed_m_per_s: 75
+    descent_rate_m_per_s: 3
+    reserve_speed_m_per_s: 75
+    cruise_lift_to_drag_ratio: 14
+    climb_lift_to_drag_ratio: 11
+    descent_lift_to_drag_ratio: 13
+    reserve_lift_to_drag_ratio: 14
+    descent_propulsive_fraction: 0.15
+    propulsion_efficiency: 0.82
+    auxiliary_power_kw: 30
+    taxi_duration_min: 15
+    taxi_propulsion_power_kw: 50
+    reserve_loiter_duration_min: 30
+    pack_specific_energy_Wh_kg: 500
+    pack_specific_power_W_kg: 1000
+    maximum_continuous_c_rate: 2
+    usable_depth_of_discharge: 0.80
+    end_of_life_state_of_health: 0.80
+    thermal_availability: 0.95
+    maximum_battery_mass_fraction: 0.40
+    peak_power_margin_fraction: 0.15
+    uncertainty_note: >
+      Every aircraft and battery value is an illustrative design-study input.
+      The case is not tied to a certified or proposed aircraft.
+    citation_ids: []
+
+  - id: mission.single_aisle_stress
+    version: 1
+    name: Single-aisle long-range stress study
+    evidence_class: speculative_hypothesis
+    status: boundary_calculation
+    description: >
+      A deliberately difficult local case used to expose mass-feedback
+      divergence and infeasible energy assumptions rather than imply viability.
+    operating_empty_mass_excluding_battery_kg: 38000
+    maximum_takeoff_mass_kg: 70000
+    payload_mass_kg: 15000
+    maximum_payload_kg: 18000
+    route_distance_km: 3000
+    range_search_upper_km: 5000
+    cruise_altitude_m: 11000
+    cruise_speed_m_per_s: 220
+    climb_speed_m_per_s: 180
+    climb_rate_m_per_s: 8
+    descent_speed_m_per_s: 200
+    descent_rate_m_per_s: 5
+    reserve_speed_m_per_s: 180
+    cruise_lift_to_drag_ratio: 18
+    climb_lift_to_drag_ratio: 14
+    descent_lift_to_drag_ratio: 17
+    reserve_lift_to_drag_ratio: 17
+    descent_propulsive_fraction: 0.10
+    propulsion_efficiency: 0.88
+    auxiliary_power_kw: 250
+    taxi_duration_min: 20
+    taxi_propulsion_power_kw: 400
+    reserve_loiter_duration_min: 45
+    pack_specific_energy_Wh_kg: 700
+    pack_specific_power_W_kg: 900
+    maximum_continuous_c_rate: 1.5
+    usable_depth_of_discharge: 0.80
+    end_of_life_state_of_health: 0.80
+    thermal_availability: 0.95
+    maximum_battery_mass_fraction: 0.45
+    peak_power_margin_fraction: 0.20
+    uncertainty_note: >
+      Values are speculative stress-test inputs. A failed mass closure is an
+      intended and reportable result, not a software error.
+    citation_ids: []

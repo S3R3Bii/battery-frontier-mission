@@ -1,0 +1,100 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+records:
+  - id: source.materials_project_api
+    title: Using the Materials Project API
+    authors: [Materials Project]
+    year: 2025
+    url: https://docs.materialsproject.org/downloading-data/using-the-api
+    source_type: documentation
+    peer_reviewed: false
+    metadata_status: verified
+
+  - id: source.battery_archive
+    title: Battery Archive
+    authors: [Battery Archive]
+    year: 2026
+    url: https://www.batteryarchive.org/
+    source_type: dataset_portal
+    peer_reviewed: false
+    metadata_status: verified
+
+  - id: source.nasa_ntrs
+    title: NASA Technical Reports Server
+    authors: [NASA Scientific and Technical Information Program]
+    year: 2025
+    url: https://ntrs.nasa.gov/
+    source_type: government_repository
+    peer_reviewed: false
+    metadata_status: verified
+
+  - id: lit.nitta_2015
+    title: Li-ion battery materials - present and future
+    authors: [N. Nitta, F. Wu, J. T. Lee, G. Yushin]
+    year: 2015
+    doi: 10.1016/j.mattod.2014.10.040
+    url: https://doi.org/10.1016/j.mattod.2014.10.040
+    source_type: review
+    peer_reviewed: true
+    metadata_status: queued_for_audit
+
+  - id: lit.manthiram_2014
+    title: Rechargeable lithium-sulfur batteries
+    authors: [A. Manthiram, Y. Fu, S.-H. Chung, C. Zu, Y.-S. Su]
+    year: 2014
+    doi: 10.1021/cr500062v
+    url: https://doi.org/10.1021/cr500062v
+    source_type: review
+    peer_reviewed: true
+    metadata_status: queued_for_audit
+
+  - id: lit.bruce_2012
+    title: Li-O2 and Li-S batteries with high energy storage
+    authors: [P. G. Bruce, S. A. Freunberger, L. J. Hardwick, J.-M. Tarascon]
+    year: 2012
+    doi: 10.1038/nmat3191
+    url: https://doi.org/10.1038/nmat3191
+    source_type: review
+    peer_reviewed: true
+    metadata_status: queued_for_audit
+
+  - id: lit.janek_2016
+    title: A solid future for battery development
+    authors: [J. Janek, W. G. Zeier]
+    year: 2016
+    doi: 10.1038/nenergy.2016.141
+    url: https://doi.org/10.1038/nenergy.2016.141
+    source_type: perspective
+    peer_reviewed: true
+    metadata_status: queued_for_audit
+
+  - id: lit.hwang_2017
+    title: Sodium-ion batteries - present and future
+    authors: [J.-Y. Hwang, S.-T. Myung, Y.-K. Sun]
+    year: 2017
+    doi: 10.1039/C6CS00776G
+    url: https://doi.org/10.1039/C6CS00776G
+    source_type: review
+    peer_reviewed: true
+    metadata_status: queued_for_audit
+
+  - id: lit.muldoon_2014
+    title: Electrolyte roadblocks to a magnesium rechargeable battery
+    authors: [J. Muldoon, C. B. Bucur, T. Gregory]
+    year: 2014
+    doi: 10.1039/C3EE43531A
+    url: https://doi.org/10.1039/C3EE43531A
+    source_type: review
+    peer_reviewed: true
+    metadata_status: queued_for_audit
+
+  - id: lit.schafer_2019
+    title: Technological, economic and environmental prospects of all-electric aircraft
+    authors: [A. W. Schafer, S. R. H. Barrett, K. Doyme, L. M. Dray, A. R. Gnadt, R. Self, A. O'Sullivan, A. P. Synodinos, A. J. Torija]
+    year: 2019
+    doi: 10.1038/s41560-018-0294-x
+    url: https://doi.org/10.1038/s41560-018-0294-x
+    source_type: research_article
+    peer_reviewed: true
+    metadata_status: queued_for_audit
+

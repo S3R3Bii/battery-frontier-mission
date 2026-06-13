@@ -1,0 +1,10 @@
+services:
+  dashboard:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./configs:/app/configs:ro
+      - ./data:/app/data
+      - ./reports:/app/reports
+

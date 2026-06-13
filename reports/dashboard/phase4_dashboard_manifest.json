@@ -1,0 +1,46 @@
+{
+  "artifacts": [
+    {
+      "artifact_id": "artifact.phase2.results",
+      "artifact_type": "json_results",
+      "evidence_status": "verified_present",
+      "path": "reports/reference/phase2_reference_cases.json",
+      "public_claim_boundary": "calculation fixtures; not experimental benchmarks",
+      "sha256": "e7278be17e6651ff3475570d4a46ac25c55d952bf91e8eb8579fe4fe65bbd8eb",
+      "title": "Phase 2 physics reference results"
+    },
+    {
+      "artifact_id": "artifact.phase3.results",
+      "artifact_type": "json_results",
+      "evidence_status": "verified_present",
+      "path": "reports/aviation/phase3_mission_cases.json",
+      "public_claim_boundary": "simulation estimates from speculative inputs",
+      "sha256": "10315df122ffed6c4db1caa3b9baf9eac31c228f247c70070a14a91cff724f41",
+      "title": "Phase 3 aviation mission results"
+    },
+    {
+      "artifact_id": "artifact.phase2.method_card",
+      "artifact_type": "method_card",
+      "evidence_status": "public_method_document",
+      "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
+      "public_claim_boundary": "documents equations, guardrails, and limitations",
+      "sha256": "46543dab0276bdb0bb6f0cd258215683a12b7c0923e8ca5f15b916424112c1fc",
+      "title": "Phase 2 physics method card"
+    },
+    {
+      "artifact_id": "artifact.phase3.method_card",
+      "artifact_type": "method_card",
+      "evidence_status": "public_method_document",
+      "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
+      "public_claim_boundary": "documents equations, guardrails, and limitations",
+      "sha256": "c332afed36ba61bcfd38618de69eb88261ea00e118c5127f8b4e227e7e763e72",
+      "title": "Phase 3 aviation method card"
+    }
+  ],
+  "chemistry_ranking_enabled": false,
+  "dashboard_status": "prototype with traceable local simulation artifacts",
+  "experimental_measurements": 0,
+  "generated_at_utc": "2026-06-13T04:13:14.676417+00:00",
+  "package_version": "0.4.0",
+  "phase": "4"
+}

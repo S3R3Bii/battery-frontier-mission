@@ -1,0 +1,108 @@
+{
+  "cases": [
+    {
+      "capacity_interval_mAh_g": {
+        "lower": 3830.4246311911456,
+        "nominal": 3861.8848911303235,
+        "upper": 3862.998147080491
+      },
+      "citation_ids": [],
+      "description": "Faraday-law reference calculation for one mole of lithium oxidized to lithium ions. This is an electrode-only capacity identity and is not a complete-cell energy claim.\n",
+      "evidence_class": "theoretical_limit",
+      "id": "reference.lithium_metal_capacity",
+      "mass_balance_relative_error": 0.0,
+      "mass_basis_description": "Mass of lithium metal only",
+      "name": "Lithium-metal electrode capacity identity",
+      "reaction_equation": "Li -> Li+",
+      "reaction_mass_basis_g_mol": 6.94,
+      "status": "calculation_fixture",
+      "theoretical_specific_capacity_evidence_class": "theoretical_limit",
+      "theoretical_specific_capacity_mAh_g": 3861.8848911303235,
+      "uncertainty_note": "The interval only demonstrates atomic-weight propagation. It excludes electrochemical utilization, excess lithium, and all complete-cell mass.\n"
+    },
+    {
+      "active_specific_energy_Wh_kg": 2523.213015884245,
+      "active_specific_energy_evidence_class": "simulation_estimate using declared voltage-profile inputs",
+      "active_specific_energy_interval_Wh_kg": {
+        "lower": 2329.9304445048147,
+        "nominal": 2523.213015884245,
+        "upper": 2687.450970342113
+      },
+      "average_voltage_v": 2.1625,
+      "capacity_interval_mAh_g": {
+        "lower": 1164.9652222524073,
+        "nominal": 1166.803706767281,
+        "upper": 1168.4569436270058
+      },
+      "cell": {
+        "active_mass_fraction": 0.6,
+        "active_reactant_mass_g": 600.0,
+        "evidence_class": "simulation_estimate using illustrative inputs",
+        "mass_fractions": {
+          "Casing and terminals": 0.11,
+          "Current collectors and tabs": 0.09,
+          "Electrolyte": 0.16,
+          "Separator": 0.04,
+          "Stoichiometric active reactants": 0.6
+        },
+        "nominal_energy_Wh": 1046.313357361799,
+        "specific_energy_Wh_kg": 1046.313357361799,
+        "total_mass_g": 1000.0,
+        "total_volume_l": 0.8,
+        "volumetric_energy_Wh_l": 1307.8916967022487
+      },
+      "citation_ids": [
+        "lit.manthiram_2014",
+        "lit.bruce_2012"
+      ],
+      "description": "A reproducible fixture that demonstrates full active-reactant mass, voltage-profile integration, cell inactive mass, and pack overhead. The voltage profile and bills of materials are illustrative assumptions, not audited performance records.\n",
+      "evidence_class": "speculative_hypothesis",
+      "id": "reference.lithium_sulfur_system_boundaries",
+      "mass_balance_relative_error": 1.546675524075098e-16,
+      "mass_basis_description": "Combined stoichiometric mass of lithium and sulfur reactants",
+      "name": "Lithium-sulfur system-boundary demonstration",
+      "pack": {
+        "cell_mass_fraction": 0.7,
+        "cell_mass_kg": 700.0,
+        "evidence_class": "simulation_estimate using illustrative inputs",
+        "mass_fractions": {
+          "Cells": 0.7,
+          "Containment": 0.06,
+          "Controls and wiring": 0.04,
+          "Pack structure": 0.12,
+          "Thermal system": 0.08
+        },
+        "nominal_energy_Wh": 703122.576147129,
+        "specific_energy_Wh_kg": 703.1225761471289,
+        "total_mass_kg": 1000.0,
+        "total_volume_l": 800.0,
+        "volumetric_energy_Wh_l": 878.9032201839112
+      },
+      "packed_active_volumetric_energy_Wh_l": 2952.1592285845672,
+      "reaction_equation": "16 Li + S8 -> 8 Li2S",
+      "reaction_mass_basis_g_mol": 367.52000000000004,
+      "status": "illustrative_calculation",
+      "theoretical_specific_capacity_evidence_class": "theoretical_limit",
+      "theoretical_specific_capacity_mAh_g": 1166.803706767281,
+      "uncertainty_note": "Ranges demonstrate deterministic propagation only. They do not represent an audited confidence interval or a prediction of practical Li-S cells.\n"
+    }
+  ],
+  "claim_status": "calculation fixtures; not experimental benchmarks",
+  "code_hashes": {
+    "src/battery_frontier/physics/__init__.py": "d497b8cb3d6dad60caf1096546cb1b9bf18a2ee7100a34d3e83907c9de36fa49",
+    "src/battery_frontier/physics/bom.py": "13373cb2cd3d502a96507310332526c45aec78d62095b041b154dd72014d46a1",
+    "src/battery_frontier/physics/derating.py": "fb6dd92107cf1f1a07fb847131915d1a8d7b0800a448ec7f0bbbd69558d89acc",
+    "src/battery_frontier/physics/electrochemistry.py": "8d2826b385d36da33c422268377cd4dab479f479d6992bb75454632ef1119e18",
+    "src/battery_frontier/physics/reference_cases.py": "ab7fcfe48da1a256b660c84f77f63d70220d02ad8fcfd4e53062a0f5decf03ab",
+    "src/battery_frontier/physics/stoichiometry.py": "ff6e9368a7c482525e3767c7047b49357ed4526317e31608b871c2239e2b4845",
+    "src/battery_frontier/physics/system_metrics.py": "ea6cbed9713428572ddabe0c19189bbd20c43fe1f2a0319077559e7fe4d4514d",
+    "src/battery_frontier/physics/uncertainty.py": "608a094e2a25d7b75a1acf253e029a003964ddd341cade57f724ba72e705dfc8",
+    "src/battery_frontier/physics/voltage.py": "56b785c9a8f842fb7dfc0d55540fb047137a214a853d81afd765400188f76feb",
+    "src/battery_frontier/schemas.py": "363dbc67938221435cb0ef87f3bbd70f4a28e45e884ec1a281b34bef8b5b21cd"
+  },
+  "code_snapshot_sha256": "14e3898ad9d8b4474a2d175d45fb366e0a6b18bb92410cf9db840ebf87f9c9ad",
+  "config_sha256": "8451321c4c1383b1258ebb06f0674030caac37244eab5efac43b100be90d7c10",
+  "generated_at_utc": "2026-06-13T04:13:14.551095+00:00",
+  "package_version": "0.4.0",
+  "phase": "2"
+}

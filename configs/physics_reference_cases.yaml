@@ -1,0 +1,142 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+records:
+  - id: reference.lithium_metal_capacity
+    name: Lithium-metal electrode capacity identity
+    evidence_class: theoretical_limit
+    status: calculation_fixture
+    description: >
+      Faraday-law reference calculation for one mole of lithium oxidized to
+      lithium ions. This is an electrode-only capacity identity and is not a
+      complete-cell energy claim.
+    mass_basis_description: Mass of lithium metal only
+    electrons_transferred: 1
+    species:
+      - name: Lithium metal
+        formula: Li
+        side: reactant
+        stoichiometric_coefficient: 1
+        molar_mass_g_mol: 6.94
+        included_in_mass_basis: true
+      - name: Lithium ion
+        formula: Li+
+        side: product
+        stoichiometric_coefficient: 1
+        molar_mass_g_mol: 6.94
+        included_in_mass_basis: false
+    mass_balance_tolerance_fraction: 0.000001
+    voltage_profile: []
+    reaction_molar_mass_range:
+      nominal: 6.94
+      lower: 6.938
+      upper: 6.997
+      unit: g/mol
+    uncertainty_note: >
+      The interval only demonstrates atomic-weight propagation. It excludes
+      electrochemical utilization, excess lithium, and all complete-cell mass.
+    citation_ids: []
+
+  - id: reference.lithium_sulfur_system_boundaries
+    name: Lithium-sulfur system-boundary demonstration
+    evidence_class: speculative_hypothesis
+    status: illustrative_calculation
+    description: >
+      A reproducible fixture that demonstrates full active-reactant mass,
+      voltage-profile integration, cell inactive mass, and pack overhead. The
+      voltage profile and bills of materials are illustrative assumptions, not
+      audited performance records.
+    mass_basis_description: Combined stoichiometric mass of lithium and sulfur reactants
+    electrons_transferred: 16
+    species:
+      - name: Lithium metal
+        formula: Li
+        side: reactant
+        stoichiometric_coefficient: 16
+        molar_mass_g_mol: 6.94
+        included_in_mass_basis: true
+      - name: Sulfur
+        formula: S8
+        side: reactant
+        stoichiometric_coefficient: 1
+        molar_mass_g_mol: 256.48
+        included_in_mass_basis: true
+      - name: Lithium sulfide
+        formula: Li2S
+        side: product
+        stoichiometric_coefficient: 8
+        molar_mass_g_mol: 45.94
+        included_in_mass_basis: false
+    mass_balance_tolerance_fraction: 0.000001
+    voltage_profile:
+      - label: Illustrative upper plateau
+        capacity_fraction: 0.25
+        average_voltage_v: 2.35
+      - label: Illustrative lower plateau
+        capacity_fraction: 0.75
+        average_voltage_v: 2.10
+    reaction_molar_mass_range:
+      nominal: 367.52
+      lower: 367.0
+      upper: 368.1
+      unit: g/mol
+    average_voltage_range:
+      nominal: 2.1625
+      lower: 2.00
+      upper: 2.30
+      unit: V
+    active_material_density_kg_l: 1.80
+    electrode_packing_fraction: 0.65
+    cell_design:
+      components:
+        - name: Stoichiometric active reactants
+          category: active_reactants
+          mass_g: 600
+          is_active_reactant: true
+          volume_ml: 513
+        - name: Electrolyte
+          category: electrolyte
+          mass_g: 160
+          volume_ml: 130
+        - name: Current collectors and tabs
+          category: current_collectors
+          mass_g: 90
+          volume_ml: 32
+        - name: Separator
+          category: separator
+          mass_g: 40
+          volume_ml: 45
+        - name: Casing and terminals
+          category: enclosure
+          mass_g: 110
+          volume_ml: 80
+      capacity_utilization: 0.75
+      voltage_efficiency: 0.95
+      discharge_efficiency: 0.97
+    pack_design:
+      components:
+        - name: Cells
+          category: cells
+          mass_kg: 700
+          is_cell_mass: true
+          volume_l: 560
+        - name: Pack structure
+          category: structure
+          mass_kg: 120
+          volume_l: 70
+        - name: Thermal system
+          category: thermal
+          mass_kg: 80
+          volume_l: 90
+        - name: Controls and wiring
+          category: controls
+          mass_kg: 40
+          volume_l: 30
+        - name: Containment
+          category: safety_containment
+          mass_kg: 60
+          volume_l: 50
+      discharge_efficiency: 0.96
+    uncertainty_note: >
+      Ranges demonstrate deterministic propagation only. They do not represent
+      an audited confidence interval or a prediction of practical Li-S cells.
+    citation_ids: [lit.manthiram_2014, lit.bruce_2012]
