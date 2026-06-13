@@ -45,6 +45,23 @@ time, SHA-256 hash, license status, limitations, and whether trusted publication
 is allowed. A manifest does not upgrade metadata into experimental battery
 performance evidence.
 
+## Candidate Metadata Appendix
+
+`python -m battery_frontier.cli candidate-dossiers` writes a Materials Project
+metadata appendix to `reports/source-metadata/`. It runs a small query plan
+against element systems that can help find later audit targets for lithium,
+sodium, multivalent, zinc-air, structural-carbon, and bio-derived carbon
+candidate leads.
+
+If `MP_API_KEY` is present, the command can fetch metadata automatically. If the
+key is absent, the appendix records `blocked_requires_key` instead of creating a
+partial trusted snapshot.
+
+The carbon query is only a carbon-allotrope metadata proxy. It does not validate
+hemp bast-fiber-derived graphitic carbon microstructure, electrochemical
+performance, full-cell energy, safety, cycle life, manufacturing yield, or
+aviation suitability.
+
 ## Automated Metadata Refresh
 
 `.github/workflows/metadata-ingestion.yml` runs weekly and on demand. It executes

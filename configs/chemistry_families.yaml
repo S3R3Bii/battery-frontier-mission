@@ -82,3 +82,16 @@ records:
     required_metrics: [effective_system_mass_saving, specific_energy, stiffness, strength, cycle_life, damage_response]
     citation_ids: []
 
+  - id: chemistry.bio_derived_carbon_electrodes
+    name: Bio-derived graphitic carbon electrodes
+    evidence_class: speculative_hypothesis
+    status: not_scored
+    scope: >
+      Biomass-derived carbon, including hemp bast-fiber-derived graphitic or
+      graphene-like nanosheet concepts, evaluated only as electrode or scaffold
+      leads until full-cell and pack boundaries are audited.
+    known_constraints:
+      [precursor_variability, carbonization_energy, pore_structure_control, electrolyte_compatibility, low_cell_voltage_for_supercapacitors, aviation_energy_density_gap]
+    required_metrics:
+      [surface_area, pore_size_distribution, conductivity, full_cell_specific_energy, cycle_life, safety, scalable_processing, pack_specific_energy]
+    citation_ids: [lit.divya_nann_2020]

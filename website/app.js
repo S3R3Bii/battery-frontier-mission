@@ -35,6 +35,7 @@ function renderMetrics(data) {
     ["Verified artifacts", `${data.metrics.verified_artifacts}/${data.metrics.total_artifacts}`],
     ["Sources registered", data.metrics.data_sources],
     ["Chemistry families", data.metrics.chemistry_families],
+    ["Candidate dossiers", data.metrics.candidate_dossiers],
     ["Physics fixtures", data.metrics.physics_fixtures],
     ["Mission fixtures", data.metrics.mission_fixtures],
   ];
@@ -132,6 +133,7 @@ function renderFrontierChart(data) {
     );
   });
 
+  const laneLabelCounts = {};
   data.frontier.points.forEach((point) => {
     const laneY = y(point.lane);
     const value = point.specific_energy_Wh_kg;
@@ -158,6 +160,8 @@ function renderFrontierChart(data) {
 
     const pointX = x(value);
     const color = point.lane === "mission pack input" ? "#f0b84c" : "#4fd8ff";
+    const laneIndex = laneLabelCounts[point.lane] || 0;
+    laneLabelCounts[point.lane] = laneIndex + 1;
     if (point.lane === "mission pack input") {
       svg.appendChild(
         svgNode("line", {
@@ -181,10 +185,18 @@ function renderFrontierChart(data) {
       }),
     );
     const label = `${point.boundary}: ${fmt(value, " Wh/kg")}`;
+    let labelY = laneY - 12;
+    if (point.lane === "mission pack input") {
+      labelY = laneY + (laneIndex % 2 === 0 ? -18 : 25);
+    } else if (point.boundary === "complete pack") {
+      labelY = laneY - 30;
+    } else if (point.boundary === "complete cell") {
+      labelY = laneY + 25;
+    }
     svg.appendChild(
       textNode("text", label, {
         x: Math.min(pointX + 12, width - margin.right - 230),
-        y: laneY - 12,
+        y: labelY,
         class: "chart-note",
       }),
     );
@@ -251,6 +263,209 @@ function renderSourceReadiness(data) {
   });
 }
 
+function renderCandidateDossiers(data) {
+  const root = document.getElementById("candidateDossiers");
+  root.innerHTML = "";
+  const summary = data.candidate_dossier_summary;
+  setText(
+    "candidateSummary",
+    `${summary.candidate_count} dossiers | ${summary.audited_measurement_count} audited measurements | ranking blocked`,
+  );
+  const ordered = [...data.candidate_dossiers].sort((left, right) => {
+    if (left.id.includes("hemp")) return -1;
+    if (right.id.includes("hemp")) return 1;
+    return left.display_name.localeCompare(right.display_name);
+  });
+  ordered.forEach((candidate) => {
+    const item = document.createElement("article");
+    item.className = `candidate-card ${candidate.id.includes("hemp") ? "focus" : ""}`;
+    const blockers = candidate.ranking_blockers.slice(0, 4);
+    const materialCount = candidate.materials_project_material_ids.length;
+    item.innerHTML = `
+      <div class="candidate-card-head">
+        <div>
+          <p class="name">${candidate.display_name}</p>
+          <p class="detail">${candidate.candidate_type}</p>
+        </div>
+        <span class="status blocked">unranked</span>
+      </div>
+      <p class="candidate-boundary">${candidate.system_boundary}</p>
+      <div class="candidate-data-row">
+        <span>${candidate.audited_measurement_count} audited records</span>
+        <span>${materialCount} MP metadata ids</span>
+        <span>${candidate.fixture_reference_ids.length} local fixtures</span>
+      </div>
+      <p class="label">Missing proof</p>
+      <ul>${blockers.map((field) => `<li>${field}</li>`).join("")}</ul>
+    `;
+    root.appendChild(item);
+  });
+}
+
+function renderMaterialsProjectAppendix(data) {
+  const root = document.getElementById("mpAppendix");
+  const appendix = data.materials_project_appendix;
+  root.innerHTML = "";
+  setText(
+    "mpSummary",
+    `${appendix.query_count} queries | ${appendix.record_count} metadata records | ranking evidence: no`,
+  );
+  appendix.queries.forEach((query) => {
+    const item = document.createElement("article");
+    item.className = "source-item";
+    const stateClass = query.status === "fetched" ? "ok" : "blocked";
+    const ids =
+      query.material_ids.length > 0
+        ? query.material_ids.slice(0, 4).join(", ")
+        : query.error_message || "no published metadata";
+    item.innerHTML = `
+      <div>
+        <p class="name">${query.label}</p>
+        <p class="detail">${query.query} | ${ids}</p>
+      </div>
+      <span class="status ${stateClass}">${query.status}</span>
+    `;
+    root.appendChild(item);
+  });
+}
+
+function renderTargetBlueprint(data) {
+  const root = document.getElementById("targetBlueprint");
+  root.innerHTML = "";
+  const system = data.conceptual_target_system;
+  setText("blueprintBoundary", system.claim_boundary);
+  const svg = svgNode("svg", {
+    viewBox: "0 0 920 360",
+    "aria-label": system.title,
+  });
+  svg.appendChild(
+    svgNode("rect", {
+      x: 18,
+      y: 18,
+      width: 884,
+      height: 324,
+      rx: 8,
+      fill: "#060a10",
+      stroke: "#273242",
+    }),
+  );
+  svg.appendChild(
+    svgNode("path", {
+      d: "M106 214 C214 174 345 158 508 158 L734 158 C790 158 836 180 868 218 C802 210 742 204 688 202 L496 198 C344 195 214 202 106 214 Z",
+      fill: "rgba(79, 216, 255, 0.10)",
+      stroke: "#4fd8ff",
+      "stroke-width": 2,
+    }),
+  );
+  svg.appendChild(
+    svgNode("path", {
+      d: "M282 166 L94 82 L520 160 Z",
+      fill: "rgba(173, 140, 255, 0.14)",
+      stroke: "#ad8cff",
+      "stroke-width": 2,
+    }),
+  );
+  svg.appendChild(
+    svgNode("path", {
+      d: "M346 198 L118 300 L574 200 Z",
+      fill: "rgba(85, 216, 139, 0.12)",
+      stroke: "#55d88b",
+      "stroke-width": 2,
+    }),
+  );
+  svg.appendChild(
+    svgNode("rect", {
+      x: 320,
+      y: 175,
+      width: 248,
+      height: 24,
+      rx: 4,
+      fill: "rgba(240, 184, 76, 0.18)",
+      stroke: "#f0b84c",
+    }),
+  );
+  svg.appendChild(
+    svgNode("path", {
+      d: "M604 163 C632 126 678 109 731 118 C694 144 665 162 630 181 Z",
+      fill: "rgba(79, 216, 255, 0.08)",
+      stroke: "#4fd8ff",
+      "stroke-width": 2,
+    }),
+  );
+  const propulsors = [
+    [210, 152],
+    [300, 166],
+    [610, 166],
+    [752, 181],
+    [258, 225],
+    [602, 214],
+  ];
+  propulsors.forEach(([cx, cy]) => {
+    svg.appendChild(
+      svgNode("circle", {
+        cx,
+        cy,
+        r: 13,
+        fill: "#05070a",
+        stroke: "#4fd8ff",
+        "stroke-width": 2,
+      }),
+    );
+    svg.appendChild(
+      svgNode("circle", {
+        cx,
+        cy,
+        r: 4,
+        fill: "#4fd8ff",
+      }),
+    );
+  });
+  const callouts = [
+    ["Battery pack corridor", 330, 142, 420, 170],
+    ["Thermal loop", 574, 250, 548, 202],
+    ["Payload + reserve margin", 648, 82, 620, 156],
+    ["Distributed propulsion", 92, 58, 205, 150],
+    ["Structural option", 126, 320, 304, 232],
+  ];
+  callouts.forEach(([label, x1, y1, x2, y2]) => {
+    svg.appendChild(
+      svgNode("line", {
+        x1,
+        y1,
+        x2,
+        y2,
+        stroke: "#566172",
+        "stroke-width": 1,
+      }),
+    );
+    svg.appendChild(
+      textNode("text", label, {
+        x: x1,
+        y: y1 - 6,
+        class: "chart-note",
+      }),
+    );
+  });
+  svg.appendChild(
+    textNode("text", "CONCEPTUAL TARGET - NOT A DESIGN CLAIM", {
+      x: 458,
+      y: 40,
+      "text-anchor": "middle",
+      class: "axis-label",
+    }),
+  );
+  root.appendChild(svg);
+
+  const labels = document.getElementById("blueprintLabels");
+  labels.innerHTML = "";
+  system.labels.forEach((label) => {
+    const item = document.createElement("article");
+    item.className = "system-label";
+    item.innerHTML = `<p class="name">${label.name}</p><p class="detail">${label.status}</p>`;
+    labels.appendChild(item);
+  });
+}
+
 function renderArtifacts(data) {
   const root = document.getElementById("artifactList");
   root.innerHTML = "";
@@ -274,8 +489,11 @@ function render(data) {
   renderMetrics(data);
   renderFrontierChart(data);
   renderMissionBands(data);
+  renderCandidateDossiers(data);
+  renderTargetBlueprint(data);
   renderEvidenceLedger(data);
   renderSourceReadiness(data);
+  renderMaterialsProjectAppendix(data);
   renderArtifacts(data);
 }
 

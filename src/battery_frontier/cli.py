@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from datetime import date
 from pathlib import Path
 
 from battery_frontier.aviation.reference_cases import write_mission_results
+from battery_frontier.candidates.dossiers import write_candidate_dossiers
 from battery_frontier.data.connectors import (
     DEFAULT_SOURCE_QUERY,
     DEFAULT_SOURCE_ROWS,
@@ -39,6 +41,22 @@ def _build_parser() -> argparse.ArgumentParser:
     subparsers.add_parser(
         "dashboard-artifacts",
         help="Generate Phase 4 method cards and the dashboard artifact manifest",
+    )
+    candidates = subparsers.add_parser(
+        "candidate-dossiers",
+        help="Generate candidate evidence dossiers and metadata appendices",
+    )
+    candidates.add_argument("--output-dir", type=Path)
+    candidates.add_argument("--mp-rows", type=int, default=2)
+    candidates.add_argument(
+        "--execute-materials-project",
+        action="store_true",
+        help="Fetch Materials Project metadata when MP_API_KEY is available",
+    )
+    candidates.add_argument(
+        "--no-auto-materials-project",
+        action="store_true",
+        help="Do not auto-fetch Materials Project metadata even if MP_API_KEY exists",
     )
     report = subparsers.add_parser("daily-report", help="Generate Markdown and JSON reports")
     report.add_argument("--date", type=date.fromisoformat, help="Report date in YYYY-MM-DD")
@@ -93,6 +111,18 @@ def main() -> None:
         manifest_path, artifacts = generate_dashboard_artifacts()
         print(f"dashboard manifest: {manifest_path}")
         print(f"artifacts: {len(artifacts)}")
+    elif args.command == "candidate-dossiers":
+        execute_mp = args.execute_materials_project or (
+            bool(os.environ.get("MP_API_KEY")) and not args.no_auto_materials_project
+        )
+        json_path, markdown_path, appendix_path = write_candidate_dossiers(
+            output_dir=args.output_dir,
+            execute_materials_project=execute_mp,
+            mp_rows=args.mp_rows,
+        )
+        print(f"candidate dossiers: {json_path}")
+        print(f"candidate report: {markdown_path}")
+        print(f"materials project appendix: {appendix_path}")
     elif args.command == "daily-report":
         report_path, manifest_path = generate_daily_report(report_date=args.date)
         print(f"report: {report_path}")

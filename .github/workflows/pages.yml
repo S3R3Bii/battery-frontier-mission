@@ -6,6 +6,7 @@ on:
     paths:
       - "website/**"
       - "reports/**"
+      - "reports/candidates/**"
       - "configs/**"
       - "src/**"
       - "dashboard/**"
@@ -37,6 +38,7 @@ jobs:
       - run: python -m battery_frontier.cli physics-reference
       - run: python -m battery_frontier.cli aviation-reference
       - run: python -m battery_frontier.cli dashboard-artifacts
+      - run: python -m battery_frontier.cli candidate-dossiers
       - run: python -m battery_frontier.cli daily-report
       - run: python -m battery_frontier.cli website-data
       - uses: actions/configure-pages@v5

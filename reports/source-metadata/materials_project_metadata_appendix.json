@@ -1,0 +1,289 @@
+{
+  "artifact_type": "materials_project_metadata_appendix",
+  "execute_if_available": false,
+  "generated_at_utc": "2026-06-13T06:29:41.135459+00:00",
+  "limitations": [
+    "Materials Project records are computed material metadata, not battery performance.",
+    "Carbon-only metadata does not validate biomass-derived graphitic nanosheets.",
+    "No record in this appendix is ranked or used as audited aviation battery evidence."
+  ],
+  "metadata_only": true,
+  "package_version": "0.4.0",
+  "payload_sha256": "a4afa08914c67a4c879eb57d1c26a2bf79904b236822804cbc1b1a0fd64e0a57",
+  "performance_evidence": false,
+  "queries": [
+    {
+      "candidate_ids": [
+        "candidate.lithium_ion_intercalation",
+        "candidate.lithium_metal",
+        "candidate.lithium_oxygen"
+      ],
+      "error_message": null,
+      "executed": false,
+      "label": "lithium oxide and oxide electrolyte discovery",
+      "license_status": "review_required",
+      "limitations": "Computed properties are model-dependent and are not experimental validation.",
+      "material_ids": [],
+      "metadata_only": true,
+      "query": "Li,O",
+      "query_id": "mp.li_oxide",
+      "ranking_evidence": false,
+      "record_count": 0,
+      "records": [],
+      "request": {
+        "headers": {
+          "Accept": "application/json",
+          "X-API-KEY": "<env:MP_API_KEY>"
+        },
+        "method": "GET",
+        "query": "Li,O",
+        "rows": 2,
+        "url": "https://api.materialsproject.org/materials/summary/?elements=Li%2CO&_fields=material_id%2Cformula_pretty%2Cchemsys%2Celements%2Cdensity%2Cenergy_above_hull%2Cformation_energy_per_atom%2Cis_stable%2Ctheoretical%2Clast_updated&_limit=2"
+      },
+      "status": "blocked_requires_key",
+      "trusted_publication": false
+    },
+    {
+      "candidate_ids": [
+        "candidate.lithium_sulfur"
+      ],
+      "error_message": null,
+      "executed": false,
+      "label": "lithium sulfur and sulfide discovery",
+      "license_status": "review_required",
+      "limitations": "Computed properties are model-dependent and are not experimental validation.",
+      "material_ids": [],
+      "metadata_only": true,
+      "query": "Li,S",
+      "query_id": "mp.li_sulfur",
+      "ranking_evidence": false,
+      "record_count": 0,
+      "records": [],
+      "request": {
+        "headers": {
+          "Accept": "application/json",
+          "X-API-KEY": "<env:MP_API_KEY>"
+        },
+        "method": "GET",
+        "query": "Li,S",
+        "rows": 2,
+        "url": "https://api.materialsproject.org/materials/summary/?elements=Li%2CS&_fields=material_id%2Cformula_pretty%2Cchemsys%2Celements%2Cdensity%2Cenergy_above_hull%2Cformation_energy_per_atom%2Cis_stable%2Ctheoretical%2Clast_updated&_limit=2"
+      },
+      "status": "blocked_requires_key",
+      "trusted_publication": false
+    },
+    {
+      "candidate_ids": [
+        "candidate.solid_state_lithium"
+      ],
+      "error_message": null,
+      "executed": false,
+      "label": "lithium thiophosphate solid-electrolyte discovery",
+      "license_status": "review_required",
+      "limitations": "Computed properties are model-dependent and are not experimental validation.",
+      "material_ids": [],
+      "metadata_only": true,
+      "query": "Li,P,S",
+      "query_id": "mp.solid_electrolyte_sulfides",
+      "ranking_evidence": false,
+      "record_count": 0,
+      "records": [],
+      "request": {
+        "headers": {
+          "Accept": "application/json",
+          "X-API-KEY": "<env:MP_API_KEY>"
+        },
+        "method": "GET",
+        "query": "Li,P,S",
+        "rows": 2,
+        "url": "https://api.materialsproject.org/materials/summary/?elements=Li%2CP%2CS&_fields=material_id%2Cformula_pretty%2Cchemsys%2Celements%2Cdensity%2Cenergy_above_hull%2Cformation_energy_per_atom%2Cis_stable%2Ctheoretical%2Clast_updated&_limit=2"
+      },
+      "status": "blocked_requires_key",
+      "trusted_publication": false
+    },
+    {
+      "candidate_ids": [
+        "candidate.lithium_ion_intercalation"
+      ],
+      "error_message": null,
+      "executed": false,
+      "label": "lithium iron phosphate and phosphate discovery",
+      "license_status": "review_required",
+      "limitations": "Computed properties are model-dependent and are not experimental validation.",
+      "material_ids": [],
+      "metadata_only": true,
+      "query": "Li,Fe,P,O",
+      "query_id": "mp.lfp",
+      "ranking_evidence": false,
+      "record_count": 0,
+      "records": [],
+      "request": {
+        "headers": {
+          "Accept": "application/json",
+          "X-API-KEY": "<env:MP_API_KEY>"
+        },
+        "method": "GET",
+        "query": "Li,Fe,P,O",
+        "rows": 2,
+        "url": "https://api.materialsproject.org/materials/summary/?elements=Li%2CFe%2CP%2CO&_fields=material_id%2Cformula_pretty%2Cchemsys%2Celements%2Cdensity%2Cenergy_above_hull%2Cformation_energy_per_atom%2Cis_stable%2Ctheoretical%2Clast_updated&_limit=2"
+      },
+      "status": "blocked_requires_key",
+      "trusted_publication": false
+    },
+    {
+      "candidate_ids": [
+        "candidate.lithium_ion_intercalation"
+      ],
+      "error_message": null,
+      "executed": false,
+      "label": "layered oxide cathode discovery",
+      "license_status": "review_required",
+      "limitations": "Computed properties are model-dependent and are not experimental validation.",
+      "material_ids": [],
+      "metadata_only": true,
+      "query": "Li,Ni,Mn,Co,O",
+      "query_id": "mp.layered_oxides",
+      "ranking_evidence": false,
+      "record_count": 0,
+      "records": [],
+      "request": {
+        "headers": {
+          "Accept": "application/json",
+          "X-API-KEY": "<env:MP_API_KEY>"
+        },
+        "method": "GET",
+        "query": "Li,Ni,Mn,Co,O",
+        "rows": 2,
+        "url": "https://api.materialsproject.org/materials/summary/?elements=Li%2CNi%2CMn%2CCo%2CO&_fields=material_id%2Cformula_pretty%2Cchemsys%2Celements%2Cdensity%2Cenergy_above_hull%2Cformation_energy_per_atom%2Cis_stable%2Ctheoretical%2Clast_updated&_limit=2"
+      },
+      "status": "blocked_requires_key",
+      "trusted_publication": false
+    },
+    {
+      "candidate_ids": [
+        "candidate.sodium_ion"
+      ],
+      "error_message": null,
+      "executed": false,
+      "label": "sodium oxide and sodium-ion host discovery",
+      "license_status": "review_required",
+      "limitations": "Computed properties are model-dependent and are not experimental validation.",
+      "material_ids": [],
+      "metadata_only": true,
+      "query": "Na,O",
+      "query_id": "mp.sodium_oxides",
+      "ranking_evidence": false,
+      "record_count": 0,
+      "records": [],
+      "request": {
+        "headers": {
+          "Accept": "application/json",
+          "X-API-KEY": "<env:MP_API_KEY>"
+        },
+        "method": "GET",
+        "query": "Na,O",
+        "rows": 2,
+        "url": "https://api.materialsproject.org/materials/summary/?elements=Na%2CO&_fields=material_id%2Cformula_pretty%2Cchemsys%2Celements%2Cdensity%2Cenergy_above_hull%2Cformation_energy_per_atom%2Cis_stable%2Ctheoretical%2Clast_updated&_limit=2"
+      },
+      "status": "blocked_requires_key",
+      "trusted_publication": false
+    },
+    {
+      "candidate_ids": [
+        "candidate.multivalent"
+      ],
+      "error_message": null,
+      "executed": false,
+      "label": "multivalent oxide host discovery",
+      "license_status": "review_required",
+      "limitations": "Computed properties are model-dependent and are not experimental validation.",
+      "material_ids": [],
+      "metadata_only": true,
+      "query": "Mg,Al,Ca,O",
+      "query_id": "mp.multivalent_oxides",
+      "ranking_evidence": false,
+      "record_count": 0,
+      "records": [],
+      "request": {
+        "headers": {
+          "Accept": "application/json",
+          "X-API-KEY": "<env:MP_API_KEY>"
+        },
+        "method": "GET",
+        "query": "Mg,Al,Ca,O",
+        "rows": 2,
+        "url": "https://api.materialsproject.org/materials/summary/?elements=Mg%2CAl%2CCa%2CO&_fields=material_id%2Cformula_pretty%2Cchemsys%2Celements%2Cdensity%2Cenergy_above_hull%2Cformation_energy_per_atom%2Cis_stable%2Ctheoretical%2Clast_updated&_limit=2"
+      },
+      "status": "blocked_requires_key",
+      "trusted_publication": false
+    },
+    {
+      "candidate_ids": [
+        "candidate.zinc_air"
+      ],
+      "error_message": null,
+      "executed": false,
+      "label": "zinc oxide and air-cathode context discovery",
+      "license_status": "review_required",
+      "limitations": "Computed properties are model-dependent and are not experimental validation.",
+      "material_ids": [],
+      "metadata_only": true,
+      "query": "Zn,O",
+      "query_id": "mp.zinc_oxides",
+      "ranking_evidence": false,
+      "record_count": 0,
+      "records": [],
+      "request": {
+        "headers": {
+          "Accept": "application/json",
+          "X-API-KEY": "<env:MP_API_KEY>"
+        },
+        "method": "GET",
+        "query": "Zn,O",
+        "rows": 2,
+        "url": "https://api.materialsproject.org/materials/summary/?elements=Zn%2CO&_fields=material_id%2Cformula_pretty%2Cchemsys%2Celements%2Cdensity%2Cenergy_above_hull%2Cformation_energy_per_atom%2Cis_stable%2Ctheoretical%2Clast_updated&_limit=2"
+      },
+      "status": "blocked_requires_key",
+      "trusted_publication": false
+    },
+    {
+      "candidate_ids": [
+        "candidate.structural_battery",
+        "candidate.hemp_bast_graphitic_carbon"
+      ],
+      "error_message": null,
+      "executed": false,
+      "label": "carbon allotrope metadata proxy; does not encode biomass origin",
+      "license_status": "review_required",
+      "limitations": "Computed properties are model-dependent and are not experimental validation.",
+      "material_ids": [],
+      "metadata_only": true,
+      "query": "C",
+      "query_id": "mp.carbon_allotropes",
+      "ranking_evidence": false,
+      "record_count": 0,
+      "records": [],
+      "request": {
+        "headers": {
+          "Accept": "application/json",
+          "X-API-KEY": "<env:MP_API_KEY>"
+        },
+        "method": "GET",
+        "query": "C",
+        "rows": 2,
+        "url": "https://api.materialsproject.org/materials/summary/?elements=C&_fields=material_id%2Cformula_pretty%2Cchemsys%2Celements%2Cdensity%2Cenergy_above_hull%2Cformation_energy_per_atom%2Cis_stable%2Ctheoretical%2Clast_updated&_limit=2"
+      },
+      "status": "blocked_requires_key",
+      "trusted_publication": false
+    }
+  ],
+  "query_count": 9,
+  "ranking_evidence": false,
+  "record_count": 0,
+  "requested_rows_per_query": 2,
+  "source_id": "datasource.materials_project",
+  "status_counts": {
+    "blocked_requires_key": 9
+  },
+  "trusted_publication": false
+}

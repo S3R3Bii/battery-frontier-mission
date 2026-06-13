@@ -10,6 +10,12 @@ Phase 4 now also includes a static high-contrast mission-control website in
 static site is the polished public surface; Streamlit remains the scientific
 workbench.
 
+The static site now also consumes candidate evidence dossiers from
+[`reports/candidates/candidate_dossiers.json`](../reports/candidates/candidate_dossiers.json).
+Those dossiers are proof-gap records. They preserve candidate ideas, including
+hemp bast-fiber-derived graphitic carbon, without turning them into ranked or
+validated battery claims.
+
 ## Pages
 
 - **Mission Control**: phase readiness, evidence ledger, artifact verification,
@@ -33,6 +39,7 @@ Generate the website data after refreshing artifacts:
 
 ```powershell
 python -m battery_frontier.cli dashboard-artifacts
+python -m battery_frontier.cli candidate-dossiers
 python -m battery_frontier.cli daily-report
 python -m battery_frontier.cli website-data
 python -m http.server 8000
@@ -47,6 +54,9 @@ The primary website chart shows:
 - mission pack-input lane: configured Phase 3 inputs, not validated
   aviation requirements
 - unknown/unvalidated region: clearly labeled
+- candidate dossier rail: required proof, blockers, and metadata-only source
+  context
+- conceptual target aircraft rail: mission reminder only, not a design claim
 
 ## Reproduction
 
@@ -55,6 +65,7 @@ python -m battery_frontier.cli validate
 python -m battery_frontier.cli physics-reference
 python -m battery_frontier.cli aviation-reference
 python -m battery_frontier.cli dashboard-artifacts
+python -m battery_frontier.cli candidate-dossiers
 python -m streamlit run dashboard/app.py
 ```
 
@@ -69,6 +80,8 @@ Open `http://localhost:8501`.
 - method cards state purpose, inputs, outputs, guardrails, and limitations
 - infeasible mission results remain visible
 - static website progress visuals do not represent technology readiness
+- hemp bast-fiber graphitic carbon is displayed as a speculative material lead,
+  not as validated graphene, cell evidence, or pack evidence
 
 ## Remaining Phase 4 Exit Gate
 

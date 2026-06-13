@@ -98,3 +98,11 @@ records:
     peer_reviewed: true
     metadata_status: queued_for_audit
 
+  - id: lit.divya_nann_2020
+    title: High voltage carbon-based cathodes for non-aqueous aluminium-ion batteries
+    authors: [S. Divya, T. Nann]
+    year: 2020
+    url: https://arxiv.org/abs/2006.00138
+    source_type: preprint
+    peer_reviewed: false
+    metadata_status: queued_for_audit

@@ -39,6 +39,15 @@
 - The static mission-control website is a polished presentation layer over the
   same fixture and readiness data. Its frontier graph is not a technology
   progress claim because the audited-measurement lane is empty.
+- Candidate evidence dossiers are triage records. They preserve proof gaps and
+  next actions, but they are not measurements, rankings, or investment-grade
+  material assessments.
+- Hemp bast-fiber-derived graphitic carbon is a speculative bio-derived carbon
+  lead. It must not be described as validated graphene, a complete rechargeable
+  battery, pack-level evidence, or aviation-grade progress until primary
+  evidence is audited at the correct system boundary.
+- The conceptual target aircraft visual is a mission reminder, not a blueprint,
+  aircraft design, performance model, or certification artifact.
 - Source connector dry runs and metadata fetches do not create experimental
   battery-performance records, approved snapshots, or ranking evidence.
 - Materials Project records are computed/material metadata unless independently

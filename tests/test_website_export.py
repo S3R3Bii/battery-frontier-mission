@@ -14,3 +14,11 @@ def test_website_export_contains_frontier_and_guardrails(tmp_path) -> None:
     assert payload["frontier"]["mission_bands"]
     assert payload["frontier"]["points"][0]["specific_energy_Wh_kg"] is None
     assert "audited-measurement lane is empty" in payload["frontier"]["unknown_region_note"]
+    assert payload["candidate_dossier_summary"]["candidate_count"] > 0
+    assert payload["candidate_dossier_summary"]["ranking_enabled"] is False
+    assert payload["materials_project_appendix"]["ranking_evidence"] is False
+    assert payload["conceptual_target_system"]["claim_boundary"].startswith("Speculative")
+    assert any(
+        candidate["id"] == "candidate.hemp_bast_graphitic_carbon"
+        for candidate in payload["candidate_dossiers"]
+    )

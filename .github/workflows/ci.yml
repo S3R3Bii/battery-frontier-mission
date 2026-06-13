@@ -18,5 +18,6 @@ jobs:
       - run: python -m battery_frontier.cli physics-reference
       - run: python -m battery_frontier.cli aviation-reference
       - run: python -m battery_frontier.cli dashboard-artifacts
+      - run: python -m battery_frontier.cli candidate-dossiers
       - run: python -m pytest
       - run: python -m ruff check .

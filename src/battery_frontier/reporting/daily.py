@@ -9,6 +9,7 @@ from pathlib import Path
 
 from battery_frontier import __version__
 from battery_frontier.aviation.reference_cases import calculate_all_mission_cases
+from battery_frontier.candidates.dossiers import build_candidate_dossiers
 from battery_frontier.config import CONFIG_DIR, PROJECT_ROOT
 from battery_frontier.data.connectors import source_status_rows
 from battery_frontier.provenance import hash_files, sha256_file
@@ -25,6 +26,13 @@ def _display_path(path: Path) -> str:
         return path.relative_to(PROJECT_ROOT).as_posix()
     except ValueError:
         return path.as_posix()
+
+
+def _candidate_payload() -> tuple[dict, Path | None]:
+    path = PROJECT_ROOT / "reports" / "candidates" / "candidate_dossiers.json"
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8")), path
+    return build_candidate_dossiers(execute_materials_project=False), None
 
 
 def generate_daily_report(
@@ -60,6 +68,13 @@ def generate_daily_report(
     mission_results = calculate_all_mission_cases(registries.segmented_mission_cases)
     feasible_missions = sum(result["feasible"] for result in mission_results)
     dashboard_manifest_path, dashboard_artifacts = generate_dashboard_artifacts()
+    candidate_payload, candidate_path = _candidate_payload()
+    candidate_summary = candidate_payload["summary"]
+    candidate_sha256 = sha256_file(candidate_path) if candidate_path else None
+    materials_project_appendix = candidate_summary["materials_project_appendix"]
+    blocked_candidate_count = candidate_summary["ranking_blocked_candidate_count"]
+    mp_record_count = materials_project_appendix["record_count"]
+    candidate_artifact = _display_path(candidate_path) if candidate_path else "not yet written"
     connector_status = source_status_rows(registries)
     connector_ready = sum(row["execution_supported"] for row in connector_status)
     trusted_sources = sum(row["trusted_publication_allowed"] for row in connector_status)
@@ -113,6 +128,7 @@ chemistry rankings remain blocked.
 - Registered assumptions: {len(registries.assumptions)}
 - Registered aviation design-study scenarios: {len(registries.scenarios)}
 - Registered chemistry families awaiting comparable evidence: {len(registries.chemistries)}
+- Candidate evidence dossiers: {candidate_summary["candidate_count"]}
 - Registered citations and source records: {len(registries.citations)}
 - Registered upstream data sources: {len(registries.data_sources)}
 - Registered Phase 2 reference calculations: {len(registries.physics_reference_cases)}
@@ -129,6 +145,8 @@ chemistry rankings remain blocked.
 2. Dashboard charts retain evidence class, system boundary, assumptions, and limitations.
 3. Source readiness and missing experimental evidence are visible instead of
    being replaced with an unsupported chemistry leaderboard.
+4. Candidate dossiers preserve promising leads, including hemp bast-fiber-derived
+   graphitic carbon, without upgrading them into validated measurements.
 
 ## Evidence Ledger
 
@@ -162,8 +180,16 @@ hashes; it does not upgrade simulations into facts.
 
 ## Candidate Screening
 
-No candidate is ranked. Required experimental, uncertainty, safety, cycle-life,
-manufacturing, and source-lineage fields are not yet populated.
+- Candidate dossiers: {candidate_summary["candidate_count"]}
+- Ranking enabled: {candidate_summary["ranking_enabled"]}
+- Ranking gate: {candidate_summary["ranking_gate_reason"]}
+- Candidates blocked by missing ranking fields: {blocked_candidate_count}
+- Materials Project metadata records linked as discovery context: {mp_record_count}
+- Hemp bast-fiber graphitic carbon status: speculative material lead only; no
+  audited full-cell, pack, cycle-life, safety, or aviation performance evidence.
+
+Required experimental, uncertainty, safety, cycle-life, manufacturing, and
+source-lineage fields are not yet populated for ranking.
 
 ## Uncertainty and Reality Filter
 
@@ -194,6 +220,8 @@ negative results remain public and reproducible.
 - Configuration hashes:
 {_markdown_hashes(config_hashes)}
 - Dashboard manifest: `{dashboard_manifest_path.relative_to(PROJECT_ROOT).as_posix()}`
+- Candidate dossier artifact: `{candidate_artifact}`
+- Candidate dossier SHA-256: `{candidate_sha256 or "not yet written"}`
 
 ## Limitations
 
@@ -216,10 +244,14 @@ procurement, investment, operations, or certification decisions.
         "audited_measurements": 0,
         "feasible_mission_fixtures": feasible_missions,
         "simulation_fixtures": len(mission_results),
+        "candidate_dossiers": candidate_summary["candidate_count"],
+        "candidate_summary": candidate_summary,
         "source_status": source_status,
         "connector_readiness": connector_status,
         "dashboard_manifest": dashboard_manifest_path.relative_to(PROJECT_ROOT).as_posix(),
         "dashboard_manifest_sha256": sha256_file(dashboard_manifest_path),
+        "candidate_dossier_path": _display_path(candidate_path) if candidate_path else None,
+        "candidate_dossier_sha256": candidate_sha256,
         "report_sha256": sha256_file(report_path),
         "top_blockers": [
             "source license approval and immutable snapshots",
@@ -244,6 +276,8 @@ procurement, investment, operations, or certification decisions.
         "registry_counts": registries.summary(),
         "experimental_measurements": 0,
         "simulations_completed": len(mission_results),
+        "candidate_dossiers": candidate_summary["candidate_count"],
+        "candidate_dossier_sha256": candidate_sha256,
         "dashboard_artifacts": len(dashboard_artifacts),
         "dashboard_manifest_sha256": sha256_file(dashboard_manifest_path),
         "ranking_enabled": False,

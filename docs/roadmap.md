@@ -48,7 +48,9 @@
 - Implemented locally: mission-control status, evidence ledger, system-boundary
   energy chart, mission segment and sizing charts, payload-range and sensitivity
   views, source/citation audit pages, method cards, downloads, hash verification,
-  static website data export, and a polished mission-control public surface.
+  static website data export, candidate evidence dossiers, Materials Project
+  metadata appendix, a conceptual target-aircraft mission reminder, and a
+  polished mission-control public surface.
 - Remaining exit item: replace fixture-only scientific content with audited
   experimental measurements while retaining uncertainty and provenance.
 

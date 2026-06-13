@@ -16,8 +16,9 @@ chemistry rankings remain blocked.
 
 - Registered assumptions: 12
 - Registered aviation design-study scenarios: 4
-- Registered chemistry families awaiting comparable evidence: 9
-- Registered citations and source records: 10
+- Registered chemistry families awaiting comparable evidence: 10
+- Candidate evidence dossiers: 11
+- Registered citations and source records: 11
 - Registered upstream data sources: 7
 - Registered Phase 2 reference calculations: 2
 - Registered Phase 3 mission calculations: 2
@@ -33,6 +34,8 @@ chemistry rankings remain blocked.
 2. Dashboard charts retain evidence class, system boundary, assumptions, and limitations.
 3. Source readiness and missing experimental evidence are visible instead of
    being replaced with an unsupported chemistry leaderboard.
+4. Candidate dossiers preserve promising leads, including hemp bast-fiber-derived
+   graphitic carbon, without upgrading them into validated measurements.
 
 ## Evidence Ledger
 
@@ -59,16 +62,16 @@ chemistry rankings remain blocked.
 
 - Metadata connectors with optional execution paths: 3
 - Sources approved for trusted published snapshots: 0
-- Materials Project status: ready for optional metadata fetch.
+- Materials Project status: requires `MP_API_KEY` before API execution.
 - NASA NTRS and OSTI status: metadata connectors are available; records remain
   metadata-only until reviewed.
 
 ## Dashboard Artifact Hashes
 
-- `artifact.phase2.results`: `f36f45de9518bdd14c57abae367f636c77054e78d00c528840b35099b6bc54d1`
-- `artifact.phase3.results`: `811e283202e15a9ae1f37f56f27ba4a873f5b91130888fdd0dffa8981748a79a`
-- `artifact.phase2.method_card`: `e2dace7c51dc929965f74edfff2d442483db124c0d962bacb8a7311b5e9b4fad`
-- `artifact.phase3.method_card`: `c7ee2f56404c5e8f0a30b73d7410c9f59ace14a2d01a62f1c1891964c4961c69`
+- `artifact.phase2.results`: `6f19723d188b8f3368d70c1c82b6e555478826ffe5b3fdd70b03c9e42b31f760`
+- `artifact.phase3.results`: `14108a4fd404d01fc1e09c3137f35059f319b207c4934cbab864008fbd5ed621`
+- `artifact.phase2.method_card`: `826213568ae7db83b175bbb33f4d46af41fe8ee1c6ae35ddfb9cbb4b9e329a43`
+- `artifact.phase3.method_card`: `fe9727daee851fc2bfb65fdf2e21e226aa88aefd33df5aad78d884b7e493b1be`
 
 ## Assumption Changes
 
@@ -78,8 +81,16 @@ hashes; it does not upgrade simulations into facts.
 
 ## Candidate Screening
 
-No candidate is ranked. Required experimental, uncertainty, safety, cycle-life,
-manufacturing, and source-lineage fields are not yet populated.
+- Candidate dossiers: 11
+- Ranking enabled: False
+- Ranking gate: Ranking blocked: required comparable evidence or uncertainty is missing.
+- Candidates blocked by missing ranking fields: 11
+- Materials Project metadata records linked as discovery context: 0
+- Hemp bast-fiber graphitic carbon status: speculative material lead only; no
+  audited full-cell, pack, cycle-life, safety, or aviation performance evidence.
+
+Required experimental, uncertainty, safety, cycle-life, manufacturing, and
+source-lineage fields are not yet populated for ranking.
 
 ## Uncertainty and Reality Filter
 
@@ -103,19 +114,21 @@ negative results remain public and reproducible.
 ## Reproducibility
 
 - Package version: `0.4.0`
-- Code snapshot SHA-256: `49cef9a63cbbc24b63e1899e7c80d0275edba47ff606db9bf3921769302624c3`
+- Code snapshot SHA-256: `8785fb8d697be87affa17b3b0d86bf9cd8a05d6e19f251b1858b58f207db6eeb`
 - Python: `3.14.2`
 - Platform: `Windows-11-10.0.26200-SP0`
-- Generated UTC: `2026-06-13T05:58:57.306715+00:00`
+- Generated UTC: `2026-06-13T06:29:48.397319+00:00`
 - Configuration hashes:
 - `configs/assumptions.yaml`: `63c51f3fbd90e4582d5b334b1552c006d63b89576d01f7f903ba1763ffbf45b8`
 - `configs/aviation_scenarios.yaml`: `a3b15ca13fefc5f51ae237dbcf40d335c1dab630c8100b9bd1f44c4020989cce`
-- `configs/chemistry_families.yaml`: `4486e9b73fd7c24d89892ea26e32a432e9a4e794b629fba5b07edd027d14fb1c`
-- `configs/citations.yaml`: `f7b3ad9e33a99f171e332e62f8eb20cbb8a054f51244c3cf024966d4a27c7b12`
+- `configs/chemistry_families.yaml`: `954d118a81f8a374b4081ac075dc3491ef6a848547ff3ae8c82f066c40f5cfd8`
+- `configs/citations.yaml`: `41720c778cc3725f380217bed28f5033411d3750df666121dcaad543228b0463`
 - `configs/data_sources.yaml`: `4153905f2a5d51237b76a47c00a037302bab05f76fff2cc22e3c489beece16bb`
 - `configs/physics_reference_cases.yaml`: `8451321c4c1383b1258ebb06f0674030caac37244eab5efac43b100be90d7c10`
 - `configs/segmented_mission_cases.yaml`: `6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2`
 - Dashboard manifest: `reports/dashboard/phase4_dashboard_manifest.json`
+- Candidate dossier artifact: `reports/candidates/candidate_dossiers.json`
+- Candidate dossier SHA-256: `6d3e1889b853db683fba5bf5603dc4c9c39a6764f0984d8d7328a854d735f900`
 
 ## Limitations
 

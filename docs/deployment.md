@@ -10,6 +10,7 @@ The workflow regenerates:
 - Phase 2 physics fixtures
 - Phase 3 aviation fixtures
 - Phase 4 dashboard method cards and manifest
+- candidate evidence dossiers and Materials Project metadata appendix
 - daily report artifacts
 - `website/mission-control-data.json`
 
@@ -51,7 +52,8 @@ Add it at:
 `Settings -> Secrets and variables -> Actions -> New repository secret`
 
 If the secret is absent, the metadata workflow skips Materials Project and still
-runs NASA NTRS and OSTI.
+runs NASA NTRS and OSTI. Candidate dossiers will still be generated, but the
+Materials Project appendix will record `blocked_requires_key`.
 
 ## Current Scientific Boundary
 

@@ -22,9 +22,12 @@ def test_daily_report_records_provenance_and_disables_ranking(tmp_path) -> None:
     assert manifest["summary_path"]
     assert manifest["dashboard_artifacts"] == 4
     assert manifest["dashboard_manifest_sha256"]
+    assert manifest["candidate_dossiers"] > 0
 
     summary_path = tmp_path / "2026-06-12-mission-summary.json"
     summary = json.loads(summary_path.read_text(encoding="utf-8"))
     assert summary["ranking_enabled"] is False
     assert summary["audited_measurements"] == 0
     assert summary["connector_readiness"]
+    assert summary["candidate_dossiers"] > 0
+    assert summary["candidate_summary"]["ranking_enabled"] is False

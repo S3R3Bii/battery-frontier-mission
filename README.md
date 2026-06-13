@@ -599,6 +599,8 @@ See [scientific scope](docs/scientific_scope.md), [equations](docs/equations.md)
 - Plotly mission, energy-boundary, provenance, and readiness charts
 - Downloadable method cards, JSON result artifacts, and a SHA-256 manifest
 - Explicit candidate-ranking and evidence gates in the public interface
+- Candidate evidence dossiers for proof-gap tracking, including a speculative
+  hemp bast-fiber-derived graphitic carbon lead
 - Streamlit mission-control wireframe that exposes unknowns instead of filling
   them with invented benchmark values
 - Daily Markdown report generator with configuration hashes
@@ -640,6 +642,7 @@ python -m pytest
 python -m battery_frontier.cli physics-reference
 python -m battery_frontier.cli aviation-reference
 python -m battery_frontier.cli dashboard-artifacts
+python -m battery_frontier.cli candidate-dossiers
 python -m battery_frontier.cli init-db
 python -m battery_frontier.cli source-status
 python -m battery_frontier.cli daily-report
@@ -669,6 +672,12 @@ estimates from speculative design-study inputs, not aircraft performance claims.
 The `dashboard-artifacts` command writes method cards and
 `reports/dashboard/phase4_dashboard_manifest.json`. Dashboard artifact hashes are
 verified before display.
+
+The `candidate-dossiers` command writes
+`reports/candidates/candidate_dossiers.json` and a Materials Project metadata
+appendix. The hemp bast-fiber-derived graphitic carbon entry is a speculative
+candidate lead only; it is not validated graphene, not a complete battery cell,
+and not aviation-grade progress.
 
 The `source-status` command reports connector readiness, required credentials,
 license status, and whether a source is approved for trusted publication. Current

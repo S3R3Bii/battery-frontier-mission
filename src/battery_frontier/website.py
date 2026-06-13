@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from battery_frontier import __version__
+from battery_frontier.candidates.dossiers import build_candidate_dossiers
 from battery_frontier.config import PROJECT_ROOT
 from battery_frontier.dashboards.data import (
     chemistry_readiness_frame,
@@ -31,6 +32,52 @@ def _latest_daily_manifest() -> dict[str, Any] | None:
     if not manifests:
         return None
     return json.loads(manifests[-1].read_text(encoding="utf-8"))
+
+
+def _read_json_if_exists(path: Path) -> dict[str, Any] | None:
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _candidate_dossier_payload() -> dict[str, Any]:
+    path = PROJECT_ROOT / "reports" / "candidates" / "candidate_dossiers.json"
+    return _read_json_if_exists(path) or build_candidate_dossiers(
+        execute_materials_project=False
+    )
+
+
+def _conceptual_target_system() -> dict[str, Any]:
+    return {
+        "title": "Long-Term Conceptual Target Aircraft",
+        "status": "mission reminder only",
+        "claim_boundary": (
+            "Speculative systems diagram for dashboard orientation. Not an aircraft "
+            "design, certification claim, performance result, or build blueprint."
+        ),
+        "labels": [
+            {
+                "name": "Distributed electric propulsion",
+                "status": "concept placeholder; no propulsion sizing claim",
+            },
+            {
+                "name": "Aviation-grade battery pack corridor",
+                "status": "target boundary; no validated pack exists in this repo",
+            },
+            {
+                "name": "Thermal and containment loop",
+                "status": "required subsystem; not yet simulated with transients",
+            },
+            {
+                "name": "Payload and reserve margin",
+                "status": "mission-model boundary; certification rules not modeled",
+            },
+            {
+                "name": "Structural integration option",
+                "status": "research concept; damage tolerance not established",
+            },
+        ],
+    }
 
 
 def _frontier_points(bundle: Any) -> list[dict[str, Any]]:
@@ -101,6 +148,7 @@ def build_website_data() -> dict[str, Any]:
     phase_rows = _records(phase_readiness_frame(registries))
     source_rows = _records(source_readiness_frame(registries))
     connector_rows = source_status_rows(registries)
+    candidate_payload = _candidate_dossier_payload()
     mission_bands = _mission_bands(bundle)
     physics_points = [
         point
@@ -138,6 +186,7 @@ def build_website_data() -> dict[str, Any]:
             "data_sources": len(registries.data_sources),
             "physics_fixtures": len(registries.physics_reference_cases),
             "mission_fixtures": len(registries.segmented_mission_cases),
+            "candidate_dossiers": candidate_payload["summary"]["candidate_count"],
             "verified_artifacts": verified_count,
             "total_artifacts": len(verification),
         },
@@ -160,6 +209,44 @@ def build_website_data() -> dict[str, Any]:
         "chemistry_readiness": _records(chemistry_readiness_frame(registries)),
         "source_readiness": source_rows,
         "connector_readiness": connector_rows,
+        "candidate_dossiers": candidate_payload["dossiers"],
+        "candidate_dossier_summary": candidate_payload["summary"],
+        "candidate_ranking_missing_by_candidate": candidate_payload[
+            "ranking_missing_by_candidate"
+        ],
+        "materials_project_appendix": {
+            "artifact_type": candidate_payload["materials_project_appendix"][
+                "artifact_type"
+            ],
+            "query_count": candidate_payload["materials_project_appendix"]["query_count"],
+            "record_count": candidate_payload["materials_project_appendix"]["record_count"],
+            "status_counts": candidate_payload["materials_project_appendix"][
+                "status_counts"
+            ],
+            "ranking_evidence": candidate_payload["materials_project_appendix"][
+                "ranking_evidence"
+            ],
+            "performance_evidence": candidate_payload["materials_project_appendix"][
+                "performance_evidence"
+            ],
+            "queries": [
+                {
+                    "query_id": query["query_id"],
+                    "query": query["query"],
+                    "label": query["label"],
+                    "status": query["status"],
+                    "record_count": query["record_count"],
+                    "candidate_ids": query["candidate_ids"],
+                    "material_ids": query["material_ids"],
+                    "error_message": query.get("error_message"),
+                }
+                for query in candidate_payload["materials_project_appendix"]["queries"]
+            ],
+            "limitations": candidate_payload["materials_project_appendix"][
+                "limitations"
+            ],
+        },
+        "conceptual_target_system": _conceptual_target_system(),
         "latest_daily_manifest": _latest_daily_manifest(),
         "dashboard_manifest": bundle.manifest,
     }

@@ -12,11 +12,13 @@ flowchart LR
     P --> A["Aviation mission models"]
     A --> U["Uncertainty and reality filters"]
     U --> R["Evidence-gated candidate assessments"]
-    R --> B["Streamlit scientific dashboard"]
-    R --> W["Static mission-control website JSON"]
-    R --> Q["Daily reproducible reports"]
+    X --> E["Candidate evidence dossiers"]
+    R --> E
+    E --> B["Streamlit scientific dashboard"]
+    E --> W["Static mission-control website JSON"]
+    E --> Q["Daily reproducible reports"]
     B --> M["Hashed method cards and downloadable artifacts"]
-    W --> P["High-contrast public website"]
+    W --> SITE["High-contrast public website"]
     V --> Q
     C --> Q
 ```
@@ -53,3 +55,8 @@ The static website follows:
 
 `website chart -> website/mission-control-data.json -> dashboard manifest ->
 hashed Phase 2/3 artifacts -> versioned configs -> method cards -> limitations`.
+
+Candidate dossier cards follow:
+
+`website candidate card -> website/mission-control-data.json -> reports/candidates
+-> registry chemistry family + metadata appendix -> source status + limitations`.

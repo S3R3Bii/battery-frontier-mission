@@ -21,12 +21,13 @@ jobs:
       - run: python -m battery_frontier.cli physics-reference
       - run: python -m battery_frontier.cli aviation-reference
       - run: python -m battery_frontier.cli dashboard-artifacts
+      - run: python -m battery_frontier.cli candidate-dossiers
       - run: python -m battery_frontier.cli daily-report
       - run: python -m battery_frontier.cli website-data
       - name: Commit generated report
         run: |
           git config user.name "battery-frontier-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add reports/daily reports/reference reports/aviation reports/dashboard website/mission-control-data.json
+          git add reports/daily reports/reference reports/aviation reports/dashboard reports/candidates reports/source-metadata website/mission-control-data.json
           git diff --cached --quiet || git commit -m "report: daily mission and website update"
           git push
