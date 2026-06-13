@@ -111,6 +111,106 @@ CREATE TABLE IF NOT EXISTS measurements (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS experimental_source_snapshots (
+    snapshot_id VARCHAR PRIMARY KEY,
+    source_id VARCHAR NOT NULL,
+    source_name VARCHAR NOT NULL,
+    source_url VARCHAR NOT NULL,
+    doi VARCHAR,
+    license_status VARCHAR NOT NULL,
+    license_name VARCHAR NOT NULL,
+    retrieval_timestamp TIMESTAMP NOT NULL,
+    row_count INTEGER NOT NULL,
+    metadata_only BOOLEAN NOT NULL,
+    system_boundary VARCHAR NOT NULL,
+    limitations VARCHAR NOT NULL,
+    manifest_sha256 VARCHAR NOT NULL,
+    manifest_json JSON NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS raw_file_manifests (
+    raw_file_id VARCHAR PRIMARY KEY,
+    snapshot_id VARCHAR NOT NULL,
+    source_id VARCHAR NOT NULL,
+    file_name VARCHAR NOT NULL,
+    url VARCHAR NOT NULL,
+    local_path VARCHAR NOT NULL,
+    supplied_md5 VARCHAR,
+    computed_md5 VARCHAR,
+    computed_sha256 VARCHAR,
+    expected_size_bytes BIGINT,
+    local_size_bytes BIGINT,
+    retrieval_timestamp TIMESTAMP NOT NULL,
+    parser_status VARCHAR NOT NULL,
+    system_boundary VARCHAR NOT NULL,
+    license_status VARCHAR NOT NULL,
+    limitations VARCHAR NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS parsed_cell_timeseries (
+    parsed_timeseries_id VARCHAR PRIMARY KEY,
+    raw_file_id VARCHAR NOT NULL,
+    source_id VARCHAR NOT NULL,
+    file_name VARCHAR NOT NULL,
+    row_count INTEGER NOT NULL,
+    units_json JSON NOT NULL,
+    column_summary_json JSON NOT NULL,
+    sign_conventions_json JSON NOT NULL,
+    quality_status VARCHAR NOT NULL,
+    system_boundary VARCHAR NOT NULL,
+    pack_level_evidence BOOLEAN NOT NULL,
+    candidate_ranking_evidence BOOLEAN NOT NULL,
+    parsed_at TIMESTAMP NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS cell_cycle_summaries (
+    cycle_summary_id VARCHAR PRIMARY KEY,
+    parsed_timeseries_id VARCHAR NOT NULL,
+    source_id VARCHAR NOT NULL,
+    file_name VARCHAR NOT NULL,
+    cycle_scope VARCHAR NOT NULL,
+    metrics_json JSON NOT NULL,
+    caveats_json JSON NOT NULL,
+    system_boundary VARCHAR NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS impedance_summaries (
+    impedance_summary_id VARCHAR PRIMARY KEY,
+    raw_file_id VARCHAR NOT NULL,
+    source_id VARCHAR NOT NULL,
+    file_name VARCHAR NOT NULL,
+    row_count INTEGER NOT NULL,
+    columns_json JSON NOT NULL,
+    missing_values_json JSON NOT NULL,
+    quality_status VARCHAR NOT NULL,
+    system_boundary VARCHAR NOT NULL,
+    pack_level_evidence BOOLEAN NOT NULL,
+    candidate_ranking_evidence BOOLEAN NOT NULL,
+    parsed_at TIMESTAMP NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS measurement_quality_reports (
+    report_id VARCHAR PRIMARY KEY,
+    source_id VARCHAR NOT NULL,
+    report_path VARCHAR NOT NULL,
+    report_sha256 VARCHAR NOT NULL,
+    quality_status VARCHAR NOT NULL,
+    parsed_timeseries_count INTEGER NOT NULL,
+    parsed_impedance_count INTEGER NOT NULL,
+    failed_file_count INTEGER NOT NULL,
+    system_boundary VARCHAR NOT NULL,
+    pack_level_evidence BOOLEAN NOT NULL,
+    candidate_ranking_evidence BOOLEAN NOT NULL,
+    generated_at TIMESTAMP NOT NULL,
+    report_json JSON NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE IF NOT EXISTS aviation_scenarios (
     scenario_id VARCHAR NOT NULL,
     version INTEGER NOT NULL,

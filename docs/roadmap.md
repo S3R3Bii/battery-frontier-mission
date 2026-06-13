@@ -17,8 +17,11 @@
 - Exit: one licensed dataset can pass validation into an immutable snapshot.
 - First approved source: Carnegie Mellon eVTOL Battery Dataset, CC BY 4.0,
   cell-level aviation-duty-cycle evidence source.
-- Remaining exit item: fetch the approved metadata snapshot, then download,
-  hash, parse, and audit measurement files before exposing measured values.
+- Current status: approved metadata snapshot exists; a representative raw subset
+  can be downloaded, hash-verified, parsed, and summarized as cell-level
+  evidence only.
+- Remaining exit item: broaden parsing across the full archive, normalize
+  measurement tables, and retain unit/sign-convention audit results.
 
 ## Phase 2: Baseline Physics - Local Foundation Complete
 
@@ -49,8 +52,9 @@
 - Sweep aviation requirements, pack architecture penalties, and candidate
   what-if envelopes to expose feasible and infeasible regions.
 - Implemented locally: aviation requirement grid, pack trade-space grid,
-  candidate parameter envelopes, explicit infeasible ledger, artifact hashes,
-  daily-report integration, and static website visualization.
+  candidate parameter envelopes, long-haul feasibility stress tests, explicit
+  infeasible ledger, artifact hashes, daily-report integration, partner dossier
+  integration, and static website visualization.
 - Boundary: these are simulations and sensitivity maps, not audited material
   performance, aircraft designs, certification evidence, or rankings.
 - Remaining exit items: benchmark sweeps against published aircraft studies and
@@ -64,10 +68,26 @@
   energy chart, mission segment and sizing charts, payload-range and sensitivity
   views, source/citation audit pages, method cards, downloads, hash verification,
   static website data export, candidate evidence dossiers, Materials Project
-  metadata appendix, simulation campaign panels, a conceptual target-aircraft
-  mission reminder, and a polished mission-control public surface.
+  metadata appendix, CMU measurement pipeline panel, manufacturer/propulsion
+  context tables, dataset triage table, partner dossier links, simulation
+  campaign panels, a conceptual target-aircraft mission reminder, and a polished
+  mission-control public surface.
 - Remaining exit item: replace fixture-only scientific content with audited
-  experimental measurements while retaining uncertainty and provenance.
+  comparable pack/cell measurements while retaining uncertainty and provenance.
+
+## Phase 4.5: Evidence and Partner Automation - Active
+
+- Add source-approved experimental parsing, long-haul diagnostics, manufacturer
+  context, dataset triage, and partner-facing reporting without enabling
+  unsupported ranking.
+- Implemented locally: CMU subset download/verification/parser, raw manifest
+  verification, measurement summary artifacts, 12 dataset candidates, 8 aircraft
+  systems, 7 propulsion systems, five partner dossier reports, and significant
+  archive snapshots.
+- Boundary: CMU evidence is cell-level eVTOL duty-cycle evidence. It is not
+  pack-level proof, long-haul feasibility proof, or candidate-ranking evidence.
+- Remaining exit items: full-archive parsing, local analytical storage,
+  uncertainty extraction, pack-level datasets, and external review.
 
 ## Phase 5: ML Screening
 

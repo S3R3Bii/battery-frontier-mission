@@ -194,6 +194,79 @@ class DataSource(StrictModel):
     citation_ids: list[str]
 
 
+class AircraftSystem(StrictModel):
+    id: str = Field(pattern=r"^[a-z0-9_.-]+$")
+    manufacturer: str
+    vehicle_name: str
+    aircraft_class: str
+    role: str
+    range_km: float | None = Field(default=None, gt=0)
+    cruise_speed_kmh: float | None = Field(default=None, gt=0)
+    max_speed_kmh: float | None = Field(default=None, gt=0)
+    payload_kg: float | None = Field(default=None, gt=0)
+    passenger_capacity: int | None = Field(default=None, ge=0)
+    mtow_kg: float | None = Field(default=None, gt=0)
+    battery_capacity_kWh: float | None = Field(default=None, gt=0)
+    motor_count: int | None = Field(default=None, ge=0)
+    motor_power_kW: float | None = Field(default=None, gt=0)
+    propulsor_count: int | None = Field(default=None, ge=0)
+    certification_status: str
+    source_url: HttpUrl
+    source_type: str
+    source_confidence: str
+    values_status: str
+    date_accessed: date
+    limitations: str = Field(min_length=20)
+
+    @model_validator(mode="after")
+    def validate_source_boundary(self) -> AircraftSystem:
+        allowed_values = {"official", "official_partial", "third_party", "estimated"}
+        if self.values_status not in allowed_values:
+            raise ValueError(f"values_status must be one of {sorted(allowed_values)}")
+        if not self.source_url:
+            raise ValueError("manufacturer example requires a source URL")
+        return self
+
+
+class PropulsionSystem(StrictModel):
+    id: str = Field(pattern=r"^[a-z0-9_.-]+$")
+    manufacturer: str
+    system_name: str
+    system_type: str
+    use_case: str
+    max_power_kW: float | None = Field(default=None, gt=0)
+    continuous_power_kW: float | None = Field(default=None, gt=0)
+    propulsor_count: int | None = Field(default=None, ge=0)
+    aircraft_examples: list[str]
+    source_url: HttpUrl
+    source_type: str
+    source_confidence: str
+    values_status: str
+    date_accessed: date
+    limitations: str = Field(min_length=20)
+
+
+class DatasetCandidate(StrictModel):
+    id: str = Field(pattern=r"^[a-z0-9_.-]+$")
+    name: str
+    url: HttpUrl
+    doi: str | None = None
+    category: str
+    license_status: str
+    system_boundary: str
+    variables: list[str] = Field(min_length=1)
+    likely_usefulness: str = Field(min_length=20)
+    ingestion_risk: str
+    downloadable: bool
+    redistributable: bool | None = None
+    measured_performance: bool
+    metadata_only: bool
+    priority: int = Field(ge=1, le=5)
+    status: str
+    date_accessed: date
+    limitations: str = Field(min_length=20)
+
+
 class ReactionSide(StrEnum):
     REACTANT = "reactant"
     PRODUCT = "product"

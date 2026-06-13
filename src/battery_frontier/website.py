@@ -53,6 +53,30 @@ def _simulation_campaign_payload() -> dict[str, Any]:
     return _read_json_if_exists(path) or build_simulation_campaign()
 
 
+def _measurement_payloads() -> dict[str, Any]:
+    measurement_dir = PROJECT_ROOT / "reports" / "measurements"
+    raw_manifest = _read_json_if_exists(measurement_dir / "cmu_evtol_raw_file_manifest.json")
+    measurement_summary = _read_json_if_exists(
+        measurement_dir / "cmu_evtol_measurement_summary.json"
+    )
+    audited_count = 0
+    if measurement_summary and measurement_summary.get("quality_status") == "passed":
+        audited_count = int(measurement_summary.get("timeseries_file_count", 0)) + int(
+            measurement_summary.get("impedance_file_count", 0)
+        )
+    return {
+        "raw_manifest": raw_manifest,
+        "measurement_summary": measurement_summary,
+        "audited_measurement_count": audited_count,
+    }
+
+
+def _partner_dossier_payload() -> dict[str, Any] | None:
+    return _read_json_if_exists(
+        PROJECT_ROOT / "reports" / "partners" / "latest" / "partner_dossiers_manifest.json"
+    )
+
+
 def _conceptual_target_system() -> dict[str, Any]:
     return {
         "title": "Long-Term Conceptual Target Aircraft",
@@ -156,7 +180,10 @@ def build_website_data() -> dict[str, Any]:
     connector_rows = source_status_rows(registries)
     candidate_payload = _candidate_dossier_payload()
     simulation_payload = _simulation_campaign_payload()
+    measurement_payload = _measurement_payloads()
+    partner_payload = _partner_dossier_payload()
     simulation_summary = simulation_payload["summary"]
+    audited_measurements = measurement_payload["audited_measurement_count"]
     mission_bands = _mission_bands(bundle)
     physics_points = [
         point
@@ -186,17 +213,25 @@ def build_website_data() -> dict[str, Any]:
         "technology_readiness_claim": False,
         "ranking_enabled": False,
         "ranking_gate_reason": gate.reason,
-        "audited_measurements": 0,
+        "audited_measurements": audited_measurements,
         "metrics": {
             "assumptions": len(registries.assumptions),
             "chemistry_families": len(registries.chemistries),
             "citations": len(registries.citations),
             "data_sources": len(registries.data_sources),
+            "aircraft_systems": len(registries.aircraft_systems),
+            "propulsion_systems": len(registries.propulsion_systems),
+            "dataset_candidates": len(registries.dataset_candidates),
             "physics_fixtures": len(registries.physics_reference_cases),
             "mission_fixtures": len(registries.segmented_mission_cases),
             "candidate_dossiers": candidate_payload["summary"]["candidate_count"],
+            "partner_dossiers": (
+                partner_payload["dossier_count"] if partner_payload else 0
+            ),
             "simulation_rows": simulation_summary["aviation_requirement_grid_rows"]
-            + simulation_summary["pack_trade_space_rows"],
+            + simulation_summary["pack_trade_space_rows"]
+            + simulation_summary["long_haul_study_count"],
+            "long_haul_cases": simulation_summary["long_haul_study_count"],
             "verified_artifacts": verified_count,
             "total_artifacts": len(verification),
         },
@@ -225,10 +260,74 @@ def build_website_data() -> dict[str, Any]:
             "ranking_missing_by_candidate"
         ],
         "simulation_campaign_summary": simulation_summary,
+        "measurement_pipeline": {
+            "approved_source": {
+                "source_id": "datasource.cmu_evtol_battery",
+                "name": "Carnegie Mellon eVTOL Battery Dataset",
+                "url": "https://kilthub.cmu.edu/articles/dataset/eVTOL_Battery_Dataset/14226830",
+                "doi": "10.1184/R1/14226830",
+                "license": "CC BY 4.0",
+                "system_boundary": "cell-level eVTOL duty-cycle evidence only",
+            },
+            "raw_manifest_present": measurement_payload["raw_manifest"] is not None,
+            "measurement_summary_present": (
+                measurement_payload["measurement_summary"] is not None
+            ),
+            "raw_snapshot": {
+                "selected_file_count": (
+                    measurement_payload["raw_manifest"].get("selected_file_count")
+                    if measurement_payload["raw_manifest"]
+                    else 0
+                ),
+                "selected_size_bytes": (
+                    measurement_payload["raw_manifest"].get("selected_size_bytes")
+                    if measurement_payload["raw_manifest"]
+                    else 0
+                ),
+                "downloaded_size_bytes": (
+                    measurement_payload["raw_manifest"].get("downloaded_size_bytes")
+                    if measurement_payload["raw_manifest"]
+                    else 0
+                ),
+                "status_counts": (
+                    measurement_payload["raw_manifest"].get("status_counts")
+                    if measurement_payload["raw_manifest"]
+                    else {}
+                ),
+                "raw_files_committed": (
+                    measurement_payload["raw_manifest"].get("raw_files_committed")
+                    if measurement_payload["raw_manifest"]
+                    else False
+                ),
+            },
+            "quality_report": measurement_payload["measurement_summary"],
+            "audited_measurement_count": audited_measurements,
+            "pack_level_evidence": False,
+            "candidate_ranking_evidence": False,
+            "claim_boundary": (
+                "CMU source is approved experimental cell-level evidence. It is not "
+                "pack-level proof or candidate-ranking evidence."
+            ),
+        },
         "aviation_requirement_map": {
             "row_count": len(simulation_payload["aviation_requirement_grid"]),
             "rows": simulation_payload["aviation_requirement_grid"],
         },
+        "long_haul_feasibility": {
+            "row_count": len(simulation_payload["long_haul_feasibility"]),
+            "rows": simulation_payload["long_haul_feasibility"],
+            "claim_boundary": "simulation diagnostic only, not an aircraft design.",
+        },
+        "manufacturer_examples": [
+            record.model_dump(mode="json") for record in registries.aircraft_systems
+        ],
+        "propulsion_examples": [
+            record.model_dump(mode="json") for record in registries.propulsion_systems
+        ],
+        "dataset_candidates": [
+            record.model_dump(mode="json") for record in registries.dataset_candidates
+        ],
+        "partner_dossiers": partner_payload,
         "pack_trade_space_summary": {
             "row_count": simulation_summary["pack_trade_space_rows"],
             "infeasible_count": simulation_summary["pack_trade_infeasible_count"],

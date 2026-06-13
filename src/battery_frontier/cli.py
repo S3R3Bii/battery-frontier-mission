@@ -16,6 +16,12 @@ from battery_frontier.data.connectors import (
     write_snapshot_manifest,
 )
 from battery_frontier.db import initialize_database
+from battery_frontier.measurements.cmu_evtol import (
+    download_cmu_evtol_files,
+    verify_raw_snapshot,
+    write_measurement_summary,
+)
+from battery_frontier.partners.dossiers import write_partner_dossiers
 from battery_frontier.physics.reference_cases import write_reference_results
 from battery_frontier.registry import load_registries
 from battery_frontier.reporting.daily import generate_daily_report
@@ -86,6 +92,47 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Export static website mission-control data",
     )
     website.add_argument("--output", type=Path)
+    fetch_cmu = subparsers.add_parser(
+        "source-fetch-cmu-evtol",
+        help="Create/fetch approved CMU eVTOL raw snapshot manifest",
+    )
+    fetch_cmu.add_argument(
+        "--mode",
+        choices=("metadata", "subset", "all"),
+        default="metadata",
+        help="metadata writes a manifest only; subset fetches README plus small CSV files",
+    )
+    fetch_cmu.add_argument("--raw-dir", type=Path)
+    fetch_cmu.add_argument("--max-files", type=int)
+    fetch_cmu.add_argument("--force", action="store_true")
+    fetch_cmu.add_argument("--source-manifest", type=Path)
+    fetch_cmu.add_argument("--output-dir", type=Path)
+    verify_raw = subparsers.add_parser(
+        "verify-raw-snapshots",
+        help="Verify raw CMU eVTOL file hashes against the raw manifest",
+    )
+    verify_raw.add_argument("--manifest", type=Path)
+    parse_cmu = subparsers.add_parser(
+        "parse-cmu-evtol",
+        help="Parse downloaded CMU eVTOL files and write a measurement summary",
+    )
+    parse_cmu.add_argument("--raw-manifest", type=Path)
+    parse_cmu.add_argument("--output-dir", type=Path)
+    parse_cmu.add_argument("--max-files", type=int, default=3)
+    parse_cmu.add_argument("--max-rows-per-file", type=int, default=50_000)
+    measurement = subparsers.add_parser(
+        "measurement-summary",
+        help="Generate the latest measurement summary artifact",
+    )
+    measurement.add_argument("--raw-manifest", type=Path)
+    measurement.add_argument("--output-dir", type=Path)
+    measurement.add_argument("--max-files", type=int, default=3)
+    measurement.add_argument("--max-rows-per-file", type=int, default=50_000)
+    partner = subparsers.add_parser(
+        "partner-dossiers",
+        help="Generate partner-facing latest and archived dossier reports",
+    )
+    partner.add_argument("--output-dir", type=Path)
     return parser
 
 
@@ -162,6 +209,42 @@ def main() -> None:
     elif args.command == "website-data":
         path = export_website_data(output_path=args.output)
         print(f"website data: {path}")
+    elif args.command == "source-fetch-cmu-evtol":
+        path = download_cmu_evtol_files(
+            mode=args.mode,
+            raw_dir=args.raw_dir,
+            max_files=args.max_files,
+            force=args.force,
+            source_manifest_path=args.source_manifest,
+            output_dir=args.output_dir,
+        )
+        print(f"cmu raw manifest: {path}")
+    elif args.command == "verify-raw-snapshots":
+        rows = verify_raw_snapshot(args.manifest)
+        print(json.dumps(rows, indent=2, sort_keys=True))
+        failed = [
+            row
+            for row in rows
+            if row["status"] != "metadata_only" and not row["hash_matches"]
+        ]
+        if failed:
+            raise SystemExit(1)
+    elif args.command in {"parse-cmu-evtol", "measurement-summary"}:
+        json_path, markdown_path = write_measurement_summary(
+            raw_manifest_path=args.raw_manifest,
+            output_dir=args.output_dir,
+            max_files=args.max_files,
+            max_rows_per_file=args.max_rows_per_file,
+        )
+        print(f"measurement summary: {json_path}")
+        print(f"measurement report: {markdown_path}")
+    elif args.command == "partner-dossiers":
+        manifest_path, archive_dir = write_partner_dossiers(output_dir=args.output_dir)
+        print(f"partner dossier manifest: {manifest_path}")
+        if archive_dir:
+            print(f"partner dossier archive: {archive_dir}")
+        else:
+            print("partner dossier archive: not created (no significant input change)")
 
 
 if __name__ == "__main__":

@@ -10,7 +10,10 @@ def test_website_export_contains_frontier_and_guardrails(tmp_path) -> None:
     assert payload["phase"] == "4"
     assert payload["technology_readiness_claim"] is False
     assert payload["ranking_enabled"] is False
-    assert payload["audited_measurements"] == 0
+    assert (
+        payload["audited_measurements"]
+        == payload["measurement_pipeline"]["audited_measurement_count"]
+    )
     assert payload["frontier"]["mission_bands"]
     assert payload["frontier"]["points"][0]["specific_energy_Wh_kg"] is None
     assert "audited-measurement lane is empty" in payload["frontier"]["unknown_region_note"]
@@ -21,7 +24,16 @@ def test_website_export_contains_frontier_and_guardrails(tmp_path) -> None:
     assert payload["simulation_campaign_summary"]["simulation_only"] is True
     assert payload["simulation_campaign_summary"]["ranking_enabled"] is False
     assert payload["simulation_campaign_summary"]["audited_measurements"] == 0
+    assert payload["simulation_campaign_summary"]["long_haul_study_count"] == 6
     assert payload["aviation_requirement_map"]["row_count"] > 0
+    assert payload["long_haul_feasibility"]["row_count"] == 6
+    assert payload["measurement_pipeline"]["approved_source"]["license"] == "CC BY 4.0"
+    assert payload["measurement_pipeline"]["pack_level_evidence"] is False
+    assert payload["measurement_pipeline"]["candidate_ranking_evidence"] is False
+    assert payload["manufacturer_examples"]
+    assert payload["propulsion_examples"]
+    assert payload["dataset_candidates"]
+    assert payload["partner_dossiers"] is not None
     assert payload["pack_trade_space_summary"]["row_count"] > 0
     assert payload["candidate_envelopes"]
     assert payload["what_would_need_to_be_true"]

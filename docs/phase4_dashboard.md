@@ -18,8 +18,15 @@ validated battery claims.
 
 The static site also consumes the Phase 3.5/4.5 simulation campaign in
 [`reports/simulations/`](../reports/simulations/). Those campaign outputs are
-requirement maps, pack trade-space sweeps, and candidate what-if envelopes. They
-do not create experimental evidence or enable chemistry ranking.
+requirement maps, pack trade-space sweeps, long-haul stress tests, and candidate
+what-if envelopes. They do not create experimental evidence or enable chemistry
+ranking.
+
+The static site now consumes CMU eVTOL measurement-pipeline artifacts from
+[`reports/measurements/`](../reports/measurements/), manufacturer and propulsion
+registries from `configs/`, dataset candidates, and partner dossier manifests
+from [`reports/partners/latest/`](../reports/partners/latest/). All of these are
+displayed with source-boundary labels.
 
 ## Pages
 
@@ -46,6 +53,9 @@ Generate the website data after refreshing artifacts:
 python -m battery_frontier.cli dashboard-artifacts
 python -m battery_frontier.cli candidate-dossiers
 python -m battery_frontier.cli simulation-campaign
+python -m battery_frontier.cli source-fetch-cmu-evtol --mode subset
+python -m battery_frontier.cli parse-cmu-evtol
+python -m battery_frontier.cli partner-dossiers
 python -m battery_frontier.cli daily-report
 python -m battery_frontier.cli website-data
 python -m http.server 8000
@@ -55,7 +65,9 @@ Open `http://localhost:8000/website/`.
 
 The primary website chart shows:
 
-- audited measurement lane: currently empty
+- audited/comparable frontier lane: no pack-level value yet
+- CMU measurement pipeline: approved cell-level source, raw hash status, parser
+  status, and explicit "not pack evidence" boundary
 - local physics fixture lane: theoretical or simulation-only values
 - mission pack-input lane: configured Phase 3 inputs, not validated
   aviation requirements
@@ -65,6 +77,8 @@ The primary website chart shows:
 - simulation campaign rail: aviation requirement map, pack architecture
   sensitivity, candidate envelopes, infeasible regions, and "what would need to
   be true" blockers
+- manufacturer and propulsion context rail: source-labeled examples only
+- partner dossier rail: latest report links and archive status
 - conceptual target aircraft rail: mission reminder only, not a design claim
 
 ## Reproduction
@@ -83,7 +97,8 @@ Open `http://localhost:8501`.
 
 ## Scientific Guardrails
 
-- chemistry ranking remains disabled with zero audited measurements
+- chemistry ranking remains disabled even when CMU cell-level files parse
+- parsed CMU files remain cell-level and cannot appear as pack-level evidence
 - theoretical, simulated, speculative, and missing evidence are visibly distinct
 - phase progress describes software implementation only
 - every downloadable scientific result has a SHA-256 hash

@@ -5,6 +5,7 @@ import pytest
 from battery_frontier.registry import load_registries
 from battery_frontier.simulations.campaign import (
     build_aviation_requirement_grid,
+    build_long_haul_feasibility_studies,
     build_simulation_campaign,
     validate_sweep_parameters,
     verify_simulation_artifacts,
@@ -22,6 +23,7 @@ def test_simulation_campaign_artifacts_are_generated(tmp_path) -> None:
     assert summary["summary"]["aviation_requirement_grid_rows"] == aviation["row_count"]
     assert summary["summary"]["pack_trade_space_rows"] == pack["row_count"]
     assert summary["summary"]["candidate_envelope_count"] == 11
+    assert summary["summary"]["long_haul_study_count"] == 6
     assert summary["summary"]["ranking_enabled"] is False
     assert summary["summary"]["audited_measurements"] == 0
     assert all(row["hash_matches"] for row in verify_simulation_artifacts(summary_path))
@@ -54,6 +56,18 @@ def test_impossible_mission_conditions_are_explicitly_infeasible() -> None:
     assert infeasible
     assert all(row["limiting_constraint"] for row in infeasible)
     assert any("required takeoff mass" in row["infeasibility_reasons"] for row in infeasible)
+
+
+def test_long_haul_stress_cases_are_explicitly_infeasible_not_crashes() -> None:
+    rows = build_long_haul_feasibility_studies()
+    by_id = {row["profile_id"]: row for row in rows}
+    stress = by_id["mission.long_haul_6000km_stress"]
+
+    assert stress["feasible"] is False
+    assert stress["impossible_unknown_region"] is True
+    assert stress["infeasibility_reasons"]
+    assert stress["battery_sufficiency_index"] < 1
+    assert stress["ranking_evidence"] is False
 
 
 def test_simulation_outputs_never_become_audited_measurements() -> None:

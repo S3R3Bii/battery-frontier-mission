@@ -21,6 +21,14 @@ Priority order:
 
 No automated download is enabled until a source has `license_status: approved`.
 
+The dataset triage registry is
+[`configs/dataset_candidates.yaml`](../configs/dataset_candidates.yaml). It now
+tracks approved, review-required, and metadata-only candidates across battery
+cycling, impedance, degradation, safety, aviation, propulsion, materials,
+charging, and infrastructure categories. Rows in that registry are not ingested
+measurements unless the license, system boundary, units, provenance, and parser
+status have been approved.
+
 ## Connector Status
 
 The repository includes metadata-only connector scaffolding for source readiness,
@@ -35,9 +43,11 @@ Current behavior:
 
 - Carnegie Mellon eVTOL Battery Dataset has an approved CC BY 4.0 source record
   and an executable Figshare/KiltHub article-metadata connector. The connector
-  fetches article and file metadata only; full measurement files must still be
-  downloaded, hashed, parsed, unit-audited, and mapped to cell-level boundaries
-  before any measured values can appear as experimental evidence.
+  fetches article and file metadata only. The separate CMU raw-snapshot command
+  can download approved files, verify supplied MD5 and computed SHA-256 hashes,
+  parse representative cell-level time-series and impedance CSVs, and write a
+  measurement summary. Parsed CMU rows are cell-level evidence only; they are
+  not pack-level proof and not candidate-ranking evidence.
 - Materials Project uses `MP_API_KEY` and can execute a small metadata-only
   summary query when the key is present. Returned records are computed/material
   metadata, not cell, pack, cycle-life, safety, or aviation performance
@@ -82,3 +92,17 @@ These manifests are useful for finding candidate reports, benchmark studies, and
 approved measurement archives. Materials Project manifests are useful for
 computed-material discovery. CMU eVTOL manifests are approved source metadata,
 but not parsed measurements or ranking inputs.
+
+## CMU Measurement Commands
+
+```powershell
+python -m battery_frontier.cli source-fetch-cmu-evtol --mode metadata
+python -m battery_frontier.cli source-fetch-cmu-evtol --mode subset
+python -m battery_frontier.cli verify-raw-snapshots
+python -m battery_frontier.cli parse-cmu-evtol --max-files 3 --max-rows-per-file 50000
+python -m battery_frontier.cli measurement-summary
+```
+
+`--mode all` is available for the full archive, but raw files stay under
+`data/raw/approved/cmu_evtol_battery/` and are ignored by Git. Do not enable full
+archive download in CI without an explicit storage/runtime control.

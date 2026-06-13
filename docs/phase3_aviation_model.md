@@ -22,6 +22,8 @@ Generated results are written to
 - Phase 3.5 requirement sweeps that vary route distance, payload, reserve,
   lift-to-drag ratio, propulsion efficiency, thermal availability, degradation,
   pack specific energy, pack specific power, and C-rate
+- long-haul feasibility stress tests for short eVTOL, regional, 500 km,
+  1000 km, 3000 km, and 6000+ km diagnostic mission profiles
 
 ## Reference Fixtures
 
@@ -50,9 +52,11 @@ python -m battery_frontier.cli simulation-campaign
 
 `simulation-campaign` writes aviation requirement maps to
 [`reports/simulations/aviation_requirement_grid.json`](../reports/simulations/aviation_requirement_grid.json)
-and `.csv`. Those rows are simulation estimates and include explicit infeasible
-states. They are useful for asking what would need to be true, not for claiming
-that a real aircraft or battery meets those requirements.
+and `.csv`, plus
+[`reports/simulations/long_haul_feasibility.json`](../reports/simulations/long_haul_feasibility.json).
+Those rows are simulation estimates and include explicit infeasible states. They
+are useful for asking what would need to be true, not for claiming that a real
+aircraft or battery meets those requirements.
 
 ## Remaining Validation Gate
 

@@ -10,6 +10,11 @@ from pathlib import Path
 from typing import Any
 
 from battery_frontier import __version__
+from battery_frontier.aviation.mission import (
+    MissionEnergyFactors,
+    required_pack_specific_energy_Wh_kg,
+    steady_level_cruise_mechanical_energy_Wh,
+)
 from battery_frontier.aviation.segmented import (
     MissionDefinition,
     mission_definition_from_case,
@@ -76,6 +81,91 @@ PACK_CONTROL_FRACTIONS = (0.03, 0.06, 0.1)
 PACK_RESERVE_MARGINS = (0.1, 0.2, 0.3)
 PACK_DEGRADATION_MARGINS = (0.1, 0.2, 0.3)
 PACK_USABLE_ENERGY_FRACTIONS = (0.7, 0.85, 0.95)
+
+LONG_HAUL_PACK_SPECIFIC_ENERGY_WH_KG = 500.0
+LONG_HAUL_PACK_SPECIFIC_POWER_W_KG = 900.0
+LONG_HAUL_MAX_CONTINUOUS_C_RATE = 2.0
+LONG_HAUL_CELL_TO_PACK_EFFECTIVE_FRACTION = 0.72
+LONG_HAUL_PROFILES = (
+    {
+        "profile_id": "mission.short_evtol_hop",
+        "name": "Short eVTOL hop",
+        "distance_km": 40.0,
+        "aircraft_mass_kg": 2400.0,
+        "payload_mass_kg": 450.0,
+        "lift_to_drag_ratio": 10.0,
+        "cruise_speed_m_per_s": 55.0,
+        "reserve_fraction": 0.25,
+        "non_cruise_energy_fraction": 0.35,
+        "max_battery_mass_fraction": 0.35,
+        "thermal_degradation_margin_fraction": 0.18,
+    },
+    {
+        "profile_id": "mission.regional_commuter",
+        "name": "Regional commuter",
+        "distance_km": 250.0,
+        "aircraft_mass_kg": 6500.0,
+        "payload_mass_kg": 1200.0,
+        "lift_to_drag_ratio": 14.0,
+        "cruise_speed_m_per_s": 95.0,
+        "reserve_fraction": 0.25,
+        "non_cruise_energy_fraction": 0.18,
+        "max_battery_mass_fraction": 0.42,
+        "thermal_degradation_margin_fraction": 0.18,
+    },
+    {
+        "profile_id": "mission.regional_500km",
+        "name": "500 km regional",
+        "distance_km": 500.0,
+        "aircraft_mass_kg": 9000.0,
+        "payload_mass_kg": 1800.0,
+        "lift_to_drag_ratio": 16.0,
+        "cruise_speed_m_per_s": 115.0,
+        "reserve_fraction": 0.25,
+        "non_cruise_energy_fraction": 0.16,
+        "max_battery_mass_fraction": 0.45,
+        "thermal_degradation_margin_fraction": 0.18,
+    },
+    {
+        "profile_id": "mission.thin_haul_1000km",
+        "name": "1000 km thin-haul",
+        "distance_km": 1000.0,
+        "aircraft_mass_kg": 19000.0,
+        "payload_mass_kg": 3600.0,
+        "lift_to_drag_ratio": 18.0,
+        "cruise_speed_m_per_s": 135.0,
+        "reserve_fraction": 0.25,
+        "non_cruise_energy_fraction": 0.14,
+        "max_battery_mass_fraction": 0.45,
+        "thermal_degradation_margin_fraction": 0.2,
+    },
+    {
+        "profile_id": "mission.medium_haul_3000km",
+        "name": "3000 km medium-haul",
+        "distance_km": 3000.0,
+        "aircraft_mass_kg": 70000.0,
+        "payload_mass_kg": 15000.0,
+        "lift_to_drag_ratio": 20.0,
+        "cruise_speed_m_per_s": 210.0,
+        "reserve_fraction": 0.22,
+        "non_cruise_energy_fraction": 0.1,
+        "max_battery_mass_fraction": 0.45,
+        "thermal_degradation_margin_fraction": 0.22,
+    },
+    {
+        "profile_id": "mission.long_haul_6000km_stress",
+        "name": "6000+ km long-haul stress test",
+        "distance_km": 6200.0,
+        "aircraft_mass_kg": 180000.0,
+        "payload_mass_kg": 42000.0,
+        "lift_to_drag_ratio": 21.0,
+        "cruise_speed_m_per_s": 235.0,
+        "reserve_fraction": 0.2,
+        "non_cruise_energy_fraction": 0.08,
+        "max_battery_mass_fraction": 0.45,
+        "thermal_degradation_margin_fraction": 0.25,
+    },
+)
 
 ENVELOPE_DEFAULTS: dict[str, dict[str, Any]] = {
     "chemistry.lithium_ion_intercalation": {
@@ -472,6 +562,110 @@ def build_pack_trade_space() -> list[dict[str, Any]]:
     return rows
 
 
+def build_long_haul_feasibility_studies() -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for profile in LONG_HAUL_PROFILES:
+        validate_sweep_parameters(
+            route_distance_km=float(profile["distance_km"]),
+            aircraft_mass_kg=float(profile["aircraft_mass_kg"]),
+            payload_mass_kg=float(profile["payload_mass_kg"]),
+            pack_specific_energy_Wh_kg=LONG_HAUL_PACK_SPECIFIC_ENERGY_WH_KG,
+            pack_specific_power_W_kg=LONG_HAUL_PACK_SPECIFIC_POWER_W_KG,
+            maximum_continuous_c_rate=LONG_HAUL_MAX_CONTINUOUS_C_RATE,
+            reserve_margin_fraction=float(profile["reserve_fraction"]),
+        )
+        cruise_energy = steady_level_cruise_mechanical_energy_Wh(
+            aircraft_mass_kg=float(profile["aircraft_mass_kg"]),
+            route_distance_km=float(profile["distance_km"]),
+            lift_to_drag_ratio=float(profile["lift_to_drag_ratio"]),
+        )
+        factors = MissionEnergyFactors(
+            propulsion_efficiency=0.86,
+            usable_depth_of_discharge=0.82,
+            state_of_health=0.82,
+            thermal_availability=1.0 - float(profile["thermal_degradation_margin_fraction"]),
+            reserve_fraction=float(profile["reserve_fraction"]),
+            non_cruise_energy_fraction=float(profile["non_cruise_energy_fraction"]),
+        )
+        nominal_energy = factors.nominal_battery_energy_Wh(cruise_energy)
+        required_pack_energy = required_pack_specific_energy_Wh_kg(
+            nominal_energy,
+            aircraft_mass_kg=float(profile["aircraft_mass_kg"]),
+            battery_mass_fraction=float(profile["max_battery_mass_fraction"]),
+        )
+        implied_cell_energy = (
+            required_pack_energy / LONG_HAUL_CELL_TO_PACK_EFFECTIVE_FRACTION
+        )
+        battery_mass = nominal_energy / LONG_HAUL_PACK_SPECIFIC_ENERGY_WH_KG
+        battery_fraction = battery_mass / float(profile["aircraft_mass_kg"])
+        cruise_duration_h = float(profile["distance_km"]) * 1000.0 / (
+            float(profile["cruise_speed_m_per_s"]) * 3600.0
+        )
+        electrical_power_w = cruise_energy / max(cruise_duration_h, 1e-9) / 0.86
+        c_rate = electrical_power_w / max(nominal_energy, 1e-9)
+        power_limited = (
+            electrical_power_w
+            > battery_mass * LONG_HAUL_PACK_SPECIFIC_POWER_W_KG
+            if battery_mass > 0
+            else True
+        )
+        reasons = []
+        if battery_fraction > float(profile["max_battery_mass_fraction"]):
+            reasons.append("required battery mass fraction exceeds configured structural limit")
+        if required_pack_energy > LONG_HAUL_PACK_SPECIFIC_ENERGY_WH_KG:
+            reasons.append("required pack specific energy exceeds diagnostic pack assumption")
+        if implied_cell_energy > RESEARCH_CELL_SPECIFIC_ENERGY_CEILING_WH_KG:
+            reasons.append("implied cell specific energy exceeds research ceiling")
+        if c_rate > LONG_HAUL_MAX_CONTINUOUS_C_RATE:
+            reasons.append("continuous C-rate exceeds configured battery-operation limit")
+        if power_limited:
+            reasons.append("pack specific power is insufficient for estimated cruise power")
+        feasible = not reasons
+        rows.append(
+            {
+                "artifact_type": "long_haul_feasibility_study",
+                "profile_id": profile["profile_id"],
+                "name": profile["name"],
+                "evidence_class": "simulation_estimate",
+                "simulation_only": True,
+                "performance_evidence": False,
+                "audited_measurement": False,
+                "ranking_evidence": False,
+                "distance_km": profile["distance_km"],
+                "aircraft_mass_kg": profile["aircraft_mass_kg"],
+                "payload_mass_kg": profile["payload_mass_kg"],
+                "lift_to_drag_ratio": profile["lift_to_drag_ratio"],
+                "cruise_speed_m_per_s": profile["cruise_speed_m_per_s"],
+                "required_pack_energy_Wh": round(nominal_energy, 3),
+                "required_pack_specific_energy_Wh_kg": round(required_pack_energy, 3),
+                "battery_mass_fraction_at_500Whkg_pack": round(battery_fraction, 5),
+                "cell_specific_energy_implied_by_pack_overhead_Wh_kg": round(
+                    implied_cell_energy,
+                    3,
+                ),
+                "estimated_cruise_electrical_power_W": round(electrical_power_w, 3),
+                "estimated_continuous_c_rate": round(c_rate, 5),
+                "reserve_fraction": profile["reserve_fraction"],
+                "thermal_degradation_margin_fraction": profile[
+                    "thermal_degradation_margin_fraction"
+                ],
+                "battery_sufficiency_index": round(
+                    LONG_HAUL_PACK_SPECIFIC_ENERGY_WH_KG / required_pack_energy,
+                    5,
+                ),
+                "feasible": feasible,
+                "feasibility_status": "diagnostic_feasible" if feasible else "infeasible",
+                "infeasibility_reasons": reasons,
+                "impossible_unknown_region": not feasible,
+                "claim_boundary": (
+                    "First-order model diagnostic only; not aircraft design, "
+                    "certification evidence, or technology score."
+                ),
+            }
+        )
+    return rows
+
+
 def _pack_sensitivity(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     variables = [
         "cell_to_pack_mass_efficiency",
@@ -628,6 +822,7 @@ def _summary(
     aviation_rows: list[dict[str, Any]],
     pack_rows: list[dict[str, Any]],
     candidate_rows: list[dict[str, Any]],
+    long_haul_rows: list[dict[str, Any]],
 ) -> dict[str, Any]:
     feasible_count = sum(bool(row["feasible"]) for row in aviation_rows)
     infeasible_count = len(aviation_rows) - feasible_count
@@ -664,6 +859,15 @@ def _summary(
         "pack_trade_space_rows": len(pack_rows),
         "pack_trade_infeasible_count": pack_infeasible_count,
         "candidate_envelope_count": len(candidate_rows),
+        "long_haul_study_count": len(long_haul_rows),
+        "long_haul_infeasible_count": sum(not row["feasible"] for row in long_haul_rows),
+        "max_long_haul_required_pack_specific_energy_Wh_kg": max(
+            (
+                row["required_pack_specific_energy_Wh_kg"]
+                for row in long_haul_rows
+            ),
+            default=None,
+        ),
         "hemp_candidate_present": any(
             row["candidate_id"] == "candidate.hemp_bast_graphitic_carbon"
             for row in candidate_rows
@@ -680,6 +884,8 @@ def _summary(
             "and source-lineage evidence before ranking.",
             "Hemp-derived graphitic carbon needs primary-paper audit and full-cell "
             "translation before any aviation claim.",
+            "Long-haul battery-electric studies need aircraft-validated aero/propulsion "
+            "models, reserve rules, pack mass closures, and thermal transients.",
         ],
     }
 
@@ -693,7 +899,8 @@ def build_simulation_campaign(
     aviation_rows = build_aviation_requirement_grid(active_registries)
     pack_rows = build_pack_trade_space()
     candidate_rows = build_candidate_envelopes(active_registries, candidate_payload)
-    summary = _summary(aviation_rows, pack_rows, candidate_rows)
+    long_haul_rows = build_long_haul_feasibility_studies()
+    summary = _summary(aviation_rows, pack_rows, candidate_rows, long_haul_rows)
     return {
         "artifact_type": "simulation_campaign",
         "generated_at_utc": datetime.now(UTC).isoformat(),
@@ -707,6 +914,7 @@ def build_simulation_campaign(
         "aviation_requirement_grid": aviation_rows,
         "pack_trade_space": pack_rows,
         "candidate_envelopes": candidate_rows,
+        "long_haul_feasibility": long_haul_rows,
         "limitations": [
             "No row is an audited battery measurement.",
             "No candidate envelope enables chemistry ranking.",
@@ -797,6 +1005,7 @@ def write_simulation_campaign(
     pack_json = destination / "pack_trade_space.json"
     pack_csv = destination / "pack_trade_space.csv"
     envelopes_json = destination / "candidate_envelopes.json"
+    long_haul_json = destination / "long_haul_feasibility.json"
     summary_path = destination / "simulation_campaign_summary.json"
     markdown_path = destination / "simulation_campaign_summary.md"
 
@@ -826,6 +1035,14 @@ def write_simulation_campaign(
             "rows": payload["candidate_envelopes"],
         },
     )
+    _write_json(
+        long_haul_json,
+        {
+            "artifact_type": "long_haul_feasibility",
+            "row_count": len(payload["long_haul_feasibility"]),
+            "rows": payload["long_haul_feasibility"],
+        },
+    )
 
     artifacts = {
         "aviation_requirement_grid_json": _artifact_record(
@@ -841,6 +1058,10 @@ def write_simulation_campaign(
         "candidate_envelopes_json": _artifact_record(
             envelopes_json,
             len(payload["candidate_envelopes"]),
+        ),
+        "long_haul_feasibility_json": _artifact_record(
+            long_haul_json,
+            len(payload["long_haul_feasibility"]),
         ),
     }
     summary_payload = {
@@ -861,6 +1082,7 @@ def write_simulation_campaign(
             "pack_json": pack_json,
             "pack_csv": pack_csv,
             "candidate_envelopes_json": envelopes_json,
+            "long_haul_feasibility_json": long_haul_json,
         },
     )
 

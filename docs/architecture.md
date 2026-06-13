@@ -6,6 +6,8 @@ flowchart LR
     S --> X["Metadata-only connector dry runs"]
     X --> I
     I --> V["Schema, license, unit, and provenance validation"]
+    I --> CMU["CMU raw manifest + parser"]
+    CMU --> V
     V --> D["DuckDB metadata + Parquet analytical tables"]
     C["Versioned assumptions and scenarios"] --> P["Transparent physics engine"]
     D --> P
@@ -21,6 +23,8 @@ flowchart LR
     E --> Q["Daily reproducible reports"]
     SC --> W
     SC --> Q
+    W --> PD["Partner dossier bundle"]
+    PD --> Q
     B --> M["Hashed method cards and downloadable artifacts"]
     W --> SITE["High-contrast public website"]
     V --> Q
@@ -40,6 +44,14 @@ flowchart LR
 - **Simulation campaign grids** map aviation requirement envelopes, pack
   architecture sensitivities, and candidate evidence boundaries without
   promoting those sweeps to experimental performance evidence.
+- **CMU measurement ingestion** downloads approved raw files only on explicit
+  command, verifies supplied MD5 and computed SHA-256 hashes, parses
+  representative CSVs, and labels outputs as cell-level evidence only.
+- **Manufacturer and propulsion registries** provide source-labeled context for
+  aircraft and powertrain examples without treating public claims as battery
+  validation.
+- **Partner dossier generation** consumes registries, measurement summaries, and
+  simulation artifacts to create factual briefs and archive significant changes.
 - **Plotly** provides traceable interactive scientific charts without requiring
   a separate front-end application.
 - **Rust or Julia** is deferred until profiling identifies a kernel whose
@@ -73,3 +85,14 @@ Candidate dossier cards follow:
 
 `website candidate card -> website/mission-control-data.json -> reports/candidates
 -> registry chemistry family + metadata appendix -> source status + limitations`.
+
+CMU measurement panels follow:
+
+`website measurement panel -> website/mission-control-data.json ->
+reports/measurements -> data/raw/approved/cmu_evtol_battery -> approved CMU
+source metadata manifest -> CC BY 4.0 source record`.
+
+Partner dossiers follow:
+
+`reports/partners/latest -> reports/partners/archive -> registries + CMU
+measurement summary + simulation campaign artifacts + website data hashes`.

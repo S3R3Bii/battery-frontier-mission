@@ -375,11 +375,11 @@
     "src/battery_frontier/aviation/mission.py": "41818f9f1497189118859c62e348e3b139c2586bd9961e5d7a6a1f8b6956fc2f",
     "src/battery_frontier/aviation/reference_cases.py": "01870fff17f00d0aba9459e2d855497f205dde649dec22ff6a1d10b6308ba219",
     "src/battery_frontier/aviation/segmented.py": "e4961b5e99212e5b01ab2025f12e9da09af2aca3833fc464bb5ae7819e0026ec",
-    "src/battery_frontier/schemas.py": "363dbc67938221435cb0ef87f3bbd70f4a28e45e884ec1a281b34bef8b5b21cd"
+    "src/battery_frontier/schemas.py": "11dfb10dbdc5148a82f7751d5a2e146584df326f79185ebf35ceacddb454a2df"
   },
-  "code_snapshot_sha256": "03a965b7cc0c47399ecf9320a93de811003419ee211c3a5acb318c3fba7aced0",
+  "code_snapshot_sha256": "7014918186ba821e98405e59ce266b2db63c66ef51bb861519c890df1923beec",
   "config_sha256": "6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2",
-  "generated_at_utc": "2026-06-13T07:16:17.782010+00:00",
+  "generated_at_utc": "2026-06-13T08:13:46.387515+00:00",
   "package_version": "0.4.0",
   "phase": "3"
 }

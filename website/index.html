@@ -60,6 +60,20 @@
         <div id="missionBands" class="band-grid"></div>
       </section>
 
+      <section class="module">
+        <div class="module-head">
+          <div>
+            <p class="eyebrow">Approved experimental source</p>
+            <h2>CMU eVTOL Measurement Pipeline</h2>
+          </div>
+          <p id="measurementPipelineSummary" class="timestamp">Loading measurement pipeline</p>
+        </div>
+        <div id="measurementPipeline" class="pipeline-grid"></div>
+        <p id="measurementBoundary" class="guardrail">
+          Approved cell-level data does not create pack-level proof.
+        </p>
+      </section>
+
       <section class="module simulation-module">
         <div class="module-head">
           <div>
@@ -76,6 +90,71 @@
               <p class="label">What would need to be true</p>
               <ul id="truthList"></ul>
             </div>
+          </div>
+        </div>
+        <div class="longhaul-panel">
+          <div class="module-head compact-head">
+            <div>
+              <p class="eyebrow">Long-haul stress test</p>
+              <h2>Battery Sufficiency Diagnostic</h2>
+            </div>
+            <p id="longHaulBoundary" class="timestamp">Simulation diagnostic only</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Profile</th>
+                  <th>Distance</th>
+                  <th>Required pack</th>
+                  <th>Battery fraction</th>
+                  <th>Status</th>
+                  <th>Reason</th>
+                </tr>
+              </thead>
+              <tbody id="longHaulTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="module">
+        <div class="module-head">
+          <div>
+            <p class="eyebrow">Industry context</p>
+            <h2>Manufacturer and Propulsion Examples</h2>
+          </div>
+          <p class="timestamp">Context records only, not battery validation</p>
+        </div>
+        <div class="context-grid">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Manufacturer</th>
+                  <th>Vehicle</th>
+                  <th>Class</th>
+                  <th>Range</th>
+                  <th>Pax</th>
+                  <th>Boundary</th>
+                </tr>
+              </thead>
+              <tbody id="aircraftExamples"></tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Manufacturer</th>
+                  <th>System</th>
+                  <th>Type</th>
+                  <th>Propulsors</th>
+                  <th>Boundary</th>
+                </tr>
+              </thead>
+              <tbody id="propulsionExamples"></tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -122,6 +201,29 @@
           <p id="candidateSummary" class="timestamp">Loading candidate dossiers</p>
         </div>
         <div id="candidateDossiers" class="candidate-grid"></div>
+      </section>
+
+      <section class="lower-grid">
+        <section class="module">
+          <div class="module-head">
+            <div>
+              <p class="eyebrow">Dataset triage</p>
+              <h2>Next Evidence Sources</h2>
+            </div>
+          </div>
+          <div id="datasetCandidates" class="source-list"></div>
+        </section>
+
+        <section class="module">
+          <div class="module-head">
+            <div>
+              <p class="eyebrow">Partner reports</p>
+              <h2>Dossier Outputs</h2>
+            </div>
+            <p id="partnerSummary" class="timestamp">Loading dossiers</p>
+          </div>
+          <div id="partnerDossiers" class="source-list"></div>
+        </section>
       </section>
 
       <section class="module blueprint-module">

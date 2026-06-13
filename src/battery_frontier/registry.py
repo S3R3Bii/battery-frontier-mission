@@ -7,12 +7,15 @@ from pydantic import BaseModel
 
 from battery_frontier.config import load_registry_file
 from battery_frontier.schemas import (
+    AircraftSystem,
     Assumption,
     AviationScenario,
     ChemistryFamily,
     Citation,
+    DatasetCandidate,
     DataSource,
     PhysicsReferenceCase,
+    PropulsionSystem,
     SegmentedMissionCase,
 )
 
@@ -26,6 +29,9 @@ class Registries:
     chemistries: list[ChemistryFamily]
     citations: list[Citation]
     data_sources: list[DataSource]
+    aircraft_systems: list[AircraftSystem]
+    propulsion_systems: list[PropulsionSystem]
+    dataset_candidates: list[DatasetCandidate]
     physics_reference_cases: list[PhysicsReferenceCase]
     segmented_mission_cases: list[SegmentedMissionCase]
 
@@ -36,6 +42,9 @@ class Registries:
             "chemistry_families": len(self.chemistries),
             "citations": len(self.citations),
             "data_sources": len(self.data_sources),
+            "aircraft_systems": len(self.aircraft_systems),
+            "propulsion_systems": len(self.propulsion_systems),
+            "dataset_candidates": len(self.dataset_candidates),
             "physics_reference_cases": len(self.physics_reference_cases),
             "segmented_mission_cases": len(self.segmented_mission_cases),
         }
@@ -79,6 +88,9 @@ def load_registries() -> Registries:
         chemistries=_parse_records("chemistry_families.yaml", ChemistryFamily),
         citations=_parse_records("citations.yaml", Citation),
         data_sources=_parse_records("data_sources.yaml", DataSource),
+        aircraft_systems=_parse_records("aircraft_systems.yaml", AircraftSystem),
+        propulsion_systems=_parse_records("propulsion_systems.yaml", PropulsionSystem),
+        dataset_candidates=_parse_records("dataset_candidates.yaml", DatasetCandidate),
         physics_reference_cases=_parse_records(
             "physics_reference_cases.yaml",
             PhysicsReferenceCase,

@@ -1,0 +1,293 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+records:
+  - id: dataset.cmu_evtol_battery
+    name: Carnegie Mellon eVTOL Battery Dataset
+    url: https://kilthub.cmu.edu/articles/dataset/eVTOL_Battery_Dataset/14226830
+    doi: 10.1184/R1/14226830
+    category: aviation battery cycling and impedance
+    license_status: approved_cc_by_4_0
+    system_boundary: cell-level eVTOL duty-cycle evidence
+    variables:
+      - time
+      - voltage
+      - current
+      - temperature
+      - charge_capacity
+      - discharge_capacity
+      - impedance
+    likely_usefulness: First approved experimental source for cell-level aviation-duty-cycle parsing and measurement audit.
+    ingestion_risk: high_volume_raw_archive
+    downloadable: true
+    redistributable: true
+    measured_performance: true
+    metadata_only: false
+    priority: 1
+    status: approved_for_ingestion
+    date_accessed: 2026-06-13
+    limitations: Cell-level duty-cycle measurements only; not pack-level proof and not chemistry ranking evidence without comparable audited records.
+
+  - id: dataset.battery_archive
+    name: Battery Archive
+    url: https://www.batteryarchive.org/
+    doi:
+    category: battery cycling and degradation repository
+    license_status: review_required
+    system_boundary: mixed cell-level battery cycling datasets
+    variables:
+      - cycling_protocols
+      - voltage
+      - current
+      - temperature
+      - capacity
+      - metadata
+    likely_usefulness: Potential source of comparable cycle-life and degradation records once dataset-level licenses and metadata are audited.
+    ingestion_risk: mixed_dataset_licenses_and_protocol_boundaries
+    downloadable: true
+    redistributable:
+    measured_performance: true
+    metadata_only: false
+    priority: 2
+    status: license_review_required
+    date_accessed: 2026-06-13
+    limitations: Repository aggregates multiple datasets; each dataset needs separate license, protocol, and uncertainty review.
+
+  - id: dataset.nasa_pcoe_battery
+    name: NASA Prognostics Center of Excellence Battery Data Set
+    url: https://www.nasa.gov/content/prognostics-center-of-excellence-data-set-repository
+    doi:
+    category: battery degradation and prognostics benchmark
+    license_status: review_required
+    system_boundary: cell-level run-to-failure battery test data
+    variables:
+      - cycle
+      - voltage
+      - current
+      - temperature
+      - impedance
+      - capacity
+    likely_usefulness: Useful for degradation-model benchmarks and uncertainty-aware life prediction once source terms are approved.
+    ingestion_risk: legacy_format_and_license_review
+    downloadable: true
+    redistributable:
+    measured_performance: true
+    metadata_only: false
+    priority: 2
+    status: review_required
+    date_accessed: 2026-06-13
+    limitations: Aerospace relevance is indirect and data formats may require legacy MATLAB parsing.
+
+  - id: dataset.calce_battery
+    name: CALCE Battery Research Group Data
+    url: https://calce.umd.edu/battery-data
+    doi:
+    category: battery cycling, aging, and reliability
+    license_status: review_required
+    system_boundary: cell-level aging and reliability tests
+    variables:
+      - cycle
+      - voltage
+      - current
+      - temperature
+      - capacity
+      - state_of_health
+    likely_usefulness: Candidate source for battery aging and reliability validation if dataset-level terms allow reproducible ingestion.
+    ingestion_risk: license_and_format_review
+    downloadable: true
+    redistributable:
+    measured_performance: true
+    metadata_only: false
+    priority: 2
+    status: review_required
+    date_accessed: 2026-06-13
+    limitations: Needs explicit redistribution review before records can be published through this repo.
+
+  - id: dataset.severson_matr_battery
+    name: Data-driven prediction of battery cycle life before capacity degradation
+    url: https://data.matr.io/1/projects/5c48dd2bc625d700019f3204
+    doi: 10.1038/s41560-019-0356-8
+    category: fast-charge battery cycle-life benchmark
+    license_status: review_required
+    system_boundary: cell-level cycle-life and early-cycle features
+    variables:
+      - cycle_life
+      - voltage
+      - current
+      - capacity
+      - early_cycle_features
+    likely_usefulness: Strong degradation-model benchmark for early-cycle feature extraction and prediction workflows.
+    ingestion_risk: account_access_and_license_review
+    downloadable: true
+    redistributable:
+    measured_performance: true
+    metadata_only: false
+    priority: 2
+    status: review_required
+    date_accessed: 2026-06-13
+    limitations: Not aviation-duty-cycle data and cannot be used as aviation pack evidence without model translation.
+
+  - id: dataset.oxford_battery_degradation
+    name: Oxford Battery Degradation Dataset
+    url: https://ora.ox.ac.uk/
+    doi:
+    category: battery degradation benchmark
+    license_status: review_required
+    system_boundary: cell-level degradation cycling
+    variables:
+      - voltage
+      - current
+      - temperature
+      - capacity
+      - cycle_index
+    likely_usefulness: Candidate benchmark for degradation-model comparison after the exact archive, terms, and schema are confirmed.
+    ingestion_risk: exact_archive_identification_required
+    downloadable: false
+    redistributable:
+    measured_performance: true
+    metadata_only: false
+    priority: 3
+    status: discovery_only
+    date_accessed: 2026-06-13
+    limitations: Placeholder discovery row until the exact record URL, license, and file schema are reviewed.
+
+  - id: dataset.materials_project_battery_materials
+    name: Materials Project Battery Explorer and Materials API
+    url: https://materialsproject.org/
+    doi:
+    category: materials metadata and computed properties
+    license_status: metadata_or_api_terms_review_required
+    system_boundary: materials metadata and computed properties, not battery measurements
+    variables:
+      - material_id
+      - composition
+      - structure
+      - computed_voltage
+      - computed_capacity
+      - stability
+    likely_usefulness: Useful for materials discovery context and candidate linkage but not experimental performance evidence.
+    ingestion_risk: requires_api_key_and_terms_review
+    downloadable: true
+    redistributable: false
+    measured_performance: false
+    metadata_only: true
+    priority: 3
+    status: api_key_required_or_metadata_only
+    date_accessed: 2026-06-13
+    limitations: Computed materials metadata cannot be ranked as achieved battery performance or aviation readiness.
+
+  - id: dataset.osti_battery_and_aviation_metadata
+    name: OSTI battery and aviation metadata search
+    url: https://www.osti.gov/
+    doi:
+    category: research metadata discovery
+    license_status: metadata_only_review_required
+    system_boundary: bibliographic metadata only
+    variables:
+      - title
+      - authors
+      - publication_date
+      - doi
+      - abstract
+    likely_usefulness: Good for discovering primary technical reports and datasets that may later be audited.
+    ingestion_risk: metadata_only_not_measurement_evidence
+    downloadable: true
+    redistributable:
+    measured_performance: false
+    metadata_only: true
+    priority: 4
+    status: metadata_connector_available
+    date_accessed: 2026-06-13
+    limitations: Metadata does not contain validated battery performance and must not appear in measurement views.
+
+  - id: dataset.nasa_ntrs_electric_aircraft_metadata
+    name: NASA NTRS electric aircraft and battery metadata
+    url: https://ntrs.nasa.gov/
+    doi:
+    category: aviation research metadata discovery
+    license_status: metadata_only_review_required
+    system_boundary: bibliographic and report metadata
+    variables:
+      - title
+      - authors
+      - report_number
+      - publication_date
+      - abstract
+    likely_usefulness: Useful for identifying NASA electric aircraft studies for mission-model reproduction.
+    ingestion_risk: metadata_only_not_measurement_evidence
+    downloadable: true
+    redistributable:
+    measured_performance: false
+    metadata_only: true
+    priority: 4
+    status: metadata_connector_available
+    date_accessed: 2026-06-13
+    limitations: Records need report-level audit before any numeric aircraft or battery values are extracted.
+
+  - id: dataset.nrel_transportation_and_battery_data
+    name: NREL Transportation and Battery Data Catalog
+    url: https://data.nrel.gov/
+    doi:
+    category: transportation, charging, and energy-system datasets
+    license_status: dataset_specific_review_required
+    system_boundary: mixed transportation, charging, and battery-adjacent records
+    variables:
+      - charging
+      - transportation_energy
+      - battery_metrics
+      - infrastructure_metadata
+    likely_usefulness: Candidate source for charging, infrastructure, and operating-context assumptions in aviation electrification studies.
+    ingestion_risk: mixed_scope_dataset_specific_terms
+    downloadable: true
+    redistributable:
+    measured_performance: false
+    metadata_only: false
+    priority: 4
+    status: review_required
+    date_accessed: 2026-06-13
+    limitations: Battery-cell performance may be absent; exact dataset selection and license review are required.
+
+  - id: dataset.sandia_energy_storage_safety
+    name: Sandia Energy Storage Safety and Reliability Resources
+    url: https://www.sandia.gov/ess-ssl/
+    doi:
+    category: battery safety, abuse, and energy storage reliability
+    license_status: review_required
+    system_boundary: safety and abuse-test resources with mixed publication forms
+    variables:
+      - abuse_conditions
+      - thermal_response
+      - failure_modes
+      - safety_metadata
+    likely_usefulness: Candidate source for thermal runaway, containment, and safety-boundary assumptions.
+    ingestion_risk: exact_dataset_and_terms_required
+    downloadable: false
+    redistributable:
+    measured_performance: true
+    metadata_only: false
+    priority: 3
+    status: discovery_only
+    date_accessed: 2026-06-13
+    limitations: Included as a source-discovery target until a specific dataset with clear license and schema is identified.
+
+  - id: dataset.battery_data_genome
+    name: Battery Data Genome / Battery Data Alliance resources
+    url: https://www.batterydataalliance.org/
+    doi:
+    category: battery data standards and interoperable metadata
+    license_status: review_required
+    system_boundary: data standards and possible linked battery datasets
+    variables:
+      - battery_metadata
+      - schema
+      - test_protocol
+      - provenance
+    likely_usefulness: Useful for improving schema interoperability and provenance fields before ingesting more datasets.
+    ingestion_risk: standards_context_not_measurement_dataset
+    downloadable: true
+    redistributable:
+    measured_performance: false
+    metadata_only: true
+    priority: 4
+    status: discovery_only
+    date_accessed: 2026-06-13
+    limitations: This is primarily schema and ecosystem context unless a specific measurement dataset is selected.

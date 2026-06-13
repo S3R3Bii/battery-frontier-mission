@@ -9,6 +9,20 @@ function fmt(value, suffix = "") {
   return `${numberFormat.format(Number(value))}${suffix}`;
 }
 
+function fmtBytes(value) {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) {
+    return "unavailable";
+  }
+  const units = ["B", "KB", "MB", "GB", "TB"];
+  let size = Number(value);
+  let index = 0;
+  while (size >= 1024 && index < units.length - 1) {
+    size /= 1024;
+    index += 1;
+  }
+  return `${size.toFixed(index === 0 ? 0 : 1)} ${units[index]}`;
+}
+
 function textNode(tag, value, attrs = {}) {
   const node = document.createElementNS(SVG_NS, tag);
   node.textContent = value;
@@ -37,8 +51,8 @@ function renderMetrics(data) {
     ["Chemistry families", data.metrics.chemistry_families],
     ["Candidate dossiers", data.metrics.candidate_dossiers],
     ["Simulation rows", data.metrics.simulation_rows],
-    ["Physics fixtures", data.metrics.physics_fixtures],
-    ["Mission fixtures", data.metrics.mission_fixtures],
+    ["Aircraft systems", data.metrics.aircraft_systems],
+    ["Dataset candidates", data.metrics.dataset_candidates],
   ];
   const grid = document.getElementById("metricsGrid");
   grid.innerHTML = "";
@@ -214,6 +228,36 @@ function renderFrontierChart(data) {
   container.appendChild(svg);
 }
 
+function renderMeasurementPipeline(data) {
+  const pipeline = data.measurement_pipeline;
+  setText(
+    "measurementPipelineSummary",
+    `${pipeline.approved_source.name} | ${pipeline.approved_source.license} | ${pipeline.approved_source.system_boundary}`,
+  );
+  const root = document.getElementById("measurementPipeline");
+  root.innerHTML = "";
+  const raw = pipeline.raw_snapshot;
+  const quality = pipeline.quality_report;
+  [
+    ["Approved source", pipeline.approved_source.doi, "ok"],
+    ["Raw manifest", pipeline.raw_manifest_present ? "present" : "missing", pipeline.raw_manifest_present ? "ok" : "blocked"],
+    ["Selected raw size", fmtBytes(raw.selected_size_bytes), "neutral"],
+    ["Downloaded raw size", fmtBytes(raw.downloaded_size_bytes), raw.downloaded_size_bytes > 0 ? "ok" : "blocked"],
+    ["Parser status", quality ? quality.quality_status : "not parsed", quality ? "ok" : "blocked"],
+    ["Pack evidence", pipeline.pack_level_evidence ? "yes" : "no", "blocked"],
+  ].forEach(([label, value, state]) => {
+    const item = document.createElement("article");
+    item.className = "pipeline-step";
+    item.innerHTML = `
+      <p class="name">${label}</p>
+      <p class="value">${value}</p>
+      <span class="status ${state === "ok" ? "ok" : state === "blocked" ? "blocked" : ""}">${state}</span>
+    `;
+    root.appendChild(item);
+  });
+  setText("measurementBoundary", pipeline.claim_boundary);
+}
+
 function renderMissionBands(data) {
   const root = document.getElementById("missionBands");
   root.innerHTML = "";
@@ -339,6 +383,28 @@ function renderAviationRequirementMap(data) {
   root.appendChild(svg);
 }
 
+function renderLongHaulFeasibility(data) {
+  const root = document.getElementById("longHaulTable");
+  root.innerHTML = "";
+  data.long_haul_feasibility.rows.forEach((row) => {
+    const tr = document.createElement("tr");
+    const reasons =
+      row.infeasibility_reasons.length > 0
+        ? row.infeasibility_reasons.slice(0, 2).join("; ")
+        : "diagnostic assumptions pass";
+    tr.innerHTML = `
+      <td>${row.name}</td>
+      <td>${fmt(row.distance_km, " km")}</td>
+      <td>${fmt(row.required_pack_specific_energy_Wh_kg, " Wh/kg")}</td>
+      <td>${fmt(row.battery_mass_fraction_at_500Whkg_pack * 100, "%")}</td>
+      <td><span class="status ${row.feasible ? "ok" : "blocked"}">${row.feasibility_status}</span></td>
+      <td>${reasons}</td>
+    `;
+    root.appendChild(tr);
+  });
+  setText("longHaulBoundary", data.long_haul_feasibility.claim_boundary);
+}
+
 function renderSimulationCampaign(data) {
   const summary = data.simulation_campaign_summary;
   setText(
@@ -354,12 +420,15 @@ function renderSimulationCampaign(data) {
     ["Infeasible rows", summary.aviation_infeasible_count],
     ["Bounded requirements", summary.bounded_requirement_count],
     ["Candidate envelopes", summary.candidate_envelope_count],
+    ["Long-haul cases", summary.long_haul_study_count],
+    ["Long-haul infeasible", summary.long_haul_infeasible_count],
   ].forEach(([label, value]) => {
     const item = document.createElement("article");
     item.className = "simulation-stat";
     item.innerHTML = `<p class="value">${fmt(value)}</p><p class="name">${label}</p>`;
     stats.appendChild(item);
   });
+  renderLongHaulFeasibility(data);
 
   const truthList = document.getElementById("truthList");
   truthList.innerHTML = "";
@@ -368,6 +437,81 @@ function renderSimulationCampaign(data) {
     li.textContent = item;
     truthList.appendChild(li);
   });
+}
+
+function renderManufacturerExamples(data) {
+  const aircraft = document.getElementById("aircraftExamples");
+  const propulsion = document.getElementById("propulsionExamples");
+  aircraft.innerHTML = "";
+  propulsion.innerHTML = "";
+  data.manufacturer_examples.forEach((row) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${row.manufacturer}</td>
+      <td>${row.vehicle_name}</td>
+      <td>${row.aircraft_class}</td>
+      <td>${fmt(row.range_km, " km")}</td>
+      <td>${fmt(row.passenger_capacity)}</td>
+      <td><span class="status">${row.values_status}</span></td>
+    `;
+    aircraft.appendChild(tr);
+  });
+  data.propulsion_examples.forEach((row) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${row.manufacturer}</td>
+      <td>${row.system_name}</td>
+      <td>${row.system_type}</td>
+      <td>${fmt(row.propulsor_count)}</td>
+      <td><span class="status">${row.values_status}</span></td>
+    `;
+    propulsion.appendChild(tr);
+  });
+}
+
+function renderDatasetCandidates(data) {
+  const root = document.getElementById("datasetCandidates");
+  root.innerHTML = "";
+  data.dataset_candidates.forEach((dataset) => {
+    const item = document.createElement("article");
+    item.className = "source-item";
+    const state = dataset.license_status.includes("approved") ? "ok" : "blocked";
+    item.innerHTML = `
+      <div>
+        <p class="name">${dataset.name}</p>
+        <p class="detail">${dataset.category} | ${dataset.system_boundary}</p>
+      </div>
+      <span class="status ${state}">${dataset.license_status}</span>
+    `;
+    root.appendChild(item);
+  });
+}
+
+function renderPartnerDossiers(data) {
+  const root = document.getElementById("partnerDossiers");
+  root.innerHTML = "";
+  const manifest = data.partner_dossiers;
+  if (!manifest) {
+    root.innerHTML = '<div class="guardrail">Partner dossiers have not been generated.</div>';
+    return;
+  }
+  Object.entries(manifest.written_artifacts).forEach(([id, artifacts]) => {
+    const item = document.createElement("article");
+    item.className = "source-item";
+    const mdPath = artifacts.markdown.path;
+    item.innerHTML = `
+      <div>
+        <p class="name">${id.replaceAll("_", " ")}</p>
+        <p class="detail">${mdPath}</p>
+      </div>
+      <span class="status ok">latest</span>
+    `;
+    root.appendChild(item);
+  });
+  setText(
+    "partnerSummary",
+    `${manifest.dossier_count} dossiers | archive: ${manifest.archive_created ? "created" : "unchanged"} | signature ${manifest.input_signature_sha256.slice(0, 10)}`,
+  );
 }
 
 function renderPackSensitivity(data) {
@@ -693,12 +837,16 @@ function render(data) {
   setText("frontierNote", data.frontier.unknown_region_note);
   renderMetrics(data);
   renderFrontierChart(data);
+  renderMeasurementPipeline(data);
   renderMissionBands(data);
   renderSimulationCampaign(data);
+  renderManufacturerExamples(data);
   renderPackSensitivity(data);
   renderInfeasibleLedger(data);
   renderCandidateEnvelopes(data);
   renderCandidateDossiers(data);
+  renderDatasetCandidates(data);
+  renderPartnerDossiers(data);
   renderTargetBlueprint(data);
   renderEvidenceLedger(data);
   renderSourceReadiness(data);

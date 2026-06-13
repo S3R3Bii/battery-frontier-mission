@@ -597,7 +597,15 @@ See [scientific scope](docs/scientific_scope.md), [equations](docs/equations.md)
 - Energy, specific-power, and continuous C-rate sizing constraints
 - Payload-range and one-at-a-time sensitivity analysis
 - Phase 3.5/4.5 simulation campaign for aviation requirement maps, pack
-  architecture trade-space sweeps, candidate envelopes, and infeasible regions
+  architecture trade-space sweeps, candidate envelopes, long-haul stress tests,
+  and infeasible regions
+- Approved CMU eVTOL raw-snapshot tooling with SHA-256/MD5 verification,
+  representative subset parsing, unit/sign-convention checks, and cell-level
+  measurement summaries
+- Manufacturer, aircraft-system, propulsion-system, and dataset-candidate
+  registries for context and source triage
+- Partner-facing dossiers for aircraft, battery, propulsion, research, and
+  program/investor audiences with archive snapshots on significant changes
 - Plotly mission, energy-boundary, provenance, and readiness charts
 - Downloadable method cards, JSON result artifacts, and a SHA-256 manifest
 - Explicit candidate-ranking and evidence gates in the public interface
@@ -649,6 +657,9 @@ python -m battery_frontier.cli candidate-dossiers
 python -m battery_frontier.cli simulation-campaign
 python -m battery_frontier.cli init-db
 python -m battery_frontier.cli source-status
+python -m battery_frontier.cli source-fetch-cmu-evtol --mode metadata
+python -m battery_frontier.cli parse-cmu-evtol
+python -m battery_frontier.cli partner-dossiers
 python -m battery_frontier.cli daily-report
 python -m battery_frontier.cli website-data
 python -m streamlit run dashboard/app.py
@@ -699,6 +710,16 @@ on Figshare/KiltHub (`datasource.cmu_evtol_battery`, DOI `10.1184/R1/14226830`),
 licensed CC BY 4.0. Its connector snapshots article/file metadata only. Full
 measurement values remain blocked until the archive is downloaded, hashed,
 parsed, unit-audited, and mapped to a cell-level system boundary.
+
+`source-fetch-cmu-evtol --mode subset` downloads a representative README,
+time-series CSV, and impedance CSV into `data/raw/approved/cmu_evtol_battery/`.
+Raw files are ignored by Git. `parse-cmu-evtol` writes
+`reports/measurements/cmu_evtol_measurement_summary.json` and labels the result
+as cell-level eVTOL evidence only. It is not pack-level proof and not ranking
+evidence.
+
+`partner-dossiers` writes latest partner briefs to `reports/partners/latest/`
+and archives significant snapshots under `reports/partners/archive/`.
 
 ## Reproducibility Contract
 

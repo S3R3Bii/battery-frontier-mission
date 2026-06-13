@@ -12,6 +12,7 @@ The workflow regenerates:
 - Phase 4 dashboard method cards and manifest
 - candidate evidence dossiers and Materials Project metadata appendix
 - Phase 3.5/4.5 simulation campaign grids and summaries
+- partner-facing dossier reports
 - daily report artifacts
 - `website/mission-control-data.json`
 
@@ -53,6 +54,27 @@ route, payload, reserve, pack architecture, and degradation assumptions. They
 are not measurements, validation records, certifiable aircraft designs, or
 evidence that any candidate material can meet the requirements.
 
+## CMU Measurement Refresh
+
+The approved CMU eVTOL dataset should not be fully downloaded in CI by default.
+Use explicit local commands for raw files:
+
+```powershell
+python -m battery_frontier.cli source-fetch-cmu-evtol --mode subset
+python -m battery_frontier.cli verify-raw-snapshots
+python -m battery_frontier.cli parse-cmu-evtol
+```
+
+Raw files are stored under `data/raw/approved/cmu_evtol_battery/` and are
+ignored by Git. CI and Pages should prefer committed manifests, parsed
+summaries, and website JSON instead of downloading the full archive.
+
+## Partner Dossier Refresh
+
+`python -m battery_frontier.cli partner-dossiers` writes latest partner reports
+under `reports/partners/latest/` and creates archive snapshots under
+`reports/partners/archive/` when the input signature changes.
+
 ## Required Secrets
 
 No secrets are required for Pages, daily report, CMU eVTOL metadata, NASA NTRS,
@@ -74,7 +96,7 @@ be generated, but the Materials Project appendix will record
 
 ## Current Scientific Boundary
 
-Automation refreshes the public dashboard and traceable artifacts. It does not
-complete Phase 4 scientifically until the approved CMU eVTOL measurement files,
-or another approved source, are downloaded, hashed, parsed, and audited with
-licenses, system boundaries, uncertainty, and provenance.
+Automation refreshes the public dashboard and traceable artifacts. A
+representative CMU subset can be parsed locally, but the project still does not
+complete Phase 4 scientifically until comparable measurements, uncertainty,
+pack-level boundaries, and external validation are available.

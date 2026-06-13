@@ -31,6 +31,7 @@
 - Mission feasibility needs published aircraft-study validation and transient power checks.
 - Candidate material envelopes need cycle-life, safety, manufacturing, and source-lineage evidence before ranking.
 - Hemp-derived graphitic carbon needs primary-paper audit and full-cell translation before any aviation claim.
+- Long-haul battery-electric studies need aircraft-validated aero/propulsion models, reserve rules, pack mass closures, and thermal transients.
 
 ## Guardrails
 

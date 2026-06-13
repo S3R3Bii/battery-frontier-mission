@@ -1,0 +1,3956 @@
+{
+  "article_url": "https://kilthub.cmu.edu/articles/dataset/eVTOL_Battery_Dataset/14226830",
+  "artifact_type": "measurement_quality_report",
+  "audited_measurement_summary": false,
+  "candidate_ranking_evidence": false,
+  "cell_cycle_summary": [
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 39324,
+        "positive": 6843,
+        "zero": 3833
+      },
+      "file_name": "VAH07.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 54.768238,
+      "temperature_min_C": 22.539068,
+      "time_s_max": 368470.719171304,
+      "voltage_max_V": 4.2006736,
+      "voltage_min_V": 2.5001392
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 41689,
+        "positive": 5186,
+        "zero": 3125
+      },
+      "file_name": "VAH16.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 44.453941,
+      "temperature_min_C": 22.823002,
+      "time_s_max": 334069.087582935,
+      "voltage_max_V": 4.1999803,
+      "voltage_min_V": 2.5000894
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 40353,
+        "positive": 6519,
+        "zero": 3128
+      },
+      "file_name": "VAH15.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 47.21162,
+      "temperature_min_C": 22.378616,
+      "time_s_max": 382295.20261331,
+      "voltage_max_V": 4.2000575,
+      "voltage_min_V": 2.5001323
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 40192,
+        "positive": 6508,
+        "zero": 3300
+      },
+      "file_name": "VAH22.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 46.927181,
+      "temperature_min_C": 22.402319,
+      "time_s_max": 386671.329069775,
+      "voltage_max_V": 4.2000184,
+      "voltage_min_V": 2.5000534
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 41627,
+        "positive": 5049,
+        "zero": 3324
+      },
+      "file_name": "VAH20.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 46.766781,
+      "temperature_min_C": 23.512936,
+      "time_s_max": 335673.71175031,
+      "voltage_max_V": 4.2000198,
+      "voltage_min_V": 2.4999714
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 39753,
+        "positive": 7217,
+        "zero": 3030
+      },
+      "file_name": "VAH25.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 43.383587,
+      "temperature_min_C": 19.492624,
+      "time_s_max": 359146.146198675,
+      "voltage_max_V": 4.200841,
+      "voltage_min_V": 2.5000422
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 34212,
+        "positive": 9662,
+        "zero": 6126
+      },
+      "file_name": "VAH23.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 49.152725,
+      "temperature_min_C": 21.715721,
+      "time_s_max": 431881.133785524,
+      "voltage_max_V": 4.200767,
+      "voltage_min_V": 2.5001092
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 41450,
+        "positive": 5263,
+        "zero": 3287
+      },
+      "file_name": "VAH30.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 52.758156,
+      "temperature_min_C": 34.04847,
+      "time_s_max": 340944.650300112,
+      "voltage_max_V": 4.1999788,
+      "voltage_min_V": 2.5000141
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 34454,
+        "positive": 9734,
+        "zero": 5812
+      },
+      "file_name": "VAH24.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 46.089821,
+      "temperature_min_C": 21.846046,
+      "time_s_max": 433361.409939929,
+      "voltage_max_V": 4.2006631,
+      "voltage_min_V": 2.4999301
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 40576,
+        "positive": 6072,
+        "zero": 3352
+      },
+      "file_name": "VAH13.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 43.108555,
+      "temperature_min_C": 22.712339,
+      "time_s_max": 327367.766883932,
+      "voltage_max_V": 4.2008882,
+      "voltage_min_V": 2.5000434
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 41152,
+        "positive": 6022,
+        "zero": 2826
+      },
+      "file_name": "VAH17.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 44.386131,
+      "temperature_min_C": 21.929956,
+      "time_s_max": 349838.079227768,
+      "voltage_max_V": 4.200089,
+      "voltage_min_V": 2.4999928
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 39784,
+        "positive": 7247,
+        "zero": 2969
+      },
+      "file_name": "VAH09.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 43.70697,
+      "temperature_min_C": 19.248114,
+      "time_s_max": 358098.054089351,
+      "voltage_max_V": 4.2008801,
+      "voltage_min_V": 2.5002
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 40601,
+        "positive": 6311,
+        "zero": 3088
+      },
+      "file_name": "VAH26.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 42.692787,
+      "temperature_min_C": 21.755285,
+      "time_s_max": 326241.258766429,
+      "voltage_max_V": 4.2009273,
+      "voltage_min_V": 2.4999647
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 40749,
+        "positive": 6704,
+        "zero": 2547
+      },
+      "file_name": "VAH28.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 37.848377,
+      "temperature_min_C": 20.847719,
+      "time_s_max": 331179.667281545,
+      "voltage_max_V": 4.2000699,
+      "voltage_min_V": 2.5000873
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 33565,
+        "positive": 9557,
+        "zero": 6878
+      },
+      "file_name": "VAH06.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 45.727146,
+      "temperature_min_C": 23.083858,
+      "time_s_max": 437625.99238476,
+      "voltage_max_V": 4.2007418,
+      "voltage_min_V": 2.5000877
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 40209,
+        "positive": 6293,
+        "zero": 3498
+      },
+      "file_name": "VAH10.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 49.714462,
+      "temperature_min_C": 30.159153,
+      "time_s_max": 347831.151018429,
+      "voltage_max_V": 4.2005472,
+      "voltage_min_V": 2.5001235
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 40682,
+        "positive": 6315,
+        "zero": 3003
+      },
+      "file_name": "VAH05.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 39.529503,
+      "temperature_min_C": 22.560413,
+      "time_s_max": 333664.275540709,
+      "voltage_max_V": 4.2000303,
+      "voltage_min_V": 2.5001266
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 36426,
+        "positive": 2631,
+        "zero": 10943
+      },
+      "file_name": "VAH02.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 46.058067,
+      "temperature_min_C": 20.822109,
+      "time_s_max": 127595.642233861,
+      "voltage_max_V": 4.1999788,
+      "voltage_min_V": 2.5000141
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 35257,
+        "positive": 2745,
+        "zero": 11998
+      },
+      "file_name": "VAH01.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 45.232193,
+      "temperature_min_C": 20.846682,
+      "time_s_max": 132267.188533359,
+      "voltage_max_V": 4.2002068,
+      "voltage_min_V": 2.5000718
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 40195,
+        "positive": 6072,
+        "zero": 3733
+      },
+      "file_name": "VAH12.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 42.567009,
+      "temperature_min_C": 22.750185,
+      "time_s_max": 333296.495502347,
+      "voltage_max_V": 4.2008724,
+      "voltage_min_V": 2.500035
+    },
+    {
+      "candidate_ranking_evidence": false,
+      "current_sign_counts": {
+        "negative": 41422,
+        "positive": 5884,
+        "zero": 2694
+      },
+      "file_name": "VAH11.csv",
+      "pack_level_evidence": false,
+      "row_count": 50000,
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_max_C": 34.501247,
+      "temperature_min_C": 21.746536,
+      "time_s_max": 313227.483408987,
+      "voltage_max_V": 4.2005849,
+      "voltage_min_V": 2.5000913
+    }
+  ],
+  "doi": "10.1184/R1/14226830",
+  "evidence_label": "known_experimental",
+  "failed_file_count": 1,
+  "failures": [
+    {
+      "error": "VAH27.csv quality check failed: voltage outside positive plausible lithium-ion cell range",
+      "file_name": "VAH27.csv"
+    }
+  ],
+  "generated_at_utc": "2026-06-13T08:13:08.794959+00:00",
+  "impedance_file_count": 21,
+  "impedance_summary": [
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH07_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH07_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.778304+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 5,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH16_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH16_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.779156+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 11,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH22_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH22_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.779975+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 11,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH25_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH25_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.780796+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 11,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH15_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH15_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.781596+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 11,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH27_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH27_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.782422+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 12,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH20_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH20_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.783236+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 12,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH02_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH02_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.784036+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 13,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH23_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH23_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.784858+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 14,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH24_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH24_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.785709+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 16,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH01_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH01_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.786529+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 17,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH30_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH30_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.787373+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 18,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH06_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH06_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.788227+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 20,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH17_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH17_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.789060+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 20,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH13_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH13_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.789859+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 20,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH09_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH09_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.790693+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 23,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH28_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH28_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.791502+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 23,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH11_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH11_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.792306+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 27,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH10_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH10_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.793171+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 28,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH05_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH05_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.793979+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 30,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    },
+    {
+      "artifact_type": "impedance_summary",
+      "candidate_ranking_evidence": false,
+      "columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "evidence_label": "known_experimental",
+      "file_name": "VAH12_impedance.csv",
+      "limitations": [
+        "Impedance evidence is cell-level and file-schema-specific.",
+        "No pack-level or candidate-ranking claim is created."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH12_impedance.csv",
+      "missing_values_by_column": {
+        "20%_1_second": 0,
+        "20%_30_second": 0,
+        "60%_1_second": 0,
+        "60%_30_second": 0,
+        "cycle numbers": 0
+      },
+      "numeric_columns": [
+        "20%_1_second",
+        "20%_30_second",
+        "60%_1_second",
+        "60%_30_second",
+        "cycle numbers"
+      ],
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.794842+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 46,
+      "source_id": "datasource.cmu_evtol_battery",
+      "system_boundary": "cell-level impedance evidence"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "license_status": "approved",
+  "limitations": [
+    "This is cell-level experimental evidence from one approved dataset.",
+    "The report does not create pack-level proof.",
+    "The report does not allow candidate or chemistry ranking.",
+    "Protocol details and cycleNumber caveats still require deeper audit."
+  ],
+  "pack_level_evidence": false,
+  "package_version": "0.4.0",
+  "parsed_cell_timeseries": [
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 3006.6445,
+        "mean": -865.2637674730599,
+        "min": -20448.469,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 39324,
+          "positive": 6843,
+          "zero": 3833
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH07.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH07.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:07.706420+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 54.768238,
+        "mean": 26.75664820612,
+        "min": 22.539068
+      },
+      "time_s": {
+        "max": 368470.719171304,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2006736,
+        "mean": 3.697966966104,
+        "min": 2.5001392
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 53
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 3
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 4491.4141,
+        "mean": -893.35478317708,
+        "min": -17480.74,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 41689,
+          "positive": 5186,
+          "zero": 3125
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH16.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH16.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:07.762272+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 44.453941,
+        "mean": 25.76498443596,
+        "min": 22.823002
+      },
+      "time_s": {
+        "max": 334069.087582935,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.1999803,
+        "mean": 3.7232327327659998,
+        "min": 2.5000894
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 2991.6287,
+        "mean": -933.80072517296,
+        "min": -18299.207,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 40353,
+          "positive": 6519,
+          "zero": 3128
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH15.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH15.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:07.819391+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 47.21162,
+        "mean": 25.65702274444,
+        "min": 22.378616
+      },
+      "time_s": {
+        "max": 382295.20261331,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2000575,
+        "mean": 3.7522905243679996,
+        "min": 2.5001323
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 2991.8257,
+        "mean": -929.49115096598,
+        "min": -18281.877,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 40192,
+          "positive": 6508,
+          "zero": 3300
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH22.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH22.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:07.870656+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 46.927181,
+        "mean": 26.026978663599998,
+        "min": 22.402319
+      },
+      "time_s": {
+        "max": 386671.329069775,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2000184,
+        "mean": 3.7559913123060005,
+        "min": 2.5000534
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 4491.4141,
+        "mean": -895.0062108217,
+        "min": -17476.801,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 41627,
+          "positive": 5049,
+          "zero": 3324
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH20.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH20.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:07.956566+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 46.766781,
+        "mean": 26.57431678486,
+        "min": 23.512936
+      },
+      "time_s": {
+        "max": 335673.71175031,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2000198,
+        "mean": 3.7227039027660003,
+        "min": 2.4999714
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 3006.1494,
+        "mean": -841.7661910339801,
+        "min": -17700.871,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 39753,
+          "positive": 7217,
+          "zero": 3030
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH25.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH25.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.008685+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 43.383587,
+        "mean": 22.347791269880002,
+        "min": 19.492624
+      },
+      "time_s": {
+        "max": 359146.146198675,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.200841,
+        "mean": 3.758136768658,
+        "min": 2.5000422
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 3008.6025,
+        "mean": -786.3248111617402,
+        "min": -18830.34,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 34212,
+          "positive": 9662,
+          "zero": 6126
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH23.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH23.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.061877+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 49.152725,
+        "mean": 25.70449903354,
+        "min": 21.715721
+      },
+      "time_s": {
+        "max": 431881.133785524,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.200767,
+        "mean": 3.773650029656,
+        "min": 2.5001092
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 2991.6284,
+        "mean": -886.2774709620201,
+        "min": -16880.607,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 41450,
+          "positive": 5263,
+          "zero": 3287
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH30.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH30.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.115261+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 52.758156,
+        "mean": 36.79701049918,
+        "min": 34.04847
+      },
+      "time_s": {
+        "max": 340944.650300112,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.1999788,
+        "mean": 3.7321874586979997,
+        "min": 2.5000141
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 1524.7892,
+        "mean": -776.8830205964799,
+        "min": -17590.781,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 34454,
+          "positive": 9734,
+          "zero": 5812
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH24.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH24.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.167473+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 46.089821,
+        "mean": 25.69303983908,
+        "min": 21.846046
+      },
+      "time_s": {
+        "max": 433361.409939929,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2006631,
+        "mean": 3.8012953503320004,
+        "min": 2.4999301
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 3
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 3007.3174,
+        "mean": -792.7273482398599,
+        "min": -16743.973,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 40576,
+          "positive": 6072,
+          "zero": 3352
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH13.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH13.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.220151+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 43.108555,
+        "mean": 25.85110486402,
+        "min": 22.712339
+      },
+      "time_s": {
+        "max": 327367.766883932,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2008882,
+        "mean": 3.733308654118,
+        "min": 2.5000434
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 2992.8472,
+        "mean": -890.6994991644,
+        "min": -17592.055,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 41152,
+          "positive": 6022,
+          "zero": 2826
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH17.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH17.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.271822+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 44.386131,
+        "mean": 25.207191201220002,
+        "min": 21.929956
+      },
+      "time_s": {
+        "max": 349838.079227768,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.200089,
+        "mean": 3.731283498534,
+        "min": 2.4999928
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 3006.3464,
+        "mean": -842.4331597606599,
+        "min": -17718.012,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 39784,
+          "positive": 7247,
+          "zero": 2969
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH09.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH09.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.324333+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 43.70697,
+        "mean": 22.1991337873,
+        "min": 19.248114
+      },
+      "time_s": {
+        "max": 358098.054089351,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2008801,
+        "mean": 3.7584951745460002,
+        "min": 2.5002
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 3
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 3006.3323,
+        "mean": -793.1024595782599,
+        "min": -16834.607,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 40601,
+          "positive": 6311,
+          "zero": 3088
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH26.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH26.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.375989+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 42.692787,
+        "mean": 24.56161274612,
+        "min": 21.755285
+      },
+      "time_s": {
+        "max": 326241.258766429,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2009273,
+        "mean": 3.7317510552740005,
+        "min": 2.4999647
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 3005.6167,
+        "mean": -799.7532200369799,
+        "min": -15171.923,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 40749,
+          "positive": 6704,
+          "zero": 2547
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH28.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH28.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.428075+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 37.848377,
+        "mean": 23.155916570259997,
+        "min": 20.847719
+      },
+      "time_s": {
+        "max": 331179.667281545,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2000699,
+        "mean": 3.748584805534,
+        "min": 2.5000873
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 1508.2406,
+        "mean": -764.22205693826,
+        "min": -17402.242,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 33565,
+          "positive": 9557,
+          "zero": 6878
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH06.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH06.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.478165+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 45.727146,
+        "mean": 26.768832467280003,
+        "min": 23.083858
+      },
+      "time_s": {
+        "max": 437625.99238476,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2007418,
+        "mean": 3.803153276848,
+        "min": 2.5000877
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 3004.1785,
+        "mean": -841.7793991415602,
+        "min": -17022.332,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 40209,
+          "positive": 6293,
+          "zero": 3498
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH10.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH10.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.529541+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 49.714462,
+        "mean": 32.90144631482,
+        "min": 30.159153
+      },
+      "time_s": {
+        "max": 347831.151018429,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2005472,
+        "mean": 3.76130538355,
+        "min": 2.5001235
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 3004.6321,
+        "mean": -797.289000096,
+        "min": -14987.641,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 40682,
+          "positive": 6315,
+          "zero": 3003
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH05.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH05.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.582136+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 39.529503,
+        "mean": 25.401939799119997,
+        "min": 22.560413
+      },
+      "time_s": {
+        "max": 333664.275540709,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2000303,
+        "mean": 3.75157396387,
+        "min": 2.5001266
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 17
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 1
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 2993.2041,
+        "mean": -2323.6332098478,
+        "min": -18087.688,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 36426,
+          "positive": 2631,
+          "zero": 10943
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH02.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH02.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.626719+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 46.058067,
+        "mean": 27.537782849059997,
+        "min": 20.822109
+      },
+      "time_s": {
+        "max": 127595.642233861,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.1999788,
+        "mean": 3.683363951204,
+        "min": 2.5000141
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 19
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 1
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 2995.8022,
+        "mean": -2297.18429781922,
+        "min": -17687.213,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 35257,
+          "positive": 2745,
+          "zero": 11998
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH01.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH01.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.672272+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 45.232193,
+        "mean": 27.9146762014,
+        "min": 20.846682
+      },
+      "time_s": {
+        "max": 132267.188533359,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2002068,
+        "mean": 3.704368081892,
+        "min": 2.5000718
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 58
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 3
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 3006.7957,
+        "mean": -774.6668026959198,
+        "min": -16210.722,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 40195,
+          "positive": 6072,
+          "zero": 3733
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH12.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH12.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.723435+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 42.567009,
+        "mean": 25.9843206151,
+        "min": 22.750185
+      },
+      "time_s": {
+        "max": 333296.495502347,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2008724,
+        "mean": 3.739061024512,
+        "min": 2.500035
+      }
+    },
+    {
+      "artifact_type": "parsed_cell_timeseries",
+      "candidate_ranking_evidence": false,
+      "capacity_monotonicity": {
+        "QCharge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 52
+        },
+        "QDischarge_mA_h": {
+          "cycle_number_caveat": "CMU README states cycleNumber is not accurate; treat cycle grouping as a quality hint, not a validated lifecycle index.",
+          "monotonicity_scope": "within reported cycleNumber groups",
+          "negative_step_count": 2
+        }
+      },
+      "columns": [
+        "time_s",
+        "Ecell_V",
+        "I_mA",
+        "EnergyCharge_W_h",
+        "QCharge_mA_h",
+        "EnergyDischarge_W_h",
+        "QDischarge_mA_h",
+        "Temperature__C",
+        "cycleNumber",
+        "Ns"
+      ],
+      "current_mA": {
+        "max": 3004.7473,
+        "mean": -758.0804040974,
+        "min": -12812.526,
+        "sign_convention": "positive, negative, and zero counts are reported from the source column; charge/discharge interpretation still requires protocol audit.",
+        "sign_counts": {
+          "negative": 41422,
+          "positive": 5884,
+          "zero": 2694
+        }
+      },
+      "duplicate_timestamp_count": 0,
+      "evidence_label": "known_experimental",
+      "file_name": "VAH11.csv",
+      "limitations": [
+        "Cell-level evidence only.",
+        "No pack overhead, aircraft integration, reserve, safety, or certification proof.",
+        "Not candidate-ranking evidence."
+      ],
+      "local_path": "data/raw/approved/cmu_evtol_battery/VAH11.csv",
+      "missing_values_by_column": {
+        "Ecell_V": 0,
+        "EnergyCharge_W_h": 0,
+        "EnergyDischarge_W_h": 0,
+        "I_mA": 0,
+        "Ns": 0,
+        "QCharge_mA_h": 0,
+        "QDischarge_mA_h": 0,
+        "Temperature__C": 0,
+        "cycleNumber": 0,
+        "time_s": 0
+      },
+      "pack_level_evidence": false,
+      "parsed_at_utc": "2026-06-13T08:13:08.775405+00:00",
+      "performance_evidence": true,
+      "quality_status": "passed",
+      "row_count": 50000,
+      "source_id": "datasource.cmu_evtol_battery",
+      "source_sign_conventions": {
+        "EnergyDischarge_W_h": "negative_discharge_energy_source_convention",
+        "QDischarge_mA_h": "nonnegative cumulative discharge capacity in selected rows",
+        "current_mA": "source column preserves signed current; charge/discharge mapping requires protocol-level audit"
+      },
+      "system_boundary": "cell-level eVTOL duty-cycle",
+      "temperature_C": {
+        "max": 34.501247,
+        "mean": 24.447163073440002,
+        "min": 21.746536
+      },
+      "time_s": {
+        "max": 313227.483408987,
+        "min": 0.0,
+        "negative_count": 0
+      },
+      "units": {
+        "Ecell_V": "V",
+        "EnergyCharge_W_h": "Wh",
+        "EnergyDischarge_W_h": "Wh",
+        "I_mA": "mA",
+        "Ns": "dimensionless",
+        "QCharge_mA_h": "mAh",
+        "QDischarge_mA_h": "mAh",
+        "Temperature__C": "degC",
+        "cycleNumber": "dimensionless",
+        "time_s": "s"
+      },
+      "voltage_V": {
+        "max": 4.2005849,
+        "mean": 3.74334838429,
+        "min": 2.5000913
+      }
+    }
+  ],
+  "quality_status": "blocked",
+  "raw_manifest_path": "reports/measurements/cmu_evtol_raw_file_manifest.json",
+  "source": "Carnegie Mellon eVTOL Battery Dataset",
+  "source_id": "datasource.cmu_evtol_battery",
+  "system_boundary": "cell-level eVTOL duty-cycle evidence only",
+  "timeseries_file_count": 21,
+  "verification": [
+    {
+      "current_md5": "d65302bc58a41b5272594ae2f8766525",
+      "current_sha256": "16d5a583e07b6ffd8654a3d88e68751f5d9acef0c3b0090a7b9e9284d273b608",
+      "exists": true,
+      "expected_sha256": "16d5a583e07b6ffd8654a3d88e68751f5d9acef0c3b0090a7b9e9284d273b608",
+      "expected_size_bytes": 5832,
+      "file_name": "README.txt",
+      "hash_matches": true,
+      "local_size_bytes": 5832,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "already_present",
+      "supplied_md5": "d65302bc58a41b5272594ae2f8766525"
+    },
+    {
+      "current_md5": "7ba1092696df05426bee98a40ca5fe22",
+      "current_sha256": "895bbfe543ac7ad1adb1eed4d03c392d0bc460d382acc6a40198c33149360223",
+      "exists": true,
+      "expected_sha256": "895bbfe543ac7ad1adb1eed4d03c392d0bc460d382acc6a40198c33149360223",
+      "expected_size_bytes": 20868474,
+      "file_name": "VAH07.csv",
+      "hash_matches": true,
+      "local_size_bytes": 20868474,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "already_present",
+      "supplied_md5": "7ba1092696df05426bee98a40ca5fe22"
+    },
+    {
+      "current_md5": "b49c28bd6355af9f27a3a59076bebcf5",
+      "current_sha256": "cef4d10ae9f4103379d5ec4f5c8c6541f9a4d647fc338f489a5deb6582679f4d",
+      "exists": true,
+      "expected_sha256": "cef4d10ae9f4103379d5ec4f5c8c6541f9a4d647fc338f489a5deb6582679f4d",
+      "expected_size_bytes": 34711901,
+      "file_name": "VAH16.csv",
+      "hash_matches": true,
+      "local_size_bytes": 34711901,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "b49c28bd6355af9f27a3a59076bebcf5"
+    },
+    {
+      "current_md5": "c0401fbec3e626f0565d86b9630daefd",
+      "current_sha256": "7c49b75c9f87bad48e172ebde9172a4649be7063705d2ddc32a629a697d6922e",
+      "exists": true,
+      "expected_sha256": "7c49b75c9f87bad48e172ebde9172a4649be7063705d2ddc32a629a697d6922e",
+      "expected_size_bytes": 36863498,
+      "file_name": "VAH15.csv",
+      "hash_matches": true,
+      "local_size_bytes": 36863498,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "c0401fbec3e626f0565d86b9630daefd"
+    },
+    {
+      "current_md5": "be391caaf8a06af7e9b4fab0a3d92654",
+      "current_sha256": "17c464c724b9a259566576ed6b6c8147425351802b6380d96df326c5e7955a1f",
+      "exists": true,
+      "expected_sha256": "17c464c724b9a259566576ed6b6c8147425351802b6380d96df326c5e7955a1f",
+      "expected_size_bytes": 38957608,
+      "file_name": "VAH22.csv",
+      "hash_matches": true,
+      "local_size_bytes": 38957608,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "be391caaf8a06af7e9b4fab0a3d92654"
+    },
+    {
+      "current_md5": "8512c658d755d456d7c65c68d4f10f49",
+      "current_sha256": "c9a2fcdb18a6265cd5b2e0ccba8afc7d5a4051e6bf56590340834df2304a137f",
+      "exists": true,
+      "expected_sha256": "c9a2fcdb18a6265cd5b2e0ccba8afc7d5a4051e6bf56590340834df2304a137f",
+      "expected_size_bytes": 39543963,
+      "file_name": "VAH27.csv",
+      "hash_matches": true,
+      "local_size_bytes": 39543963,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "8512c658d755d456d7c65c68d4f10f49"
+    },
+    {
+      "current_md5": "4f8f2155724b2485dcc9b26bf9e1018a",
+      "current_sha256": "2ee40fb5654ccc3d8aaec3b7892a1c48d9fd6a3f435b8781e173668d42a1b3e5",
+      "exists": true,
+      "expected_sha256": "2ee40fb5654ccc3d8aaec3b7892a1c48d9fd6a3f435b8781e173668d42a1b3e5",
+      "expected_size_bytes": 39716804,
+      "file_name": "VAH20.csv",
+      "hash_matches": true,
+      "local_size_bytes": 39716804,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "4f8f2155724b2485dcc9b26bf9e1018a"
+    },
+    {
+      "current_md5": "ef187dc740443fee6875d8f33246406b",
+      "current_sha256": "739fe3d4cac8993aec437cda08b941c217cffb118081da463c0b31d085c49412",
+      "exists": true,
+      "expected_sha256": "739fe3d4cac8993aec437cda08b941c217cffb118081da463c0b31d085c49412",
+      "expected_size_bytes": 40334649,
+      "file_name": "VAH25.csv",
+      "hash_matches": true,
+      "local_size_bytes": 40334649,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "ef187dc740443fee6875d8f33246406b"
+    },
+    {
+      "current_md5": "d5f0f9aebb672bec8a59ce517b5da854",
+      "current_sha256": "3b08dbbd5403c379f9a557c66a5a84faeda35f7a39243de609c0e9fe39f1b608",
+      "exists": true,
+      "expected_sha256": "3b08dbbd5403c379f9a557c66a5a84faeda35f7a39243de609c0e9fe39f1b608",
+      "expected_size_bytes": 52941535,
+      "file_name": "VAH23.csv",
+      "hash_matches": true,
+      "local_size_bytes": 52941535,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "d5f0f9aebb672bec8a59ce517b5da854"
+    },
+    {
+      "current_md5": "5d48dc40b509bf197b45cc0c3d2a9eeb",
+      "current_sha256": "a37ed0e32a52aa165369b58a0cdad6155bf36f153e433b12f9a34b2b8bef07c8",
+      "exists": true,
+      "expected_sha256": "a37ed0e32a52aa165369b58a0cdad6155bf36f153e433b12f9a34b2b8bef07c8",
+      "expected_size_bytes": 59542865,
+      "file_name": "VAH30.csv",
+      "hash_matches": true,
+      "local_size_bytes": 59542865,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "5d48dc40b509bf197b45cc0c3d2a9eeb"
+    },
+    {
+      "current_md5": "d1205279db4359f7f034148fbdf2fd8e",
+      "current_sha256": "b89449330d73c876bbde158754f42e80cdc2bfa84cd90c6607e9352e230c8da5",
+      "exists": true,
+      "expected_sha256": "b89449330d73c876bbde158754f42e80cdc2bfa84cd90c6607e9352e230c8da5",
+      "expected_size_bytes": 64996701,
+      "file_name": "VAH24.csv",
+      "hash_matches": true,
+      "local_size_bytes": 64996701,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "d1205279db4359f7f034148fbdf2fd8e"
+    },
+    {
+      "current_md5": "cf15d329ddbe429ef55256ccb85549e4",
+      "current_sha256": "02e6ae71d83ae35a7a7059fa46ba322524178182ae8bed739ddf773b3821967b",
+      "exists": true,
+      "expected_sha256": "02e6ae71d83ae35a7a7059fa46ba322524178182ae8bed739ddf773b3821967b",
+      "expected_size_bytes": 65053976,
+      "file_name": "VAH13.csv",
+      "hash_matches": true,
+      "local_size_bytes": 65053976,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "cf15d329ddbe429ef55256ccb85549e4"
+    },
+    {
+      "current_md5": "30419d4152fd0a1cd00f4725cbdcfc49",
+      "current_sha256": "a20cf42e2a58eed8dff3a1d54816012c043664dbf4cfdcee61bf86bd5048b4d8",
+      "exists": true,
+      "expected_sha256": "a20cf42e2a58eed8dff3a1d54816012c043664dbf4cfdcee61bf86bd5048b4d8",
+      "expected_size_bytes": 65550764,
+      "file_name": "VAH17.csv",
+      "hash_matches": true,
+      "local_size_bytes": 65550764,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "30419d4152fd0a1cd00f4725cbdcfc49"
+    },
+    {
+      "current_md5": "34a2ddb60ea304aecd48b090e3728a58",
+      "current_sha256": "4bd91ff22fe8d417270455ca300dc03de83a061f3fef08cfd3f0ffbb942d8e26",
+      "exists": true,
+      "expected_sha256": "4bd91ff22fe8d417270455ca300dc03de83a061f3fef08cfd3f0ffbb942d8e26",
+      "expected_size_bytes": 68755848,
+      "file_name": "VAH09.csv",
+      "hash_matches": true,
+      "local_size_bytes": 68755848,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "34a2ddb60ea304aecd48b090e3728a58"
+    },
+    {
+      "current_md5": "7cc437a0c3f49d603c2561c870a8644c",
+      "current_sha256": "1e6ecd99821a1e110e67650b2c6475e3fcb4fac0e798842d1689d0fb4bd09c0c",
+      "exists": true,
+      "expected_sha256": "1e6ecd99821a1e110e67650b2c6475e3fcb4fac0e798842d1689d0fb4bd09c0c",
+      "expected_size_bytes": 72084649,
+      "file_name": "VAH26.csv",
+      "hash_matches": true,
+      "local_size_bytes": 72084649,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "7cc437a0c3f49d603c2561c870a8644c"
+    },
+    {
+      "current_md5": "b5f709421414add938c4124ef975bc76",
+      "current_sha256": "64e6917005a6e769177089beaedd44a9a0f43339042fab5a23b58d5640c7aa28",
+      "exists": true,
+      "expected_sha256": "64e6917005a6e769177089beaedd44a9a0f43339042fab5a23b58d5640c7aa28",
+      "expected_size_bytes": 77372609,
+      "file_name": "VAH28.csv",
+      "hash_matches": true,
+      "local_size_bytes": 77372609,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "b5f709421414add938c4124ef975bc76"
+    },
+    {
+      "current_md5": "48fe5eed2cb98e3e44852efb8dd6538a",
+      "current_sha256": "1fc8df685aaa783b416286fb04bd0425bcb11d32b3a5d8f977e1f018543bf75d",
+      "exists": true,
+      "expected_sha256": "1fc8df685aaa783b416286fb04bd0425bcb11d32b3a5d8f977e1f018543bf75d",
+      "expected_size_bytes": 80516636,
+      "file_name": "VAH06.csv",
+      "hash_matches": true,
+      "local_size_bytes": 80516636,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "48fe5eed2cb98e3e44852efb8dd6538a"
+    },
+    {
+      "current_md5": "3878134738ac2321474d1e79fbec21f9",
+      "current_sha256": "d6d2604ddbe2771cb8cecfa6be62c5fce6271b0ee9d02e8eeec92cf7985bc3cd",
+      "exists": true,
+      "expected_sha256": "d6d2604ddbe2771cb8cecfa6be62c5fce6271b0ee9d02e8eeec92cf7985bc3cd",
+      "expected_size_bytes": 95058678,
+      "file_name": "VAH10.csv",
+      "hash_matches": true,
+      "local_size_bytes": 95058678,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "3878134738ac2321474d1e79fbec21f9"
+    },
+    {
+      "current_md5": "e656158721e03b68c24c12d167930a29",
+      "current_sha256": "55f31eb9877a62e1e7da7aded95b76bc6ab4190fda2ae8e86b05e6a5a0ed2cb3",
+      "exists": true,
+      "expected_sha256": "55f31eb9877a62e1e7da7aded95b76bc6ab4190fda2ae8e86b05e6a5a0ed2cb3",
+      "expected_size_bytes": 101558525,
+      "file_name": "VAH05.csv",
+      "hash_matches": true,
+      "local_size_bytes": 101558525,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "e656158721e03b68c24c12d167930a29"
+    },
+    {
+      "current_md5": "1e52367cbe1d1c97834ebc406446eb91",
+      "current_sha256": "63ae338dfa26bcde8b497b6511e4202396efe3de0dcdf9011af602b38307dbbe",
+      "exists": true,
+      "expected_sha256": "63ae338dfa26bcde8b497b6511e4202396efe3de0dcdf9011af602b38307dbbe",
+      "expected_size_bytes": 102405276,
+      "file_name": "VAH02.csv",
+      "hash_matches": true,
+      "local_size_bytes": 102405276,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "1e52367cbe1d1c97834ebc406446eb91"
+    },
+    {
+      "current_md5": "5b0ac8963f1d161d4b74c731f8d8640a",
+      "current_sha256": "596ab1e1e80eeac3509f789609f751527c2073a4310deec8274cbfaf4fef39c4",
+      "exists": true,
+      "expected_sha256": "596ab1e1e80eeac3509f789609f751527c2073a4310deec8274cbfaf4fef39c4",
+      "expected_size_bytes": 110884708,
+      "file_name": "VAH01.csv",
+      "hash_matches": true,
+      "local_size_bytes": 110884708,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "5b0ac8963f1d161d4b74c731f8d8640a"
+    },
+    {
+      "current_md5": "0e83559d8060526c1c79deb8bb81850a",
+      "current_sha256": "783d39c0ced88d93c885e7b78d834a45e2cea121662ea24bb425b10c3ef7c041",
+      "exists": true,
+      "expected_sha256": "783d39c0ced88d93c885e7b78d834a45e2cea121662ea24bb425b10c3ef7c041",
+      "expected_size_bytes": 133282685,
+      "file_name": "VAH12.csv",
+      "hash_matches": true,
+      "local_size_bytes": 133282685,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "0e83559d8060526c1c79deb8bb81850a"
+    },
+    {
+      "current_md5": "b8c40f60bfcf49e901f598b22fec9ad1",
+      "current_sha256": "03e6d90e11d20f1759f9dc7ea6922598cae078c5c556f9d6f7438f8f38e50c76",
+      "exists": true,
+      "expected_sha256": "03e6d90e11d20f1759f9dc7ea6922598cae078c5c556f9d6f7438f8f38e50c76",
+      "expected_size_bytes": 138352138,
+      "file_name": "VAH11.csv",
+      "hash_matches": true,
+      "local_size_bytes": 138352138,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "b8c40f60bfcf49e901f598b22fec9ad1"
+    },
+    {
+      "current_md5": "c3eb0ca25c7d0a566119fa843ae8892b",
+      "current_sha256": "c7c4d2c433d55af489bad3672ff9752fdd10534e822d6558bc0f205e76d5e854",
+      "exists": true,
+      "expected_sha256": "c7c4d2c433d55af489bad3672ff9752fdd10534e822d6558bc0f205e76d5e854",
+      "expected_size_bytes": 496,
+      "file_name": "VAH07_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 496,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "already_present",
+      "supplied_md5": "c3eb0ca25c7d0a566119fa843ae8892b"
+    },
+    {
+      "current_md5": "5859bf1b3b63fbecf2fe22a2a5a1fae4",
+      "current_sha256": "0b7c65e269485be0cf80be515970b463b1f92015fb25cdcbd1425c304b1bcd69",
+      "exists": true,
+      "expected_sha256": "0b7c65e269485be0cf80be515970b463b1f92015fb25cdcbd1425c304b1bcd69",
+      "expected_size_bytes": 1008,
+      "file_name": "VAH16_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1008,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "5859bf1b3b63fbecf2fe22a2a5a1fae4"
+    },
+    {
+      "current_md5": "80e2e3ea5677e0f1757a9b1b4c4acb59",
+      "current_sha256": "caaca9a99757ab23b1f75d428c99b40397b9a404189e305b94bf057182ff80c9",
+      "exists": true,
+      "expected_sha256": "caaca9a99757ab23b1f75d428c99b40397b9a404189e305b94bf057182ff80c9",
+      "expected_size_bytes": 1008,
+      "file_name": "VAH22_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1008,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "80e2e3ea5677e0f1757a9b1b4c4acb59"
+    },
+    {
+      "current_md5": "969a8f4ebbe9c840f30d1f77cb7e4485",
+      "current_sha256": "c7f963b849846dd32827539042a299c23517a364361a47e77cbc60b111b4cf7b",
+      "exists": true,
+      "expected_sha256": "c7f963b849846dd32827539042a299c23517a364361a47e77cbc60b111b4cf7b",
+      "expected_size_bytes": 1010,
+      "file_name": "VAH25_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1010,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "969a8f4ebbe9c840f30d1f77cb7e4485"
+    },
+    {
+      "current_md5": "8c6dc9267cf25257bd1cdd0b278692e4",
+      "current_sha256": "30771e30a7b7b41f72f31245fd02c9b112314b2661e874f23f7e3b5e945a1d6b",
+      "exists": true,
+      "expected_sha256": "30771e30a7b7b41f72f31245fd02c9b112314b2661e874f23f7e3b5e945a1d6b",
+      "expected_size_bytes": 1011,
+      "file_name": "VAH15_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1011,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "8c6dc9267cf25257bd1cdd0b278692e4"
+    },
+    {
+      "current_md5": "d899a6ee45a0d295e852fb46fd76aac1",
+      "current_sha256": "76ab678e83be9c5d51f8c4a3c9b7fb0c68bc20ef8479331adfe67bf8b1d7a4da",
+      "exists": true,
+      "expected_sha256": "76ab678e83be9c5d51f8c4a3c9b7fb0c68bc20ef8479331adfe67bf8b1d7a4da",
+      "expected_size_bytes": 1098,
+      "file_name": "VAH27_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1098,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "d899a6ee45a0d295e852fb46fd76aac1"
+    },
+    {
+      "current_md5": "48eeea0e0ed1b50f1b3ad627d6d30465",
+      "current_sha256": "3a57af9e556ac5be36e5d634a34f3d8539072c4cdccd238433624fc51bb36882",
+      "exists": true,
+      "expected_sha256": "3a57af9e556ac5be36e5d634a34f3d8539072c4cdccd238433624fc51bb36882",
+      "expected_size_bytes": 1101,
+      "file_name": "VAH20_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1101,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "48eeea0e0ed1b50f1b3ad627d6d30465"
+    },
+    {
+      "current_md5": "983f062e4503a50e7327e2c0bd1e6749",
+      "current_sha256": "54f0854f94b745d4ad1242e948e055a991279667f507c330af9ac5ae33b7ff57",
+      "exists": true,
+      "expected_sha256": "54f0854f94b745d4ad1242e948e055a991279667f507c330af9ac5ae33b7ff57",
+      "expected_size_bytes": 1185,
+      "file_name": "VAH02_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1185,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "983f062e4503a50e7327e2c0bd1e6749"
+    },
+    {
+      "current_md5": "ca0b407cb71a516553c444cc52abf01d",
+      "current_sha256": "faad66c83519c32e7743575f301d3ccaec865f4d613769398558466c824b0d60",
+      "exists": true,
+      "expected_sha256": "faad66c83519c32e7743575f301d3ccaec865f4d613769398558466c824b0d60",
+      "expected_size_bytes": 1261,
+      "file_name": "VAH23_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1261,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "ca0b407cb71a516553c444cc52abf01d"
+    },
+    {
+      "current_md5": "c24914b70c57cbc8886fc035c12795d8",
+      "current_sha256": "642022e68f04ecf9ef22d588d6b0042496cdb25154e7c84017654b77defda35e",
+      "exists": true,
+      "expected_sha256": "642022e68f04ecf9ef22d588d6b0042496cdb25154e7c84017654b77defda35e",
+      "expected_size_bytes": 1431,
+      "file_name": "VAH24_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1431,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "c24914b70c57cbc8886fc035c12795d8"
+    },
+    {
+      "current_md5": "02c687dbcfaa1ccc23c66f5ca51a9514",
+      "current_sha256": "f92a2e6b141d732863fbf5ba09e8867c073f15df2d35c80c83887051a1d31b25",
+      "exists": true,
+      "expected_sha256": "f92a2e6b141d732863fbf5ba09e8867c073f15df2d35c80c83887051a1d31b25",
+      "expected_size_bytes": 1522,
+      "file_name": "VAH01_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1522,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "02c687dbcfaa1ccc23c66f5ca51a9514"
+    },
+    {
+      "current_md5": "64d75a388c0ea129b72f32b28417e8dc",
+      "current_sha256": "b4a881a04db010c944780376cfe9fcc79f45cb23a89a9b04a6146a6eedbee94c",
+      "exists": true,
+      "expected_sha256": "b4a881a04db010c944780376cfe9fcc79f45cb23a89a9b04a6146a6eedbee94c",
+      "expected_size_bytes": 1608,
+      "file_name": "VAH30_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1608,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "64d75a388c0ea129b72f32b28417e8dc"
+    },
+    {
+      "current_md5": "6dba1cfce488983b53cc3cb57089299c",
+      "current_sha256": "0ef668247db20357450b5abc2fb2bfb384cafb3096b57e85c54376c2055f20a7",
+      "exists": true,
+      "expected_sha256": "0ef668247db20357450b5abc2fb2bfb384cafb3096b57e85c54376c2055f20a7",
+      "expected_size_bytes": 1774,
+      "file_name": "VAH06_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1774,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "6dba1cfce488983b53cc3cb57089299c"
+    },
+    {
+      "current_md5": "afc4c6cb3ce644d8c52d3c0ada82d99a",
+      "current_sha256": "543f86f5ed7558833311a145b3ae57bf56916f01eb6223e873711aca48908a29",
+      "exists": true,
+      "expected_sha256": "543f86f5ed7558833311a145b3ae57bf56916f01eb6223e873711aca48908a29",
+      "expected_size_bytes": 1779,
+      "file_name": "VAH17_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1779,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "afc4c6cb3ce644d8c52d3c0ada82d99a"
+    },
+    {
+      "current_md5": "ec9ae058b220bc5dafce33be4f94af97",
+      "current_sha256": "71980be44b3e6411d48e27c12f3a867a6358264be8cf0874ea5bf885f9dcac8b",
+      "exists": true,
+      "expected_sha256": "71980be44b3e6411d48e27c12f3a867a6358264be8cf0874ea5bf885f9dcac8b",
+      "expected_size_bytes": 1787,
+      "file_name": "VAH13_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 1787,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "ec9ae058b220bc5dafce33be4f94af97"
+    },
+    {
+      "current_md5": "97f8c94b3cf673eb7e868f9aa964ce2d",
+      "current_sha256": "b0dca59ca2a54d383b4faed9ed3e6108b38b9401c2c1e425b1ceb82cc4f3b051",
+      "exists": true,
+      "expected_sha256": "b0dca59ca2a54d383b4faed9ed3e6108b38b9401c2c1e425b1ceb82cc4f3b051",
+      "expected_size_bytes": 2034,
+      "file_name": "VAH09_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 2034,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "97f8c94b3cf673eb7e868f9aa964ce2d"
+    },
+    {
+      "current_md5": "af18badb2f52ecc03ad30b324946a94b",
+      "current_sha256": "3da9ee287976f7aa4bd65598b3d1fd19f961c5d82703620af4a809bc4a3c1535",
+      "exists": true,
+      "expected_sha256": "3da9ee287976f7aa4bd65598b3d1fd19f961c5d82703620af4a809bc4a3c1535",
+      "expected_size_bytes": 2035,
+      "file_name": "VAH28_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 2035,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "af18badb2f52ecc03ad30b324946a94b"
+    },
+    {
+      "current_md5": "be8ee1f0c68c5fa066a771736421228c",
+      "current_sha256": "fafd4f35bc844197c9d4fec19dbbbb92102939a2073463ccae54c13b80038bcf",
+      "exists": true,
+      "expected_sha256": "fafd4f35bc844197c9d4fec19dbbbb92102939a2073463ccae54c13b80038bcf",
+      "expected_size_bytes": 2381,
+      "file_name": "VAH11_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 2381,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "be8ee1f0c68c5fa066a771736421228c"
+    },
+    {
+      "current_md5": "10887e5d96a080af61a0405f4170a6ee",
+      "current_sha256": "99d0326a3217121f165b18bc82d359c3dc03d590aaa0f161b5a37991007b4cc2",
+      "exists": true,
+      "expected_sha256": "99d0326a3217121f165b18bc82d359c3dc03d590aaa0f161b5a37991007b4cc2",
+      "expected_size_bytes": 2470,
+      "file_name": "VAH10_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 2470,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "10887e5d96a080af61a0405f4170a6ee"
+    },
+    {
+      "current_md5": "8e9a0f629409eb0b161ac17b9768d119",
+      "current_sha256": "daf5837767126ba6e6bce68ba0912f604a995c6de030dc85ee423b331901edbc",
+      "exists": true,
+      "expected_sha256": "daf5837767126ba6e6bce68ba0912f604a995c6de030dc85ee423b331901edbc",
+      "expected_size_bytes": 2640,
+      "file_name": "VAH05_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 2640,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "8e9a0f629409eb0b161ac17b9768d119"
+    },
+    {
+      "current_md5": "edd7fea4808b6d1cba0a6260e6ee0ee8",
+      "current_sha256": "f934693b63b549979d0e1ae13225f809617cea12262a5b62d63ae24de4c76d7f",
+      "exists": true,
+      "expected_sha256": "f934693b63b549979d0e1ae13225f809617cea12262a5b62d63ae24de4c76d7f",
+      "expected_size_bytes": 4015,
+      "file_name": "VAH12_impedance.csv",
+      "hash_matches": true,
+      "local_size_bytes": 4015,
+      "md5_matches": true,
+      "parser_status": "not_attempted",
+      "size_matches": true,
+      "status": "downloaded",
+      "supplied_md5": "edd7fea4808b6d1cba0a6260e6ee0ee8"
+    }
+  ]
+}

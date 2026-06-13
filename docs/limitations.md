@@ -1,6 +1,8 @@
 # Scientific Limitations
 
-- No experimental materials or cell dataset has been ingested in Phase 0/1.
+- A representative subset of the approved CMU eVTOL Battery Dataset can be
+  downloaded, hash-verified, and parsed as cell-level evidence. This does not
+  create comparable pack-level evidence or chemistry-ranking evidence.
 - Phase 2 reference cases are calculation fixtures. The lithium-sulfur voltage
   profile and cell/pack bills of materials are deliberately illustrative and
   must not be treated as achieved or projected product performance.
@@ -22,6 +24,9 @@
 - Simulation campaign grids map requirement envelopes and architecture
   sensitivities. They do not validate materials, prove mission feasibility,
   replace published aircraft-study benchmarks, or enable candidate ranking.
+- Long-haul feasibility rows are first-order diagnostics. Expected-infeasible
+  500 km, 1000 km, 3000 km, and 6000+ km cases are not aircraft designs and do
+  not prove impossibility outside the configured assumptions.
 - Pack trade-space sweeps convert pack targets into required cell-energy
   envelopes under simplified mass and usable-energy factors. They are not pack
   designs or manufacturable bills of materials.
@@ -59,10 +64,14 @@
 - Source connector dry runs and metadata fetches do not create experimental
   battery-performance records, approved snapshots, or ranking evidence.
 - The Carnegie Mellon eVTOL Battery Dataset source is approved under CC BY 4.0
-  for cell-level aviation-duty-cycle evidence, but its connector currently
-  snapshots article and file metadata only. Measurement values are not trusted
-  until the archive is downloaded, hashed, parsed, unit-audited, and mapped to
-  explicit cell-level boundaries.
+  for cell-level aviation-duty-cycle evidence. Parsed representative files are
+  still cell-level only. They cannot be used as pack-level proof, candidate
+  ranking evidence, or aircraft mission validation.
+- Manufacturer and propulsion registries contain public context values with
+  source-boundary labels. They are not a substitute for certification filings,
+  battery pack measurements, or detailed propulsion duty-cycle data.
+- Partner dossiers are factual briefs derived from repo artifacts. They are not
+  sales claims, investment recommendations, or validation packages.
 - Materials Project records are computed/material metadata unless independently
   audited and contextualized. They do not validate electrochemical cell
   performance, pack performance, cycle life, safety, manufacturability, or

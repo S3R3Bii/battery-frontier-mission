@@ -1,0 +1,121 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+records:
+  - id: propulsion.whisper_aero_quiet_propulsor_reference
+    manufacturer: Whisper Aero
+    system_name: Quiet electric propulsor reference
+    system_type: electric propulsor technology
+    use_case: low-noise distributed electric propulsion research and product context
+    max_power_kW:
+    continuous_power_kW:
+    propulsor_count:
+    aircraft_examples: []
+    source_url: https://whisper.aero/
+    source_type: manufacturer_site
+    source_confidence: medium_for_scope_low_for_numeric_specs
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Included as propulsion technology context only; no audited aircraft, battery, motor power, or pack evidence is encoded here.
+
+  - id: propulsion.beta_h500a
+    manufacturer: BETA Technologies
+    system_name: H500A electric motor
+    system_type: electric propulsion motor
+    use_case: ALIA CTOL cruise propulsion and ALIA VTOL cruise propulsion
+    max_power_kW:
+    continuous_power_kW:
+    propulsor_count: 1
+    aircraft_examples:
+      - aircraft.beta_alia_ctol
+      - aircraft.beta_alia_vtol
+    source_url: https://beta.team/aircraft
+    source_type: manufacturer_product_page
+    source_confidence: high_for_configuration_low_for_power
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Public aircraft page identifies motor family and installation context but does not expose enough power or pack data for battery sufficiency validation.
+
+  - id: propulsion.beta_v600a
+    manufacturer: BETA Technologies
+    system_name: V600A lift motor
+    system_type: electric lift motor
+    use_case: ALIA VTOL vertical-lift propulsion
+    max_power_kW:
+    continuous_power_kW:
+    propulsor_count: 4
+    aircraft_examples:
+      - aircraft.beta_alia_vtol
+    source_url: https://beta.team/aircraft
+    source_type: manufacturer_product_page
+    source_confidence: high_for_configuration_low_for_power
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Public aircraft page identifies lift-motor count but does not provide transient power, thermal, or battery-pack limits.
+
+  - id: propulsion.joby_distributed_electric_reference
+    manufacturer: Joby Aviation
+    system_name: Six-propulsor distributed electric aircraft propulsion reference
+    system_type: distributed electric tilt-propulsor aircraft system
+    use_case: piloted eVTOL air taxi
+    max_power_kW:
+    continuous_power_kW:
+    propulsor_count: 6
+    aircraft_examples:
+      - aircraft.joby_s4_evtol
+    source_url: https://www.jobyaviation.com/aircraft/
+    source_type: manufacturer_product_page
+    source_confidence: medium
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Aircraft-level propulsion layout is useful for context but not enough to infer motor power, pack energy, reserve, or battery margin.
+
+  - id: propulsion.archer_midnight_distributed_electric_reference
+    manufacturer: Archer Aviation
+    system_name: Midnight distributed electric propulsion reference
+    system_type: distributed electric eVTOL propulsion system
+    use_case: short urban airport shuttle and air taxi
+    max_power_kW:
+    continuous_power_kW:
+    propulsor_count: 12
+    aircraft_examples:
+      - aircraft.archer_midnight
+    source_url: https://www.archer.com/aircraft
+    source_type: manufacturer_product_page
+    source_confidence: medium
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Public web content is insufficient for battery model calibration; values remain system-context metadata only.
+
+  - id: propulsion.magnix_magni650
+    manufacturer: magniX
+    system_name: magni650
+    system_type: electric propulsion unit
+    use_case: fixed-wing eCTOL aircraft propulsion
+    max_power_kW:
+    continuous_power_kW:
+    propulsor_count:
+    aircraft_examples:
+      - aircraft.eviation_alice
+    source_url: https://www.magnix.aero/powertrains
+    source_type: manufacturer_product_page
+    source_confidence: high_for_product_scope_low_for_numeric_specs
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Official page confirms fixed-wing eCTOL product scope but does not expose enough numeric motor data for validated mission comparison.
+
+  - id: propulsion.zeroavia_hydrogen_electric_reference
+    manufacturer: ZeroAvia
+    system_name: Hydrogen-electric regional powertrain reference
+    system_type: hydrogen-electric propulsion system
+    use_case: 10-20 seat and 40-80 seat regional aircraft powertrain applications
+    max_power_kW:
+    continuous_power_kW:
+    propulsor_count:
+    aircraft_examples:
+      - aircraft.zeroavia_regional_reference
+    source_url: https://zeroavia.com/
+    source_type: manufacturer_site
+    source_confidence: high_for_scope
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Hydrogen-electric powertrains are included for aviation propulsion context and must not be compared as battery-only pack proof.

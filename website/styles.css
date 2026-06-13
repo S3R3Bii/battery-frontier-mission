@@ -47,6 +47,8 @@ body {
 .simulation-grid,
 .simulation-stats,
 .envelope-grid,
+.pipeline-grid,
+.context-grid,
 .artifact-list {
   display: grid;
   gap: 12px;
@@ -214,6 +216,34 @@ h2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.pipeline-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.pipeline-step {
+  border: 1px solid #243044;
+  border-radius: 8px;
+  background: #0a0f16;
+  padding: 12px;
+  min-width: 0;
+}
+
+.pipeline-step .name {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.pipeline-step .value {
+  min-height: 34px;
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
 .band .value {
   margin: 8px 0;
   font-size: 1.35rem;
@@ -319,7 +349,7 @@ th {
 }
 
 .simulation-stats {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .simulation-stat,
@@ -349,6 +379,22 @@ th {
 
 .truth-panel {
   margin-top: 12px;
+}
+
+.longhaul-panel {
+  margin-top: 14px;
+  border: 1px solid #1c2634;
+  border-radius: 8px;
+  background: #05080d;
+  padding: 12px;
+}
+
+.compact-head {
+  margin-bottom: 8px;
+}
+
+.context-grid {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 }
 
 .truth-panel ul,
@@ -545,6 +591,8 @@ th {
   .blueprint-grid,
   .simulation-grid,
   .envelope-grid,
+.pipeline-grid,
+.context-grid,
   .artifact-list {
     grid-template-columns: 1fr;
   }

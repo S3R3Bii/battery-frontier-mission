@@ -1,0 +1,186 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+records:
+  - id: aircraft.beta_alia_vtol
+    manufacturer: BETA Technologies
+    vehicle_name: ALIA VTOL
+    aircraft_class: eVTOL utility aircraft
+    role: passenger, cargo, medical, defense
+    range_km:
+    cruise_speed_kmh:
+    max_speed_kmh: 283.0
+    payload_kg:
+    passenger_capacity: 5
+    mtow_kg:
+    battery_capacity_kWh:
+    motor_count: 5
+    motor_power_kW:
+    propulsor_count: 5
+    certification_status: development and flight test; configuration data from public product page
+    source_url: https://beta.team/aircraft
+    source_type: manufacturer_product_page
+    source_confidence: high_for_listed_fields
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Public page lists configuration fields but not full battery mass, MTOW, payload mass, or certified performance.
+
+  - id: aircraft.beta_alia_ctol
+    manufacturer: BETA Technologies
+    vehicle_name: ALIA CTOL
+    aircraft_class: eCTOL utility aircraft
+    role: passenger, cargo, medical, defense
+    range_km: 622.0
+    cruise_speed_kmh:
+    max_speed_kmh: 283.0
+    payload_kg:
+    passenger_capacity: 5
+    mtow_kg:
+    battery_capacity_kWh:
+    motor_count: 1
+    motor_power_kW:
+    propulsor_count: 1
+    certification_status: development and flight test; public page reports max demonstrated range
+    source_url: https://beta.team/aircraft
+    source_type: manufacturer_product_page
+    source_confidence: high_for_listed_fields
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Max demonstrated range is not a certified service range and cannot be used as pack-level battery validation.
+
+  - id: aircraft.joby_s4_evtol
+    manufacturer: Joby Aviation
+    vehicle_name: Joby S4 eVTOL
+    aircraft_class: piloted eVTOL air taxi
+    role: urban and regional air taxi
+    range_km: 161.0
+    cruise_speed_kmh:
+    max_speed_kmh: 322.0
+    payload_kg: 454.0
+    passenger_capacity: 4
+    mtow_kg:
+    battery_capacity_kWh:
+    motor_count: 6
+    motor_power_kW:
+    propulsor_count: 6
+    certification_status: FAA certification in progress; public claims require primary filing audit before modeling as certified values
+    source_url: https://www.jobyaviation.com/aircraft/
+    source_type: manufacturer_product_page
+    source_confidence: medium
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Public range, speed, and payload values are system claims, not disclosed battery cell or pack measurements.
+
+  - id: aircraft.archer_midnight
+    manufacturer: Archer Aviation
+    vehicle_name: Midnight
+    aircraft_class: piloted eVTOL air taxi
+    role: short urban airport shuttle and air taxi
+    range_km: 161.0
+    cruise_speed_kmh:
+    max_speed_kmh: 241.0
+    payload_kg: 454.0
+    passenger_capacity: 4
+    mtow_kg:
+    battery_capacity_kWh:
+    motor_count:
+    motor_power_kW:
+    propulsor_count: 12
+    certification_status: FAA certification in progress; public values require filing-level audit
+    source_url: https://www.archer.com/aircraft
+    source_type: manufacturer_product_page
+    source_confidence: medium
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Aircraft-level claims do not disclose battery energy, pack mass, reserve assumptions, or certified mission performance.
+
+  - id: aircraft.heart_es30
+    manufacturer: Heart Aerospace
+    vehicle_name: ES-30
+    aircraft_class: hybrid-electric regional aircraft
+    role: regional passenger transport
+    range_km: 200.0
+    cruise_speed_kmh:
+    max_speed_kmh:
+    payload_kg:
+    passenger_capacity: 30
+    mtow_kg:
+    battery_capacity_kWh:
+    motor_count:
+    motor_power_kW:
+    propulsor_count:
+    certification_status: planned type certification in 2031 according to manufacturer page
+    source_url: https://www.heartaerospace.com/es-30
+    source_type: manufacturer_product_page
+    source_confidence: high_for_listed_fields
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: All-electric range is listed separately from hybrid range; this is not a pure battery long-haul example.
+
+  - id: aircraft.eviation_alice
+    manufacturer: Eviation Aircraft
+    vehicle_name: Alice
+    aircraft_class: electric regional aircraft
+    role: commuter passenger and cargo concept
+    range_km: 463.0
+    cruise_speed_kmh: 407.0
+    max_speed_kmh:
+    payload_kg: 1134.0
+    passenger_capacity: 9
+    mtow_kg: 6350.0
+    battery_capacity_kWh: 820.0
+    motor_count: 2
+    motor_power_kW: 634.0
+    propulsor_count: 2
+    certification_status: program status uncertain; values come from industry reporting and need current primary confirmation
+    source_url: https://www.futureflight.aero/aircraft-program/eviation-aircraft-alice
+    source_type: industry_profile
+    source_confidence: medium
+    values_status: third_party
+    date_accessed: 2026-06-13
+    limitations: Current company status and redesign values must be rechecked before using as an active aircraft benchmark.
+
+  - id: aircraft.wisk_generation_6
+    manufacturer: Wisk Aero
+    vehicle_name: Generation 6
+    aircraft_class: autonomous eVTOL air taxi
+    role: urban air taxi
+    range_km: 144.0
+    cruise_speed_kmh: 222.0
+    max_speed_kmh:
+    payload_kg:
+    passenger_capacity: 4
+    mtow_kg:
+    battery_capacity_kWh:
+    motor_count:
+    motor_power_kW:
+    propulsor_count: 12
+    certification_status: candidate for certification; autonomy and aircraft values require source audit
+    source_url: https://wisk.aero/
+    source_type: manufacturer_site
+    source_confidence: medium
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Public vehicle claims do not expose battery pack details or full certification assumptions.
+
+  - id: aircraft.zeroavia_regional_reference
+    manufacturer: ZeroAvia
+    vehicle_name: Hydrogen-electric regional platform reference
+    aircraft_class: hydrogen-electric regional retrofit/platform
+    role: 10-20 seat and 40-80 seat regional aircraft powertrain applications
+    range_km:
+    cruise_speed_kmh:
+    max_speed_kmh:
+    payload_kg:
+    passenger_capacity:
+    mtow_kg:
+    battery_capacity_kWh:
+    motor_count:
+    motor_power_kW:
+    propulsor_count:
+    certification_status: hydrogen-electric propulsion development; not a battery-electric aircraft benchmark
+    source_url: https://zeroavia.com/
+    source_type: manufacturer_site
+    source_confidence: high_for_scope
+    values_status: official_partial
+    date_accessed: 2026-06-13
+    limitations: Included as propulsion context only; hydrogen-electric systems should not be compared as battery-only pack evidence.

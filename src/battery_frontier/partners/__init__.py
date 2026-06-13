@@ -1,0 +1,2 @@
+"""Partner-facing dossier generation."""
+
