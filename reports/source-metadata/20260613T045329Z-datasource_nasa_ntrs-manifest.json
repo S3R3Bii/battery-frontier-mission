@@ -1,0 +1,66 @@
+{
+  "artifact_type": "source_snapshot_manifest",
+  "created_at_utc": "2026-06-13T04:53:29.617878+00:00",
+  "ingestion_status": "metadata_ready",
+  "license_status": "item_specific",
+  "limitations": "Repository records span different evidence levels and publication types.",
+  "metadata_only": true,
+  "payload_sha256": "f6a9921d466a8e5f0ac8ccbaaa0e202bf890acb3caec0bb56bf6e75a77b64b14",
+  "query": "electric aircraft battery",
+  "ranking_evidence": false,
+  "request": {
+    "headers": {
+      "Accept": "application/json"
+    },
+    "method": "GET",
+    "query": "electric aircraft battery",
+    "rows": 1,
+    "url": "https://ntrs.nasa.gov/api/citations/search?keyword=electric+aircraft+battery&size=1"
+  },
+  "requested_rows": 1,
+  "result": {
+    "connector": "NASA NTRS metadata search",
+    "credential_available": true,
+    "execute_requested": true,
+    "executed": true,
+    "execution_supported": true,
+    "generated_at_utc": "2026-06-13T04:53:29.188110+00:00",
+    "ingestion_status": "metadata_ready",
+    "key_env": null,
+    "license_note": "Follow NASA terms and each record's public-availability and distribution markings.",
+    "license_status": "item_specific",
+    "limitations": "Repository records span different evidence levels and publication types.",
+    "metadata_only": true,
+    "notes": [
+      "Metadata-only connector output is not battery performance evidence.",
+      "Chemistry ranking remains blocked until audited measurements exist.",
+      "Source license is not approved for trusted published snapshots."
+    ],
+    "query": "electric aircraft battery",
+    "ranking_evidence": false,
+    "record_count": 0,
+    "records": [],
+    "request": {
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "GET",
+      "query": "electric aircraft battery",
+      "rows": 1,
+      "url": "https://ntrs.nasa.gov/api/citations/search?keyword=electric+aircraft+battery&size=1"
+    },
+    "requested_rows": 1,
+    "requires_key": false,
+    "response_sha256": "ba5ede9a2aaf00094ea359a29c018030ef6d28e8273d1e2cbf0489c3c1a98da1",
+    "source": "NASA Technical Reports Server",
+    "source_id": "datasource.nasa_ntrs",
+    "status": "fetched",
+    "trusted_publication": false
+  },
+  "retrieved_at_utc": "2026-06-13T04:53:29.188110+00:00",
+  "row_count": 0,
+  "source": "NASA Technical Reports Server",
+  "source_id": "datasource.nasa_ntrs",
+  "status": "fetched",
+  "trusted_publication": false
+}

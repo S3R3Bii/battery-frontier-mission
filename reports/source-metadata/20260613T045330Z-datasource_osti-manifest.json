@@ -1,0 +1,143 @@
+{
+  "artifact_type": "source_snapshot_manifest",
+  "created_at_utc": "2026-06-13T04:53:30.499249+00:00",
+  "ingestion_status": "planned",
+  "license_status": "item_specific",
+  "limitations": "Publication type and review status vary.",
+  "metadata_only": true,
+  "payload_sha256": "cacb0a34ffee649b8fc91957478983827043a0cfb44acaf732d0e494166d835c",
+  "query": "aviation battery energy storage",
+  "ranking_evidence": false,
+  "request": {
+    "headers": {
+      "Accept": "application/json"
+    },
+    "method": "GET",
+    "query": "aviation battery energy storage",
+    "rows": 1,
+    "url": "https://www.osti.gov/api/v1/records?q=aviation+battery+energy+storage&rows=1"
+  },
+  "requested_rows": 1,
+  "result": {
+    "connector": "DOE OSTI metadata search",
+    "credential_available": true,
+    "execute_requested": true,
+    "executed": true,
+    "execution_supported": true,
+    "generated_at_utc": "2026-06-13T04:53:30.293539+00:00",
+    "ingestion_status": "planned",
+    "key_env": null,
+    "license_note": "Retain report-level rights and distribution metadata.",
+    "license_status": "item_specific",
+    "limitations": "Publication type and review status vary.",
+    "metadata_only": true,
+    "notes": [
+      "Metadata-only connector output is not battery performance evidence.",
+      "Chemistry ranking remains blocked until audited measurements exist.",
+      "Source license is not approved for trusted published snapshots."
+    ],
+    "query": "aviation battery energy storage",
+    "ranking_evidence": false,
+    "record_count": 1,
+    "records": [
+      {
+        "authors": [
+          "Leach, Timothy [Launch Alaska]"
+        ],
+        "contract_number": "EE0009608; ",
+        "country_publication": "United States",
+        "description": "The Launch Alaska Transportation and Energy Accelerator (LATEA), funded through the U.S. Department of Energy Office of Technology Commercialization\u2019s Energy Program for Innovation Clusters (EPIC),advanced deployment of innovative and efficient transportation and energy technology in Alaska from October 2021 through June 2025. The project was designed to leverage Launch Alaska\u2019s accelerator model to identify, recruit, and support transportation technology companies with novel solutions to market needs while building the stakeholder networks, demonstration opportunities, and institutional capacity necessary to accelerate commercialization in one of the most challenging operating environments in the United States.",
+        "doe_contract_number": "EE0009608; ",
+        "doi": "10.2172/3366886",
+        "entry_date": "2026-06-04T16:28:07Z",
+        "identifier": "EE0009608",
+        "language": "English",
+        "links": [
+          {
+            "href": "https://www.osti.gov/biblio/3366886",
+            "rel": "citation"
+          },
+          {
+            "href": "https://www.osti.gov/servlets/purl/3366886",
+            "rel": "fulltext"
+          }
+        ],
+        "osti_id": "3366886",
+        "product_type": "Technical Report",
+        "publication_date": "2026-06-04T00:00:00Z",
+        "publisher": "Launch Alaska",
+        "report_number": "DOE-LA-09608-FTR1",
+        "research_orgs": [
+          "Launch Alaska"
+        ],
+        "sponsor_orgs": [
+          "Department of Energy and Office of the Under Secretary for Science(54)"
+        ],
+        "subjects": [
+          "08 HYDROGEN",
+          "09 BIOMASS FUELS",
+          "10 SYNTHETIC FUELS",
+          "25 ENERGY STORAGE",
+          "33 ADVANCED PROPULSION SYSTEMS",
+          "AK4C",
+          "Alaska",
+          "Alaska Clean Cities and Communities Coalition",
+          "Alternative Fuels",
+          "Arctic Innovation",
+          "Battery Energy Storage",
+          "Charging Infrastructure",
+          "Clean Transportation",
+          "Cold Climate Testing",
+          "Demonstration Projects",
+          "DOE EPIC",
+          "E-fuels",
+          "Economic Development",
+          "Electric Aviation",
+          "Electric Vehicles",
+          "Energy Resilience",
+          "EVSE",
+          "Fleet Electrification",
+          "Hydrogen Fuel Cells",
+          "Maritime Decarbonization",
+          "Market Transformation",
+          "Proof of Concept",
+          "Public-Private Partnerships",
+          "Remote Communities",
+          "Renewable Diesel",
+          "Rural Transportation",
+          "Startup Accelerator",
+          "Sustainable Aviation Fuel",
+          "Synthetic Fuels",
+          "Technology Commercialization",
+          "Technology Deployment",
+          "Technology Transfer",
+          "Transportation Electrification",
+          "Transportation Innovation"
+        ],
+        "title": "EPIC FOA AWARDEE FINAL TECHNICAL REPORT"
+      }
+    ],
+    "request": {
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "GET",
+      "query": "aviation battery energy storage",
+      "rows": 1,
+      "url": "https://www.osti.gov/api/v1/records?q=aviation+battery+energy+storage&rows=1"
+    },
+    "requested_rows": 1,
+    "requires_key": false,
+    "response_sha256": "92dbfeec0dbf7a774ab89f6f632973495a0e98d5ad413142f9878be46176e7fa",
+    "source": "DOE Office of Scientific and Technical Information",
+    "source_id": "datasource.osti",
+    "status": "fetched",
+    "trusted_publication": false
+  },
+  "retrieved_at_utc": "2026-06-13T04:53:30.293539+00:00",
+  "row_count": 1,
+  "source": "DOE Office of Scientific and Technical Information",
+  "source_id": "datasource.osti",
+  "status": "fetched",
+  "trusted_publication": false
+}

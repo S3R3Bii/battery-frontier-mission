@@ -609,6 +609,8 @@ See [scientific scope](docs/scientific_scope.md), [equations](docs/equations.md)
   snapshot manifests
 - Static mission-control website data export and high-contrast public dashboard
   surface in `website/`
+- GitHub Actions workflows for CI, daily report refresh, metadata-only source
+  refresh, and GitHub Pages deployment
 
 ## Repository Map
 
@@ -624,6 +626,8 @@ src/battery_frontier/    Validated domain, physics, aviation, and reporting code
 tests/                   Equation and registry validation tests
 website/                 Static mission-control web app consuming generated JSON
 ```
+
+See [deployment](docs/deployment.md) for GitHub Pages and automation setup.
 
 ## Quick Start
 

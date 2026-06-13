@@ -40,3 +40,13 @@ Snapshot manifests record source id, query, row count, request URL, retrieval
 time, SHA-256 hash, license status, limitations, and whether trusted publication
 is allowed. A manifest does not upgrade metadata into experimental battery
 performance evidence.
+
+## Automated Metadata Refresh
+
+`.github/workflows/metadata-ingestion.yml` runs weekly and on demand. It executes
+metadata-only requests for NASA NTRS and DOE OSTI and writes manifests to
+`reports/source-metadata/`.
+
+These manifests are useful for finding candidate reports and benchmark studies.
+They are not approved external snapshots, experimental measurements, or ranking
+inputs.

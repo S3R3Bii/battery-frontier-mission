@@ -65,10 +65,10 @@ chemistry rankings remain blocked.
 
 ## Dashboard Artifact Hashes
 
-- `artifact.phase2.results`: `a5b5df2a0ba00f8218474e1fb283afd5deb1dad00939edf7647135f8494ee75c`
-- `artifact.phase3.results`: `91d2f1f54d1f71dfa8684f2a6c80b2450924f0c47d5971b18adc94a73f459fd1`
-- `artifact.phase2.method_card`: `7556e99e57dd719c8ec3a7b4223af0c4f574548278aa54da325daa88879196c4`
-- `artifact.phase3.method_card`: `7c20d35399d79b4552505f3ca0fa2c58c05a7b78184f239847d2ad714d753cb2`
+- `artifact.phase2.results`: `0b3b0ab394f9d2c88bf6e473ec4a580234d4e0076430b25bde2a7142cb93c16f`
+- `artifact.phase3.results`: `22aef9a00b337fba487444385a1592c7a17c7114b0d757db4b717f46645b72d9`
+- `artifact.phase2.method_card`: `565ac1f75fe94cdbd644d0adcb9a1be20b2818a5cf3fec522f716539020a6844`
+- `artifact.phase3.method_card`: `8aab5474e888149e7269e1358550b42d80e85ac3705b75b6430efa1ff8de78b9`
 
 ## Assumption Changes
 
@@ -106,7 +106,7 @@ negative results remain public and reproducible.
 - Code snapshot SHA-256: `bd484b9cf01f600d859a74f8f6705e3ccb35053d3be321902bea84b2b693ef4b`
 - Python: `3.14.2`
 - Platform: `Windows-11-10.0.26200-SP0`
-- Generated UTC: `2026-06-13T04:07:43.107870+00:00`
+- Generated UTC: `2026-06-13T04:52:39.204946+00:00`
 - Configuration hashes:
 - `configs/assumptions.yaml`: `63c51f3fbd90e4582d5b334b1552c006d63b89576d01f7f903ba1763ffbf45b8`
 - `configs/aviation_scenarios.yaml`: `a3b15ca13fefc5f51ae237dbcf40d335c1dab630c8100b9bd1f44c4020989cce`

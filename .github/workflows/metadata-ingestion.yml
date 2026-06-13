@@ -1,0 +1,49 @@
+name: Source metadata refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "40 11 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install -e .
+      - run: python -m battery_frontier.cli validate
+      - name: Fetch metadata-only source manifests
+        run: |
+          python -m battery_frontier.cli source-dry-run \
+            --source datasource.nasa_ntrs \
+            --query "electric aircraft battery energy storage" \
+            --rows 10 \
+            --execute \
+            --write-manifest \
+            --manifest-dir reports/source-metadata
+          python -m battery_frontier.cli source-dry-run \
+            --source datasource.osti \
+            --query "aviation battery energy storage" \
+            --rows 10 \
+            --execute \
+            --write-manifest \
+            --manifest-dir reports/source-metadata
+      - name: Refresh website data
+        run: |
+          python -m battery_frontier.cli dashboard-artifacts
+          python -m battery_frontier.cli daily-report
+          python -m battery_frontier.cli website-data
+      - name: Commit metadata manifests
+        run: |
+          git config user.name "battery-frontier-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/source-metadata reports/daily reports/dashboard website/mission-control-data.json
+          git diff --cached --quiet || git commit -m "data: refresh source metadata manifests"
+          git push
