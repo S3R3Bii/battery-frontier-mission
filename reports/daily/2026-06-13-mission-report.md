@@ -85,10 +85,10 @@ rankings remain blocked because pack-level comparable evidence is not available.
 
 ## Dashboard Artifact Hashes
 
-- `artifact.phase2.results`: `af4eff66338669dda0069bd50fbf7110c302d486e080ad19257f96dac4652117`
-- `artifact.phase3.results`: `b874835d482bde86fdb758b98aaf4d3f698d8f7ec0d85a69f3db31fceec2edfb`
-- `artifact.phase2.method_card`: `379281952b3102612378197da4d0e38ac443f0c8e4e962b858f30fdde60f0cf4`
-- `artifact.phase3.method_card`: `335521063b185111f518cf8070d4ffb725aea1e386d40cf1530820bb14de92e7`
+- `artifact.phase2.results`: `942b656a643e84d8931793759635c409e4bfd41fc6911743c7c37693f0ee6981`
+- `artifact.phase3.results`: `e0c6daa5536634af117920a26a4d71722aa15032cf9e906fdc79793e7624084d`
+- `artifact.phase2.method_card`: `7db278dd175505093f5157c356d0119686a1313b5f0612f4888332335d323aaa`
+- `artifact.phase3.method_card`: `05da40098fadc13577e4a7b3758e9dd49e2f8dc656c46f7b0a60532dd2a53fca`
 
 ## Assumption Changes
 
@@ -102,7 +102,7 @@ hashes; it does not upgrade simulations into facts.
 - Ranking enabled: False
 - Ranking gate: Ranking blocked: required comparable evidence or uncertainty is missing.
 - Candidates blocked by missing ranking fields: 11
-- Materials Project metadata records linked as discovery context: 0
+- Materials Project metadata records linked as discovery context: 18
 - Hemp bast-fiber graphitic carbon status: speculative material lead only; no
   audited full-cell, pack, cycle-life, safety, or aviation performance evidence.
 
@@ -156,9 +156,9 @@ negative results remain public and reproducible.
 
 - Package version: `0.4.0`
 - Code snapshot SHA-256: `bad4f3804ae30c54d52ad04f3e3686aef606327d17f78326984120d9d5d439a4`
-- Python: `3.14.2`
-- Platform: `Windows-11-10.0.26200-SP0`
-- Generated UTC: `2026-06-13T08:13:26.059051+00:00`
+- Python: `3.11.15`
+- Platform: `Linux-6.17.0-1018-azure-x86_64-with-glibc2.39`
+- Generated UTC: `2026-06-13T12:58:13.271515+00:00`
 - Configuration hashes:
 - `configs/aircraft_systems.yaml`: `f28336c50e7777958acb96b0f0b48298b984c9c27a86c1f3cb258b35c6d10e23`
 - `configs/assumptions.yaml`: `63c51f3fbd90e4582d5b334b1552c006d63b89576d01f7f903ba1763ffbf45b8`
@@ -172,12 +172,12 @@ negative results remain public and reproducible.
 - `configs/segmented_mission_cases.yaml`: `6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2`
 - Dashboard manifest: `reports/dashboard/phase4_dashboard_manifest.json`
 - Candidate dossier artifact: `reports/candidates/candidate_dossiers.json`
-- Candidate dossier SHA-256: `1e911bd65b71f8b27d0203687f4da89027780031ebecc8a8c8600c994fa3b7ae`
+- Candidate dossier SHA-256: `a54cb25d5271703ede2d0f76b1931eaa598e70465d0a1784631b4be8d005d6d7`
 - Simulation campaign artifact: `reports/simulations/simulation_campaign_summary.json`
-- Simulation campaign SHA-256: `62e46a016653fea1fb558aad9d36032d5970d7ed83d14521322dd4ed04d8a07d`
-- CMU raw manifest SHA-256: `8c04effffa0373d925b033f286c9981b5515eeb99c83899edfed535980c4b3e9`
-- CMU measurement summary SHA-256: `9b93445ebd1e142ec1f87f0d838341e96440d459b062b280610b672851b7a076`
-- Partner dossier manifest SHA-256: `99dfbb04def5b8fc3253059174bba3663471cba67956b4d2a5dcd5bc26f022d6`
+- Simulation campaign SHA-256: `13bb445050699569d1883491c69f72c1b2dde805968b0aa659e29262786f4823`
+- CMU raw manifest SHA-256: `e5f999ee1a71983a79600b7f6400eb93b9609a6b51362a9b42552a4249f0daa4`
+- CMU measurement summary SHA-256: `1c3882f98eae1b5cbf7d664252d08b48cde4d5a788b5cc3e6fe27b0be0915e3d`
+- Partner dossier manifest SHA-256: `76951eccb0fb37878688b973000859876f7276fb9c0178647f120e4d6b153d72`
 
 ## Limitations
 

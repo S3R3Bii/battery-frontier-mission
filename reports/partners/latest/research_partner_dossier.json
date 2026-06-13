@@ -2,28 +2,28 @@
   "artifact_hashes": {
     "candidate_dossiers": {
       "path": "reports/candidates/candidate_dossiers.json",
-      "sha256": "1e911bd65b71f8b27d0203687f4da89027780031ebecc8a8c8600c994fa3b7ae",
-      "size_bytes": 51707
+      "sha256": "a54cb25d5271703ede2d0f76b1931eaa598e70465d0a1784631b4be8d005d6d7",
+      "size_bytes": 70502
     },
     "cmu_measurement_summary": {
       "path": "reports/measurements/cmu_evtol_measurement_summary.json",
-      "sha256": "9b93445ebd1e142ec1f87f0d838341e96440d459b062b280610b672851b7a076",
-      "size_bytes": 138823
+      "sha256": "1c3882f98eae1b5cbf7d664252d08b48cde4d5a788b5cc3e6fe27b0be0915e3d",
+      "size_bytes": 134868
     },
     "cmu_raw_manifest": {
       "path": "reports/measurements/cmu_evtol_raw_file_manifest.json",
-      "sha256": "8c04effffa0373d925b033f286c9981b5515eeb99c83899edfed535980c4b3e9",
-      "size_bytes": 71412
+      "sha256": "e5f999ee1a71983a79600b7f6400eb93b9609a6b51362a9b42552a4249f0daa4",
+      "size_bytes": 70014
     },
     "long_haul_feasibility": {
       "path": "reports/simulations/long_haul_feasibility.json",
-      "sha256": "76054fd95003477cebe57237225d26d699dd2d712a117df2453451239150ec1d",
-      "size_bytes": 8446
+      "sha256": "c799ca6825e7f5ba69f443f4faabfecd3377cd66bf6c3d496bf46dbd56f1256d",
+      "size_bytes": 8253
     },
     "simulation_campaign": {
       "path": "reports/simulations/simulation_campaign_summary.json",
-      "sha256": "62e46a016653fea1fb558aad9d36032d5970d7ed83d14521322dd4ed04d8a07d",
-      "size_bytes": 6974812
+      "sha256": "13bb445050699569d1883491c69f72c1b2dde805968b0aa659e29262786f4823",
+      "size_bytes": 6797881
     }
   },
   "artifact_type": "partner_dossier",
@@ -87,7 +87,7 @@
     "measurement schema and quality checks",
     "license and provenance requirements"
   ],
-  "generated_at_utc": "2026-06-13T08:13:19.052894+00:00",
+  "generated_at_utc": "2026-06-13T12:58:11.985593+00:00",
   "manufacturer_example_table": [
     {
       "aircraft_class": "eVTOL utility aircraft",

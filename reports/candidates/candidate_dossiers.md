@@ -9,7 +9,7 @@
 - Audited measurements: 0
 - Ranking enabled: False
 - Ranking gate: Ranking blocked: required comparable evidence or uncertainty is missing.
-- Materials Project appendix: 0 metadata records
+- Materials Project appendix: 18 metadata records
 
 ## Dossiers
 
