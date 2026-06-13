@@ -63,6 +63,14 @@ def generate_daily_report(
     connector_status = source_status_rows(registries)
     connector_ready = sum(row["execution_supported"] for row in connector_status)
     trusted_sources = sum(row["trusted_publication_allowed"] for row in connector_status)
+    materials_project_status = next(
+        (
+            row["readiness"]
+            for row in connector_status
+            if row["source_id"] == "datasource.materials_project"
+        ),
+        "not registered",
+    )
     artifact_rows = "\n".join(
         f"- `{artifact.artifact_id}`: `{artifact.sha256}`"
         for artifact in dashboard_artifacts
@@ -138,7 +146,7 @@ chemistry rankings remain blocked.
 
 - Metadata connectors with optional execution paths: {connector_ready}
 - Sources approved for trusted published snapshots: {trusted_sources}
-- Materials Project status: requires `MP_API_KEY` before API execution.
+- Materials Project status: {materials_project_status}.
 - NASA NTRS and OSTI status: metadata connectors are available; records remain
   metadata-only until reviewed.
 

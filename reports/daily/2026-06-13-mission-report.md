@@ -57,18 +57,18 @@ chemistry rankings remain blocked.
 
 ## Connector Readiness
 
-- Metadata connectors with optional execution paths: 2
+- Metadata connectors with optional execution paths: 3
 - Sources approved for trusted published snapshots: 0
-- Materials Project status: requires `MP_API_KEY` before API execution.
+- Materials Project status: ready for optional metadata fetch.
 - NASA NTRS and OSTI status: metadata connectors are available; records remain
   metadata-only until reviewed.
 
 ## Dashboard Artifact Hashes
 
-- `artifact.phase2.results`: `0b3b0ab394f9d2c88bf6e473ec4a580234d4e0076430b25bde2a7142cb93c16f`
-- `artifact.phase3.results`: `22aef9a00b337fba487444385a1592c7a17c7114b0d757db4b717f46645b72d9`
-- `artifact.phase2.method_card`: `565ac1f75fe94cdbd644d0adcb9a1be20b2818a5cf3fec522f716539020a6844`
-- `artifact.phase3.method_card`: `8aab5474e888149e7269e1358550b42d80e85ac3705b75b6430efa1ff8de78b9`
+- `artifact.phase2.results`: `f36f45de9518bdd14c57abae367f636c77054e78d00c528840b35099b6bc54d1`
+- `artifact.phase3.results`: `811e283202e15a9ae1f37f56f27ba4a873f5b91130888fdd0dffa8981748a79a`
+- `artifact.phase2.method_card`: `e2dace7c51dc929965f74edfff2d442483db124c0d962bacb8a7311b5e9b4fad`
+- `artifact.phase3.method_card`: `c7ee2f56404c5e8f0a30b73d7410c9f59ace14a2d01a62f1c1891964c4961c69`
 
 ## Assumption Changes
 
@@ -103,10 +103,10 @@ negative results remain public and reproducible.
 ## Reproducibility
 
 - Package version: `0.4.0`
-- Code snapshot SHA-256: `bd484b9cf01f600d859a74f8f6705e3ccb35053d3be321902bea84b2b693ef4b`
+- Code snapshot SHA-256: `49cef9a63cbbc24b63e1899e7c80d0275edba47ff606db9bf3921769302624c3`
 - Python: `3.14.2`
 - Platform: `Windows-11-10.0.26200-SP0`
-- Generated UTC: `2026-06-13T04:52:39.204946+00:00`
+- Generated UTC: `2026-06-13T05:58:57.306715+00:00`
 - Configuration hashes:
 - `configs/assumptions.yaml`: `63c51f3fbd90e4582d5b334b1552c006d63b89576d01f7f903ba1763ffbf45b8`
 - `configs/aviation_scenarios.yaml`: `a3b15ca13fefc5f51ae237dbcf40d335c1dab630c8100b9bd1f44c4020989cce`

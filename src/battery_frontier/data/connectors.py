@@ -18,6 +18,140 @@ from battery_frontier.schemas import DataSource
 DEFAULT_SOURCE_QUERY = "battery aviation energy storage"
 DEFAULT_SOURCE_ROWS = 5
 FETCH_TIMEOUT_S = 30
+SOURCE_USER_AGENT = "battery-frontier-mission/0.4 metadata-only"
+MATERIALS_PROJECT_FIELDS = (
+    "material_id",
+    "formula_pretty",
+    "chemsys",
+    "elements",
+    "density",
+    "energy_above_hull",
+    "formation_energy_per_atom",
+    "is_stable",
+    "theoretical",
+    "last_updated",
+)
+MATERIALS_PROJECT_DEFAULT_ELEMENTS = ("Li", "O")
+_ELEMENT_SYMBOLS = {
+    "H",
+    "He",
+    "Li",
+    "Be",
+    "B",
+    "C",
+    "N",
+    "O",
+    "F",
+    "Ne",
+    "Na",
+    "Mg",
+    "Al",
+    "Si",
+    "P",
+    "S",
+    "Cl",
+    "Ar",
+    "K",
+    "Ca",
+    "Sc",
+    "Ti",
+    "V",
+    "Cr",
+    "Mn",
+    "Fe",
+    "Co",
+    "Ni",
+    "Cu",
+    "Zn",
+    "Ga",
+    "Ge",
+    "As",
+    "Se",
+    "Br",
+    "Kr",
+    "Rb",
+    "Sr",
+    "Y",
+    "Zr",
+    "Nb",
+    "Mo",
+    "Tc",
+    "Ru",
+    "Rh",
+    "Pd",
+    "Ag",
+    "Cd",
+    "In",
+    "Sn",
+    "Sb",
+    "Te",
+    "I",
+    "Xe",
+    "Cs",
+    "Ba",
+    "La",
+    "Ce",
+    "Pr",
+    "Nd",
+    "Pm",
+    "Sm",
+    "Eu",
+    "Gd",
+    "Tb",
+    "Dy",
+    "Ho",
+    "Er",
+    "Tm",
+    "Yb",
+    "Lu",
+    "Hf",
+    "Ta",
+    "W",
+    "Re",
+    "Os",
+    "Ir",
+    "Pt",
+    "Au",
+    "Hg",
+    "Tl",
+    "Pb",
+    "Bi",
+    "Po",
+    "At",
+    "Rn",
+    "Fr",
+    "Ra",
+    "Ac",
+    "Th",
+    "Pa",
+    "U",
+    "Np",
+    "Pu",
+    "Am",
+    "Cm",
+    "Bk",
+    "Cf",
+    "Es",
+    "Fm",
+    "Md",
+    "No",
+    "Lr",
+    "Rf",
+    "Db",
+    "Sg",
+    "Bh",
+    "Hs",
+    "Mt",
+    "Ds",
+    "Rg",
+    "Cn",
+    "Nh",
+    "Fl",
+    "Mc",
+    "Lv",
+    "Ts",
+    "Og",
+}
 
 
 @dataclass(frozen=True)
@@ -86,12 +220,34 @@ class SourceConnector:
         request_spec = self.build_request(query, rows)
         request = Request(
             request_spec.url,
-            headers={"Accept": "application/json", **request_spec.headers},
+            headers={
+                "Accept": "application/json",
+                "User-Agent": SOURCE_USER_AGENT,
+                **request_spec.headers,
+            },
             method=request_spec.method,
         )
         with urlopen(request, timeout=FETCH_TIMEOUT_S) as response:
             payload = json.loads(response.read().decode("utf-8"))
         return request_spec, payload, self.parse_records(payload)
+
+
+def _extract_element_symbols(query: str) -> list[str]:
+    separators = ",;:/|+()[]{}"
+    normalized = query
+    for separator in separators:
+        normalized = normalized.replace(separator, " ")
+    normalized = normalized.replace("-", " ")
+
+    symbols: list[str] = []
+    for raw_token in normalized.split():
+        token = raw_token.strip()
+        if not token:
+            continue
+        candidate = token[0].upper() + token[1:].lower()
+        if candidate in _ELEMENT_SYMBOLS and candidate not in symbols:
+            symbols.append(candidate)
+    return symbols
 
 
 class NasaNtrsConnector(SourceConnector):
@@ -147,19 +303,71 @@ class PubChemConnector(SourceConnector):
 
 class MaterialsProjectConnector(SourceConnector):
     source_id = "datasource.materials_project"
-    connector_name = "Materials Project mp-api client"
+    connector_name = "Materials Project summary metadata API"
     requires_key = True
     key_env = "MP_API_KEY"
-    execution_supported = False
+    execution_supported = True
 
     def build_request(self, query: str, rows: int) -> SourceRequest:
+        elements = _extract_element_symbols(query) or list(MATERIALS_PROJECT_DEFAULT_ELEMENTS)
+        params = urlencode(
+            {
+                "elements": ",".join(elements),
+                "_fields": ",".join(MATERIALS_PROJECT_FIELDS),
+                "_limit": rows,
+            }
+        )
         return SourceRequest(
-            method="CLIENT",
-            url="mp-api MPRester.materials.summary.search",
-            headers={"Authorization": "MP_API_KEY environment variable required"},
+            method="GET",
+            url=f"https://api.materialsproject.org/materials/summary/?{params}",
+            headers={
+                "Accept": "application/json",
+                "X-API-KEY": f"<env:{self.key_env}>",
+            },
             query=query,
             rows=rows,
         )
+
+    def parse_records(self, payload: Any) -> list[dict[str, Any]]:
+        records = super().parse_records(payload)
+        normalized: list[dict[str, Any]] = []
+        for record in records:
+            item = {field: record.get(field) for field in MATERIALS_PROJECT_FIELDS}
+            item.update(
+                {
+                    "record_type": "computed_material_metadata",
+                    "metadata_only": True,
+                    "ranking_evidence": False,
+                    "performance_evidence": False,
+                    "system_boundary": "computed material metadata, not cell or pack performance",
+                    "evidence_class": "simulation_estimate",
+                    "limitations": (
+                        "Materials Project values are computed/material metadata. They do not "
+                        "validate battery performance, cycle life, manufacturability, safety, "
+                        "or aviation usefulness."
+                    ),
+                }
+            )
+            normalized.append(item)
+        return normalized
+
+    def fetch(self, query: str, rows: int) -> tuple[SourceRequest, Any, list[dict[str, Any]]]:
+        if self.requires_key and not self.credential_available():
+            raise RuntimeError(f"{self.source_id} requires `{self.key_env}`")
+
+        request_spec = self.build_request(query, rows)
+        request = Request(
+            request_spec.url,
+            headers={
+                "Accept": "application/json",
+                "User-Agent": SOURCE_USER_AGENT,
+                "X-API-KEY": os.environ[str(self.key_env)],
+            },
+            method=request_spec.method,
+        )
+        with urlopen(request, timeout=FETCH_TIMEOUT_S) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+        return request_spec, payload, self.parse_records(payload)
 
 
 CONNECTORS: dict[str, SourceConnector] = {

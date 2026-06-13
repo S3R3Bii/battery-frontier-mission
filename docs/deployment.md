@@ -30,6 +30,7 @@ reports and website data, then commits generated outputs back to `main`.
 `.github/workflows/metadata-ingestion.yml` runs weekly and on demand. It executes
 metadata-only connector requests for:
 
+- Materials Project, when `MP_API_KEY` is configured
 - NASA Technical Reports Server
 - DOE OSTI
 
@@ -38,16 +39,19 @@ performance evidence. They do not enable chemistry ranking.
 
 ## Required Secrets
 
-No secrets are required for the current Pages, daily report, NASA NTRS, or OSTI
-metadata workflows.
+No secrets are required for Pages, daily report, NASA NTRS, or OSTI metadata
+workflows.
 
-Future Materials Project ingestion requires:
+Materials Project metadata refresh requires:
 
 - `MP_API_KEY`
 
 Add it at:
 
 `Settings -> Secrets and variables -> Actions -> New repository secret`
+
+If the secret is absent, the metadata workflow skips Materials Project and still
+runs NASA NTRS and OSTI.
 
 ## Current Scientific Boundary
 

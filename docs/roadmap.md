@@ -11,8 +11,9 @@
 - Build normalized schema, source/citation registers, claim structure,
   assumptions registry, chemistry-family queue, and ingestion contracts.
 - Implemented locally: source readiness inventory, metadata-only connector
-  scaffold, dry-run requests, optional metadata fetch paths for NASA NTRS and
-  OSTI, Materials Project credential gate, and immutable snapshot manifest writer.
+  scaffold, dry-run requests, optional metadata fetch paths for Materials
+  Project, NASA NTRS, and OSTI, Materials Project credential gate, and immutable
+  snapshot manifest writer.
 - Exit: one licensed dataset can pass validation into an immutable snapshot.
 - Remaining exit item: ingest the first approved external snapshot.
 

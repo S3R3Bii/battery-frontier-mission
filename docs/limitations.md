@@ -41,3 +41,7 @@
   progress claim because the audited-measurement lane is empty.
 - Source connector dry runs and metadata fetches do not create experimental
   battery-performance records, approved snapshots, or ranking evidence.
+- Materials Project records are computed/material metadata unless independently
+  audited and contextualized. They do not validate electrochemical cell
+  performance, pack performance, cycle life, safety, manufacturability, or
+  aviation usefulness.
