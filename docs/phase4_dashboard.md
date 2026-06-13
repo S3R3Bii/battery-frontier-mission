@@ -16,6 +16,11 @@ Those dossiers are proof-gap records. They preserve candidate ideas, including
 hemp bast-fiber-derived graphitic carbon, without turning them into ranked or
 validated battery claims.
 
+The static site also consumes the Phase 3.5/4.5 simulation campaign in
+[`reports/simulations/`](../reports/simulations/). Those campaign outputs are
+requirement maps, pack trade-space sweeps, and candidate what-if envelopes. They
+do not create experimental evidence or enable chemistry ranking.
+
 ## Pages
 
 - **Mission Control**: phase readiness, evidence ledger, artifact verification,
@@ -40,6 +45,7 @@ Generate the website data after refreshing artifacts:
 ```powershell
 python -m battery_frontier.cli dashboard-artifacts
 python -m battery_frontier.cli candidate-dossiers
+python -m battery_frontier.cli simulation-campaign
 python -m battery_frontier.cli daily-report
 python -m battery_frontier.cli website-data
 python -m http.server 8000
@@ -56,6 +62,9 @@ The primary website chart shows:
 - unknown/unvalidated region: clearly labeled
 - candidate dossier rail: required proof, blockers, and metadata-only source
   context
+- simulation campaign rail: aviation requirement map, pack architecture
+  sensitivity, candidate envelopes, infeasible regions, and "what would need to
+  be true" blockers
 - conceptual target aircraft rail: mission reminder only, not a design claim
 
 ## Reproduction
@@ -66,6 +75,7 @@ python -m battery_frontier.cli physics-reference
 python -m battery_frontier.cli aviation-reference
 python -m battery_frontier.cli dashboard-artifacts
 python -m battery_frontier.cli candidate-dossiers
+python -m battery_frontier.cli simulation-campaign
 python -m streamlit run dashboard/app.py
 ```
 
@@ -80,6 +90,7 @@ Open `http://localhost:8501`.
 - method cards state purpose, inputs, outputs, guardrails, and limitations
 - infeasible mission results remain visible
 - static website progress visuals do not represent technology readiness
+- simulation campaign outputs are parameter sweeps, not validation records
 - hemp bast-fiber graphitic carbon is displayed as a speculative material lead,
   not as validated graphene, cell evidence, or pack evidence
 

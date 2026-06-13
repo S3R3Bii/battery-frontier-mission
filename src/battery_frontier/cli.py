@@ -20,6 +20,7 @@ from battery_frontier.physics.reference_cases import write_reference_results
 from battery_frontier.registry import load_registries
 from battery_frontier.reporting.daily import generate_daily_report
 from battery_frontier.reporting.method_cards import generate_dashboard_artifacts
+from battery_frontier.simulations.campaign import write_simulation_campaign
 from battery_frontier.website import export_website_data
 
 
@@ -60,6 +61,11 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     report = subparsers.add_parser("daily-report", help="Generate Markdown and JSON reports")
     report.add_argument("--date", type=date.fromisoformat, help="Report date in YYYY-MM-DD")
+    simulation = subparsers.add_parser(
+        "simulation-campaign",
+        help="Generate Phase 3.5/4.5 simulation campaign artifacts",
+    )
+    simulation.add_argument("--output-dir", type=Path)
     subparsers.add_parser("source-status", help="Show connector and license readiness")
     dry_run = subparsers.add_parser(
         "source-dry-run",
@@ -127,6 +133,13 @@ def main() -> None:
         report_path, manifest_path = generate_daily_report(report_date=args.date)
         print(f"report: {report_path}")
         print(f"manifest: {manifest_path}")
+    elif args.command == "simulation-campaign":
+        summary_path, markdown_path, artifacts = write_simulation_campaign(
+            output_dir=args.output_dir,
+        )
+        print(f"simulation summary: {summary_path}")
+        print(f"simulation report: {markdown_path}")
+        print(f"artifacts: {len(artifacts)}")
     elif args.command == "source-status":
         registries = load_registries()
         print(json.dumps(source_status_rows(registries), indent=2, sort_keys=True))

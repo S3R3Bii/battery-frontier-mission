@@ -41,6 +41,7 @@ jobs:
       - run: python -m battery_frontier.cli candidate-dossiers --execute-materials-project
         env:
           MP_API_KEY: ${{ secrets.MP_API_KEY }}
+      - run: python -m battery_frontier.cli simulation-campaign
       - run: python -m battery_frontier.cli daily-report
       - run: python -m battery_frontier.cli website-data
       - uses: actions/configure-pages@v5

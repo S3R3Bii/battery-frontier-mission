@@ -596,6 +596,8 @@ See [scientific scope](docs/scientific_scope.md), [equations](docs/equations.md)
 - Iterative battery-mass closure with explicit infeasibility reporting
 - Energy, specific-power, and continuous C-rate sizing constraints
 - Payload-range and one-at-a-time sensitivity analysis
+- Phase 3.5/4.5 simulation campaign for aviation requirement maps, pack
+  architecture trade-space sweeps, candidate envelopes, and infeasible regions
 - Plotly mission, energy-boundary, provenance, and readiness charts
 - Downloadable method cards, JSON result artifacts, and a SHA-256 manifest
 - Explicit candidate-ranking and evidence gates in the public interface
@@ -623,6 +625,7 @@ dashboard/               Streamlit public-science wireframe
 docs/                    Scope, methods, architecture, roadmap, limitations
 notebooks/               Reproducible analysis notebook placeholders
 reports/                 Daily/weekly/monthly outputs and templates
+reports/simulations/     Simulation campaign grids, trade spaces, and summaries
 schemas/                 DuckDB DDL
 src/battery_frontier/    Validated domain, physics, aviation, and reporting code
 tests/                   Equation and registry validation tests
@@ -643,6 +646,7 @@ python -m battery_frontier.cli physics-reference
 python -m battery_frontier.cli aviation-reference
 python -m battery_frontier.cli dashboard-artifacts
 python -m battery_frontier.cli candidate-dossiers
+python -m battery_frontier.cli simulation-campaign
 python -m battery_frontier.cli init-db
 python -m battery_frontier.cli source-status
 python -m battery_frontier.cli daily-report
@@ -678,6 +682,12 @@ The `candidate-dossiers` command writes
 appendix. The hemp bast-fiber-derived graphitic carbon entry is a speculative
 candidate lead only; it is not validated graphene, not a complete battery cell,
 and not aviation-grade progress.
+
+The `simulation-campaign` command writes aviation requirement grids, pack
+trade-space sweeps, candidate what-if envelopes, and a simulation summary under
+`reports/simulations/`. These are requirement and sensitivity studies only; they
+are not audited material measurements, candidate rankings, aircraft designs, or
+certification evidence.
 
 The `source-status` command reports connector readiness, required credentials,
 license status, and whether a source is approved for trusted publication. Current

@@ -10,13 +10,17 @@ flowchart LR
     C["Versioned assumptions and scenarios"] --> P["Transparent physics engine"]
     D --> P
     P --> A["Aviation mission models"]
+    A --> SC["Simulation campaign grids"]
     A --> U["Uncertainty and reality filters"]
+    SC --> U
     U --> R["Evidence-gated candidate assessments"]
     X --> E["Candidate evidence dossiers"]
     R --> E
     E --> B["Streamlit scientific dashboard"]
     E --> W["Static mission-control website JSON"]
     E --> Q["Daily reproducible reports"]
+    SC --> W
+    SC --> Q
     B --> M["Hashed method cards and downloadable artifacts"]
     W --> SITE["High-contrast public website"]
     V --> Q
@@ -33,6 +37,9 @@ flowchart LR
   engine is immature.
 - **Static HTML/CSS/JavaScript** provides a polished public mission-control
   surface over generated JSON without adding a frontend build pipeline.
+- **Simulation campaign grids** map aviation requirement envelopes, pack
+  architecture sensitivities, and candidate evidence boundaries without
+  promoting those sweeps to experimental performance evidence.
 - **Plotly** provides traceable interactive scientific charts without requiring
   a separate front-end application.
 - **Rust or Julia** is deferred until profiling identifies a kernel whose
@@ -55,6 +62,12 @@ The static website follows:
 
 `website chart -> website/mission-control-data.json -> dashboard manifest ->
 hashed Phase 2/3 artifacts -> versioned configs -> method cards -> limitations`.
+
+Simulation campaign panels follow:
+
+`website simulation panel -> website/mission-control-data.json ->
+reports/simulations -> configured mission scenarios + simulation code ->
+limitations`.
 
 Candidate dossier cards follow:
 

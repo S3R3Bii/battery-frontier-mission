@@ -19,6 +19,14 @@
   yet resolve takeoff, gust, maneuver, fault, or thermal transients.
 - Battery-mass closure demonstrates mathematical consistency under configured
   assumptions; convergence does not establish practical or certifiable feasibility.
+- Simulation campaign grids map requirement envelopes and architecture
+  sensitivities. They do not validate materials, prove mission feasibility,
+  replace published aircraft-study benchmarks, or enable candidate ranking.
+- Pack trade-space sweeps convert pack targets into required cell-energy
+  envelopes under simplified mass and usable-energy factors. They are not pack
+  designs or manufacturable bills of materials.
+- Candidate material envelopes are what-if ranges and unknown markers. They are
+  not experimental performance claims and must not be sorted into a leaderboard.
 - Theoretical capacity and energy exclude kinetics, transport losses,
   electrolyte depletion, inactive components, manufacturing tolerances,
   degradation, and safety containment until explicit factors are applied.

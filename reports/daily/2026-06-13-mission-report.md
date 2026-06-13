@@ -26,6 +26,8 @@ chemistry rankings remain blocked.
 - Phase 4 downloadable artifacts: 4
 - Experimental measurements ingested: 0
 - Simulations completed: 2
+- Simulation campaign aviation grid rows: 270
+- Simulation campaign pack trade rows: 8748
 - Candidate rankings changed: 0
 
 ## Top Three Changed Findings
@@ -36,6 +38,9 @@ chemistry rankings remain blocked.
    being replaced with an unsupported chemistry leaderboard.
 4. Candidate dossiers preserve promising leads, including hemp bast-fiber-derived
    graphitic carbon, without upgrading them into validated measurements.
+5. The simulation campaign now maps aviation requirements, pack architecture
+   penalties, candidate envelopes, and infeasible regions without creating
+   experimental evidence.
 
 ## Evidence Ledger
 
@@ -68,10 +73,10 @@ chemistry rankings remain blocked.
 
 ## Dashboard Artifact Hashes
 
-- `artifact.phase2.results`: `6f19723d188b8f3368d70c1c82b6e555478826ffe5b3fdd70b03c9e42b31f760`
-- `artifact.phase3.results`: `14108a4fd404d01fc1e09c3137f35059f319b207c4934cbab864008fbd5ed621`
-- `artifact.phase2.method_card`: `826213568ae7db83b175bbb33f4d46af41fe8ee1c6ae35ddfb9cbb4b9e329a43`
-- `artifact.phase3.method_card`: `fe9727daee851fc2bfb65fdf2e21e226aa88aefd33df5aad78d884b7e493b1be`
+- `artifact.phase2.results`: `814049cc89299f46e2c2a6bcd9780d10d4dd8a37610c921a68e943d497f3e9d0`
+- `artifact.phase3.results`: `8cd7643aef2b8f0ea5e345304ef79ff2559c5d216439fcff9958e90e1d4ab7cc`
+- `artifact.phase2.method_card`: `9c7f01ec47e7ac10f2c8bae77f12ed801fd74f7209eb5c7f2c38c23cbaff520f`
+- `artifact.phase3.method_card`: `e9d7e6a007aa1589ba381fb593dfea1c7a0d836a8d36bf36d371e9506c3faa01`
 
 ## Assumption Changes
 
@@ -91,6 +96,26 @@ hashes; it does not upgrade simulations into facts.
 
 Required experimental, uncertainty, safety, cycle-life, manufacturing, and
 source-lineage fields are not yet populated for ranking.
+
+## Simulation Campaign
+
+- Campaign status: generated
+- Simulation-only outputs: True
+- Aviation grid rows: 270
+- Feasible aviation rows: 92
+- Infeasible aviation rows: 178
+- Pack trade-space rows: 8748
+- Pack rows above research ceiling: 5345
+- Candidate envelopes: 11
+- Experimental evidence created: no
+- Ranking enabled by simulations: False
+
+```json
+{
+  "energy": 210,
+  "specific_power": 60
+}
+```
 
 ## Uncertainty and Reality Filter
 
@@ -114,10 +139,10 @@ negative results remain public and reproducible.
 ## Reproducibility
 
 - Package version: `0.4.0`
-- Code snapshot SHA-256: `8785fb8d697be87affa17b3b0d86bf9cd8a05d6e19f251b1858b58f207db6eeb`
+- Code snapshot SHA-256: `0fe9ab9c1ea09110e684acaf07764f6fe50a375ead77dc1674ae08865ab6078b`
 - Python: `3.14.2`
 - Platform: `Windows-11-10.0.26200-SP0`
-- Generated UTC: `2026-06-13T06:29:48.397319+00:00`
+- Generated UTC: `2026-06-13T06:57:16.884155+00:00`
 - Configuration hashes:
 - `configs/assumptions.yaml`: `63c51f3fbd90e4582d5b334b1552c006d63b89576d01f7f903ba1763ffbf45b8`
 - `configs/aviation_scenarios.yaml`: `a3b15ca13fefc5f51ae237dbcf40d335c1dab630c8100b9bd1f44c4020989cce`
@@ -128,7 +153,9 @@ negative results remain public and reproducible.
 - `configs/segmented_mission_cases.yaml`: `6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2`
 - Dashboard manifest: `reports/dashboard/phase4_dashboard_manifest.json`
 - Candidate dossier artifact: `reports/candidates/candidate_dossiers.json`
-- Candidate dossier SHA-256: `6d3e1889b853db683fba5bf5603dc4c9c39a6764f0984d8d7328a854d735f900`
+- Candidate dossier SHA-256: `48435c94b66c95aaf0cd5152917128a04c0f708a7523e1114371f4e7a2b2a94b`
+- Simulation campaign artifact: `reports/simulations/simulation_campaign_summary.json`
+- Simulation campaign SHA-256: `e66cd970bf85f27193bbc6f68c46a1544278327e2edc6bbffa26898feec3efe7`
 
 ## Limitations
 

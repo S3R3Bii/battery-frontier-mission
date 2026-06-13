@@ -18,6 +18,13 @@ def test_website_export_contains_frontier_and_guardrails(tmp_path) -> None:
     assert payload["candidate_dossier_summary"]["ranking_enabled"] is False
     assert payload["materials_project_appendix"]["ranking_evidence"] is False
     assert payload["conceptual_target_system"]["claim_boundary"].startswith("Speculative")
+    assert payload["simulation_campaign_summary"]["simulation_only"] is True
+    assert payload["simulation_campaign_summary"]["ranking_enabled"] is False
+    assert payload["simulation_campaign_summary"]["audited_measurements"] == 0
+    assert payload["aviation_requirement_map"]["row_count"] > 0
+    assert payload["pack_trade_space_summary"]["row_count"] > 0
+    assert payload["candidate_envelopes"]
+    assert payload["what_would_need_to_be_true"]
     assert any(
         candidate["id"] == "candidate.hemp_bast_graphitic_carbon"
         for candidate in payload["candidate_dossiers"]

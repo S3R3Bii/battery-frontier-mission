@@ -36,6 +36,7 @@ function renderMetrics(data) {
     ["Sources registered", data.metrics.data_sources],
     ["Chemistry families", data.metrics.chemistry_families],
     ["Candidate dossiers", data.metrics.candidate_dossiers],
+    ["Simulation rows", data.metrics.simulation_rows],
     ["Physics fixtures", data.metrics.physics_fixtures],
     ["Mission fixtures", data.metrics.mission_fixtures],
   ];
@@ -225,6 +226,210 @@ function renderMissionBands(data) {
       <p class="value">${fmt(band.pack_specific_energy_Wh_kg, " Wh/kg")}</p>
       <span class="status ${statusClass}">${band.feasible ? "feasible fixture" : "infeasible fixture"}</span>
       <p class="detail">${band.claim_boundary}</p>
+    `;
+    root.appendChild(item);
+  });
+}
+
+function renderAviationRequirementMap(data) {
+  const root = document.getElementById("aviationRequirementMap");
+  root.innerHTML = "";
+  const rows = data.aviation_requirement_map.rows;
+  const focus =
+    rows.filter(
+      (row) =>
+        row.base_case_id === "mission.regional_demonstrator" &&
+        row.profile === "baseline" &&
+        Number(row.payload_fraction) === 0.6,
+    ) ||
+    [];
+  const sourceRows = focus.length > 0 ? focus : rows.slice(0, 15);
+  const routes = [...new Set(sourceRows.map((row) => Number(row.route_distance_km)))].sort(
+    (left, right) => left - right,
+  );
+  const energies = [
+    ...new Set(sourceRows.map((row) => Number(row.pack_specific_energy_Wh_kg))),
+  ].sort((left, right) => left - right);
+  const width = 760;
+  const height = 330;
+  const margin = { top: 42, right: 24, bottom: 58, left: 86 };
+  const cellW = (width - margin.left - margin.right) / routes.length;
+  const cellH = (height - margin.top - margin.bottom) / energies.length;
+  const svg = svgNode("svg", {
+    viewBox: `0 0 ${width} ${height}`,
+    "aria-label": "Aviation requirement feasibility heatmap",
+  });
+
+  energies.forEach((energy, energyIndex) => {
+    routes.forEach((route, routeIndex) => {
+      const row = sourceRows.find(
+        (candidate) =>
+          Number(candidate.route_distance_km) === route &&
+          Number(candidate.pack_specific_energy_Wh_kg) === energy,
+      );
+      const feasible = row && row.feasible;
+      const rectX = margin.left + routeIndex * cellW;
+      const rectY = margin.top + (energies.length - energyIndex - 1) * cellH;
+      svg.appendChild(
+        svgNode("rect", {
+          x: rectX,
+          y: rectY,
+          width: Math.max(cellW - 4, 12),
+          height: Math.max(cellH - 4, 12),
+          rx: 4,
+          fill: feasible ? "rgba(85, 216, 139, 0.55)" : "rgba(255, 107, 107, 0.34)",
+          stroke: feasible ? "#55d88b" : "#ff6b6b",
+        }),
+      );
+      if (row) {
+        svg.appendChild(
+          textNode("text", feasible ? "OK" : "NO", {
+            x: rectX + cellW / 2,
+            y: rectY + cellH / 2 + 4,
+            "text-anchor": "middle",
+            class: "heatmap-cell-label",
+          }),
+        );
+      }
+    });
+  });
+
+  routes.forEach((route, index) => {
+    svg.appendChild(
+      textNode("text", `${fmt(route)} km`, {
+        x: margin.left + index * cellW + cellW / 2,
+        y: height - 26,
+        "text-anchor": "middle",
+        class: "axis-label",
+      }),
+    );
+  });
+  energies.forEach((energy, index) => {
+    svg.appendChild(
+      textNode("text", fmt(energy), {
+        x: margin.left - 12,
+        y: margin.top + (energies.length - index - 0.5) * cellH + 4,
+        "text-anchor": "end",
+        class: "axis-label",
+      }),
+    );
+  });
+  svg.appendChild(
+    textNode("text", "Regional demonstrator baseline payload sweep", {
+      x: margin.left,
+      y: 24,
+      class: "chart-label",
+    }),
+  );
+  svg.appendChild(
+    textNode("text", "Pack specific energy (Wh/kg)", {
+      x: 18,
+      y: margin.top + 4,
+      class: "axis-label",
+    }),
+  );
+  svg.appendChild(
+    textNode("text", "Route distance", {
+      x: margin.left + (width - margin.left - margin.right) / 2,
+      y: height - 4,
+      "text-anchor": "middle",
+      class: "axis-label",
+    }),
+  );
+  root.appendChild(svg);
+}
+
+function renderSimulationCampaign(data) {
+  const summary = data.simulation_campaign_summary;
+  setText(
+    "simulationSummary",
+    `${summary.aviation_requirement_grid_rows} aviation rows | ${summary.pack_trade_space_rows} pack rows | evidence: simulation only`,
+  );
+  renderAviationRequirementMap(data);
+
+  const stats = document.getElementById("simulationStats");
+  stats.innerHTML = "";
+  [
+    ["Feasible rows", summary.aviation_feasible_count],
+    ["Infeasible rows", summary.aviation_infeasible_count],
+    ["Bounded requirements", summary.bounded_requirement_count],
+    ["Candidate envelopes", summary.candidate_envelope_count],
+  ].forEach(([label, value]) => {
+    const item = document.createElement("article");
+    item.className = "simulation-stat";
+    item.innerHTML = `<p class="value">${fmt(value)}</p><p class="name">${label}</p>`;
+    stats.appendChild(item);
+  });
+
+  const truthList = document.getElementById("truthList");
+  truthList.innerHTML = "";
+  data.what_would_need_to_be_true.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    truthList.appendChild(li);
+  });
+}
+
+function renderPackSensitivity(data) {
+  const root = document.getElementById("packSensitivity");
+  root.innerHTML = "";
+  data.pack_trade_space_summary.sensitivity.slice(0, 6).forEach((item) => {
+    const row = document.createElement("article");
+    row.className = "sensitivity-row";
+    row.innerHTML = `
+      <div>
+        <p class="name">${item.variable.replaceAll("_", " ")}</p>
+        <p class="detail">Spread: ${fmt(item.mean_required_cell_energy_spread_Wh_kg, " Wh/kg")}</p>
+      </div>
+      <span class="status">architecture</span>
+    `;
+    root.appendChild(row);
+  });
+}
+
+function renderInfeasibleLedger(data) {
+  const root = document.getElementById("infeasibleLedger");
+  root.innerHTML = "";
+  data.infeasible_region_ledger.slice(0, 8).forEach((row) => {
+    const item = document.createElement("article");
+    item.className = "source-item";
+    item.innerHTML = `
+      <div>
+        <p class="name">${row.base_case_id} | ${row.profile}</p>
+        <p class="detail">${fmt(row.route_distance_km, " km")} | ${fmt(row.pack_specific_energy_Wh_kg, " Wh/kg")} | ${row.reasons}</p>
+      </div>
+      <span class="status blocked">${row.limiting_constraint}</span>
+    `;
+    root.appendChild(item);
+  });
+}
+
+function renderCandidateEnvelopes(data) {
+  const root = document.getElementById("candidateEnvelopeConsole");
+  root.innerHTML = "";
+  const ordered = [...data.candidate_envelopes].sort((left, right) => {
+    if (left.candidate_id.includes("hemp")) return -1;
+    if (right.candidate_id.includes("hemp")) return 1;
+    return left.display_name.localeCompare(right.display_name);
+  });
+  ordered.slice(0, 8).forEach((candidate) => {
+    const item = document.createElement("article");
+    item.className = `envelope-card ${
+      candidate.candidate_id.includes("hemp") ? "focus" : ""
+    }`;
+    const projection = candidate.envelopes.find(
+      (entry) => entry.mode === "theoretical_projection",
+    );
+    const optimistic = candidate.envelopes.find((entry) => entry.mode === "optimistic");
+    item.innerHTML = `
+      <p class="name">${candidate.display_name}</p>
+      <p class="detail">${candidate.basis}</p>
+      <div class="candidate-data-row">
+        <span>Optimistic ${fmt(optimistic.full_cell_specific_energy_Wh_kg, " Wh/kg")}</span>
+        <span>Projection ${fmt(projection.full_cell_specific_energy_Wh_kg, " Wh/kg")}</span>
+        <span>Ranking no</span>
+      </div>
+      <p class="detail">${candidate.hemp_specific_guardrail || "Envelope only; audit required."}</p>
     `;
     root.appendChild(item);
   });
@@ -489,6 +694,10 @@ function render(data) {
   renderMetrics(data);
   renderFrontierChart(data);
   renderMissionBands(data);
+  renderSimulationCampaign(data);
+  renderPackSensitivity(data);
+  renderInfeasibleLedger(data);
+  renderCandidateEnvelopes(data);
   renderCandidateDossiers(data);
   renderTargetBlueprint(data);
   renderEvidenceLedger(data);

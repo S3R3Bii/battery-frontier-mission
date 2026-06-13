@@ -54,12 +54,13 @@ jobs:
         run: |
           python -m battery_frontier.cli dashboard-artifacts
           python -m battery_frontier.cli candidate-dossiers --execute-materials-project
+          python -m battery_frontier.cli simulation-campaign
           python -m battery_frontier.cli daily-report
           python -m battery_frontier.cli website-data
       - name: Commit metadata manifests
         run: |
           git config user.name "battery-frontier-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add reports/source-metadata reports/daily reports/dashboard reports/candidates website/mission-control-data.json
+          git add reports/source-metadata reports/daily reports/dashboard reports/candidates reports/simulations website/mission-control-data.json
           git diff --cached --quiet || git commit -m "data: refresh source metadata manifests"
           git push

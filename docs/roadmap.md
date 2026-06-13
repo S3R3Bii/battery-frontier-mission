@@ -41,6 +41,18 @@
   constant segment assumptions with validated profiles, and add thermal/power
   transients without concealing model-form uncertainty.
 
+## Phase 3.5: Simulation Campaigns - Active
+
+- Sweep aviation requirements, pack architecture penalties, and candidate
+  what-if envelopes to expose feasible and infeasible regions.
+- Implemented locally: aviation requirement grid, pack trade-space grid,
+  candidate parameter envelopes, explicit infeasible ledger, artifact hashes,
+  daily-report integration, and static website visualization.
+- Boundary: these are simulations and sensitivity maps, not audited material
+  performance, aircraft designs, certification evidence, or rankings.
+- Remaining exit items: benchmark sweeps against published aircraft studies and
+  replace broad what-if envelopes with audited experimental records.
+
 ## Phase 4: Dashboard Prototype - Active
 
 - Replace wireframe placeholders with audited records, traceable charts, and
@@ -49,8 +61,8 @@
   energy chart, mission segment and sizing charts, payload-range and sensitivity
   views, source/citation audit pages, method cards, downloads, hash verification,
   static website data export, candidate evidence dossiers, Materials Project
-  metadata appendix, a conceptual target-aircraft mission reminder, and a
-  polished mission-control public surface.
+  metadata appendix, simulation campaign panels, a conceptual target-aircraft
+  mission reminder, and a polished mission-control public surface.
 - Remaining exit item: replace fixture-only scientific content with audited
   experimental measurements while retaining uncertainty and provenance.
 

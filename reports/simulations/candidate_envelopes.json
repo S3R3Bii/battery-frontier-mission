@@ -1,0 +1,578 @@
+{
+  "artifact_type": "candidate_envelopes",
+  "row_count": 11,
+  "rows": [
+    {
+      "artifact_type": "candidate_envelope",
+      "audited_measurement_count": 0,
+      "basis": "what-if full-cell envelope from common intercalation-family ranges",
+      "candidate_id": "candidate.lithium_ion_intercalation",
+      "chemistry_family": "Advanced lithium-ion intercalation",
+      "chemistry_family_id": "chemistry.lithium_ion_intercalation",
+      "display_name": "Advanced lithium-ion intercalation",
+      "envelopes": [
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 180.0,
+          "mode": "conservative",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 300.0,
+          "mode": "optimistic",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 350.0,
+          "mode": "theoretical_projection",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "unknown",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        }
+      ],
+      "evidence_class": "simulation_estimate_parameter_envelope",
+      "hemp_specific_guardrail": "",
+      "performance_evidence": false,
+      "ranking_allowed": false,
+      "ranking_evidence": false
+    },
+    {
+      "artifact_type": "candidate_envelope",
+      "audited_measurement_count": 0,
+      "basis": "what-if full-cell envelope requiring lithium inventory and safety audit",
+      "candidate_id": "candidate.lithium_metal",
+      "chemistry_family": "Lithium-metal rechargeable cells",
+      "chemistry_family_id": "chemistry.lithium_metal",
+      "display_name": "Lithium-metal rechargeable cells",
+      "envelopes": [
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 250.0,
+          "mode": "conservative",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 500.0,
+          "mode": "optimistic",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 650.0,
+          "mode": "theoretical_projection",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "unknown",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        }
+      ],
+      "evidence_class": "simulation_estimate_parameter_envelope",
+      "hemp_specific_guardrail": "",
+      "performance_evidence": false,
+      "ranking_allowed": false,
+      "ranking_evidence": false
+    },
+    {
+      "artifact_type": "candidate_envelope",
+      "audited_measurement_count": 0,
+      "basis": "what-if solid-state full-cell envelope with pressure/interface unknowns",
+      "candidate_id": "candidate.solid_state_lithium",
+      "chemistry_family": "Solid-state lithium",
+      "chemistry_family_id": "chemistry.solid_state_lithium",
+      "display_name": "Solid-state lithium",
+      "envelopes": [
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 240.0,
+          "mode": "conservative",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 500.0,
+          "mode": "optimistic",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 650.0,
+          "mode": "theoretical_projection",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "unknown",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        }
+      ],
+      "evidence_class": "simulation_estimate_parameter_envelope",
+      "hemp_specific_guardrail": "",
+      "performance_evidence": false,
+      "ranking_allowed": false,
+      "ranking_evidence": false
+    },
+    {
+      "artifact_type": "candidate_envelope",
+      "audited_measurement_count": 0,
+      "basis": "what-if full-cell envelope sensitive to electrolyte and lithium excess",
+      "candidate_id": "candidate.lithium_sulfur",
+      "chemistry_family": "Lithium-sulfur",
+      "chemistry_family_id": "chemistry.lithium_sulfur",
+      "display_name": "Lithium-sulfur",
+      "envelopes": [
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 260.0,
+          "mode": "conservative",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 600.0,
+          "mode": "optimistic",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 900.0,
+          "mode": "theoretical_projection",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "unknown",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        }
+      ],
+      "evidence_class": "simulation_estimate_parameter_envelope",
+      "hemp_specific_guardrail": "",
+      "performance_evidence": false,
+      "ranking_allowed": false,
+      "ranking_evidence": false
+    },
+    {
+      "artifact_type": "candidate_envelope",
+      "audited_measurement_count": 0,
+      "basis": "what-if system envelope; oxygen management and reversibility unresolved",
+      "candidate_id": "candidate.lithium_oxygen",
+      "chemistry_family": "Lithium-oxygen",
+      "chemistry_family_id": "chemistry.lithium_oxygen",
+      "display_name": "Lithium-oxygen",
+      "envelopes": [
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 300.0,
+          "mode": "conservative",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 800.0,
+          "mode": "optimistic",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 1500.0,
+          "mode": "theoretical_projection",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "unknown",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        }
+      ],
+      "evidence_class": "simulation_estimate_parameter_envelope",
+      "hemp_specific_guardrail": "",
+      "performance_evidence": false,
+      "ranking_allowed": false,
+      "ranking_evidence": false
+    },
+    {
+      "artifact_type": "candidate_envelope",
+      "audited_measurement_count": 0,
+      "basis": "what-if full-cell envelope for sodium-ion host systems",
+      "candidate_id": "candidate.sodium_ion",
+      "chemistry_family": "Sodium-ion",
+      "chemistry_family_id": "chemistry.sodium_ion",
+      "display_name": "Sodium-ion",
+      "envelopes": [
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 120.0,
+          "mode": "conservative",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 220.0,
+          "mode": "optimistic",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 300.0,
+          "mode": "theoretical_projection",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "unknown",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        }
+      ],
+      "evidence_class": "simulation_estimate_parameter_envelope",
+      "hemp_specific_guardrail": "",
+      "performance_evidence": false,
+      "ranking_allowed": false,
+      "ranking_evidence": false
+    },
+    {
+      "artifact_type": "candidate_envelope",
+      "audited_measurement_count": 0,
+      "basis": "what-if envelope for magnesium, calcium, and aluminum systems",
+      "candidate_id": "candidate.multivalent",
+      "chemistry_family": "Magnesium, calcium, and aluminum multivalent systems",
+      "chemistry_family_id": "chemistry.multivalent",
+      "display_name": "Magnesium, calcium, and aluminum multivalent systems",
+      "envelopes": [
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 100.0,
+          "mode": "conservative",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 300.0,
+          "mode": "optimistic",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 600.0,
+          "mode": "theoretical_projection",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "unknown",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        }
+      ],
+      "evidence_class": "simulation_estimate_parameter_envelope",
+      "hemp_specific_guardrail": "",
+      "performance_evidence": false,
+      "ranking_allowed": false,
+      "ranking_evidence": false
+    },
+    {
+      "artifact_type": "candidate_envelope",
+      "audited_measurement_count": 0,
+      "basis": "what-if rechargeable zinc-air system envelope with air-system mass unknown",
+      "candidate_id": "candidate.zinc_air",
+      "chemistry_family": "Rechargeable zinc-air",
+      "chemistry_family_id": "chemistry.zinc_air",
+      "display_name": "Rechargeable zinc-air",
+      "envelopes": [
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 150.0,
+          "mode": "conservative",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 500.0,
+          "mode": "optimistic",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 900.0,
+          "mode": "theoretical_projection",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "unknown",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        }
+      ],
+      "evidence_class": "simulation_estimate_parameter_envelope",
+      "hemp_specific_guardrail": "",
+      "performance_evidence": false,
+      "ranking_allowed": false,
+      "ranking_evidence": false
+    },
+    {
+      "artifact_type": "candidate_envelope",
+      "audited_measurement_count": 0,
+      "basis": "what-if effective-system envelope; not separable from aircraft structure",
+      "candidate_id": "candidate.structural_battery",
+      "chemistry_family": "Structural battery composites",
+      "chemistry_family_id": "chemistry.structural_battery",
+      "display_name": "Structural battery composites",
+      "envelopes": [
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 50.0,
+          "mode": "conservative",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 200.0,
+          "mode": "optimistic",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": 400.0,
+          "mode": "theoretical_projection",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "unknown",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        }
+      ],
+      "evidence_class": "simulation_estimate_parameter_envelope",
+      "hemp_specific_guardrail": "",
+      "performance_evidence": false,
+      "ranking_allowed": false,
+      "ranking_evidence": false
+    },
+    {
+      "artifact_type": "candidate_envelope",
+      "audited_measurement_count": 0,
+      "basis": "electrode/scaffold lead only; no full rechargeable-cell energy envelope",
+      "candidate_id": "candidate.bio_derived_carbon_electrodes",
+      "chemistry_family": "Bio-derived graphitic carbon electrodes",
+      "chemistry_family_id": "chemistry.bio_derived_carbon_electrodes",
+      "display_name": "Bio-derived graphitic carbon electrodes",
+      "envelopes": [
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "conservative",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "optimistic",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "theoretical_projection",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "unknown",
+          "note": "Parameter envelope only; requires audited full-cell evidence.",
+          "performance_evidence": false,
+          "system_boundary": "simulation envelope for full-cell or system what-if study",
+          "usable_for_ranking": false
+        }
+      ],
+      "evidence_class": "simulation_estimate_parameter_envelope",
+      "hemp_specific_guardrail": "",
+      "performance_evidence": false,
+      "ranking_allowed": false,
+      "ranking_evidence": false
+    },
+    {
+      "artifact_type": "candidate_envelope",
+      "audited_measurement_count": 0,
+      "basis": "electrode/scaffold lead only; no full rechargeable-cell energy envelope",
+      "candidate_id": "candidate.hemp_bast_graphitic_carbon",
+      "chemistry_family": "Bio-derived graphitic carbon electrodes",
+      "chemistry_family_id": "chemistry.bio_derived_carbon_electrodes",
+      "display_name": "Hemp bast-fiber-derived graphitic carbon nanosheets",
+      "envelopes": [
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "conservative",
+          "note": "Hemp-derived graphitic carbon is not mapped to battery-cell energy; supercapacitor behavior is not aviation battery evidence.",
+          "performance_evidence": false,
+          "system_boundary": "speculative carbon electrode/scaffold lead only",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "optimistic",
+          "note": "Hemp-derived graphitic carbon is not mapped to battery-cell energy; supercapacitor behavior is not aviation battery evidence.",
+          "performance_evidence": false,
+          "system_boundary": "speculative carbon electrode/scaffold lead only",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "theoretical_projection",
+          "note": "Hemp-derived graphitic carbon is not mapped to battery-cell energy; supercapacitor behavior is not aviation battery evidence.",
+          "performance_evidence": false,
+          "system_boundary": "speculative carbon electrode/scaffold lead only",
+          "usable_for_ranking": false
+        },
+        {
+          "audited_measurement": false,
+          "full_cell_specific_energy_Wh_kg": null,
+          "mode": "unknown",
+          "note": "Hemp-derived graphitic carbon is not mapped to battery-cell energy; supercapacitor behavior is not aviation battery evidence.",
+          "performance_evidence": false,
+          "system_boundary": "speculative carbon electrode/scaffold lead only",
+          "usable_for_ranking": false
+        }
+      ],
+      "evidence_class": "simulation_estimate_parameter_envelope",
+      "hemp_specific_guardrail": "Speculative carbon electrode/scaffold only; not validated graphene and not aviation-grade battery evidence.",
+      "performance_evidence": false,
+      "ranking_allowed": false,
+      "ranking_evidence": false
+    }
+  ]
+}

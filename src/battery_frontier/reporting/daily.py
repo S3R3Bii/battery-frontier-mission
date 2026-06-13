@@ -15,6 +15,7 @@ from battery_frontier.data.connectors import source_status_rows
 from battery_frontier.provenance import hash_files, sha256_file
 from battery_frontier.registry import load_registries
 from battery_frontier.reporting.method_cards import generate_dashboard_artifacts
+from battery_frontier.simulations.campaign import build_simulation_campaign
 
 
 def _markdown_hashes(hashes: dict[str, str]) -> str:
@@ -33,6 +34,13 @@ def _candidate_payload() -> tuple[dict, Path | None]:
     if path.exists():
         return json.loads(path.read_text(encoding="utf-8")), path
     return build_candidate_dossiers(execute_materials_project=False), None
+
+
+def _simulation_payload() -> tuple[dict, Path | None]:
+    path = PROJECT_ROOT / "reports" / "simulations" / "simulation_campaign_summary.json"
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8")), path
+    return build_simulation_campaign(), None
 
 
 def generate_daily_report(
@@ -75,6 +83,12 @@ def generate_daily_report(
     blocked_candidate_count = candidate_summary["ranking_blocked_candidate_count"]
     mp_record_count = materials_project_appendix["record_count"]
     candidate_artifact = _display_path(candidate_path) if candidate_path else "not yet written"
+    simulation_payload, simulation_path = _simulation_payload()
+    simulation_summary = simulation_payload["summary"]
+    simulation_sha256 = sha256_file(simulation_path) if simulation_path else None
+    simulation_artifact = (
+        _display_path(simulation_path) if simulation_path else "not yet written"
+    )
     connector_status = source_status_rows(registries)
     connector_ready = sum(row["execution_supported"] for row in connector_status)
     trusted_sources = sum(row["trusted_publication_allowed"] for row in connector_status)
@@ -137,6 +151,8 @@ chemistry rankings remain blocked.
 - Phase 4 downloadable artifacts: {len(dashboard_artifacts)}
 - Experimental measurements ingested: 0
 - Simulations completed: {len(mission_results)}
+- Simulation campaign aviation grid rows: {simulation_summary["aviation_requirement_grid_rows"]}
+- Simulation campaign pack trade rows: {simulation_summary["pack_trade_space_rows"]}
 - Candidate rankings changed: 0
 
 ## Top Three Changed Findings
@@ -147,6 +163,9 @@ chemistry rankings remain blocked.
    being replaced with an unsupported chemistry leaderboard.
 4. Candidate dossiers preserve promising leads, including hemp bast-fiber-derived
    graphitic carbon, without upgrading them into validated measurements.
+5. The simulation campaign now maps aviation requirements, pack architecture
+   penalties, candidate envelopes, and infeasible regions without creating
+   experimental evidence.
 
 ## Evidence Ledger
 
@@ -191,6 +210,23 @@ hashes; it does not upgrade simulations into facts.
 Required experimental, uncertainty, safety, cycle-life, manufacturing, and
 source-lineage fields are not yet populated for ranking.
 
+## Simulation Campaign
+
+- Campaign status: {simulation_summary["campaign_status"]}
+- Simulation-only outputs: {simulation_summary["simulation_only"]}
+- Aviation grid rows: {simulation_summary["aviation_requirement_grid_rows"]}
+- Feasible aviation rows: {simulation_summary["aviation_feasible_count"]}
+- Infeasible aviation rows: {simulation_summary["aviation_infeasible_count"]}
+- Pack trade-space rows: {simulation_summary["pack_trade_space_rows"]}
+- Pack rows above research ceiling: {simulation_summary["pack_trade_infeasible_count"]}
+- Candidate envelopes: {simulation_summary["candidate_envelope_count"]}
+- Experimental evidence created: no
+- Ranking enabled by simulations: {simulation_summary["ranking_enabled"]}
+
+```json
+{json.dumps(simulation_summary["aviation_limiting_constraints"], indent=2, sort_keys=True)}
+```
+
 ## Uncertainty and Reality Filter
 
 Unknown performance remains unknown. Chemistry-family records identify required
@@ -222,6 +258,8 @@ negative results remain public and reproducible.
 - Dashboard manifest: `{dashboard_manifest_path.relative_to(PROJECT_ROOT).as_posix()}`
 - Candidate dossier artifact: `{candidate_artifact}`
 - Candidate dossier SHA-256: `{candidate_sha256 or "not yet written"}`
+- Simulation campaign artifact: `{simulation_artifact}`
+- Simulation campaign SHA-256: `{simulation_sha256 or "not yet written"}`
 
 ## Limitations
 
@@ -244,6 +282,11 @@ procurement, investment, operations, or certification decisions.
         "audited_measurements": 0,
         "feasible_mission_fixtures": feasible_missions,
         "simulation_fixtures": len(mission_results),
+        "simulation_campaign": simulation_summary,
+        "simulation_campaign_path": (
+            _display_path(simulation_path) if simulation_path else None
+        ),
+        "simulation_campaign_sha256": simulation_sha256,
         "candidate_dossiers": candidate_summary["candidate_count"],
         "candidate_summary": candidate_summary,
         "source_status": source_status,
@@ -276,6 +319,14 @@ procurement, investment, operations, or certification decisions.
         "registry_counts": registries.summary(),
         "experimental_measurements": 0,
         "simulations_completed": len(mission_results),
+        "simulation_campaign_rows": {
+            "aviation_requirement_grid": simulation_summary[
+                "aviation_requirement_grid_rows"
+            ],
+            "pack_trade_space": simulation_summary["pack_trade_space_rows"],
+            "candidate_envelopes": simulation_summary["candidate_envelope_count"],
+        },
+        "simulation_campaign_sha256": simulation_sha256,
         "candidate_dossiers": candidate_summary["candidate_count"],
         "candidate_dossier_sha256": candidate_sha256,
         "dashboard_artifacts": len(dashboard_artifacts),

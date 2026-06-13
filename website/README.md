@@ -8,6 +8,7 @@ dashboard.
 ```powershell
 python -m battery_frontier.cli dashboard-artifacts
 python -m battery_frontier.cli candidate-dossiers
+python -m battery_frontier.cli simulation-campaign
 python -m battery_frontier.cli daily-report
 python -m battery_frontier.cli website-data
 python -m http.server 8000
@@ -21,3 +22,8 @@ demonstration and reproducibility checks, not as validated battery performance.
 Candidate dossiers, including the hemp bast-fiber-derived graphitic carbon
 lead, are displayed as proof-gap records only. The conceptual aircraft visual is
 a mission reminder, not a blueprint or performance claim.
+
+The simulation campaign panels are generated from local assumptions and model
+code. They map requirement envelopes, pack sensitivity, infeasible regions, and
+candidate evidence gaps. They do not publish measurements or imply that a
+candidate material has reached aviation-grade pack performance.

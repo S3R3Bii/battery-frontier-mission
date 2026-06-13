@@ -24,12 +24,13 @@ jobs:
       - run: python -m battery_frontier.cli candidate-dossiers --execute-materials-project
         env:
           MP_API_KEY: ${{ secrets.MP_API_KEY }}
+      - run: python -m battery_frontier.cli simulation-campaign
       - run: python -m battery_frontier.cli daily-report
       - run: python -m battery_frontier.cli website-data
       - name: Commit generated report
         run: |
           git config user.name "battery-frontier-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add reports/daily reports/reference reports/aviation reports/dashboard reports/candidates reports/source-metadata website/mission-control-data.json
+          git add reports/daily reports/reference reports/aviation reports/dashboard reports/candidates reports/source-metadata reports/simulations website/mission-control-data.json
           git diff --cached --quiet || git commit -m "report: daily mission and website update"
           git push

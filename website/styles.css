@@ -38,13 +38,16 @@ body {
 .topbar,
 .module-head,
 .status-strip,
-  .lower-grid,
-  .situation-grid,
-  .metrics-grid,
-  .band-grid,
-  .candidate-grid,
-  .blueprint-grid,
-  .artifact-list {
+.lower-grid,
+.situation-grid,
+.metrics-grid,
+.band-grid,
+.candidate-grid,
+.blueprint-grid,
+.simulation-grid,
+.simulation-stats,
+.envelope-grid,
+.artifact-list {
   display: grid;
   gap: 12px;
 }
@@ -291,6 +294,103 @@ th {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.simulation-module {
+  background: #090d13;
+}
+
+.simulation-grid {
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  align-items: stretch;
+}
+
+.simulation-chart {
+  min-height: 330px;
+  border: 1px solid #1c2634;
+  border-radius: 8px;
+  background: #05080d;
+  overflow-x: auto;
+}
+
+.simulation-chart svg {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+  height: 330px;
+}
+
+.simulation-stats {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.simulation-stat,
+.truth-panel,
+.sensitivity-row,
+.envelope-card {
+  border: 1px solid #243044;
+  border-radius: 8px;
+  background: #0a0f16;
+  padding: 12px;
+}
+
+.simulation-stat .value {
+  margin: 0 0 4px;
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.simulation-stat .name,
+.sensitivity-row .name,
+.envelope-card .name {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.truth-panel {
+  margin-top: 12px;
+}
+
+.truth-panel ul,
+.envelope-card ul {
+  margin: 8px 0 0;
+  padding-left: 17px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.sensitivity-list {
+  display: grid;
+  gap: 9px;
+}
+
+.sensitivity-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.sensitivity-row .detail,
+.envelope-card .detail {
+  margin: 6px 0 0;
+  color: var(--subtle);
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+.envelope-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.envelope-card.focus {
+  border-color: rgba(240, 184, 76, 0.58);
+  background:
+    linear-gradient(180deg, rgba(240, 184, 76, 0.08), rgba(10, 15, 22, 0.96)),
+    #0a0f16;
+}
+
 .candidate-module {
   background: linear-gradient(180deg, #0d1117 0%, #0a0f16 100%);
 }
@@ -430,6 +530,12 @@ th {
   font-size: 12px;
 }
 
+.heatmap-cell-label {
+  fill: var(--text);
+  font-size: 11px;
+  font-weight: 800;
+}
+
 @media (max-width: 1050px) {
   .topbar,
   .situation-grid,
@@ -437,6 +543,8 @@ th {
   .module-head,
   .candidate-grid,
   .blueprint-grid,
+  .simulation-grid,
+  .envelope-grid,
   .artifact-list {
     grid-template-columns: 1fr;
   }
@@ -460,6 +568,7 @@ th {
 
   .metrics-grid,
   .band-grid,
+  .simulation-stats,
   .candidate-data-row {
     grid-template-columns: 1fr;
   }

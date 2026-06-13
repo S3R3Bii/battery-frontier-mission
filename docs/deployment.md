@@ -11,6 +11,7 @@ The workflow regenerates:
 - Phase 3 aviation fixtures
 - Phase 4 dashboard method cards and manifest
 - candidate evidence dossiers and Materials Project metadata appendix
+- Phase 3.5/4.5 simulation campaign grids and summaries
 - daily report artifacts
 - `website/mission-control-data.json`
 
@@ -24,7 +25,8 @@ GitHub and set:
 ## Daily Refresh
 
 `.github/workflows/daily-report.yml` runs daily and on demand. It refreshes
-reports and website data, then commits generated outputs back to `main`.
+reports, simulation campaign artifacts, candidate dossiers, and website data,
+then commits generated outputs back to `main`.
 
 ## Metadata Refresh
 
@@ -37,6 +39,17 @@ metadata-only connector requests for:
 
 The generated manifests are source-discovery artifacts, not experimental battery
 performance evidence. They do not enable chemistry ranking.
+
+## Simulation Campaign Refresh
+
+`python -m battery_frontier.cli simulation-campaign` regenerates
+`reports/simulations/` from configured mission assumptions and local model code.
+The outputs are hashed and then consumed by the daily report and static website.
+
+These artifacts are useful for showing how aviation requirements move under
+route, payload, reserve, pack architecture, and degradation assumptions. They
+are not measurements, validation records, certifiable aircraft designs, or
+evidence that any candidate material can meet the requirements.
 
 ## Required Secrets
 

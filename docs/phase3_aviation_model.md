@@ -19,6 +19,9 @@ Generated results are written to
 - maximum takeoff mass and battery-fraction gates
 - payload-range bisection
 - one-at-a-time sensitivity analysis
+- Phase 3.5 requirement sweeps that vary route distance, payload, reserve,
+  lift-to-drag ratio, propulsion efficiency, thermal availability, degradation,
+  pack specific energy, pack specific power, and C-rate
 
 ## Reference Fixtures
 
@@ -42,7 +45,14 @@ Run:
 
 ```powershell
 python -m battery_frontier.cli aviation-reference
+python -m battery_frontier.cli simulation-campaign
 ```
+
+`simulation-campaign` writes aviation requirement maps to
+[`reports/simulations/aviation_requirement_grid.json`](../reports/simulations/aviation_requirement_grid.json)
+and `.csv`. Those rows are simulation estimates and include explicit infeasible
+states. They are useful for asking what would need to be true, not for claiming
+that a real aircraft or battery meets those requirements.
 
 ## Remaining Validation Gate
 

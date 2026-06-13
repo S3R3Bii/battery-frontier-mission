@@ -20,6 +20,7 @@ from battery_frontier.dashboards.data import (
 from battery_frontier.data.connectors import source_status_rows
 from battery_frontier.registry import load_registries
 from battery_frontier.scientific_audit import evaluate_ranking_gate
+from battery_frontier.simulations.campaign import build_simulation_campaign
 
 
 def _records(frame: Any) -> list[dict[str, Any]]:
@@ -45,6 +46,11 @@ def _candidate_dossier_payload() -> dict[str, Any]:
     return _read_json_if_exists(path) or build_candidate_dossiers(
         execute_materials_project=False
     )
+
+
+def _simulation_campaign_payload() -> dict[str, Any]:
+    path = PROJECT_ROOT / "reports" / "simulations" / "simulation_campaign_summary.json"
+    return _read_json_if_exists(path) or build_simulation_campaign()
 
 
 def _conceptual_target_system() -> dict[str, Any]:
@@ -149,6 +155,8 @@ def build_website_data() -> dict[str, Any]:
     source_rows = _records(source_readiness_frame(registries))
     connector_rows = source_status_rows(registries)
     candidate_payload = _candidate_dossier_payload()
+    simulation_payload = _simulation_campaign_payload()
+    simulation_summary = simulation_payload["summary"]
     mission_bands = _mission_bands(bundle)
     physics_points = [
         point
@@ -187,6 +195,8 @@ def build_website_data() -> dict[str, Any]:
             "physics_fixtures": len(registries.physics_reference_cases),
             "mission_fixtures": len(registries.segmented_mission_cases),
             "candidate_dossiers": candidate_payload["summary"]["candidate_count"],
+            "simulation_rows": simulation_summary["aviation_requirement_grid_rows"]
+            + simulation_summary["pack_trade_space_rows"],
             "verified_artifacts": verified_count,
             "total_artifacts": len(verification),
         },
@@ -214,6 +224,22 @@ def build_website_data() -> dict[str, Any]:
         "candidate_ranking_missing_by_candidate": candidate_payload[
             "ranking_missing_by_candidate"
         ],
+        "simulation_campaign_summary": simulation_summary,
+        "aviation_requirement_map": {
+            "row_count": len(simulation_payload["aviation_requirement_grid"]),
+            "rows": simulation_payload["aviation_requirement_grid"],
+        },
+        "pack_trade_space_summary": {
+            "row_count": simulation_summary["pack_trade_space_rows"],
+            "infeasible_count": simulation_summary["pack_trade_infeasible_count"],
+            "sensitivity": simulation_summary["pack_sensitivity"],
+            "claim_boundary": (
+                "Architecture sweep only; required cell energy is not a material claim."
+            ),
+        },
+        "candidate_envelopes": simulation_payload["candidate_envelopes"],
+        "infeasible_region_ledger": simulation_summary["infeasible_region_ledger"],
+        "what_would_need_to_be_true": simulation_summary["what_would_need_to_be_true"],
         "materials_project_appendix": {
             "artifact_type": candidate_payload["materials_project_appendix"][
                 "artifact_type"
