@@ -301,6 +301,101 @@ class PubChemConnector(SourceConnector):
         )
 
 
+class FigshareArticleConnector(SourceConnector):
+    source_id = "datasource.cmu_evtol_battery"
+    connector_name = "Figshare/KiltHub approved article metadata"
+    execution_supported = True
+
+    def build_request(self, query: str, rows: int) -> SourceRequest:
+        article_id = query.strip() or "14226830"
+        if not article_id.isdigit():
+            article_id = "14226830"
+        return SourceRequest(
+            method="GET",
+            url=f"https://api.figshare.com/v2/articles/{article_id}",
+            headers={"Accept": "application/json"},
+            query=article_id,
+            rows=rows,
+        )
+
+    def parse_records(self, payload: Any) -> list[dict[str, Any]]:
+        if not isinstance(payload, dict):
+            return []
+
+        files = payload.get("files")
+        if not isinstance(files, list):
+            files = []
+
+        article_license = payload.get("license")
+        license_name = None
+        license_url = None
+        if isinstance(article_license, dict):
+            license_name = article_license.get("name")
+            license_url = article_license.get("url")
+
+        article = {
+            "article_id": payload.get("id"),
+            "article_title": payload.get("title"),
+            "article_doi": payload.get("doi"),
+            "article_url": payload.get("url_public_html") or payload.get("url"),
+            "article_version": payload.get("version"),
+            "published_date": payload.get("published_date"),
+            "modified_date": payload.get("modified_date"),
+            "license": license_name,
+            "license_url": license_url,
+        }
+
+        records: list[dict[str, Any]] = []
+        for file_record in files:
+            if not isinstance(file_record, dict):
+                continue
+            record = {
+                **article,
+                "record_type": "approved_experimental_dataset_file_metadata",
+                "metadata_only": True,
+                "ranking_evidence": False,
+                "performance_evidence": False,
+                "system_boundary": (
+                    "cell-level experimental eVTOL duty-cycle data; file metadata only"
+                ),
+                "evidence_class": "known_experimental",
+                "measurement_status": "measurement_file_not_ingested_or_audited",
+                "file_id": file_record.get("id"),
+                "file_name": file_record.get("name"),
+                "file_size_bytes": file_record.get("size"),
+                "download_url": file_record.get("download_url"),
+                "supplied_md5": file_record.get("supplied_md5"),
+                "limitations": (
+                    "Approved CC BY 4.0 source metadata. The file itself must be "
+                    "downloaded, hashed, parsed, unit-audited, and mapped to cell-level "
+                    "system boundaries before any measured values can be used. This is "
+                    "not pack-level proof or ranking evidence."
+                ),
+            }
+            records.append(record)
+
+        if records:
+            return records
+
+        return [
+            {
+                **article,
+                "record_type": "approved_experimental_dataset_article_metadata",
+                "metadata_only": True,
+                "ranking_evidence": False,
+                "performance_evidence": False,
+                "system_boundary": (
+                    "cell-level experimental eVTOL duty-cycle data; article metadata only"
+                ),
+                "evidence_class": "known_experimental",
+                "measurement_status": "measurement_files_not_listed_or_audited",
+                "limitations": (
+                    "Approved source metadata only; no measured values have been parsed."
+                ),
+            }
+        ]
+
+
 class MaterialsProjectConnector(SourceConnector):
     source_id = "datasource.materials_project"
     connector_name = "Materials Project summary metadata API"
@@ -374,6 +469,7 @@ CONNECTORS: dict[str, SourceConnector] = {
     connector.source_id: connector
     for connector in (
         MaterialsProjectConnector(),
+        FigshareArticleConnector(),
         NasaNtrsConnector(),
         OstiConnector(),
         PubChemConnector(),

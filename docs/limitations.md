@@ -58,6 +58,11 @@
   aircraft design, performance model, or certification artifact.
 - Source connector dry runs and metadata fetches do not create experimental
   battery-performance records, approved snapshots, or ranking evidence.
+- The Carnegie Mellon eVTOL Battery Dataset source is approved under CC BY 4.0
+  for cell-level aviation-duty-cycle evidence, but its connector currently
+  snapshots article and file metadata only. Measurement values are not trusted
+  until the archive is downloaded, hashed, parsed, unit-audited, and mapped to
+  explicit cell-level boundaries.
 - Materials Project records are computed/material metadata unless independently
   audited and contextualized. They do not validate electrochemical cell
   performance, pack performance, cycle life, safety, manufacturability, or

@@ -62,7 +62,11 @@ def test_dashboard_frames_preserve_evidence_boundaries() -> None:
     assert "speculative_hypothesis" in set(ledger["evidence class"])
     assert (chemistry["ranking status"] == "not_scored").all()
     assert "prototype active" in set(phases["status"])
-    assert (sources["license status"] != "approved").all()
+    approved_sources = sources[sources["license status"] == "approved"]
+    assert set(approved_sources["source"]) == {"Carnegie Mellon eVTOL Battery Dataset"}
+    assert (
+        approved_sources["ingestion status"] == "approved_metadata_snapshot_ready"
+    ).all()
 
 
 def test_fixture_data_does_not_appear_as_audited_measurement() -> None:

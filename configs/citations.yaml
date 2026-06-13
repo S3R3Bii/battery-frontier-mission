@@ -19,6 +19,22 @@ records:
     peer_reviewed: false
     metadata_status: verified
 
+  - id: source.cmu_evtol_battery_dataset
+    title: eVTOL Battery Dataset
+    authors:
+      - Alexander Bills
+      - Venkatasubramanian Viswanathan
+      - Shashank Sripad
+      - Evan Frank
+      - Devin Charles
+      - William Leif Fredericks
+    year: 2023
+    doi: 10.1184/R1/14226830
+    url: https://kilthub.cmu.edu/articles/dataset/eVTOL_Battery_Dataset/14226830
+    source_type: experimental_dataset
+    peer_reviewed: false
+    metadata_status: verified
+
   - id: source.nasa_ntrs
     title: NASA Technical Reports Server
     authors: [NASA Scientific and Technical Information Program]

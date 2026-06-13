@@ -7,7 +7,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/reference/phase2_reference_cases.json",
-      "sha256": "06aa6cdda980d62094130e8d8e8e20f6dfd9b399a81fe75abf7e7efea4426303",
+      "sha256": "014d1ec0a64182e703e77383292d3a851f4889e620b477ddb9e0786a90351284",
       "type": "json_results"
     },
     {
@@ -17,7 +17,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/aviation/phase3_mission_cases.json",
-      "sha256": "afbe5536a7439c20da8ff0184ce4006205d67e3e59adf0e7b64591c2c5a0ab24",
+      "sha256": "d62fb7cede81744c14f157ceb70419aad1914ba5720f1d0b8044f270f5905378",
       "type": "json_results"
     },
     {
@@ -27,7 +27,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
-      "sha256": "a7bfecf2c4edb53edd3654a904903bcb64043ac05be12cbf44e83118875f45be",
+      "sha256": "2b77a3609ceefc09a75c8e4447e0366d1c1c8f2f8e117f8b48d1e120a1873e10",
       "type": "method_card"
     },
     {
@@ -37,7 +37,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
-      "sha256": "8d552609560c352f01987ed23e91c118a99560095afe1f45632215cc34ed92e7",
+      "sha256": "950fa70b637bb4faa554d244f25e1dfea2b6479cb23c954516c3982bd9b2e148",
       "type": "method_card"
     }
   ],
@@ -11405,6 +11405,21 @@
       "trusted_publication_allowed": false
     },
     {
+      "connector": "Figshare/KiltHub approved article metadata",
+      "credential_available": true,
+      "execution_supported": true,
+      "ingestion_status": "approved_metadata_snapshot_ready",
+      "key_env": null,
+      "license_status": "approved",
+      "limitations": "Cell-level eVTOL duty-cycle data; not pack-level proof, aircraft feasibility evidence, or candidate-ranking evidence.",
+      "metadata_only": true,
+      "readiness": "ready for optional metadata fetch",
+      "requires_key": false,
+      "source": "Carnegie Mellon eVTOL Battery Dataset",
+      "source_id": "datasource.cmu_evtol_battery",
+      "trusted_publication_allowed": true
+    },
+    {
       "connector": "NASA NTRS metadata search",
       "credential_available": true,
       "execution_supported": true,
@@ -11488,7 +11503,7 @@
         "evidence_status": "verified_present",
         "path": "reports/reference/phase2_reference_cases.json",
         "public_claim_boundary": "calculation fixtures; not experimental benchmarks",
-        "sha256": "06aa6cdda980d62094130e8d8e8e20f6dfd9b399a81fe75abf7e7efea4426303",
+        "sha256": "014d1ec0a64182e703e77383292d3a851f4889e620b477ddb9e0786a90351284",
         "title": "Phase 2 physics reference results"
       },
       {
@@ -11497,7 +11512,7 @@
         "evidence_status": "verified_present",
         "path": "reports/aviation/phase3_mission_cases.json",
         "public_claim_boundary": "simulation estimates from speculative inputs",
-        "sha256": "afbe5536a7439c20da8ff0184ce4006205d67e3e59adf0e7b64591c2c5a0ab24",
+        "sha256": "d62fb7cede81744c14f157ceb70419aad1914ba5720f1d0b8044f270f5905378",
         "title": "Phase 3 aviation mission results"
       },
       {
@@ -11506,7 +11521,7 @@
         "evidence_status": "public_method_document",
         "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
         "public_claim_boundary": "documents equations, guardrails, and limitations",
-        "sha256": "a7bfecf2c4edb53edd3654a904903bcb64043ac05be12cbf44e83118875f45be",
+        "sha256": "2b77a3609ceefc09a75c8e4447e0366d1c1c8f2f8e117f8b48d1e120a1873e10",
         "title": "Phase 2 physics method card"
       },
       {
@@ -11515,14 +11530,14 @@
         "evidence_status": "public_method_document",
         "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
         "public_claim_boundary": "documents equations, guardrails, and limitations",
-        "sha256": "8d552609560c352f01987ed23e91c118a99560095afe1f45632215cc34ed92e7",
+        "sha256": "950fa70b637bb4faa554d244f25e1dfea2b6479cb23c954516c3982bd9b2e148",
         "title": "Phase 3 aviation method card"
       }
     ],
     "chemistry_ranking_enabled": false,
     "dashboard_status": "prototype with traceable local simulation artifacts",
     "experimental_measurements": 0,
-    "generated_at_utc": "2026-06-13T06:57:21.628601+00:00",
+    "generated_at_utc": "2026-06-13T07:16:05.810022+00:00",
     "package_version": "0.4.0",
     "phase": "4"
   },
@@ -11644,7 +11659,7 @@
     "title": "Frontier Gap to Aviation-Grade Pack Energy",
     "unknown_region_note": "The audited-measurement lane is empty; fixture values cannot be used as evidence of achieved aviation-grade storage."
   },
-  "generated_at_utc": "2026-06-13T06:57:21.663329+00:00",
+  "generated_at_utc": "2026-06-13T07:16:05.845056+00:00",
   "infeasible_region_ledger": [
     {
       "base_case_id": "mission.regional_demonstrator",
@@ -11772,9 +11787,9 @@
       "src/battery_frontier/cli.py": "50ea5e3b699c7a1978e6de7e71773ef79df494424c3a06e76cb0d48640cbcdd2",
       "src/battery_frontier/config.py": "8d5a63fb7c846e88b1ce20d7b5cf902cbd4a7f7a439f892dbaf4a0ba1a791872",
       "src/battery_frontier/dashboards/__init__.py": "c9a7eeb33b2d54e64a7cbc32d13d3dceb7a1e9455f92b245b027c867cca8e25b",
-      "src/battery_frontier/dashboards/data.py": "c32b00c7ba318a5fa9069bd328e0fd82dcb00552c59a74acde1f25bb5e50d0a4",
+      "src/battery_frontier/dashboards/data.py": "31929bc5721d63910756d92b6adc5786e1d422c6e63f67b41197314c4b698b97",
       "src/battery_frontier/data/__init__.py": "7cdff8cd889b6f05768d9fbc6bedab5204963d07a4ace1fd934936b39aaa85d5",
-      "src/battery_frontier/data/connectors.py": "810592f7643d35448f73c27d669ae3a1eeea51c7175e6ef87e608fd8905267d0",
+      "src/battery_frontier/data/connectors.py": "77e6c5f92b06a563a4012b521cde6febc786b48cc6fa41d9e417f85a853340d8",
       "src/battery_frontier/db.py": "da3c51c39e3a658272e4a6bd809398b0fef354b94a9c130ac5b39dd6340813c0",
       "src/battery_frontier/literature/__init__.py": "e4672a02c8a9ffded13b0a7f1042b05965cd9c9c84bdf93f9d3db3426d3e7592",
       "src/battery_frontier/ml/__init__.py": "c4974bae1fdf88064b2256af16ac8bb816bc0c86529db44dd810a4bb033e7e82",
@@ -11791,7 +11806,7 @@
       "src/battery_frontier/provenance.py": "1e0a6838432114d4f1b06c4b236c95930b16ef0277922454b2de51d38752964a",
       "src/battery_frontier/registry.py": "2f4c11ba1d0a0620b357519f001bac65b1553ffb7c97f265bf6021f7afb89159",
       "src/battery_frontier/reporting/__init__.py": "986a03db761bca4771dbb9742fa7bed50c4104099a6c48ca10a48925763f774f",
-      "src/battery_frontier/reporting/daily.py": "17dbe8e259d8bbe778294ee5b06cc4a7304a7d2ee269f42f36b8ee03b2284b2f",
+      "src/battery_frontier/reporting/daily.py": "a84d8fd663c84603e4ec738e0610507cefb6cd97bbdd9c862e49875050c2c5eb",
       "src/battery_frontier/reporting/method_cards.py": "eec0cd2702e3536a1871c19ea03f23604310c86436b7f16176af5b00f6b51d8f",
       "src/battery_frontier/schemas.py": "363dbc67938221435cb0ef87f3bbd70f4a28e45e884ec1a281b34bef8b5b21cd",
       "src/battery_frontier/scientific_audit.py": "7c31e5985164c0abc8cd2fdf66303a9af6cc1e59a338dbbc166ce3ce318f58be",
@@ -11800,34 +11815,34 @@
       "src/battery_frontier/utils/__init__.py": "9793f0bcab4321b5156ad18435a4fc585c46c5bca5b30e2f59bcda52e14b7c77",
       "src/battery_frontier/website.py": "71c12648a87555481c1e768456cae3d723eb92f53e04781dc0108e477a21744f"
     },
-    "code_snapshot_sha256": "0fe9ab9c1ea09110e684acaf07764f6fe50a375ead77dc1674ae08865ab6078b",
+    "code_snapshot_sha256": "109de2898a98aa0c845bea9450444fdb55ca2586379a0370464693f8f73dbacd",
     "config_hashes": {
       "configs/assumptions.yaml": "63c51f3fbd90e4582d5b334b1552c006d63b89576d01f7f903ba1763ffbf45b8",
       "configs/aviation_scenarios.yaml": "a3b15ca13fefc5f51ae237dbcf40d335c1dab630c8100b9bd1f44c4020989cce",
       "configs/chemistry_families.yaml": "954d118a81f8a374b4081ac075dc3491ef6a848547ff3ae8c82f066c40f5cfd8",
-      "configs/citations.yaml": "41720c778cc3725f380217bed28f5033411d3750df666121dcaad543228b0463",
-      "configs/data_sources.yaml": "4153905f2a5d51237b76a47c00a037302bab05f76fff2cc22e3c489beece16bb",
+      "configs/citations.yaml": "3f44cba05cde92e10ebf081dcef86ba52f09bf1eb729e7126d6b0f7d6b0beb1e",
+      "configs/data_sources.yaml": "fa92b32d8cb43470c4346516a4072ad0afc2b83a5428faaa42965b23f76b6c67",
       "configs/physics_reference_cases.yaml": "8451321c4c1383b1258ebb06f0674030caac37244eab5efac43b100be90d7c10",
       "configs/segmented_mission_cases.yaml": "6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2"
     },
     "dashboard_artifacts": 4,
-    "dashboard_manifest_sha256": "afb5127cbf5da626c3a5419dbe6b22b4be69555407e926d12947451ad630f1e8",
+    "dashboard_manifest_sha256": "5afc369f0b46e3a14329a9b9b9fb497e68e7f92e0767b2fa56ec1b3bfab7f53e",
     "experimental_measurements": 0,
-    "generated_at_utc": "2026-06-13T06:57:16.895616+00:00",
+    "generated_at_utc": "2026-06-13T07:16:01.400828+00:00",
     "package_version": "0.4.0",
     "python_version": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
     "ranking_enabled": false,
     "registry_counts": {
       "assumptions": 12,
       "chemistry_families": 10,
-      "citations": 11,
-      "data_sources": 7,
+      "citations": 12,
+      "data_sources": 8,
       "physics_reference_cases": 2,
       "scenarios": 4,
       "segmented_mission_cases": 2
     },
     "report_date": "2026-06-13",
-    "report_sha256": "18ec676b63d2424b890f3fd6fd374fd16057aa8cd47b5513e1a5dd0e82f5360a",
+    "report_sha256": "6c16501e406947ca633cb57bc79dfe3cfd20c4bc9b3ec97ecaa63ef0d0fe8c50",
     "simulation_campaign_rows": {
       "aviation_requirement_grid": 270,
       "candidate_envelopes": 11,
@@ -11836,7 +11851,7 @@
     "simulation_campaign_sha256": "e66cd970bf85f27193bbc6f68c46a1544278327e2edc6bbffa26898feec3efe7",
     "simulations_completed": 2,
     "summary_path": "reports/daily/2026-06-13-mission-summary.json",
-    "summary_sha256": "92d9a77a1badacf791aad17f1b7bfa48a0e2dcee8f97af155c82da1ebe3b21ed"
+    "summary_sha256": "20a33e1c9a051613060b226a35dc6bb0ed60493336b358ffbe686fa4c4feb998"
   },
   "materials_project_appendix": {
     "artifact_type": "materials_project_metadata_appendix",
@@ -11970,8 +11985,8 @@
     "assumptions": 12,
     "candidate_dossiers": 11,
     "chemistry_families": 10,
-    "citations": 11,
-    "data_sources": 7,
+    "citations": 12,
+    "data_sources": 8,
     "mission_fixtures": 2,
     "physics_fixtures": 2,
     "simulation_rows": 9018,
@@ -12045,7 +12060,7 @@
     },
     {
       "component": "Schema and literature registry",
-      "evidence gate": "first licensed snapshot pending",
+      "evidence gate": "approved source metadata snapshot active",
       "phase": "1",
       "status": "foundation complete"
     },
@@ -12288,6 +12303,15 @@
       "source": "Battery Archive",
       "url": "https://www.batteryarchive.org/",
       "variables": "cycling_data, voltage_curves, capacity_fade, test_conditions"
+    },
+    {
+      "ingestion status": "approved_metadata_snapshot_ready",
+      "license status": "approved",
+      "limitations": "Cell-level eVTOL duty-cycle data; not pack-level proof, aircraft feasibility evidence, or candidate-ranking evidence.",
+      "reliability rating": 4,
+      "source": "Carnegie Mellon eVTOL Battery Dataset",
+      "url": "https://kilthub.cmu.edu/articles/dataset/eVTOL_Battery_Dataset/14226830",
+      "variables": "cell_voltage, cell_temperature, current, discharge_capacity, charge_capacity, processed_internal_resistance, evtol_duty_cycle_conditions"
     },
     {
       "ingestion status": "metadata_ready",

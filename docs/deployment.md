@@ -33,12 +33,14 @@ then commits generated outputs back to `main`.
 `.github/workflows/metadata-ingestion.yml` runs weekly and on demand. It executes
 metadata-only connector requests for:
 
+- Carnegie Mellon eVTOL Battery Dataset article/file metadata
 - Materials Project, when `MP_API_KEY` is configured
 - NASA Technical Reports Server
 - DOE OSTI
 
-The generated manifests are source-discovery artifacts, not experimental battery
-performance evidence. They do not enable chemistry ranking.
+The generated manifests are source-discovery artifacts and source metadata. The
+CMU eVTOL source is approved for trusted source snapshots, but its manifest is
+not parsed measurement evidence. These manifests do not enable chemistry ranking.
 
 ## Simulation Campaign Refresh
 
@@ -53,10 +55,10 @@ evidence that any candidate material can meet the requirements.
 
 ## Required Secrets
 
-No secrets are required for Pages, daily report, NASA NTRS, or OSTI metadata
-workflows to complete. If `MP_API_KEY` is present, Pages, daily report, and
-metadata refresh workflows also attach Materials Project metadata-only discovery
-records to the candidate dossiers.
+No secrets are required for Pages, daily report, CMU eVTOL metadata, NASA NTRS,
+or OSTI metadata workflows to complete. If `MP_API_KEY` is present, Pages, daily
+report, and metadata refresh workflows also attach Materials Project
+metadata-only discovery records to the candidate dossiers.
 
 Materials Project metadata refresh requires:
 
@@ -73,5 +75,6 @@ be generated, but the Materials Project appendix will record
 ## Current Scientific Boundary
 
 Automation refreshes the public dashboard and traceable artifacts. It does not
-complete Phase 4 scientifically until audited external measurements with
-licenses, system boundaries, uncertainty, and provenance are ingested.
+complete Phase 4 scientifically until the approved CMU eVTOL measurement files,
+or another approved source, are downloaded, hashed, parsed, and audited with
+licenses, system boundaries, uncertainty, and provenance.

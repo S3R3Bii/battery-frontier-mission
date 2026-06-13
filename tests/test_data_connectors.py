@@ -17,7 +17,98 @@ def test_source_status_preserves_license_gates(monkeypatch) -> None:
 
     assert by_id["datasource.materials_project"]["requires_key"] is True
     assert by_id["datasource.materials_project"]["credential_available"] is False
-    assert all(row["trusted_publication_allowed"] is False for row in rows)
+    assert by_id["datasource.cmu_evtol_battery"]["trusted_publication_allowed"] is True
+    assert by_id["datasource.cmu_evtol_battery"]["metadata_only"] is True
+    assert all(
+        row["trusted_publication_allowed"] is False
+        for row in rows
+        if row["source_id"] != "datasource.cmu_evtol_battery"
+    )
+
+
+def test_cmu_evtol_dry_run_builds_figshare_request() -> None:
+    registries = load_registries()
+    result = dry_run_source(
+        registries,
+        "datasource.cmu_evtol_battery",
+        query="14226830",
+        rows=3,
+    )
+
+    assert result["status"] == "dry_run"
+    assert result["trusted_publication"] is False
+    assert result["license_status"] == "approved"
+    assert result["execution_supported"] is True
+    assert result["request"]["url"] == "https://api.figshare.com/v2/articles/14226830"
+    assert result["ranking_evidence"] is False
+
+
+def test_cmu_evtol_execute_normalizes_file_metadata(monkeypatch) -> None:
+    registries = load_registries()
+
+    from battery_frontier.data import connectors
+
+    class FakeResponse:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, traceback):
+            return False
+
+        def read(self):
+            return json.dumps(
+                {
+                    "id": 14226830,
+                    "title": "eVTOL Battery Dataset",
+                    "doi": "10.1184/R1/14226830",
+                    "url_public_html": (
+                        "https://kilthub.cmu.edu/articles/dataset/"
+                        "eVTOL_Battery_Dataset/14226830"
+                    ),
+                    "version": 3,
+                    "published_date": "2023-04-21T18:33:00Z",
+                    "license": {
+                        "name": "CC BY 4.0",
+                        "url": "https://creativecommons.org/licenses/by/4.0/",
+                    },
+                    "files": [
+                        {
+                            "id": 1,
+                            "name": "VAH01.csv",
+                            "size": 123,
+                            "download_url": "https://figshare.com/file/download/1",
+                            "supplied_md5": "abc123",
+                        }
+                    ],
+                }
+            ).encode("utf-8")
+
+    def fake_urlopen(request, timeout):
+        assert timeout == connectors.FETCH_TIMEOUT_S
+        assert request.full_url == "https://api.figshare.com/v2/articles/14226830"
+        return FakeResponse()
+
+    monkeypatch.setattr(connectors, "urlopen", fake_urlopen)
+
+    result = dry_run_source(
+        registries,
+        "datasource.cmu_evtol_battery",
+        query="14226830",
+        rows=5,
+        execute=True,
+    )
+
+    assert result["status"] == "fetched"
+    assert result["trusted_publication"] is True
+    assert result["ranking_evidence"] is False
+    assert result["record_count"] == 1
+    record = result["records"][0]
+    assert record["record_type"] == "approved_experimental_dataset_file_metadata"
+    assert record["metadata_only"] is True
+    assert record["performance_evidence"] is False
+    assert record["ranking_evidence"] is False
+    assert record["system_boundary"].startswith("cell-level experimental")
+    assert record["file_name"] == "VAH01.csv"
 
 
 def test_materials_project_dry_run_reports_missing_key(monkeypatch) -> None:

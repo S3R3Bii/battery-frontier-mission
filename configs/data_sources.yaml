@@ -27,6 +27,26 @@ records:
     ingestion_status: blocked_by_license_review
     citation_ids: [source.battery_archive]
 
+  - id: datasource.cmu_evtol_battery
+    name: Carnegie Mellon eVTOL Battery Dataset
+    url: https://kilthub.cmu.edu/articles/dataset/eVTOL_Battery_Dataset/14226830
+    access_date: 2026-06-13
+    license_status: approved
+    license_note: CC BY 4.0 approved by project owner on 2026-06-13; retain attribution and DOI.
+    variables:
+      - cell_voltage
+      - cell_temperature
+      - current
+      - discharge_capacity
+      - charge_capacity
+      - processed_internal_resistance
+      - evtol_duty_cycle_conditions
+    reliability_rating: 4
+    update_frequency: provider_managed
+    limitations: Cell-level eVTOL duty-cycle data; not pack-level proof, aircraft feasibility evidence, or candidate-ranking evidence.
+    ingestion_status: approved_metadata_snapshot_ready
+    citation_ids: [source.cmu_evtol_battery_dataset]
+
   - id: datasource.nasa_ntrs
     name: NASA Technical Reports Server
     url: https://ntrs.nasa.gov/
@@ -87,4 +107,3 @@ records:
     limitations: Regulatory applicability depends on aircraft category and date.
     ingestion_status: planned
     citation_ids: []
-

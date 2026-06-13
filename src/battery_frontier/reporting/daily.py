@@ -184,6 +184,9 @@ chemistry rankings remain blocked.
 - Metadata connectors with optional execution paths: {connector_ready}
 - Sources approved for trusted published snapshots: {trusted_sources}
 - Materials Project status: {materials_project_status}.
+- CMU eVTOL battery status: approved CC BY 4.0 cell-level experimental source;
+  metadata snapshot is allowed, but measured file ingestion still requires
+  download, hashing, parsing, unit audit, and boundary mapping.
 - NASA NTRS and OSTI status: metadata connectors are available; records remain
   metadata-only until reviewed.
 
@@ -239,12 +242,14 @@ negative results remain public and reproducible.
 
 ## Next Work
 
-1. Complete license review for the first source snapshot.
-2. Connect source API credentials only after source-specific terms are recorded.
-3. Audit a published full-reaction reference and define acceptance tolerance.
-4. Reproduce one published aviation mission study without tuning discrepancies away.
-5. Populate the dashboard with audited measurements and uncertainty.
-6. Add segment power and thermal transients with visible model-form uncertainty.
+1. Fetch and hash the approved CMU eVTOL dataset metadata snapshot.
+2. Download the approved measurement archive only when storage/runtime budget is acceptable.
+3. Parse a controlled subset of cell-level files and audit units, timestamps,
+   capacity, current sign convention, temperature, and system boundary.
+4. Audit a published full-reaction reference and define acceptance tolerance.
+5. Reproduce one published aviation mission study without tuning discrepancies away.
+6. Populate the dashboard with audited cell-level measurements and uncertainty.
+7. Add segment power and thermal transients with visible model-form uncertainty.
 
 ## Reproducibility
 
@@ -297,8 +302,8 @@ procurement, investment, operations, or certification decisions.
         "candidate_dossier_sha256": candidate_sha256,
         "report_sha256": sha256_file(report_path),
         "top_blockers": [
-            "source license approval and immutable snapshots",
-            "audited experimental measurements with comparable boundaries",
+            "approved CMU eVTOL measurement-file download and immutable hashes",
+            "audited experimental measurements with comparable cell boundaries",
             "published aviation-study reproduction",
             "candidate safety, cycle-life, cost, and manufacturability evidence",
         ],

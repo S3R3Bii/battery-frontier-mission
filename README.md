@@ -694,6 +694,12 @@ license status, and whether a source is approved for trusted publication. Curren
 connectors are metadata-only; they do not create battery-performance evidence or
 enable chemistry ranking.
 
+The first approved external source is the Carnegie Mellon eVTOL Battery Dataset
+on Figshare/KiltHub (`datasource.cmu_evtol_battery`, DOI `10.1184/R1/14226830`),
+licensed CC BY 4.0. Its connector snapshots article/file metadata only. Full
+measurement values remain blocked until the archive is downloaded, hashed,
+parsed, unit-audited, and mapped to a cell-level system boundary.
+
 ## Reproducibility Contract
 
 - Raw files are immutable and excluded from Git unless redistribution is

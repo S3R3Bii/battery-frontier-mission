@@ -74,7 +74,7 @@ def phase_readiness_frame(registries: Registries) -> pd.DataFrame:
                 "phase": "1",
                 "component": "Schema and literature registry",
                 "status": "foundation complete",
-                "evidence gate": "first licensed snapshot pending",
+                "evidence gate": "approved source metadata snapshot active",
             },
             {
                 "phase": "2",
@@ -217,4 +217,3 @@ def citation_readiness_frame(registries: Registries) -> pd.DataFrame:
             for citation in registries.citations
         ]
     )
-

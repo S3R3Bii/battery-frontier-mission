@@ -35,6 +35,13 @@ jobs:
             echo "MP_API_KEY is not configured; skipping Materials Project metadata fetch."
           fi
           python -m battery_frontier.cli source-dry-run \
+            --source datasource.cmu_evtol_battery \
+            --query "14226830" \
+            --rows 50 \
+            --execute \
+            --write-manifest \
+            --manifest-dir reports/source-metadata
+          python -m battery_frontier.cli source-dry-run \
             --source datasource.nasa_ntrs \
             --query "electric aircraft battery energy storage" \
             --rows 10 \
