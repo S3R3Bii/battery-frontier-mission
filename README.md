@@ -599,6 +599,9 @@ See [scientific scope](docs/scientific_scope.md), [equations](docs/equations.md)
 - Phase 3.5/4.5 simulation campaign for aviation requirement maps, pack
   architecture trade-space sweeps, candidate envelopes, long-haul stress tests,
   and infeasible regions
+- Phase 4.6 material hypothesis screening for theoretical and
+  engineering-bounded pack-energy proxies, with explicit audited-evidence
+  blocking
 - Approved CMU eVTOL raw-snapshot tooling with SHA-256/MD5 verification,
   representative subset parsing, unit/sign-convention checks, and cell-level
   measurement summaries
@@ -655,6 +658,7 @@ python -m battery_frontier.cli aviation-reference
 python -m battery_frontier.cli dashboard-artifacts
 python -m battery_frontier.cli candidate-dossiers
 python -m battery_frontier.cli simulation-campaign
+python -m battery_frontier.cli materials-campaign
 python -m battery_frontier.cli init-db
 python -m battery_frontier.cli source-status
 python -m battery_frontier.cli source-fetch-cmu-evtol --mode metadata
@@ -699,6 +703,14 @@ trade-space sweeps, candidate what-if envelopes, and a simulation summary under
 `reports/simulations/`. These are requirement and sensitivity studies only; they
 are not audited material measurements, candidate rankings, aircraft designs, or
 certification evidence.
+
+The `materials-campaign` command writes
+`reports/materials/material_screening_summary.json`, material candidate cards,
+and material frontier-gap rows. It compares assumption-only material hypotheses
+against aviation requirement bands, but every output remains simulation-only.
+Hemp/bast-fiber-derived graphene-like carbon is tracked as exploratory carbon
+architecture only, not validated graphene, not full-cell evidence, and not
+aviation-grade progress.
 
 The `source-status` command reports connector readiness, required credentials,
 license status, and whether a source is approved for trusted publication. Current

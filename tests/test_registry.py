@@ -12,6 +12,7 @@ def test_all_registries_validate_and_cross_references_resolve() -> None:
     assert registries.aircraft_systems
     assert registries.propulsion_systems
     assert registries.dataset_candidates
+    assert registries.material_candidates
 
 
 def test_scenarios_are_not_mislabeled_as_validated_facts() -> None:
@@ -45,3 +46,16 @@ def test_dataset_candidates_separate_measurements_from_metadata() -> None:
     assert by_id["dataset.cmu_evtol_battery"].measured_performance is True
     assert by_id["dataset.materials_project_battery_materials"].metadata_only is True
     assert by_id["dataset.materials_project_battery_materials"].measured_performance is False
+
+
+def test_material_candidates_are_not_audited_measurement_lane() -> None:
+    registries = load_registries()
+
+    assert all(
+        not material.may_appear_in_audited_lane
+        for material in registries.material_candidates
+    )
+    assert any(
+        material.id == "material.hemp_bast_fiber_graphene_like_carbon"
+        for material in registries.material_candidates
+    )

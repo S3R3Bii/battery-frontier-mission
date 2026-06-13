@@ -14,6 +14,7 @@ from battery_frontier.schemas import (
     Citation,
     DatasetCandidate,
     DataSource,
+    MaterialCandidate,
     PhysicsReferenceCase,
     PropulsionSystem,
     SegmentedMissionCase,
@@ -32,6 +33,7 @@ class Registries:
     aircraft_systems: list[AircraftSystem]
     propulsion_systems: list[PropulsionSystem]
     dataset_candidates: list[DatasetCandidate]
+    material_candidates: list[MaterialCandidate]
     physics_reference_cases: list[PhysicsReferenceCase]
     segmented_mission_cases: list[SegmentedMissionCase]
 
@@ -45,6 +47,7 @@ class Registries:
             "aircraft_systems": len(self.aircraft_systems),
             "propulsion_systems": len(self.propulsion_systems),
             "dataset_candidates": len(self.dataset_candidates),
+            "material_candidates": len(self.material_candidates),
             "physics_reference_cases": len(self.physics_reference_cases),
             "segmented_mission_cases": len(self.segmented_mission_cases),
         }
@@ -66,6 +69,7 @@ def _validate_citation_references(registries: Registries) -> None:
         *registries.scenarios,
         *registries.chemistries,
         *registries.data_sources,
+        *registries.material_candidates,
         *registries.physics_reference_cases,
         *registries.segmented_mission_cases,
     ]
@@ -91,6 +95,7 @@ def load_registries() -> Registries:
         aircraft_systems=_parse_records("aircraft_systems.yaml", AircraftSystem),
         propulsion_systems=_parse_records("propulsion_systems.yaml", PropulsionSystem),
         dataset_candidates=_parse_records("dataset_candidates.yaml", DatasetCandidate),
+        material_candidates=_parse_records("material_candidates.yaml", MaterialCandidate),
         physics_reference_cases=_parse_records(
             "physics_reference_cases.yaml",
             PhysicsReferenceCase,

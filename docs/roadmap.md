@@ -89,6 +89,23 @@
 - Remaining exit items: full-archive parsing, local analytical storage,
   uncertainty extraction, pack-level datasets, and external review.
 
+## Phase 4.6: Material Hypothesis Screening - Active
+
+- Add a first material-candidate registry and screening campaign without
+  enabling unsupported chemistry ranking.
+- Implemented locally: `configs/material_candidates.yaml`, 14 material
+  candidates, material candidate cards, theoretical active-material Wh/kg
+  proxies where assumptions exist, engineering-bounded pack Wh/kg proxies,
+  aviation mission gap rows, Materials Project metadata-only enrichment, and a
+  static dashboard material frontier panel.
+- Boundary: material screening is not DFT proof, not experimental validation,
+  not pack proof, not aircraft design, and not ranking evidence.
+- Hemp/bast-fiber-derived graphene-like carbon is included only as exploratory
+  natural-carbon architecture for hypothesis tracking.
+- Remaining exit items: audited full-cell measurements, uncertainty extraction,
+  real pack/module measurements, DFT or electrochemical modeling backends, and
+  external scientific review.
+
 ## Phase 5: ML Screening
 
 - Establish leakage-resistant baselines, uncertainty, calibration, and

@@ -9,6 +9,7 @@ dashboard.
 python -m battery_frontier.cli dashboard-artifacts
 python -m battery_frontier.cli candidate-dossiers
 python -m battery_frontier.cli simulation-campaign
+python -m battery_frontier.cli materials-campaign
 python -m battery_frontier.cli source-fetch-cmu-evtol --mode subset
 python -m battery_frontier.cli parse-cmu-evtol
 python -m battery_frontier.cli partner-dossiers
@@ -31,6 +32,13 @@ The simulation campaign panels are generated from local assumptions and model
 code. They map requirement envelopes, pack sensitivity, infeasible regions, and
 candidate evidence gaps. They do not publish measurements or imply that a
 candidate material has reached aviation-grade pack performance.
+
+The material hypothesis frontier is generated from `configs/material_candidates.yaml`
+and `reports/materials/`. It shows theoretical-only and engineering-bounded
+pack-energy proxies against aviation requirement bands. Those rows are
+simulation diagnostics only. Hemp/bast-fiber-derived graphene-like carbon is
+shown as exploratory carbon architecture only and has no validated aviation
+battery performance claim.
 
 The current public data also includes manufacturer/propulsion context tables,
 dataset triage, long-haul feasibility stress tests, and partner dossier links.

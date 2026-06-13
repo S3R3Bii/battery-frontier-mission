@@ -12,6 +12,7 @@ from battery_frontier.aviation.reference_cases import calculate_all_mission_case
 from battery_frontier.candidates.dossiers import build_candidate_dossiers
 from battery_frontier.config import CONFIG_DIR, PROJECT_ROOT
 from battery_frontier.data.connectors import source_status_rows
+from battery_frontier.materials.campaign import build_materials_campaign
 from battery_frontier.provenance import hash_files, sha256_file
 from battery_frontier.registry import load_registries
 from battery_frontier.reporting.method_cards import generate_dashboard_artifacts
@@ -41,6 +42,13 @@ def _simulation_payload() -> tuple[dict, Path | None]:
     if path.exists():
         return json.loads(path.read_text(encoding="utf-8")), path
     return build_simulation_campaign(), None
+
+
+def _materials_payload() -> tuple[dict, Path | None]:
+    path = PROJECT_ROOT / "reports" / "materials" / "material_screening_summary.json"
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8")), path
+    return build_materials_campaign(), None
 
 
 def _read_json_if_exists(path: Path) -> dict | None:
@@ -94,6 +102,14 @@ def generate_daily_report(
     simulation_sha256 = sha256_file(simulation_path) if simulation_path else None
     simulation_artifact = (
         _display_path(simulation_path) if simulation_path else "not yet written"
+    )
+    materials_payload, materials_path = _materials_payload()
+    materials_summary = materials_payload["summary"]
+    highest_theoretical_pack = materials_summary["highest_theoretical_only_pack_Wh_kg"]
+    highest_engineered_pack = materials_summary["highest_engineering_bounded_pack_Wh_kg"]
+    materials_sha256 = sha256_file(materials_path) if materials_path else None
+    materials_artifact = (
+        _display_path(materials_path) if materials_path else "not yet written"
     )
     connector_status = source_status_rows(registries)
     connector_ready = sum(row["execution_supported"] for row in connector_status)
@@ -183,6 +199,7 @@ rankings remain blocked because pack-level comparable evidence is not available.
 - Registered aircraft systems: {len(registries.aircraft_systems)}
 - Registered propulsion systems: {len(registries.propulsion_systems)}
 - Dataset candidates queued for review: {len(registries.dataset_candidates)}
+- Material candidates in hypothesis screening: {len(registries.material_candidates)}
 - Registered Phase 2 reference calculations: {len(registries.physics_reference_cases)}
 - Registered Phase 3 mission calculations: {len(registries.segmented_mission_cases)}
 - Phase 3 fixtures feasible under configured assumptions: {feasible_missions}
@@ -193,6 +210,10 @@ rankings remain blocked because pack-level comparable evidence is not available.
 - Simulation campaign aviation grid rows: {simulation_summary["aviation_requirement_grid_rows"]}
 - Simulation campaign pack trade rows: {simulation_summary["pack_trade_space_rows"]}
 - Long-haul stress-test rows: {simulation_summary["long_haul_study_count"]}
+- Materials campaign status: {materials_summary["campaign_status"]}
+- Materials screened: {materials_summary["material_candidate_count"]}
+- Highest theoretical-only pack estimate: {highest_theoretical_pack} Wh/kg
+- Highest engineering-bounded pack estimate: {highest_engineered_pack} Wh/kg
 - Partner dossiers generated: {partner_dossier_count}
 - Candidate rankings changed: 0
 
@@ -207,6 +228,8 @@ rankings remain blocked because pack-level comparable evidence is not available.
 5. The simulation campaign now maps aviation requirements, pack architecture
    penalties, candidate envelopes, and infeasible regions without creating
    experimental evidence.
+6. The materials campaign now screens material hypotheses against aviation
+   requirement bands while keeping all results out of audited and ranking lanes.
 
 ## Evidence Ledger
 
@@ -273,6 +296,24 @@ source-lineage fields are not yet populated for ranking.
 {json.dumps(simulation_summary["aviation_limiting_constraints"], indent=2, sort_keys=True)}
 ```
 
+## Materials Campaign
+
+- Campaign status: {materials_summary["campaign_status"]}
+- Simulation-only outputs: {materials_summary["simulation_only"]}
+- Material candidates: {materials_summary["material_candidate_count"]}
+- Energy-estimated candidates: {materials_summary["energy_estimated_candidate_count"]}
+- Energy-blocked candidates: {materials_summary["energy_blocked_candidate_count"]}
+- Frontier gap rows: {materials_summary["frontier_gap_row_count"]}
+- Highest theoretical-only pack estimate: {highest_theoretical_pack} Wh/kg
+- Highest engineering-bounded pack estimate: {highest_engineered_pack} Wh/kg
+- Hemp/bast-fiber carbon present: {materials_summary["hemp_bast_fiber_candidate_present"]}
+- Materials Project status: {materials_summary["materials_project_status"]}
+- Ranking enabled by materials screening: {materials_summary["ranking_enabled"]}
+
+Material screening values are assumptions for hypothesis triage. They are not
+validated material discovery, DFT results, full-cell measurements, pack proof,
+or aircraft performance evidence.
+
 ## Uncertainty and Reality Filter
 
 Unknown performance remains unknown. Chemistry-family records identify required
@@ -308,6 +349,8 @@ negative results remain public and reproducible.
 - Candidate dossier SHA-256: `{candidate_sha256 or "not yet written"}`
 - Simulation campaign artifact: `{simulation_artifact}`
 - Simulation campaign SHA-256: `{simulation_sha256 or "not yet written"}`
+- Materials campaign artifact: `{materials_artifact}`
+- Materials campaign SHA-256: `{materials_sha256 or "not yet written"}`
 - CMU raw manifest SHA-256: `{raw_manifest_sha256 or "not yet written"}`
 - CMU measurement summary SHA-256: `{measurement_summary_sha256 or "not yet written"}`
 - Partner dossier manifest SHA-256: `{partner_manifest_sha256 or "not yet written"}`
@@ -348,6 +391,11 @@ operations, or certification decisions.
             _display_path(simulation_path) if simulation_path else None
         ),
         "simulation_campaign_sha256": simulation_sha256,
+        "materials_campaign": materials_summary,
+        "materials_campaign_path": (
+            _display_path(materials_path) if materials_path else None
+        ),
+        "materials_campaign_sha256": materials_sha256,
         "candidate_dossiers": candidate_summary["candidate_count"],
         "candidate_summary": candidate_summary,
         "source_status": source_status,
@@ -394,7 +442,12 @@ operations, or certification decisions.
             "candidate_envelopes": simulation_summary["candidate_envelope_count"],
             "long_haul_feasibility": simulation_summary["long_haul_study_count"],
         },
+        "materials_campaign_rows": {
+            "material_candidates": materials_summary["material_candidate_count"],
+            "material_frontier_gap": materials_summary["frontier_gap_row_count"],
+        },
         "simulation_campaign_sha256": simulation_sha256,
+        "materials_campaign_sha256": materials_sha256,
         "candidate_dossiers": candidate_summary["candidate_count"],
         "candidate_dossier_sha256": candidate_sha256,
         "partner_dossier_count": partner_dossier_count,

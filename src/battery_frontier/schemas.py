@@ -267,6 +267,46 @@ class DatasetCandidate(StrictModel):
     limitations: str = Field(min_length=20)
 
 
+class MaterialCandidate(StrictModel):
+    id: str = Field(pattern=r"^[a-z0-9_.-]+$")
+    material_id: str = Field(pattern=r"^[a-z0-9_.-]+$")
+    display_name: str
+    chemistry_family_id: str = Field(pattern=r"^[a-z0-9_.-]+$")
+    chemistry_family: str
+    role: str
+    evidence_level: EvidenceClass
+    source_type: str
+    system_boundary: str = Field(min_length=20)
+    theoretical_basis: str = Field(min_length=20)
+    measured_basis: str | None = None
+    aviation_relevance: str = Field(min_length=20)
+    key_limitations: list[str] = Field(min_length=1)
+    toxicity_safety_flags: list[str] = Field(min_length=1)
+    abundance_supply_flags: list[str] = Field(min_length=1)
+    manufacturability_flags: list[str] = Field(min_length=1)
+    theoretical_specific_capacity_mAh_g: float | None = Field(default=None, gt=0)
+    nominal_voltage_v: float | None = Field(default=None, gt=0)
+    nominal_voltage_note: str | None = None
+    cell_derating_factor: float = Field(gt=0, le=1)
+    pack_overhead_factor: float = Field(gt=0, le=1)
+    citation_ids: list[str]
+    source_urls: list[HttpUrl] = Field(min_length=1)
+    may_appear_in_audited_lane: bool = False
+
+    @model_validator(mode="after")
+    def validate_material_boundary(self) -> MaterialCandidate:
+        if self.material_id != self.id:
+            raise ValueError("material_id must match id")
+        if self.may_appear_in_audited_lane and (
+            self.evidence_level != EvidenceClass.KNOWN_EXPERIMENTAL
+            or not self.measured_basis
+        ):
+            raise ValueError(
+                "audited-lane materials require known experimental evidence and measured basis"
+            )
+        return self
+
+
 class ReactionSide(StrEnum):
     REACTANT = "reactant"
     PRODUCT = "product"

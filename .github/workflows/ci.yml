@@ -20,6 +20,7 @@ jobs:
       - run: python -m battery_frontier.cli dashboard-artifacts
       - run: python -m battery_frontier.cli candidate-dossiers
       - run: python -m battery_frontier.cli simulation-campaign
+      - run: python -m battery_frontier.cli materials-campaign
       - run: python -m battery_frontier.cli partner-dossiers
       - run: python -m battery_frontier.cli website-data
       - run: python -m pytest

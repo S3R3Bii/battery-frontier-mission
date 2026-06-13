@@ -58,6 +58,12 @@ Those rows are simulation estimates and include explicit infeasible states. They
 are useful for asking what would need to be true, not for claiming that a real
 aircraft or battery meets those requirements.
 
+`materials-campaign` reuses the long-haul requirement profiles as comparison
+bands for material hypotheses. A material row meeting a diagnostic band only
+means it exceeds the configured first-order Wh/kg proxy. It does not validate
+power, thermal transients, cycle life, safety, certification, manufacturability,
+or an aircraft design.
+
 ## Remaining Validation Gate
 
 Phase 3 is not complete until at least one published mission study is reproduced

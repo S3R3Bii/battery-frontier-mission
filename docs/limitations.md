@@ -32,6 +32,12 @@
   designs or manufacturable bills of materials.
 - Candidate material envelopes are what-if ranges and unknown markers. They are
   not experimental performance claims and must not be sorted into a leaderboard.
+- Material hypothesis screening converts registry assumptions into theoretical
+  and engineering-bounded pack-energy proxies. These are not DFT results,
+  experimental measurements, pack demonstrations, aircraft feasibility proof, or
+  rankings.
+- Rows missing a full-cell voltage or capacity assumption are intentionally
+  blocked from energy estimates instead of being filled with optimistic defaults.
 - Theoretical capacity and energy exclude kinetics, transport losses,
   electrolyte depletion, inactive components, manufacturing tolerances,
   degradation, and safety containment until explicit factors are applied.
@@ -59,6 +65,9 @@
   lead. It must not be described as validated graphene, a complete rechargeable
   battery, pack-level evidence, or aviation-grade progress until primary
   evidence is audited at the correct system boundary.
+- In the materials campaign, hemp/bast-fiber-derived graphene-like carbon is
+  treated as exploratory carbon architecture only. It has no energy estimate and
+  cannot appear in the audited measurement lane.
 - The conceptual target aircraft visual is a mission reminder, not a blueprint,
   aircraft design, performance model, or certification artifact.
 - Source connector dry runs and metadata fetches do not create experimental

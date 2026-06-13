@@ -25,6 +25,12 @@ def test_website_export_contains_frontier_and_guardrails(tmp_path) -> None:
     assert payload["simulation_campaign_summary"]["ranking_enabled"] is False
     assert payload["simulation_campaign_summary"]["audited_measurements"] == 0
     assert payload["simulation_campaign_summary"]["long_haul_study_count"] == 6
+    assert payload["materials_campaign_summary"]["simulation_only"] is True
+    assert payload["materials_campaign_summary"]["ranking_enabled"] is False
+    assert payload["materials_campaign_summary"]["material_candidate_count"] >= 14
+    assert payload["material_candidate_cards"]
+    assert payload["material_frontier_gap"]
+    assert payload["material_metadata_snapshot"]["performance_evidence"] is False
     assert payload["aviation_requirement_map"]["row_count"] > 0
     assert payload["long_haul_feasibility"]["row_count"] == 6
     assert payload["measurement_pipeline"]["approved_source"]["license"] == "CC BY 4.0"

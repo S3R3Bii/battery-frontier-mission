@@ -12,6 +12,7 @@ The workflow regenerates:
 - Phase 4 dashboard method cards and manifest
 - candidate evidence dossiers and Materials Project metadata appendix
 - Phase 3.5/4.5 simulation campaign grids and summaries
+- Phase 4.6 material hypothesis screening artifacts
 - partner-facing dossier reports
 - daily report artifacts
 - `website/mission-control-data.json`
@@ -54,6 +55,18 @@ route, payload, reserve, pack architecture, and degradation assumptions. They
 are not measurements, validation records, certifiable aircraft designs, or
 evidence that any candidate material can meet the requirements.
 
+## Materials Campaign Refresh
+
+`python -m battery_frontier.cli materials-campaign` regenerates
+`reports/materials/` from `configs/material_candidates.yaml`, long-haul
+requirement bands, and optional Materials Project metadata-only enrichment.
+
+The outputs are theoretical and engineering-bounded screening diagnostics only.
+They are not DFT results, measurements, pack demonstrations, aircraft designs,
+or rankings. If `MP_API_KEY` is present, the command may fetch Materials
+Project metadata; the snapshot remains metadata-only and non-performance
+evidence.
+
 ## CMU Measurement Refresh
 
 The approved CMU eVTOL dataset should not be fully downloaded in CI by default.
@@ -79,8 +92,8 @@ under `reports/partners/latest/` and creates archive snapshots under
 
 No secrets are required for Pages, daily report, CMU eVTOL metadata, NASA NTRS,
 or OSTI metadata workflows to complete. If `MP_API_KEY` is present, Pages, daily
-report, and metadata refresh workflows also attach Materials Project
-metadata-only discovery records to the candidate dossiers.
+report, materials campaign, and metadata refresh workflows also attach
+Materials Project metadata-only discovery records to generated artifacts.
 
 Materials Project metadata refresh requires:
 

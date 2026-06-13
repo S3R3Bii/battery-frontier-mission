@@ -22,6 +22,12 @@ requirement maps, pack trade-space sweeps, long-haul stress tests, and candidate
 what-if envelopes. They do not create experimental evidence or enable chemistry
 ranking.
 
+The static site now consumes the Phase 4.6 materials campaign in
+[`reports/materials/`](../reports/materials/). Those outputs are material
+hypothesis cards, theoretical-only pack proxies, engineering-bounded pack
+proxies, and aviation requirement gap rows. They are not DFT proof, validated
+measurements, pack demonstrations, or rankings.
+
 The static site now consumes CMU eVTOL measurement-pipeline artifacts from
 [`reports/measurements/`](../reports/measurements/), manufacturer and propulsion
 registries from `configs/`, dataset candidates, and partner dossier manifests
@@ -53,6 +59,7 @@ Generate the website data after refreshing artifacts:
 python -m battery_frontier.cli dashboard-artifacts
 python -m battery_frontier.cli candidate-dossiers
 python -m battery_frontier.cli simulation-campaign
+python -m battery_frontier.cli materials-campaign
 python -m battery_frontier.cli source-fetch-cmu-evtol --mode subset
 python -m battery_frontier.cli parse-cmu-evtol
 python -m battery_frontier.cli partner-dossiers
@@ -77,6 +84,9 @@ The primary website chart shows:
 - simulation campaign rail: aviation requirement map, pack architecture
   sensitivity, candidate envelopes, infeasible regions, and "what would need to
   be true" blockers
+- material hypothesis rail: theoretical versus engineering-bounded pack-energy
+  proxies, mission requirement overlays, blocked assumptions, and source
+  boundary labels
 - manufacturer and propulsion context rail: source-labeled examples only
 - partner dossier rail: latest report links and archive status
 - conceptual target aircraft rail: mission reminder only, not a design claim
@@ -90,6 +100,7 @@ python -m battery_frontier.cli aviation-reference
 python -m battery_frontier.cli dashboard-artifacts
 python -m battery_frontier.cli candidate-dossiers
 python -m battery_frontier.cli simulation-campaign
+python -m battery_frontier.cli materials-campaign
 python -m streamlit run dashboard/app.py
 ```
 
@@ -106,6 +117,8 @@ Open `http://localhost:8501`.
 - infeasible mission results remain visible
 - static website progress visuals do not represent technology readiness
 - simulation campaign outputs are parameter sweeps, not validation records
+- material campaign outputs are assumption diagnostics, not DFT or experimental
+  performance records
 - hemp bast-fiber graphitic carbon is displayed as a speculative material lead,
   not as validated graphene, cell evidence, or pack evidence
 

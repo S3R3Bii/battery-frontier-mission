@@ -1,0 +1,354 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+records:
+  - id: material.graphite_nmc_li_ion_baseline
+    material_id: material.graphite_nmc_li_ion_baseline
+    display_name: Graphite/NMC lithium-ion baseline
+    chemistry_family_id: chemistry.lithium_ion_intercalation
+    chemistry_family: Advanced lithium-ion intercalation
+    role: cell_system
+    evidence_level: known_experimental
+    source_type: literature_review_assumption
+    system_boundary: Full-cell lithium-ion baseline translated through aviation pack overhead assumptions.
+    theoretical_basis: Intercalation full-cell screening proxy; not a parsed experimental record.
+    measured_basis: Published lithium-ion family context exists, but this registry row is not an audited measurement.
+    aviation_relevance: Establishes a conservative incumbent reference lane for aviation requirement gaps.
+    key_limitations: [cycle_life_energy_tradeoff, thermal_runaway, critical_materials, pack_overhead]
+    toxicity_safety_flags: [thermal_runaway_requires_containment, transition_metal_exposure]
+    abundance_supply_flags: [nickel_cobalt_supply_chain_exposure, graphite_supply_chain_review]
+    manufacturability_flags: [commercially_mature_family, aviation_pack_not_validated]
+    theoretical_specific_capacity_mAh_g: 180
+    nominal_voltage_v: 3.7
+    nominal_voltage_note: Full-cell screening proxy for NMC/graphite family, not a universal cell rating.
+    cell_derating_factor: 0.42
+    pack_overhead_factor: 0.72
+    citation_ids: [lit.nitta_2015]
+    source_urls: [https://doi.org/10.1016/j.mattod.2014.10.040]
+    may_appear_in_audited_lane: false
+
+  - id: material.lfp_li_ion_baseline
+    material_id: material.lfp_li_ion_baseline
+    display_name: LFP lithium-ion baseline
+    chemistry_family_id: chemistry.lithium_ion_intercalation
+    chemistry_family: Advanced lithium-ion intercalation
+    role: cell_system
+    evidence_level: known_experimental
+    source_type: literature_review_assumption
+    system_boundary: Full-cell LFP-family screening proxy translated through pack overhead assumptions.
+    theoretical_basis: Intercalation full-cell proxy using conservative voltage and capacity assumptions.
+    measured_basis: Published LFP-family context exists, but no audited record is linked to this row.
+    aviation_relevance: Safety and cost reference lane, expected to remain energy-limited for aircraft range.
+    key_limitations: [lower_voltage, lower_specific_energy, pack_mass_fraction, cold_weather_power]
+    toxicity_safety_flags: [safer_than_high_nickel_baselines_but_still_requires_pack_safety]
+    abundance_supply_flags: [iron_phosphate_abundance_advantage, lithium_supply_exposure]
+    manufacturability_flags: [commercially_mature_family, aircraft_pack_specific_energy_gap]
+    theoretical_specific_capacity_mAh_g: 160
+    nominal_voltage_v: 3.2
+    nominal_voltage_note: Full-cell screening proxy for LFP family, not a product specification.
+    cell_derating_factor: 0.45
+    pack_overhead_factor: 0.72
+    citation_ids: [lit.nitta_2015]
+    source_urls: [https://doi.org/10.1016/j.mattod.2014.10.040]
+    may_appear_in_audited_lane: false
+
+  - id: material.nca_li_ion_baseline
+    material_id: material.nca_li_ion_baseline
+    display_name: NCA lithium-ion baseline
+    chemistry_family_id: chemistry.lithium_ion_intercalation
+    chemistry_family: Advanced lithium-ion intercalation
+    role: cell_system
+    evidence_level: known_experimental
+    source_type: literature_review_assumption
+    system_boundary: Full-cell NCA-family screening proxy translated through pack overhead assumptions.
+    theoretical_basis: High-energy intercalation full-cell proxy for aviation gap context only.
+    measured_basis: Published NCA-family context exists, but no audited record is linked to this row.
+    aviation_relevance: High-energy incumbent reference lane for aviation pack requirement comparison.
+    key_limitations: [thermal_safety, nickel_cobalt_supply, high_soc_degradation, pack_containment_mass]
+    toxicity_safety_flags: [thermal_runaway_requires_containment, transition_metal_exposure]
+    abundance_supply_flags: [nickel_supply_exposure, cobalt_supply_exposure]
+    manufacturability_flags: [commercially_mature_family, aviation_certification_not_implied]
+    theoretical_specific_capacity_mAh_g: 200
+    nominal_voltage_v: 3.7
+    nominal_voltage_note: Full-cell screening proxy for NCA family, not a product specification.
+    cell_derating_factor: 0.43
+    pack_overhead_factor: 0.72
+    citation_ids: [lit.nitta_2015]
+    source_urls: [https://doi.org/10.1016/j.mattod.2014.10.040]
+    may_appear_in_audited_lane: false
+
+  - id: material.silicon_graphite_composite_anode
+    material_id: material.silicon_graphite_composite_anode
+    display_name: Silicon-graphite composite anode
+    chemistry_family_id: chemistry.lithium_ion_intercalation
+    chemistry_family: Advanced lithium-ion intercalation
+    role: anode_architecture
+    evidence_level: known_experimental
+    source_type: literature_review_assumption
+    system_boundary: Anode improvement hypothesis translated through a speculative full-cell proxy.
+    theoretical_basis: Silicon-rich anode capacity can be high, but full-cell energy is limited by cathode, binder, electrolyte, and swelling control.
+    measured_basis: Published silicon-anode context exists, but no audited aviation cell record is linked here.
+    aviation_relevance: Possible incremental energy improvement path if swelling and cycle-life penalties are solved.
+    key_limitations: [volume_expansion, first_cycle_loss, cycle_life, cathode_limit, pack_level_unknown]
+    toxicity_safety_flags: [lithiation_swelling_mechanical_risk, electrolyte_consumption]
+    abundance_supply_flags: [silicon_abundance_advantage, graphite_and_electrolyte_supply_review]
+    manufacturability_flags: [manufacturing_control_required, aviation_cycle_life_not_validated]
+    theoretical_specific_capacity_mAh_g: 420
+    nominal_voltage_v: 3.6
+    nominal_voltage_note: Full-cell proxy for a silicon-graphite lithium-ion system; anode alone has no pack voltage.
+    cell_derating_factor: 0.28
+    pack_overhead_factor: 0.68
+    citation_ids: [lit.nitta_2015]
+    source_urls: [https://doi.org/10.1016/j.mattod.2014.10.040]
+    may_appear_in_audited_lane: false
+
+  - id: material.lithium_metal_anode
+    material_id: material.lithium_metal_anode
+    display_name: Lithium metal anode
+    chemistry_family_id: chemistry.lithium_metal
+    chemistry_family: Lithium-metal rechargeable cells
+    role: anode
+    evidence_level: known_experimental
+    source_type: literature_review_assumption
+    system_boundary: Negative-electrode material only; not a standalone rechargeable full cell or pack.
+    theoretical_basis: Metallic lithium has high specific capacity, but anode-only capacity does not define cell energy.
+    measured_basis: Literature context exists; this row has no audited full-cell aviation measurement.
+    aviation_relevance: Critical enabling component for multiple high-energy hypotheses, but safety and excess-lithium mass dominate.
+    key_limitations: [dendrites, coulombic_efficiency, excess_lithium, safety, stack_pressure]
+    toxicity_safety_flags: [reactive_metal, dendrite_short_risk, thermal_abuse_risk]
+    abundance_supply_flags: [lithium_supply_exposure]
+    manufacturability_flags: [dry_processing_control, separator_interface_quality, aviation_pack_unknown]
+    theoretical_specific_capacity_mAh_g: 3860
+    nominal_voltage_v:
+    nominal_voltage_note: Anode-only row intentionally lacks full-cell voltage; energy estimate must be blocked.
+    cell_derating_factor: 0.25
+    pack_overhead_factor: 0.68
+    citation_ids: [lit.janek_2016]
+    source_urls: [https://doi.org/10.1038/nenergy.2016.141]
+    may_appear_in_audited_lane: false
+
+  - id: material.lithium_sulfur_full_cell
+    material_id: material.lithium_sulfur_full_cell
+    display_name: Lithium-sulfur full-cell hypothesis
+    chemistry_family_id: chemistry.lithium_sulfur
+    chemistry_family: Lithium-sulfur
+    role: cell_system
+    evidence_level: literature_projection
+    source_type: literature_review_assumption
+    system_boundary: Full-cell hypothesis requiring electrolyte, lithium excess, sulfur loading, and cycle-life accounting.
+    theoretical_basis: Sulfur conversion capacity is high, but complete cell energy is strongly reduced by electrolyte and lithium excess.
+    measured_basis: Published Li-S context exists, but no audited aviation duty-cycle full-cell measurement is linked.
+    aviation_relevance: Potential high-energy path if cycle life, electrolyte mass, safety, and power limits are solved.
+    key_limitations: [polysulfide_shuttle, electrolyte_mass, lithium_excess, cycle_life, volumetric_energy]
+    toxicity_safety_flags: [reactive_lithium_if_lithium_metal_used, thermal_containment_required]
+    abundance_supply_flags: [sulfur_abundance_advantage, lithium_supply_exposure]
+    manufacturability_flags: [electrolyte_management, high_loading_scaleup, aviation_pack_unknown]
+    theoretical_specific_capacity_mAh_g: 1675
+    nominal_voltage_v: 2.1
+    nominal_voltage_note: Sulfur conversion screening voltage, not an audited cell average.
+    cell_derating_factor: 0.18
+    pack_overhead_factor: 0.67
+    citation_ids: [lit.manthiram_2014, lit.bruce_2012]
+    source_urls:
+      - https://doi.org/10.1021/cr500062v
+      - https://doi.org/10.1038/nmat3191
+    may_appear_in_audited_lane: false
+
+  - id: material.sodium_ion_layered_oxide
+    material_id: material.sodium_ion_layered_oxide
+    display_name: Sodium-ion layered oxide or Prussian-blue analogue
+    chemistry_family_id: chemistry.sodium_ion
+    chemistry_family: Sodium-ion
+    role: cell_system
+    evidence_level: known_experimental
+    source_type: literature_review_assumption
+    system_boundary: Sodium-ion full-cell family proxy; not an audited aircraft battery measurement.
+    theoretical_basis: Sodium insertion systems have lower voltage and mass advantages/disadvantages than lithium-ion.
+    measured_basis: Published sodium-ion context exists, but no audited aviation cell record is linked.
+    aviation_relevance: Useful abundance and cost comparator, likely energy-limited for aviation range.
+    key_limitations: [lower_voltage, lower_specific_energy, density_penalty, first_cycle_loss]
+    toxicity_safety_flags: [pack_safety_still_required, electrolyte_flammability_if_organic]
+    abundance_supply_flags: [sodium_abundance_advantage, transition_metal_selection_required]
+    manufacturability_flags: [emerging_manufacturing, aviation_pack_unknown]
+    theoretical_specific_capacity_mAh_g: 150
+    nominal_voltage_v: 3.2
+    nominal_voltage_note: Sodium-ion full-cell screening proxy, not a product specification.
+    cell_derating_factor: 0.42
+    pack_overhead_factor: 0.72
+    citation_ids: [lit.hwang_2017]
+    source_urls: [https://doi.org/10.1039/C6CS00776G]
+    may_appear_in_audited_lane: false
+
+  - id: material.solid_state_lithium_sulfide
+    material_id: material.solid_state_lithium_sulfide
+    display_name: Solid-state lithium metal with sulfide electrolyte
+    chemistry_family_id: chemistry.solid_state_lithium
+    chemistry_family: Solid-state lithium
+    role: cell_system
+    evidence_level: literature_projection
+    source_type: literature_review_assumption
+    system_boundary: Solid-state full-cell hypothesis with sulfide electrolyte and lithium-metal interface assumptions.
+    theoretical_basis: Lithium-metal negative electrode plus high-voltage cathode proxy; interfaces and pressure not solved by this estimate.
+    measured_basis: Published solid-state context exists, but no audited aviation duty-cycle measurement is linked.
+    aviation_relevance: Candidate path for higher pack energy if pressure, rate, safety, and cycle-life issues are solved.
+    key_limitations: [interface_resistance, stack_pressure, sulfide_moisture_sensitivity, dendrites, manufacturability]
+    toxicity_safety_flags: [hydrogen_sulfide_risk_if_sulfide_mismanaged, lithium_metal_reactivity]
+    abundance_supply_flags: [lithium_supply_exposure, sulfur_abundance_advantage]
+    manufacturability_flags: [dry_room_requirement, pressure_stack_integration, aviation_pack_unknown]
+    theoretical_specific_capacity_mAh_g: 350
+    nominal_voltage_v: 3.8
+    nominal_voltage_note: Full-cell proxy for lithium-metal solid-state system, not audited stack data.
+    cell_derating_factor: 0.32
+    pack_overhead_factor: 0.70
+    citation_ids: [lit.janek_2016]
+    source_urls: [https://doi.org/10.1038/nenergy.2016.141]
+    may_appear_in_audited_lane: false
+
+  - id: material.solid_state_lithium_oxide
+    material_id: material.solid_state_lithium_oxide
+    display_name: Solid-state lithium metal with oxide electrolyte
+    chemistry_family_id: chemistry.solid_state_lithium
+    chemistry_family: Solid-state lithium
+    role: cell_system
+    evidence_level: literature_projection
+    source_type: literature_review_assumption
+    system_boundary: Solid-state full-cell hypothesis with oxide electrolyte and lithium-metal interface assumptions.
+    theoretical_basis: Lithium-metal negative electrode plus high-voltage cathode proxy; ceramic processing and interfaces dominate uncertainty.
+    measured_basis: Published solid-state context exists, but no audited aviation duty-cycle measurement is linked.
+    aviation_relevance: Safety-oriented solid-state branch, with manufacturability and interface risk still central.
+    key_limitations: [ceramic_processing, interface_resistance, stack_pressure, fracture_tolerance, cycle_life]
+    toxicity_safety_flags: [lithium_metal_reactivity, brittle_electrolyte_failure_modes]
+    abundance_supply_flags: [lithium_supply_exposure, ceramic_precursor_review_required]
+    manufacturability_flags: [sintering_or_thin_film_process, pressure_stack_integration, aviation_pack_unknown]
+    theoretical_specific_capacity_mAh_g: 330
+    nominal_voltage_v: 3.8
+    nominal_voltage_note: Full-cell proxy for oxide-electrolyte lithium-metal system, not audited stack data.
+    cell_derating_factor: 0.30
+    pack_overhead_factor: 0.68
+    citation_ids: [lit.janek_2016]
+    source_urls: [https://doi.org/10.1038/nenergy.2016.141]
+    may_appear_in_audited_lane: false
+
+  - id: material.lithium_air_stress_test
+    material_id: material.lithium_air_stress_test
+    display_name: Lithium-air theoretical stress test
+    chemistry_family_id: chemistry.lithium_oxygen
+    chemistry_family: Lithium-oxygen
+    role: cell_system
+    evidence_level: speculative_hypothesis
+    source_type: literature_review_assumption
+    system_boundary: Theoretical stress-test system with oxygen management, reversibility, and air hardware unresolved.
+    theoretical_basis: Lithium-oxygen reaction has high theoretical energy, but rechargeable system mass and durability are unresolved.
+    measured_basis: No audited aviation-relevant rechargeable pack measurement is linked.
+    aviation_relevance: Upper-bound thought experiment for impossible/unknown region visualization.
+    key_limitations: [oxygen_management, parasitic_reactions, round_trip_efficiency, cycle_life, air_system_mass]
+    toxicity_safety_flags: [reactive_lithium, oxygen_system_hazard, parasitic_reaction_products]
+    abundance_supply_flags: [lithium_supply_exposure, oxygen_system_complexity]
+    manufacturability_flags: [not_manufacturing_ready, rechargeable_reversibility_unresolved, aviation_pack_unknown]
+    theoretical_specific_capacity_mAh_g: 11680
+    nominal_voltage_v: 2.7
+    nominal_voltage_note: Theoretical stress-test voltage; not a rechargeable aircraft cell rating.
+    cell_derating_factor: 0.07
+    pack_overhead_factor: 0.55
+    citation_ids: [lit.bruce_2012]
+    source_urls: [https://doi.org/10.1038/nmat3191]
+    may_appear_in_audited_lane: false
+
+  - id: material.structural_battery_composite
+    material_id: material.structural_battery_composite
+    display_name: Structural battery composite
+    chemistry_family_id: chemistry.structural_battery
+    chemistry_family: Structural battery composites
+    role: architecture
+    evidence_level: speculative_hypothesis
+    source_type: architecture_hypothesis
+    system_boundary: Multifunctional structure concept; energy storage cannot be separated from structural mass without audited test data.
+    theoretical_basis: Effective aircraft mass benefit may matter more than standalone Wh/kg, so simple active-material energy is intentionally blocked.
+    measured_basis:
+    aviation_relevance: Long-term aircraft integration concept if energy, stiffness, damage tolerance, and certification can be jointly demonstrated.
+    key_limitations: [damage_tolerance, certification, repairability, low_energy_density, multifunctional_tradeoff]
+    toxicity_safety_flags: [crashworthiness_unknown, embedded_cell_thermal_containment_unknown]
+    abundance_supply_flags: [carbon_fiber_supply_review, polymer_electrolyte_supply_review]
+    manufacturability_flags: [airframe_certification_hurdle, structural_battery_process_not_mature]
+    theoretical_specific_capacity_mAh_g:
+    nominal_voltage_v:
+    nominal_voltage_note: Architecture-only row intentionally lacks full-cell voltage and capacity.
+    cell_derating_factor: 0.20
+    pack_overhead_factor: 0.80
+    citation_ids: []
+    source_urls: [https://doi.org/10.1016/j.compscitech.2021.108636]
+    may_appear_in_audited_lane: false
+
+  - id: material.graphene_carbon_supercapacitive_architecture
+    material_id: material.graphene_carbon_supercapacitive_architecture
+    display_name: Graphene/carbon supercapacitive architecture
+    chemistry_family_id: chemistry.bio_derived_carbon_electrodes
+    chemistry_family: Bio-derived graphitic carbon electrodes
+    role: architecture
+    evidence_level: speculative_hypothesis
+    source_type: architecture_hypothesis
+    system_boundary: Carbon electrode or scaffold architecture; not a rechargeable aviation battery chemistry by itself.
+    theoretical_basis: High surface-area carbon can support power and conductivity, but capacitance metrics do not translate directly to pack Wh/kg.
+    measured_basis:
+    aviation_relevance: Possible power, thermal, or conductive scaffold role; not a standalone aircraft energy solution.
+    key_limitations: [low_energy_density_for_supercapacitors, voltage_window, electrolyte_mass, self_discharge, no_full_cell_boundary]
+    toxicity_safety_flags: [nanomaterial_handling_review_required, electrolyte_safety_depends_on_system]
+    abundance_supply_flags: [carbon_abundance_advantage, processing_energy_review_required]
+    manufacturability_flags: [scalable_texture_control_required, cell_integration_unknown]
+    theoretical_specific_capacity_mAh_g:
+    nominal_voltage_v:
+    nominal_voltage_note: Supercapacitive capacitance is not treated as battery specific capacity.
+    cell_derating_factor: 0.20
+    pack_overhead_factor: 0.70
+    citation_ids: [lit.divya_nann_2020]
+    source_urls: [https://arxiv.org/abs/2006.00138]
+    may_appear_in_audited_lane: false
+
+  - id: material.hemp_bast_fiber_graphene_like_carbon
+    material_id: material.hemp_bast_fiber_graphene_like_carbon
+    display_name: Hemp/bast-fiber-derived graphene-like carbon
+    chemistry_family_id: chemistry.bio_derived_carbon_electrodes
+    chemistry_family: Bio-derived graphitic carbon electrodes
+    role: architecture
+    evidence_level: speculative_hypothesis
+    source_type: exploratory_natural_carbon_architecture
+    system_boundary: Exploratory carbon scaffold or electrode architecture; not validated graphene, not a full cell, and not pack evidence.
+    theoretical_basis: Bast-fiber-derived activated or graphitic carbon may provide porous conductive structure, but no aviation battery energy model is supported.
+    measured_basis:
+    aviation_relevance: Hypothesis-tracking material for conductive scaffolds, anode supports, or hybrid supercapacitive components.
+    key_limitations: [precursor_variability, carbonization_energy, pore_structure_control, low_cell_voltage_for_supercapacitors, no_full_cell_boundary]
+    toxicity_safety_flags: [nanocarbon_handling_review_required, electrolyte_safety_depends_on_cell]
+    abundance_supply_flags: [bio_precursor_availability_possible, agricultural_supply_variability]
+    manufacturability_flags: [batch_variability, activation_process_control, aviation_pack_unknown]
+    theoretical_specific_capacity_mAh_g:
+    nominal_voltage_v:
+    nominal_voltage_note: Exploratory carbon architecture; included for hypothesis tracking only. No validated aviation battery performance is claimed.
+    cell_derating_factor: 0.20
+    pack_overhead_factor: 0.70
+    citation_ids: [lit.divya_nann_2020]
+    source_urls: [https://arxiv.org/abs/2006.00138]
+    may_appear_in_audited_lane: false
+
+  - id: material.aluminum_ion_carbon_cathode
+    material_id: material.aluminum_ion_carbon_cathode
+    display_name: Aluminum-ion carbon cathode concept
+    chemistry_family_id: chemistry.multivalent
+    chemistry_family: Magnesium, calcium, and aluminum multivalent systems
+    role: cell_system
+    evidence_level: speculative_hypothesis
+    source_type: preprint_assumption
+    system_boundary: Non-aqueous aluminum-ion carbon cathode concept; not aviation cell or pack evidence.
+    theoretical_basis: Carbon cathodes can host chloroaluminate species, but full-cell voltage, capacity, electrolyte mass, and cycle life remain limiting.
+    measured_basis: Preprint context only; not audited or aviation-specific.
+    aviation_relevance: Low-priority speculative comparator for abundance and safety discussion.
+    key_limitations: [low_specific_energy_proxy, electrolyte_complexity, corrosion, rate_and_cycle_uncertainty]
+    toxicity_safety_flags: [ionic_liquid_or_chloroaluminate_electrolyte_review_required, corrosion_risk]
+    abundance_supply_flags: [aluminum_abundance_advantage, electrolyte_supply_review_required]
+    manufacturability_flags: [early_stage_cell_architecture, aviation_pack_unknown]
+    theoretical_specific_capacity_mAh_g: 80
+    nominal_voltage_v: 2.0
+    nominal_voltage_note: Screening proxy from carbon-cathode aluminum-ion context, not audited aviation data.
+    cell_derating_factor: 0.40
+    pack_overhead_factor: 0.65
+    citation_ids: [lit.divya_nann_2020]
+    source_urls: [https://arxiv.org/abs/2006.00138]
+    may_appear_in_audited_lane: false

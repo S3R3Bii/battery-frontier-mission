@@ -13,8 +13,11 @@ flowchart LR
     D --> P
     P --> A["Aviation mission models"]
     A --> SC["Simulation campaign grids"]
+    C --> MAT["Material candidate registry"]
+    MAT --> MC["Material hypothesis campaign"]
     A --> U["Uncertainty and reality filters"]
     SC --> U
+    MC --> U
     U --> R["Evidence-gated candidate assessments"]
     X --> E["Candidate evidence dossiers"]
     R --> E
@@ -22,7 +25,9 @@ flowchart LR
     E --> W["Static mission-control website JSON"]
     E --> Q["Daily reproducible reports"]
     SC --> W
+    MC --> W
     SC --> Q
+    MC --> Q
     W --> PD["Partner dossier bundle"]
     PD --> Q
     B --> M["Hashed method cards and downloadable artifacts"]
@@ -44,6 +49,9 @@ flowchart LR
 - **Simulation campaign grids** map aviation requirement envelopes, pack
   architecture sensitivities, and candidate evidence boundaries without
   promoting those sweeps to experimental performance evidence.
+- **Material hypothesis screening** maps material-candidate assumptions to
+  theoretical and engineering-bounded pack-energy proxies while explicitly
+  blocking audited-measurement and ranking lanes.
 - **CMU measurement ingestion** downloads approved raw files only on explicit
   command, verifies supplied MD5 and computed SHA-256 hashes, parses
   representative CSVs, and labels outputs as cell-level evidence only.
@@ -96,3 +104,16 @@ Partner dossiers follow:
 
 `reports/partners/latest -> reports/partners/archive -> registries + CMU
 measurement summary + simulation campaign artifacts + website data hashes`.
+
+Material campaign panels follow:
+
+`website material panel -> website/mission-control-data.json ->
+reports/materials -> configs/material_candidates.yaml -> citations/source URLs
+-> limitations`.
+
+Materials Project enrichment follows:
+
+`reports/materials/materials_project_metadata_snapshot.json -> Materials
+Project metadata connector -> source status`. These records are computed
+material metadata only and cannot become battery-performance evidence without a
+separate audited measurement source.

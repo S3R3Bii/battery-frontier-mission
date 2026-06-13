@@ -93,6 +93,64 @@ CREATE TABLE IF NOT EXISTS materials (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS material_candidates (
+    material_id VARCHAR PRIMARY KEY,
+    display_name VARCHAR NOT NULL,
+    chemistry_family_id VARCHAR NOT NULL,
+    role VARCHAR NOT NULL,
+    evidence_level VARCHAR NOT NULL,
+    source_type VARCHAR NOT NULL,
+    system_boundary VARCHAR NOT NULL,
+    theoretical_basis VARCHAR NOT NULL,
+    measured_basis VARCHAR,
+    aviation_relevance VARCHAR NOT NULL,
+    screening_assumptions_json JSON NOT NULL,
+    safety_flags_json JSON NOT NULL,
+    supply_flags_json JSON NOT NULL,
+    manufacturability_flags_json JSON NOT NULL,
+    citation_ids_json JSON NOT NULL,
+    source_urls_json JSON NOT NULL,
+    may_appear_in_audited_lane BOOLEAN NOT NULL DEFAULT FALSE,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS material_screening_results (
+    screening_result_id VARCHAR PRIMARY KEY,
+    material_id VARCHAR NOT NULL,
+    campaign_id VARCHAR NOT NULL,
+    energy_estimate_status VARCHAR NOT NULL,
+    theoretical_active_material_Wh_kg DOUBLE,
+    theoretical_only_pack_Wh_kg DOUBLE,
+    engineering_bounded_pack_Wh_kg DOUBLE,
+    implied_pack_range_json JSON,
+    performance_evidence BOOLEAN NOT NULL,
+    audited_measurement BOOLEAN NOT NULL,
+    ranking_evidence BOOLEAN NOT NULL,
+    claim_boundary VARCHAR NOT NULL,
+    generated_at TIMESTAMP NOT NULL,
+    result_json JSON NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS material_frontier_gap_results (
+    gap_result_id VARCHAR PRIMARY KEY,
+    material_id VARCHAR NOT NULL,
+    campaign_id VARCHAR NOT NULL,
+    mission_profile_id VARCHAR NOT NULL,
+    required_pack_specific_energy_Wh_kg DOUBLE NOT NULL,
+    engineering_bounded_pack_Wh_kg DOUBLE,
+    gap_to_requirement_Wh_kg DOUBLE,
+    battery_sufficiency_index DOUBLE,
+    diagnostic_status VARCHAR NOT NULL,
+    performance_evidence BOOLEAN NOT NULL,
+    audited_measurement BOOLEAN NOT NULL,
+    ranking_evidence BOOLEAN NOT NULL,
+    claim_boundary VARCHAR NOT NULL,
+    generated_at TIMESTAMP NOT NULL,
+    result_json JSON NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE IF NOT EXISTS measurements (
     measurement_id VARCHAR PRIMARY KEY,
     subject_id VARCHAR NOT NULL,

@@ -1,0 +1,154 @@
+{
+  "artifact_type": "materials_project_material_screening_metadata_snapshot",
+  "audited_measurement": false,
+  "credential_available": true,
+  "error_message": null,
+  "execute_requested": true,
+  "executed": true,
+  "key_env": "MP_API_KEY",
+  "license_status": "review_required",
+  "limitations": [
+    "Materials Project metadata can enrich composition/property context only.",
+    "Materials Project rows are not battery performance measurements.",
+    "No Materials Project metadata may appear in audited measurement views."
+  ],
+  "metadata_only": true,
+  "performance_evidence": false,
+  "query": "Li O",
+  "ranking_evidence": false,
+  "records": [
+    {
+      "chemsys": "B-Li-O",
+      "density": 1.8041686563718107,
+      "elements": [
+        "B",
+        "Li",
+        "O"
+      ],
+      "energy_above_hull": 0.029330214096150442,
+      "evidence_class": "simulation_estimate",
+      "formation_energy_per_atom": -0.41602970897435926,
+      "formula_pretty": "Li7B18O",
+      "is_stable": false,
+      "last_updated": "2023-10-07T22:59:58.041000",
+      "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
+      "material_id": "mp-aaafkmdf",
+      "metadata_only": true,
+      "performance_evidence": false,
+      "ranking_evidence": false,
+      "record_type": "computed_material_metadata",
+      "system_boundary": "computed material metadata, not cell or pack performance",
+      "theoretical": true
+    },
+    {
+      "chemsys": "F-Li-Mn-O",
+      "density": 3.6125475962232616,
+      "elements": [
+        "F",
+        "Li",
+        "Mn",
+        "O"
+      ],
+      "energy_above_hull": 0.08468099120369654,
+      "evidence_class": "simulation_estimate",
+      "formation_energy_per_atom": -2.669187779077267,
+      "formula_pretty": "LiMn2OF5",
+      "is_stable": false,
+      "last_updated": "2021-02-16T18:09:58.366000",
+      "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
+      "material_id": "mp-aaabrspi",
+      "metadata_only": true,
+      "performance_evidence": false,
+      "ranking_evidence": false,
+      "record_type": "computed_material_metadata",
+      "system_boundary": "computed material metadata, not cell or pack performance",
+      "theoretical": true
+    },
+    {
+      "chemsys": "Cl-Cu-Li-O",
+      "density": 2.771437451374369,
+      "elements": [
+        "Cl",
+        "Cu",
+        "Li",
+        "O"
+      ],
+      "energy_above_hull": 0.40870539078947354,
+      "evidence_class": "simulation_estimate",
+      "formation_energy_per_atom": -1.0261943275438596,
+      "formula_pretty": "Li4Cu4Cl10O",
+      "is_stable": false,
+      "last_updated": "2021-02-09T06:19:43.190000",
+      "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
+      "material_id": "mp-aaabrtyu",
+      "metadata_only": true,
+      "performance_evidence": false,
+      "ranking_evidence": false,
+      "record_type": "computed_material_metadata",
+      "system_boundary": "computed material metadata, not cell or pack performance",
+      "theoretical": true
+    },
+    {
+      "chemsys": "Li-O-S-Ti",
+      "density": 2.2800698884507478,
+      "elements": [
+        "Li",
+        "O",
+        "S",
+        "Ti"
+      ],
+      "energy_above_hull": 0.027613073564816126,
+      "evidence_class": "simulation_estimate",
+      "formation_energy_per_atom": -2.0103958154166666,
+      "formula_pretty": "Li2TiS2O",
+      "is_stable": false,
+      "last_updated": "2021-02-24T13:20:57.242000",
+      "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
+      "material_id": "mp-aaabrtzz",
+      "metadata_only": true,
+      "performance_evidence": false,
+      "ranking_evidence": false,
+      "record_type": "computed_material_metadata",
+      "system_boundary": "computed material metadata, not cell or pack performance",
+      "theoretical": true
+    },
+    {
+      "chemsys": "F-Li-Nb-O",
+      "density": 3.231829523887079,
+      "elements": [
+        "F",
+        "Li",
+        "Nb",
+        "O"
+      ],
+      "energy_above_hull": 0.08530720152777693,
+      "evidence_class": "simulation_estimate",
+      "formation_energy_per_atom": -3.2496008863580244,
+      "formula_pretty": "Li5Nb3OF18",
+      "is_stable": false,
+      "last_updated": "2021-02-22T22:23:43.075000",
+      "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
+      "material_id": "mp-aaabrubc",
+      "metadata_only": true,
+      "performance_evidence": false,
+      "ranking_evidence": false,
+      "record_type": "computed_material_metadata",
+      "system_boundary": "computed material metadata, not cell or pack performance",
+      "theoretical": true
+    }
+  ],
+  "request": {
+    "headers": {
+      "Accept": "application/json",
+      "X-API-KEY": "<env:MP_API_KEY>"
+    },
+    "method": "GET",
+    "query": "Li O",
+    "rows": 5,
+    "url": "https://api.materialsproject.org/materials/summary/?elements=Li%2CO&_fields=material_id%2Cformula_pretty%2Cchemsys%2Celements%2Cdensity%2Cenergy_above_hull%2Cformation_energy_per_atom%2Cis_stable%2Ctheoretical%2Clast_updated&_limit=5"
+  },
+  "requires_key": true,
+  "row_count": 5,
+  "source_id": "datasource.materials_project",
+  "status": "fetched"
+}

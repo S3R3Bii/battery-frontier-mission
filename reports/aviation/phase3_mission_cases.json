@@ -3,7 +3,7 @@
     {
       "battery_mass_fraction": 0.33125494918491316,
       "battery_mass_interpretation": "converged sizing result",
-      "battery_mass_kg": 1882.2850432589285,
+      "battery_mass_kg": 1882.285043258928,
       "c_rate_limited_mass_kg": 1157.8136198818722,
       "citation_ids": [],
       "configured_maximum_battery_mass_fraction": 0.4,
@@ -11,7 +11,7 @@
       "configured_pack_specific_power_W_kg": 1000.0,
       "converged": true,
       "description": "A local Phase 3 calculation fixture for testing mission segmentation, battery-mass closure, explicit reserve, and power constraints.\n",
-      "energy_limited_mass_kg": 1882.2850432589285,
+      "energy_limited_mass_kg": 1882.285043258928,
       "evidence_class": "simulation_estimate using speculative mission inputs",
       "feasible": true,
       "id": "mission.regional_demonstrator",
@@ -19,7 +19,7 @@
       "limiting_constraint": "energy",
       "maximum_takeoff_mass_kg": 5700.0,
       "name": "Regional demonstrator segmented study",
-      "nominal_battery_energy_Wh": 941142.5216294642,
+      "nominal_battery_energy_Wh": 941142.521629464,
       "payload_mass_kg": 800.0,
       "payload_range_curve": [
         {
@@ -104,7 +104,7 @@
       ],
       "sensitivity": [
         {
-          "battery_mass_kg": 1882.2850432589285,
+          "battery_mass_kg": 1882.285043258928,
           "case": "baseline",
           "change_from_baseline_fraction": 0.0,
           "comparison_valid": true,
@@ -114,7 +114,7 @@
         {
           "battery_mass_kg": 2629.4992068282636,
           "case": "pack specific energy -20%",
-          "change_from_baseline_fraction": 0.3969718434757534,
+          "change_from_baseline_fraction": 0.39697184347575387,
           "comparison_valid": true,
           "converged": true,
           "feasible": false
@@ -122,7 +122,7 @@
         {
           "battery_mass_kg": 1465.764627465205,
           "case": "pack specific energy +20%",
-          "change_from_baseline_fraction": -0.22128445279072784,
+          "change_from_baseline_fraction": -0.22128445279072761,
           "comparison_valid": true,
           "converged": true,
           "feasible": true
@@ -130,7 +130,7 @@
         {
           "battery_mass_kg": 1966.6691757024992,
           "case": "cruise lift-to-drag -10%",
-          "change_from_baseline_fraction": 0.044830687438004,
+          "change_from_baseline_fraction": 0.044830687438004224,
           "comparison_valid": true,
           "converged": true,
           "feasible": false
@@ -138,15 +138,15 @@
         {
           "battery_mass_kg": 1815.0586111291027,
           "case": "cruise lift-to-drag +10%",
-          "change_from_baseline_fraction": -0.03571533034838981,
+          "change_from_baseline_fraction": -0.035715330348389585,
           "comparison_valid": true,
           "converged": true,
           "feasible": true
         },
         {
-          "battery_mass_kg": 2010.9923533720041,
+          "battery_mass_kg": 2010.9923533720043,
           "case": "propulsion efficiency -5%",
-          "change_from_baseline_fraction": 0.0683782249527074,
+          "change_from_baseline_fraction": 0.06837822495270784,
           "comparison_valid": true,
           "converged": true,
           "feasible": false
@@ -154,7 +154,7 @@
         {
           "battery_mass_kg": 1770.6518754970182,
           "case": "propulsion efficiency +5%",
-          "change_from_baseline_fraction": -0.05930725963195893,
+          "change_from_baseline_fraction": -0.05930725963195871,
           "comparison_valid": true,
           "converged": true,
           "feasible": true
@@ -162,13 +162,13 @@
         {
           "battery_mass_kg": 1453.924095176634,
           "case": "reserve duration -50%",
-          "change_from_baseline_fraction": -0.22757496247255093,
+          "change_from_baseline_fraction": -0.2275749624725507,
           "comparison_valid": true,
           "converged": true,
           "feasible": true
         },
         {
-          "battery_mass_kg": 2379.9695210656937,
+          "battery_mass_kg": 2379.9695210656932,
           "case": "reserve duration +50%",
           "change_from_baseline_fraction": 0.2644044161053791,
           "comparison_valid": true,
@@ -178,22 +178,22 @@
       ],
       "specific_power_limited_mass_kg": 1157.8136198818722,
       "status": "illustrative_calculation",
-      "takeoff_mass_kg": 5682.285043258928,
-      "terminal_electrical_energy_Wh": 572214.6531507144,
+      "takeoff_mass_kg": 5682.2850432589275,
+      "terminal_electrical_energy_Wh": 572214.6531507142,
       "uncertainty_note": "Every aircraft and battery value is an illustrative design-study input. The case is not tied to a certified or proposed aircraft.\n"
     },
     {
-      "battery_mass_fraction": 0.9910932551584722,
+      "battery_mass_fraction": 0.9910932551584724,
       "battery_mass_interpretation": "last solver iterate; not a converged sizing result",
-      "battery_mass_kg": 5897546.573747959,
-      "c_rate_limited_mass_kg": 2080206.8702731745,
+      "battery_mass_kg": 5897546.573747963,
+      "c_rate_limited_mass_kg": 2080206.8702731756,
       "citation_ids": [],
       "configured_maximum_battery_mass_fraction": 0.45,
       "configured_pack_specific_energy_Wh_kg": 700.0,
       "configured_pack_specific_power_W_kg": 900.0,
       "converged": false,
       "description": "A deliberately difficult local case used to expose mass-feedback divergence and infeasible energy assumptions rather than imply viability.\n",
-      "energy_limited_mass_kg": 8154117.583969701,
+      "energy_limited_mass_kg": 8154117.583969705,
       "evidence_class": "simulation_estimate using speculative mission inputs",
       "feasible": false,
       "id": "mission.single_aisle_stress",
@@ -201,7 +201,7 @@
       "limiting_constraint": "energy",
       "maximum_takeoff_mass_kg": 70000.0,
       "name": "Single-aisle long-range stress study",
-      "nominal_battery_energy_Wh": 5707882308.77879,
+      "nominal_battery_energy_Wh": 5707882308.778793,
       "payload_mass_kg": 15000.0,
       "payload_range_curve": [
         {
@@ -229,7 +229,7 @@
           "payload_kg": 18000.0
         }
       ],
-      "peak_electrical_power_W": 1660005082.4779932,
+      "peak_electrical_power_W": 1660005082.4779942,
       "reasons": [
         "battery-mass closure did not converge; energy-mass feedback may be divergent",
         "required takeoff mass exceeds the configured maximum",
@@ -249,48 +249,48 @@
         },
         {
           "assumptions": "Constant speed/rate; drag plus gravitational potential energy.",
-          "average_electrical_power_W": 1383337568.731661,
+          "average_electrical_power_W": 1383337568.7316618,
           "duration_min": 22.916666666666668,
-          "electrical_energy_Wh": 528358099.16834277,
+          "electrical_energy_Wh": 528358099.168343,
           "horizontal_distance_km": 247.5,
           "kind": "climb",
-          "mechanical_energy_Wh": 464871099.49036384,
+          "mechanical_energy_Wh": 464871099.49036413,
           "name": "Climb"
         },
         {
           "assumptions": "Steady level flight at constant mass, speed, and lift-to-drag ratio.",
-          "average_electrical_power_W": 810735104.9645197,
+          "average_electrical_power_W": 810735104.9645202,
           "duration_min": 175.18939393939394,
-          "electrical_energy_Wh": 2367203194.735419,
+          "electrical_energy_Wh": 2367203194.73542,
           "horizontal_distance_km": 2312.5,
           "kind": "cruise",
-          "mechanical_energy_Wh": 2082496450.2560577,
+          "mechanical_energy_Wh": 2082496450.2560587,
           "name": "Cruise"
         },
         {
           "assumptions": "Explicit steady-level loiter reserve; no regulatory claim.",
-          "average_electrical_power_W": 702381481.3061615,
+          "average_electrical_power_W": 702381481.3061619,
           "duration_min": 45.0,
-          "electrical_energy_Wh": 526786110.9796212,
+          "electrical_energy_Wh": 526786110.9796214,
           "horizontal_distance_km": 486.0,
           "kind": "reserve",
-          "mechanical_energy_Wh": 463406777.6620666,
+          "mechanical_energy_Wh": 463406777.6620669,
           "name": "Reserve loiter"
         },
         {
           "assumptions": "No recovered potential energy; explicit fraction of level-drag power.",
-          "average_electrical_power_W": 78264609.03401795,
+          "average_electrical_power_W": 78264609.034018,
           "duration_min": 36.666666666666664,
-          "electrical_energy_Wh": 47828372.187455416,
+          "electrical_energy_Wh": 47828372.187455446,
           "horizontal_distance_km": 440.0,
           "kind": "descent",
-          "mechanical_energy_Wh": 41954523.080516316,
+          "mechanical_energy_Wh": 41954523.080516346,
           "name": "Descent"
         }
       ],
       "sensitivity": [
         {
-          "battery_mass_kg": 5897546.573747959,
+          "battery_mass_kg": 5897546.573747963,
           "case": "baseline",
           "change_from_baseline_fraction": null,
           "comparison_valid": false,
@@ -298,7 +298,7 @@
           "feasible": false
         },
         {
-          "battery_mass_kg": 5016247.6408558935,
+          "battery_mass_kg": 5016247.640855895,
           "case": "pack specific energy -20%",
           "change_from_baseline_fraction": null,
           "comparison_valid": false,
@@ -314,7 +314,7 @@
           "feasible": false
         },
         {
-          "battery_mass_kg": 4977150.39239588,
+          "battery_mass_kg": 4977150.392395879,
           "case": "cruise lift-to-drag -10%",
           "change_from_baseline_fraction": null,
           "comparison_valid": false,
@@ -330,7 +330,7 @@
           "feasible": false
         },
         {
-          "battery_mass_kg": 5186780.173108578,
+          "battery_mass_kg": 5186780.173108575,
           "case": "propulsion efficiency -5%",
           "change_from_baseline_fraction": null,
           "comparison_valid": false,
@@ -338,7 +338,7 @@
           "feasible": false
         },
         {
-          "battery_mass_kg": 5953547.9918605015,
+          "battery_mass_kg": 5953547.9918605,
           "case": "propulsion efficiency +5%",
           "change_from_baseline_fraction": null,
           "comparison_valid": false,
@@ -346,7 +346,7 @@
           "feasible": false
         },
         {
-          "battery_mass_kg": 5707313.955523663,
+          "battery_mass_kg": 5707313.955523666,
           "case": "reserve duration -50%",
           "change_from_baseline_fraction": null,
           "comparison_valid": false,
@@ -354,7 +354,7 @@
           "feasible": false
         },
         {
-          "battery_mass_kg": 4994316.7505630655,
+          "battery_mass_kg": 4994316.750563066,
           "case": "reserve duration +50%",
           "change_from_baseline_fraction": null,
           "comparison_valid": false,
@@ -362,10 +362,10 @@
           "feasible": false
         }
       ],
-      "specific_power_limited_mass_kg": 2426908.0153187034,
+      "specific_power_limited_mass_kg": 2426908.015318705,
       "status": "boundary_calculation",
-      "takeoff_mass_kg": 5950546.573747959,
-      "terminal_electrical_energy_Wh": 3470392443.737505,
+      "takeoff_mass_kg": 5950546.573747963,
+      "terminal_electrical_energy_Wh": 3470392443.737507,
       "uncertainty_note": "Values are speculative stress-test inputs. A failed mass closure is an intended and reportable result, not a software error.\n"
     }
   ],
@@ -375,11 +375,11 @@
     "src/battery_frontier/aviation/mission.py": "41818f9f1497189118859c62e348e3b139c2586bd9961e5d7a6a1f8b6956fc2f",
     "src/battery_frontier/aviation/reference_cases.py": "01870fff17f00d0aba9459e2d855497f205dde649dec22ff6a1d10b6308ba219",
     "src/battery_frontier/aviation/segmented.py": "e4961b5e99212e5b01ab2025f12e9da09af2aca3833fc464bb5ae7819e0026ec",
-    "src/battery_frontier/schemas.py": "11dfb10dbdc5148a82f7751d5a2e146584df326f79185ebf35ceacddb454a2df"
+    "src/battery_frontier/schemas.py": "507980152a2275ec704f50c60982b8e3c97fc1786ed572be56657de6500ef973"
   },
-  "code_snapshot_sha256": "7014918186ba821e98405e59ce266b2db63c66ef51bb861519c890df1923beec",
+  "code_snapshot_sha256": "482e98f2ffa156ace3db2db7de3bb8c40bba6959197b55f3845eebe04272e32b",
   "config_sha256": "6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2",
-  "generated_at_utc": "2026-06-13T12:58:14.068039+00:00",
+  "generated_at_utc": "2026-06-13T14:54:07.975210+00:00",
   "package_version": "0.4.0",
   "phase": "3"
 }

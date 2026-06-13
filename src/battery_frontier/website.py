@@ -18,6 +18,7 @@ from battery_frontier.dashboards.data import (
     verify_dashboard_artifacts,
 )
 from battery_frontier.data.connectors import source_status_rows
+from battery_frontier.materials.campaign import build_materials_campaign
 from battery_frontier.registry import load_registries
 from battery_frontier.scientific_audit import evaluate_ranking_gate
 from battery_frontier.simulations.campaign import build_simulation_campaign
@@ -51,6 +52,11 @@ def _candidate_dossier_payload() -> dict[str, Any]:
 def _simulation_campaign_payload() -> dict[str, Any]:
     path = PROJECT_ROOT / "reports" / "simulations" / "simulation_campaign_summary.json"
     return _read_json_if_exists(path) or build_simulation_campaign()
+
+
+def _materials_campaign_payload() -> dict[str, Any]:
+    path = PROJECT_ROOT / "reports" / "materials" / "material_screening_summary.json"
+    return _read_json_if_exists(path) or build_materials_campaign()
 
 
 def _measurement_payloads() -> dict[str, Any]:
@@ -180,9 +186,11 @@ def build_website_data() -> dict[str, Any]:
     connector_rows = source_status_rows(registries)
     candidate_payload = _candidate_dossier_payload()
     simulation_payload = _simulation_campaign_payload()
+    materials_payload = _materials_campaign_payload()
     measurement_payload = _measurement_payloads()
     partner_payload = _partner_dossier_payload()
     simulation_summary = simulation_payload["summary"]
+    materials_summary = materials_payload["summary"]
     audited_measurements = measurement_payload["audited_measurement_count"]
     mission_bands = _mission_bands(bundle)
     physics_points = [
@@ -222,6 +230,7 @@ def build_website_data() -> dict[str, Any]:
             "aircraft_systems": len(registries.aircraft_systems),
             "propulsion_systems": len(registries.propulsion_systems),
             "dataset_candidates": len(registries.dataset_candidates),
+            "material_candidates": len(registries.material_candidates),
             "physics_fixtures": len(registries.physics_reference_cases),
             "mission_fixtures": len(registries.segmented_mission_cases),
             "candidate_dossiers": candidate_payload["summary"]["candidate_count"],
@@ -232,6 +241,7 @@ def build_website_data() -> dict[str, Any]:
             + simulation_summary["pack_trade_space_rows"]
             + simulation_summary["long_haul_study_count"],
             "long_haul_cases": simulation_summary["long_haul_study_count"],
+            "material_gap_rows": materials_summary["frontier_gap_row_count"],
             "verified_artifacts": verified_count,
             "total_artifacts": len(verification),
         },
@@ -337,6 +347,11 @@ def build_website_data() -> dict[str, Any]:
             ),
         },
         "candidate_envelopes": simulation_payload["candidate_envelopes"],
+        "materials_campaign_summary": materials_summary,
+        "material_candidate_cards": materials_payload["material_candidate_cards"],
+        "material_frontier_gap": materials_payload["material_frontier_gap"],
+        "material_mission_requirements": materials_payload["mission_requirements"],
+        "material_metadata_snapshot": materials_payload["materials_project_metadata"],
         "infeasible_region_ledger": simulation_summary["infeasible_region_ledger"],
         "what_would_need_to_be_true": simulation_summary["what_would_need_to_be_true"],
         "materials_project_appendix": {

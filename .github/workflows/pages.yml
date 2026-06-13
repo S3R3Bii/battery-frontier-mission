@@ -8,6 +8,7 @@ on:
       - "reports/**"
       - "reports/candidates/**"
       - "reports/measurements/**"
+      - "reports/materials/**"
       - "reports/partners/**"
       - "configs/**"
       - "src/**"
@@ -44,6 +45,9 @@ jobs:
         env:
           MP_API_KEY: ${{ secrets.MP_API_KEY }}
       - run: python -m battery_frontier.cli simulation-campaign
+      - run: python -m battery_frontier.cli materials-campaign
+        env:
+          MP_API_KEY: ${{ secrets.MP_API_KEY }}
       - run: python -m battery_frontier.cli partner-dossiers
       - run: python -m battery_frontier.cli daily-report
       - run: python -m battery_frontier.cli website-data

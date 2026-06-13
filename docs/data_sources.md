@@ -81,6 +81,25 @@ hemp bast-fiber-derived graphitic carbon microstructure, electrochemical
 performance, full-cell energy, safety, cycle life, manufacturing yield, or
 aviation suitability.
 
+## Material Candidate Registry
+
+`configs/material_candidates.yaml` tracks material and architecture hypotheses
+for Phase 4.6 screening. These records include source URLs, citation ids,
+system boundaries, theoretical basis, safety/supply/manufacturing flags, and
+whether an energy estimate is allowed.
+
+The material registry is not a measurement dataset. Rows with missing full-cell
+voltage or capacity assumptions are intentionally blocked from energy estimates.
+Rows with estimates remain assumption-only diagnostics and cannot appear in
+audited measurement, pack-proof, or ranking views.
+
+`python -m battery_frontier.cli materials-campaign` writes
+`reports/materials/` artifacts and a Materials Project metadata snapshot. If
+`MP_API_KEY` is present, the command fetches a small metadata-only enrichment
+query. If the key is absent, it records `blocked_requires_key`. In either case,
+Materials Project rows remain computed material metadata, not battery
+performance evidence.
+
 ## Automated Metadata Refresh
 
 `.github/workflows/metadata-ingestion.yml` runs weekly and on demand. It executes

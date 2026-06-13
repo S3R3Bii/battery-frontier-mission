@@ -24,6 +24,7 @@ rankings remain blocked because pack-level comparable evidence is not available.
 - Registered aircraft systems: 8
 - Registered propulsion systems: 7
 - Dataset candidates queued for review: 12
+- Material candidates in hypothesis screening: 14
 - Registered Phase 2 reference calculations: 2
 - Registered Phase 3 mission calculations: 2
 - Phase 3 fixtures feasible under configured assumptions: 1
@@ -34,6 +35,10 @@ rankings remain blocked because pack-level comparable evidence is not available.
 - Simulation campaign aviation grid rows: 270
 - Simulation campaign pack trade rows: 8748
 - Long-haul stress-test rows: 6
+- Materials campaign status: generated
+- Materials screened: 14
+- Highest theoretical-only pack estimate: 17344.8 Wh/kg
+- Highest engineering-bounded pack estimate: 1214.136 Wh/kg
 - Partner dossiers generated: 5
 - Candidate rankings changed: 0
 
@@ -48,6 +53,8 @@ rankings remain blocked because pack-level comparable evidence is not available.
 5. The simulation campaign now maps aviation requirements, pack architecture
    penalties, candidate envelopes, and infeasible regions without creating
    experimental evidence.
+6. The materials campaign now screens material hypotheses against aviation
+   requirement bands while keeping all results out of audited and ranking lanes.
 
 ## Evidence Ledger
 
@@ -76,7 +83,7 @@ rankings remain blocked because pack-level comparable evidence is not available.
 
 - Metadata connectors with optional execution paths: 4
 - Sources approved for trusted published snapshots: 1
-- Materials Project status: requires `MP_API_KEY` before API execution.
+- Materials Project status: ready for optional metadata fetch.
 - CMU eVTOL battery status: approved CC BY 4.0 cell-level experimental source;
   raw snapshot status: {'already_present': 3, 'downloaded': 41};
   parsed measurement status: blocked.
@@ -85,10 +92,10 @@ rankings remain blocked because pack-level comparable evidence is not available.
 
 ## Dashboard Artifact Hashes
 
-- `artifact.phase2.results`: `942b656a643e84d8931793759635c409e4bfd41fc6911743c7c37693f0ee6981`
-- `artifact.phase3.results`: `e0c6daa5536634af117920a26a4d71722aa15032cf9e906fdc79793e7624084d`
-- `artifact.phase2.method_card`: `7db278dd175505093f5157c356d0119686a1313b5f0612f4888332335d323aaa`
-- `artifact.phase3.method_card`: `05da40098fadc13577e4a7b3758e9dd49e2f8dc656c46f7b0a60532dd2a53fca`
+- `artifact.phase2.results`: `7aa93d7292e534a883ae01aefdf08a7873891b5db2dbfb4a80a6f4e05520f740`
+- `artifact.phase3.results`: `b3047a4adf46e53f22a7faed3a1999635378421a472a536ce6eb30766affe82f`
+- `artifact.phase2.method_card`: `b89a414648538cc07af649fee104f2b0e168a5282e729f65f34376aeefc17995`
+- `artifact.phase3.method_card`: `6cf72aeabe37b3c8542f6463e7544b16b08ff71cb7cbf085a86f69ab92962de3`
 
 ## Assumption Changes
 
@@ -131,6 +138,24 @@ source-lineage fields are not yet populated for ranking.
 }
 ```
 
+## Materials Campaign
+
+- Campaign status: generated
+- Simulation-only outputs: True
+- Material candidates: 14
+- Energy-estimated candidates: 10
+- Energy-blocked candidates: 4
+- Frontier gap rows: 84
+- Highest theoretical-only pack estimate: 17344.8 Wh/kg
+- Highest engineering-bounded pack estimate: 1214.136 Wh/kg
+- Hemp/bast-fiber carbon present: True
+- Materials Project status: fetched
+- Ranking enabled by materials screening: False
+
+Material screening values are assumptions for hypothesis triage. They are not
+validated material discovery, DFT results, full-cell measurements, pack proof,
+or aircraft performance evidence.
+
 ## Uncertainty and Reality Filter
 
 Unknown performance remains unknown. Chemistry-family records identify required
@@ -155,10 +180,10 @@ negative results remain public and reproducible.
 ## Reproducibility
 
 - Package version: `0.4.0`
-- Code snapshot SHA-256: `bad4f3804ae30c54d52ad04f3e3686aef606327d17f78326984120d9d5d439a4`
-- Python: `3.11.15`
-- Platform: `Linux-6.17.0-1018-azure-x86_64-with-glibc2.39`
-- Generated UTC: `2026-06-13T12:58:13.271515+00:00`
+- Code snapshot SHA-256: `706c4e26d6356f1dbe807902cfadb02fb1d7ef3e0cb7695648a65472186cb96e`
+- Python: `3.14.2`
+- Platform: `Windows-11-10.0.26200-SP0`
+- Generated UTC: `2026-06-13T14:53:01.311295+00:00`
 - Configuration hashes:
 - `configs/aircraft_systems.yaml`: `f28336c50e7777958acb96b0f0b48298b984c9c27a86c1f3cb258b35c6d10e23`
 - `configs/assumptions.yaml`: `63c51f3fbd90e4582d5b334b1552c006d63b89576d01f7f903ba1763ffbf45b8`
@@ -167,6 +192,7 @@ negative results remain public and reproducible.
 - `configs/citations.yaml`: `3f44cba05cde92e10ebf081dcef86ba52f09bf1eb729e7126d6b0f7d6b0beb1e`
 - `configs/data_sources.yaml`: `fa92b32d8cb43470c4346516a4072ad0afc2b83a5428faaa42965b23f76b6c67`
 - `configs/dataset_candidates.yaml`: `e0d85c0e6f3e29a932152ec31e46d0cb0afce48eae71ac7283adc4dffc12126b`
+- `configs/material_candidates.yaml`: `dfbce83c3986fba036d50effec69a81fd508fe1eabdd80adda01abbb96720569`
 - `configs/physics_reference_cases.yaml`: `8451321c4c1383b1258ebb06f0674030caac37244eab5efac43b100be90d7c10`
 - `configs/propulsion_systems.yaml`: `5bc9675209d8465c035af1f9378ad16265b58b733a3ef9d23a92e43ad31afd4f`
 - `configs/segmented_mission_cases.yaml`: `6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2`
@@ -174,9 +200,11 @@ negative results remain public and reproducible.
 - Candidate dossier artifact: `reports/candidates/candidate_dossiers.json`
 - Candidate dossier SHA-256: `a54cb25d5271703ede2d0f76b1931eaa598e70465d0a1784631b4be8d005d6d7`
 - Simulation campaign artifact: `reports/simulations/simulation_campaign_summary.json`
-- Simulation campaign SHA-256: `13bb445050699569d1883491c69f72c1b2dde805968b0aa659e29262786f4823`
-- CMU raw manifest SHA-256: `e5f999ee1a71983a79600b7f6400eb93b9609a6b51362a9b42552a4249f0daa4`
-- CMU measurement summary SHA-256: `1c3882f98eae1b5cbf7d664252d08b48cde4d5a788b5cc3e6fe27b0be0915e3d`
+- Simulation campaign SHA-256: `7dd644cac09a5ab98d20b1fd4ad7bce725ea9dcb01955b698798e5c8ad110ece`
+- Materials campaign artifact: `reports/materials/material_screening_summary.json`
+- Materials campaign SHA-256: `87a125e5a7e04c2204f9373534b3752f5355a5a2ff64b3865d6db75a8c85eff9`
+- CMU raw manifest SHA-256: `8c04effffa0373d925b033f286c9981b5515eeb99c83899edfed535980c4b3e9`
+- CMU measurement summary SHA-256: `d03e4d76b74f0fc2f14dbf4d69caa852e79a5938e301630a12100e03cf6c28ca`
 - Partner dossier manifest SHA-256: `76951eccb0fb37878688b973000859876f7276fb9c0178647f120e4d6b153d72`
 
 ## Limitations

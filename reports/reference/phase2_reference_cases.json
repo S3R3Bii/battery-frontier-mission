@@ -98,11 +98,11 @@
     "src/battery_frontier/physics/system_metrics.py": "ea6cbed9713428572ddabe0c19189bbd20c43fe1f2a0319077559e7fe4d4514d",
     "src/battery_frontier/physics/uncertainty.py": "608a094e2a25d7b75a1acf253e029a003964ddd341cade57f724ba72e705dfc8",
     "src/battery_frontier/physics/voltage.py": "56b785c9a8f842fb7dfc0d55540fb047137a214a853d81afd765400188f76feb",
-    "src/battery_frontier/schemas.py": "11dfb10dbdc5148a82f7751d5a2e146584df326f79185ebf35ceacddb454a2df"
+    "src/battery_frontier/schemas.py": "507980152a2275ec704f50c60982b8e3c97fc1786ed572be56657de6500ef973"
   },
-  "code_snapshot_sha256": "e7f90c23173aa84271e62e4f9901732a2d56ddd9ddeb2e17e6f77b0c18a5b3b1",
+  "code_snapshot_sha256": "944797a16d2790f066fd2d049176f91bd59ccf7f36ddb14b39d0d34e58c423b2",
   "config_sha256": "8451321c4c1383b1258ebb06f0674030caac37244eab5efac43b100be90d7c10",
-  "generated_at_utc": "2026-06-13T12:58:14.066968+00:00",
+  "generated_at_utc": "2026-06-13T14:54:07.971253+00:00",
   "package_version": "0.4.0",
   "phase": "2"
 }

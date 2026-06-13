@@ -16,6 +16,7 @@ from battery_frontier.data.connectors import (
     write_snapshot_manifest,
 )
 from battery_frontier.db import initialize_database
+from battery_frontier.materials.campaign import write_materials_campaign
 from battery_frontier.measurements.cmu_evtol import (
     download_cmu_evtol_files,
     verify_raw_snapshot,
@@ -72,6 +73,11 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Generate Phase 3.5/4.5 simulation campaign artifacts",
     )
     simulation.add_argument("--output-dir", type=Path)
+    materials = subparsers.add_parser(
+        "materials-campaign",
+        help="Generate material hypothesis screening artifacts",
+    )
+    materials.add_argument("--output-dir", type=Path)
     subparsers.add_parser("source-status", help="Show connector and license readiness")
     dry_run = subparsers.add_parser(
         "source-dry-run",
@@ -186,6 +192,13 @@ def main() -> None:
         )
         print(f"simulation summary: {summary_path}")
         print(f"simulation report: {markdown_path}")
+        print(f"artifacts: {len(artifacts)}")
+    elif args.command == "materials-campaign":
+        summary_path, markdown_path, artifacts = write_materials_campaign(
+            output_dir=args.output_dir,
+        )
+        print(f"materials summary: {summary_path}")
+        print(f"materials report: {markdown_path}")
         print(f"artifacts: {len(artifacts)}")
     elif args.command == "source-status":
         registries = load_registries()

@@ -430,6 +430,50 @@ th {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.material-module {
+  background: #090d13;
+}
+
+.material-chart svg {
+  min-width: 860px;
+}
+
+.material-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.material-card {
+  border: 1px solid #243044;
+  border-radius: 8px;
+  background: #090e15;
+  padding: 12px;
+  min-height: 230px;
+}
+
+.material-card.focus {
+  border-color: rgba(240, 184, 76, 0.58);
+  background:
+    linear-gradient(180deg, rgba(240, 184, 76, 0.08), rgba(9, 14, 21, 0.96)),
+    #090e15;
+}
+
+.material-card .name {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.material-card .detail {
+  margin: 6px 0 0;
+  color: var(--subtle);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
 .envelope-card.focus {
   border-color: rgba(240, 184, 76, 0.58);
   background:
@@ -591,8 +635,9 @@ th {
   .blueprint-grid,
   .simulation-grid,
   .envelope-grid,
-.pipeline-grid,
-.context-grid,
+  .material-grid,
+  .pipeline-grid,
+  .context-grid,
   .artifact-list {
     grid-template-columns: 1fr;
   }

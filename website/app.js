@@ -52,7 +52,7 @@ function renderMetrics(data) {
     ["Candidate dossiers", data.metrics.candidate_dossiers],
     ["Simulation rows", data.metrics.simulation_rows],
     ["Aircraft systems", data.metrics.aircraft_systems],
-    ["Dataset candidates", data.metrics.dataset_candidates],
+    ["Material candidates", data.metrics.material_candidates],
   ];
   const grid = document.getElementById("metricsGrid");
   grid.innerHTML = "";
@@ -579,6 +579,204 @@ function renderCandidateEnvelopes(data) {
   });
 }
 
+function renderMaterialHypothesisFrontier(data) {
+  const summary = data.materials_campaign_summary;
+  setText(
+    "materialSummary",
+    `${summary.material_candidate_count} materials | ${summary.energy_estimated_candidate_count} estimated | ${summary.energy_blocked_candidate_count} blocked`,
+  );
+  setText(
+    "materialBoundary",
+    "Material screening is simulation-only. No material card is an audited measurement, DFT proof, pack proof, or candidate ranking.",
+  );
+
+  const chart = document.getElementById("materialFrontierChart");
+  chart.innerHTML = "";
+  const estimated = data.material_candidate_cards
+    .filter((card) => card.engineering_bounded_pack_Wh_kg !== null)
+    .sort(
+      (left, right) =>
+        Number(right.engineering_bounded_pack_Wh_kg) -
+        Number(left.engineering_bounded_pack_Wh_kg),
+    )
+    .slice(0, 8);
+  const requirements = data.material_mission_requirements;
+  const values = [
+    ...estimated.flatMap((card) => [
+      card.theoretical_only_pack_Wh_kg,
+      card.engineering_bounded_pack_Wh_kg,
+    ]),
+    ...requirements.map((row) => row.required_pack_specific_energy_Wh_kg),
+  ].filter((value) => value !== null && value !== undefined);
+  const maxValue = Math.max(1000, ...values) * 1.08;
+  const width = 1120;
+  const height = 460;
+  const margin = { top: 44, right: 42, bottom: 52, left: 260 };
+  const rowHeight = (height - margin.top - margin.bottom) / Math.max(estimated.length, 1);
+  const x = (value) => margin.left + (Number(value) / maxValue) * (width - margin.left - margin.right);
+  const svg = svgNode("svg", {
+    viewBox: `0 0 ${width} ${height}`,
+    "aria-label": "Material hypothesis frontier",
+  });
+
+  svg.appendChild(
+    svgNode("rect", {
+      x: x(1000),
+      y: margin.top - 18,
+      width: width - margin.right - x(1000),
+      height: height - margin.top - margin.bottom + 34,
+      fill: "rgba(255, 107, 107, 0.07)",
+    }),
+  );
+  svg.appendChild(
+    textNode("text", "unknown / unvalidated aviation region", {
+      x: x(1000) + 12,
+      y: margin.top - 3,
+      class: "chart-note",
+    }),
+  );
+
+  for (let index = 0; index <= 5; index += 1) {
+    const value = (maxValue / 5) * index;
+    const tickX = x(value);
+    svg.appendChild(
+      svgNode("line", {
+        x1: tickX,
+        x2: tickX,
+        y1: margin.top - 10,
+        y2: height - margin.bottom + 8,
+        stroke: "#1c2634",
+      }),
+    );
+    svg.appendChild(
+      textNode("text", fmt(value), {
+        x: tickX,
+        y: height - 22,
+        "text-anchor": "middle",
+        class: "axis-label",
+      }),
+    );
+  }
+
+  requirements.forEach((requirement, index) => {
+    const reqX = x(requirement.required_pack_specific_energy_Wh_kg);
+    svg.appendChild(
+      svgNode("line", {
+        x1: reqX,
+        x2: reqX,
+        y1: margin.top - 8,
+        y2: height - margin.bottom + 8,
+        stroke: index < 2 ? "#55d88b" : "#f0b84c",
+        "stroke-width": 1.4,
+        "stroke-dasharray": "5 6",
+      }),
+    );
+    svg.appendChild(
+      textNode("text", requirement.name.replace(" stress test", ""), {
+        x: Math.min(reqX + 6, width - margin.right - 130),
+        y: margin.top + 13 + index * 16,
+        class: "chart-note",
+      }),
+    );
+  });
+
+  estimated.forEach((card, index) => {
+    const y = margin.top + index * rowHeight + rowHeight / 2;
+    svg.appendChild(
+      textNode("text", card.display_name, {
+        x: 22,
+        y: y + 4,
+        class: "chart-label",
+      }),
+    );
+    svg.appendChild(
+      svgNode("line", {
+        x1: margin.left,
+        x2: x(card.theoretical_only_pack_Wh_kg),
+        y1: y - 7,
+        y2: y - 7,
+        stroke: "#f0b84c",
+        "stroke-width": 9,
+        "stroke-linecap": "round",
+      }),
+    );
+    svg.appendChild(
+      svgNode("line", {
+        x1: margin.left,
+        x2: x(card.engineering_bounded_pack_Wh_kg),
+        y1: y + 8,
+        y2: y + 8,
+        stroke: "#4fd8ff",
+        "stroke-width": 9,
+        "stroke-linecap": "round",
+      }),
+    );
+    svg.appendChild(
+      textNode("text", `eng ${fmt(card.engineering_bounded_pack_Wh_kg, " Wh/kg")}`, {
+        x: Math.min(x(card.engineering_bounded_pack_Wh_kg) + 10, width - margin.right - 90),
+        y: y + 13,
+        class: "chart-note",
+      }),
+    );
+  });
+
+  svg.appendChild(
+    textNode("text", "theoretical-only pack proxy", {
+      x: margin.left,
+      y: 24,
+      class: "chart-note",
+    }),
+  );
+  svg.appendChild(
+    textNode("text", "engineering-bounded pack proxy", {
+      x: margin.left + 190,
+      y: 24,
+      class: "chart-note",
+    }),
+  );
+  svg.appendChild(
+    textNode("text", "Pack specific energy proxy (Wh/kg)", {
+      x: margin.left + (width - margin.left - margin.right) / 2,
+      y: height - 4,
+      "text-anchor": "middle",
+      class: "axis-label",
+    }),
+  );
+  chart.appendChild(svg);
+
+  const cards = document.getElementById("materialCards");
+  cards.innerHTML = "";
+  const featured = [...data.material_candidate_cards]
+    .sort((left, right) => {
+      if (left.material_id.includes("hemp")) return -1;
+      if (right.material_id.includes("hemp")) return 1;
+      return left.display_name.localeCompare(right.display_name);
+    })
+    .slice(0, 10);
+  featured.forEach((card) => {
+    const item = document.createElement("article");
+    item.className = `material-card ${card.material_id.includes("hemp") ? "focus" : ""}`;
+    const blocked = card.energy_estimate_status.startsWith("blocked");
+    item.innerHTML = `
+      <div class="candidate-card-head">
+        <div>
+          <p class="name">${card.display_name}</p>
+          <p class="detail">${card.role} | ${card.evidence_level}</p>
+        </div>
+        <span class="status ${blocked ? "blocked" : "ok"}">${blocked ? "blocked" : "estimated"}</span>
+      </div>
+      <p class="candidate-boundary">${card.system_boundary}</p>
+      <div class="candidate-data-row">
+        <span>Theoretical ${fmt(card.theoretical_only_pack_Wh_kg, " Wh/kg")}</span>
+        <span>Engineered ${fmt(card.engineering_bounded_pack_Wh_kg, " Wh/kg")}</span>
+        <span>Ranking no</span>
+      </div>
+      <p class="detail">${card.hemp_bast_fiber_guardrail || card.claim_boundary}</p>
+    `;
+    cards.appendChild(item);
+  });
+}
+
 function renderEvidenceLedger(data) {
   const body = document.getElementById("evidenceLedger");
   body.innerHTML = "";
@@ -844,6 +1042,7 @@ function render(data) {
   renderPackSensitivity(data);
   renderInfeasibleLedger(data);
   renderCandidateEnvelopes(data);
+  renderMaterialHypothesisFrontier(data);
   renderCandidateDossiers(data);
   renderDatasetCandidates(data);
   renderPartnerDossiers(data);
