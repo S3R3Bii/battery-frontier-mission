@@ -2,12 +2,12 @@
   "artifact_hashes": {
     "candidate_dossiers": {
       "path": "reports/candidates/candidate_dossiers.json",
-      "sha256": "a54cb25d5271703ede2d0f76b1931eaa598e70465d0a1784631b4be8d005d6d7",
+      "sha256": "6eca9b69f78fb55b308c71540cf87cdff2ec909c968e0ac9f03f38a664c4fae9",
       "size_bytes": 70502
     },
     "cmu_measurement_summary": {
       "path": "reports/measurements/cmu_evtol_measurement_summary.json",
-      "sha256": "1c3882f98eae1b5cbf7d664252d08b48cde4d5a788b5cc3e6fe27b0be0915e3d",
+      "sha256": "071929fc910141de21d2fb6e15a8a36af10e28b2620420c177490d496b25d222",
       "size_bytes": 134868
     },
     "cmu_raw_manifest": {
@@ -22,7 +22,7 @@
     },
     "simulation_campaign": {
       "path": "reports/simulations/simulation_campaign_summary.json",
-      "sha256": "13bb445050699569d1883491c69f72c1b2dde805968b0aa659e29262786f4823",
+      "sha256": "766e58b21b853579fb24b61c9b0bf54ebc3eeaacb283fb1966a2bed245211d29",
       "size_bytes": 6797881
     }
   },
@@ -87,7 +87,7 @@
     "measurement schema and quality checks",
     "license and provenance requirements"
   ],
-  "generated_at_utc": "2026-06-13T12:58:11.985593+00:00",
+  "generated_at_utc": "2026-06-14T13:04:12.495030+00:00",
   "manufacturer_example_table": [
     {
       "aircraft_class": "eVTOL utility aircraft",
@@ -1296,6 +1296,7 @@
       "citations": 12,
       "data_sources": 8,
       "dataset_candidates": 12,
+      "material_candidates": 14,
       "physics_reference_cases": 2,
       "propulsion_systems": 7,
       "scenarios": 4,

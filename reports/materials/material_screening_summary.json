@@ -4,21 +4,21 @@
     "material_candidate_cards_json": {
       "path": "reports/materials/material_candidate_cards.json",
       "row_count": 14,
-      "sha256": "acd6da8a512a4f8b5c67b4dd7b897c3d626b80cd822bb202de02448f3c0bc903"
+      "sha256": "b3e0cb126e36d495ede3567e186fc431750ba3d02881ac97a6d96e19e561407d"
     },
     "material_frontier_gap_json": {
       "path": "reports/materials/material_frontier_gap.json",
       "row_count": 84,
-      "sha256": "77093d27cafe39d6807aa9fe7b984a038eb9704748b5c0bd35bacfdf3d1d38db"
+      "sha256": "17b14cd592b394b0a874558054a9e409f48733b23ec148831c124c5fcf692232"
     },
     "materials_project_metadata_snapshot_json": {
       "path": "reports/materials/materials_project_metadata_snapshot.json",
       "row_count": 5,
-      "sha256": "09f8bb6d4777cc9a278cc86b398cb0ec8e08a2f45f5cfbad7ba4b2be65f78a1c"
+      "sha256": "41bf34aa4683f900edf6c09c4fb569a0fc430fced448129c9f7adb301ecf175c"
     }
   },
   "claim_boundary": "Material screening is assumption-based hypothesis triage only. It is not experimental validation, DFT proof, pack proof, aircraft design, or candidate ranking.",
-  "generated_at_utc": "2026-06-13T14:52:54.246093+00:00",
+  "generated_at_utc": "2026-06-14T13:04:11.767105+00:00",
   "limitations": [
     "No material card is an audited measurement.",
     "Rows missing voltage or capacity are intentionally blocked from energy estimates.",
@@ -2497,7 +2497,7 @@
     }
   ],
   "package_version": "0.4.0",
-  "payload_sha256": "61c1ad100a90e729c0a485d9b2732512e4ae8aed25b5e1dd66a66725f05acb17",
+  "payload_sha256": "525e6dc0ad1b23191f71b9ea4210522ac4e76042e6b92db00b8e8c91e8c4cd2a",
   "summary": {
     "artifact_type": "material_screening_summary",
     "audited_measurements": 0,
