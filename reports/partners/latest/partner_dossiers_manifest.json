@@ -4,7 +4,7 @@
   "artifact_hashes": {
     "candidate_dossiers": {
       "path": "reports/candidates/candidate_dossiers.json",
-      "sha256": "c7498501f58178ac6c6cf23e847400ffe417593eccca7e8c0d7c4d727874af16",
+      "sha256": "28860dceb12bc3e9fe4221d5c24e8f61389a9655bd64261456b0ec1c053e2e2a",
       "size_bytes": 70479
     },
     "cmu_measurement_summary": {
@@ -24,7 +24,7 @@
     },
     "simulation_campaign": {
       "path": "reports/simulations/simulation_campaign_summary.json",
-      "sha256": "df2dc829c6a7da37f30f8c59b92bc1ffb0c9b5f0a98c43fe1e92495d6e7f6e20",
+      "sha256": "480754a09b96fafa03695c37860a1f3e289d7f95728c26c23a7c0102fd5e9174",
       "size_bytes": 6797881
     }
   },
@@ -35,7 +35,7 @@
       "artifact_hashes": {
         "candidate_dossiers": {
           "path": "reports/candidates/candidate_dossiers.json",
-          "sha256": "c7498501f58178ac6c6cf23e847400ffe417593eccca7e8c0d7c4d727874af16",
+          "sha256": "28860dceb12bc3e9fe4221d5c24e8f61389a9655bd64261456b0ec1c053e2e2a",
           "size_bytes": 70479
         },
         "cmu_measurement_summary": {
@@ -55,7 +55,7 @@
         },
         "simulation_campaign": {
           "path": "reports/simulations/simulation_campaign_summary.json",
-          "sha256": "df2dc829c6a7da37f30f8c59b92bc1ffb0c9b5f0a98c43fe1e92495d6e7f6e20",
+          "sha256": "480754a09b96fafa03695c37860a1f3e289d7f95728c26c23a7c0102fd5e9174",
           "size_bytes": 6797881
         }
       },
@@ -120,7 +120,7 @@
         "pack-overhead and cell-to-pack translation",
         "missing uncertainty and safety evidence"
       ],
-      "generated_at_utc": "2026-06-20T12:59:16.474652+00:00",
+      "generated_at_utc": "2026-06-21T13:18:15.273270+00:00",
       "manufacturer_example_table": [
         {
           "aircraft_class": "eVTOL utility aircraft",
@@ -1538,7 +1538,7 @@
       "artifact_hashes": {
         "candidate_dossiers": {
           "path": "reports/candidates/candidate_dossiers.json",
-          "sha256": "c7498501f58178ac6c6cf23e847400ffe417593eccca7e8c0d7c4d727874af16",
+          "sha256": "28860dceb12bc3e9fe4221d5c24e8f61389a9655bd64261456b0ec1c053e2e2a",
           "size_bytes": 70479
         },
         "cmu_measurement_summary": {
@@ -1558,7 +1558,7 @@
         },
         "simulation_campaign": {
           "path": "reports/simulations/simulation_campaign_summary.json",
-          "sha256": "df2dc829c6a7da37f30f8c59b92bc1ffb0c9b5f0a98c43fe1e92495d6e7f6e20",
+          "sha256": "480754a09b96fafa03695c37860a1f3e289d7f95728c26c23a7c0102fd5e9174",
           "size_bytes": 6797881
         }
       },
@@ -1623,7 +1623,7 @@
         "evidence blockers",
         "automation and reporting readiness"
       ],
-      "generated_at_utc": "2026-06-20T12:59:16.474652+00:00",
+      "generated_at_utc": "2026-06-21T13:18:15.273270+00:00",
       "manufacturer_example_table": [
         {
           "aircraft_class": "eVTOL utility aircraft",
@@ -3041,7 +3041,7 @@
       "artifact_hashes": {
         "candidate_dossiers": {
           "path": "reports/candidates/candidate_dossiers.json",
-          "sha256": "c7498501f58178ac6c6cf23e847400ffe417593eccca7e8c0d7c4d727874af16",
+          "sha256": "28860dceb12bc3e9fe4221d5c24e8f61389a9655bd64261456b0ec1c053e2e2a",
           "size_bytes": 70479
         },
         "cmu_measurement_summary": {
@@ -3061,7 +3061,7 @@
         },
         "simulation_campaign": {
           "path": "reports/simulations/simulation_campaign_summary.json",
-          "sha256": "df2dc829c6a7da37f30f8c59b92bc1ffb0c9b5f0a98c43fe1e92495d6e7f6e20",
+          "sha256": "480754a09b96fafa03695c37860a1f3e289d7f95728c26c23a7c0102fd5e9174",
           "size_bytes": 6797881
         }
       },
@@ -3126,7 +3126,7 @@
         "long-haul infeasibility reasons",
         "manufacturer example boundaries"
       ],
-      "generated_at_utc": "2026-06-20T12:59:16.474652+00:00",
+      "generated_at_utc": "2026-06-21T13:18:15.273270+00:00",
       "manufacturer_example_table": [
         {
           "aircraft_class": "eVTOL utility aircraft",
@@ -4544,7 +4544,7 @@
       "artifact_hashes": {
         "candidate_dossiers": {
           "path": "reports/candidates/candidate_dossiers.json",
-          "sha256": "c7498501f58178ac6c6cf23e847400ffe417593eccca7e8c0d7c4d727874af16",
+          "sha256": "28860dceb12bc3e9fe4221d5c24e8f61389a9655bd64261456b0ec1c053e2e2a",
           "size_bytes": 70479
         },
         "cmu_measurement_summary": {
@@ -4564,7 +4564,7 @@
         },
         "simulation_campaign": {
           "path": "reports/simulations/simulation_campaign_summary.json",
-          "sha256": "df2dc829c6a7da37f30f8c59b92bc1ffb0c9b5f0a98c43fe1e92495d6e7f6e20",
+          "sha256": "480754a09b96fafa03695c37860a1f3e289d7f95728c26c23a7c0102fd5e9174",
           "size_bytes": 6797881
         }
       },
@@ -4629,7 +4629,7 @@
         "power and C-rate diagnostics",
         "battery sufficiency under mission loads"
       ],
-      "generated_at_utc": "2026-06-20T12:59:16.474652+00:00",
+      "generated_at_utc": "2026-06-21T13:18:15.273270+00:00",
       "manufacturer_example_table": [
         {
           "aircraft_class": "eVTOL utility aircraft",
@@ -6047,7 +6047,7 @@
       "artifact_hashes": {
         "candidate_dossiers": {
           "path": "reports/candidates/candidate_dossiers.json",
-          "sha256": "c7498501f58178ac6c6cf23e847400ffe417593eccca7e8c0d7c4d727874af16",
+          "sha256": "28860dceb12bc3e9fe4221d5c24e8f61389a9655bd64261456b0ec1c053e2e2a",
           "size_bytes": 70479
         },
         "cmu_measurement_summary": {
@@ -6067,7 +6067,7 @@
         },
         "simulation_campaign": {
           "path": "reports/simulations/simulation_campaign_summary.json",
-          "sha256": "df2dc829c6a7da37f30f8c59b92bc1ffb0c9b5f0a98c43fe1e92495d6e7f6e20",
+          "sha256": "480754a09b96fafa03695c37860a1f3e289d7f95728c26c23a7c0102fd5e9174",
           "size_bytes": 6797881
         }
       },
@@ -6132,7 +6132,7 @@
         "measurement schema and quality checks",
         "license and provenance requirements"
       ],
-      "generated_at_utc": "2026-06-20T12:59:16.474652+00:00",
+      "generated_at_utc": "2026-06-21T13:18:15.273270+00:00",
       "manufacturer_example_table": [
         {
           "aircraft_class": "eVTOL utility aircraft",
@@ -7547,7 +7547,7 @@
       }
     }
   },
-  "generated_at_utc": "2026-06-20T12:59:16.474652+00:00",
+  "generated_at_utc": "2026-06-21T13:18:15.273270+00:00",
   "input_signature_sha256": "86b8907aa5ffd43279e905d278e67b6f3aa5cd57bd6b983848af67cc4638bd8c",
   "long_haul_status": {
     "claim_boundary": "simulation diagnostic only",
@@ -7594,60 +7594,60 @@
     "battery_manufacturer_dossier": {
       "json": {
         "path": "reports/partners/latest/battery_manufacturer_dossier.json",
-        "sha256": "b0bf5b9db5fc036dca595305c8a5cb49556391f22ea03a8bcc4b5f3805c3128e",
+        "sha256": "3901a5d988d0cc49aeb22c1589871809664c56a85feb5b70ed8ae6a620c71c2a",
         "size_bytes": 65848
       },
       "markdown": {
         "path": "reports/partners/latest/battery_manufacturer_dossier.md",
-        "sha256": "aaca862c66bfed029ea39fef0f0543b385efbdbd85bad66fed2394ff0485e7c9",
+        "sha256": "46b3478ad0477daaa3b42334cbf7e099a961ee0f149f066bbb69592bf07e2cdd",
         "size_bytes": 2090
       }
     },
     "investor_or_program_manager_brief": {
       "json": {
         "path": "reports/partners/latest/investor_or_program_manager_brief.json",
-        "sha256": "73866cd7667b8e8d1799bed5c7dc654b7a84d6f1d7c6759509066d940c9759e6",
+        "sha256": "7754387ab29854053a1f943fcd9e0cd5ee3767ba5743d1b603aa9a0d43172836",
         "size_bytes": 65823
       },
       "markdown": {
         "path": "reports/partners/latest/investor_or_program_manager_brief.md",
-        "sha256": "8986cc944b21993ad3492109ce5a3e98012c47fbb1bf76da5983e2d759c8ef77",
+        "sha256": "c5c77cc9895ef2c01649d2b96de9a8441195c4c0a97955f1b1c6355de87e02f4",
         "size_bytes": 2111
       }
     },
     "plane_manufacturer_dossier": {
       "json": {
         "path": "reports/partners/latest/plane_manufacturer_dossier.json",
-        "sha256": "3d2b54ec8d8c51ddf3e8d999f25a461f00c343d45d113b3c230dcae290ccc295",
+        "sha256": "802a5e18b667bb20463474c267a9b802fe471ea27bc40b7021120272a6f3e5c8",
         "size_bytes": 65831
       },
       "markdown": {
         "path": "reports/partners/latest/plane_manufacturer_dossier.md",
-        "sha256": "0c74885e1fadeadf9fa3712e7ca721a7a6dcde8b6f3dd6a36fd447ec9f49e529",
+        "sha256": "22e27fec1ce72c01424134348d9bcfd6bf6347c1df25f03f67598d84594274a3",
         "size_bytes": 2103
       }
     },
     "propulsion_partner_dossier": {
       "json": {
         "path": "reports/partners/latest/propulsion_partner_dossier.json",
-        "sha256": "118980bf11d6d0cacc982751c105a6c247ad104775660181e4917cc2c10b9081",
+        "sha256": "59357125152d58881fd09392bccf283d8db2c304420bc2515a03b9ea105ae51b",
         "size_bytes": 65817
       },
       "markdown": {
         "path": "reports/partners/latest/propulsion_partner_dossier.md",
-        "sha256": "0342707b35a64507bee8da966891fc3e3df40c6e9a029aa5d755dcf1938d0c9d",
+        "sha256": "b746271fbcc444d796375ad802add0a120605b1fce37283ef0b23cf0ce89f778",
         "size_bytes": 2082
       }
     },
     "research_partner_dossier": {
       "json": {
         "path": "reports/partners/latest/research_partner_dossier.json",
-        "sha256": "0580461e901f8277a180b5702c4fb22b0298eaeb760309f67960cd52856c6bc3",
+        "sha256": "79206b247d6473d3abdb4ebf056dd465dac2f48c66a5544922868957aaac1496",
         "size_bytes": 65826
       },
       "markdown": {
         "path": "reports/partners/latest/research_partner_dossier.md",
-        "sha256": "b2fe714b73984b78486fe402ba0990cd226c01f8d240f9b07c40195f016a67b7",
+        "sha256": "f40a1fb9e3a5bf4ce1483ff38046cc902962b832e93249b1cade989d0298d507",
         "size_bytes": 2094
       }
     }
