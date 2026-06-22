@@ -2,7 +2,7 @@
   "artifact_hashes": {
     "candidate_dossiers": {
       "path": "reports/candidates/candidate_dossiers.json",
-      "sha256": "28860dceb12bc3e9fe4221d5c24e8f61389a9655bd64261456b0ec1c053e2e2a",
+      "sha256": "be090c6f02f09a2b2b84c911359a64969cac26f1345719341e7a8cb088eef29e",
       "size_bytes": 70479
     },
     "cmu_measurement_summary": {
@@ -22,7 +22,7 @@
     },
     "simulation_campaign": {
       "path": "reports/simulations/simulation_campaign_summary.json",
-      "sha256": "480754a09b96fafa03695c37860a1f3e289d7f95728c26c23a7c0102fd5e9174",
+      "sha256": "0016fbead4c7d0a196f051faeea2e4150811cb406a8ae78508a7ba68380e96d9",
       "size_bytes": 6797881
     }
   },
@@ -87,7 +87,7 @@
     "power and C-rate diagnostics",
     "battery sufficiency under mission loads"
   ],
-  "generated_at_utc": "2026-06-21T13:18:15.273270+00:00",
+  "generated_at_utc": "2026-06-22T16:00:40.986752+00:00",
   "manufacturer_example_table": [
     {
       "aircraft_class": "eVTOL utility aircraft",
