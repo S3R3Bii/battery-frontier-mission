@@ -1,0 +1,612 @@
+{
+  "artifact_type": "source_snapshot_manifest",
+  "created_at_utc": "2026-06-22T16:16:34.720064+00:00",
+  "ingestion_status": "planned",
+  "license_status": "item_specific",
+  "limitations": "Publication type and review status vary.",
+  "metadata_only": true,
+  "payload_sha256": "418b9b5636ac55f58bf7cf0a240c6c4223b2d1026b85fc3a1f5e49951845ef22",
+  "query": "aviation battery energy storage",
+  "ranking_evidence": false,
+  "request": {
+    "headers": {
+      "Accept": "application/json"
+    },
+    "method": "GET",
+    "query": "aviation battery energy storage",
+    "rows": 10,
+    "url": "https://www.osti.gov/api/v1/records?q=aviation+battery+energy+storage&rows=10"
+  },
+  "requested_rows": 10,
+  "result": {
+    "connector": "DOE OSTI metadata search",
+    "credential_available": true,
+    "execute_requested": true,
+    "executed": true,
+    "execution_supported": true,
+    "generated_at_utc": "2026-06-22T16:16:34.485589+00:00",
+    "ingestion_status": "planned",
+    "key_env": null,
+    "license_note": "Retain report-level rights and distribution metadata.",
+    "license_status": "item_specific",
+    "limitations": "Publication type and review status vary.",
+    "metadata_only": true,
+    "notes": [
+      "Metadata-only connector output is not battery performance evidence.",
+      "Chemistry ranking remains blocked until audited measurements exist.",
+      "Source license is not approved for trusted published snapshots."
+    ],
+    "query": "aviation battery energy storage",
+    "ranking_evidence": false,
+    "record_count": 10,
+    "records": [
+      {
+        "authors": [
+          "Leach, Timothy [Launch Alaska]"
+        ],
+        "contract_number": "EE0009608; ",
+        "country_publication": "United States",
+        "description": "The Launch Alaska Transportation and Energy Accelerator (LATEA), funded through the U.S. Department of Energy Office of Technology Commercialization\u2019s Energy Program for Innovation Clusters (EPIC),advanced deployment of innovative and efficient transportation and energy technology in Alaska from October 2021 through June 2025. The project was designed to leverage Launch Alaska\u2019s accelerator model to identify, recruit, and support transportation technology companies with novel solutions to market needs while building the stakeholder networks, demonstration opportunities, and institutional capacity necessary to accelerate commercialization in one of the most challenging operating environments in the United States.",
+        "doe_contract_number": "EE0009608; ",
+        "doi": "10.2172/3366886",
+        "entry_date": "2026-06-04T16:28:07Z",
+        "identifier": "EE0009608",
+        "language": "English",
+        "links": [
+          {
+            "href": "https://www.osti.gov/biblio/3366886",
+            "rel": "citation"
+          },
+          {
+            "href": "https://www.osti.gov/servlets/purl/3366886",
+            "rel": "fulltext"
+          }
+        ],
+        "osti_id": "3366886",
+        "product_type": "Technical Report",
+        "publication_date": "2026-06-04T00:00:00Z",
+        "publisher": "Launch Alaska",
+        "report_number": "DOE-LA-09608-FTR1",
+        "research_orgs": [
+          "Launch Alaska"
+        ],
+        "sponsor_orgs": [
+          "Department of Energy and Office of the Under Secretary for Science(54)"
+        ],
+        "subjects": [
+          "08 HYDROGEN",
+          "09 BIOMASS FUELS",
+          "10 SYNTHETIC FUELS",
+          "25 ENERGY STORAGE",
+          "33 ADVANCED PROPULSION SYSTEMS",
+          "AK4C",
+          "Alaska",
+          "Alaska Clean Cities and Communities Coalition",
+          "Alternative Fuels",
+          "Arctic Innovation",
+          "Battery Energy Storage",
+          "Charging Infrastructure",
+          "Clean Transportation",
+          "Cold Climate Testing",
+          "Demonstration Projects",
+          "DOE EPIC",
+          "E-fuels",
+          "Economic Development",
+          "Electric Aviation",
+          "Electric Vehicles",
+          "Energy Resilience",
+          "EVSE",
+          "Fleet Electrification",
+          "Hydrogen Fuel Cells",
+          "Maritime Decarbonization",
+          "Market Transformation",
+          "Proof of Concept",
+          "Public-Private Partnerships",
+          "Remote Communities",
+          "Renewable Diesel",
+          "Rural Transportation",
+          "Startup Accelerator",
+          "Sustainable Aviation Fuel",
+          "Synthetic Fuels",
+          "Technology Commercialization",
+          "Technology Deployment",
+          "Technology Transfer",
+          "Transportation Electrification",
+          "Transportation Innovation"
+        ],
+        "title": "EPIC FOA AWARDEE FINAL TECHNICAL REPORT"
+      },
+      {
+        "authors": [
+          "Moriarty, Kristi [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Bracci, Justin [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Naser, Nimal [National Laboratory of the Rockies (NLR), Golden, CO (United States)] (ORCID:0000000227402179)",
+          "Grim, Gary [National Laboratory of the Rockies (NLR), Golden, CO (United States)]"
+        ],
+        "contract_number": "AC36-08GO28308; ",
+        "country_publication": "United States",
+        "description": "Global jet fuel demand is projected to grow to 165 billion gallons by 2050 and there is growing interest in the aviation industry to understand the capabilities of alternative energy carriers. This report considers several potential energy carriers, reviewing their production potential, operational considerations, and economic implications to inform potential next steps in aeronautics research. The following energy carriers (i.e., fuels) were evaluated in this study for future use in aviation: sustainable aviation fuel (SAF) - both biomass-based and power-to-liquids (PtL) - based SAF - cryogenic hydrogen (LH<sub>2</sub>) - also known as liquid hydrogen - liquefied natural gas (LNG), liquefied ethane (LE), and Jet X. The barriers and opportunities for the evaluated energy carriers vary. SAF is a commercially available drop-in fuel compatible with existing aircraft and infrastructure. SAF is limited by both higher prices and slow commercialization of multiple pathways using different feedstocks necessary to significantly grow supply. Cryogenic fuels, in contrast, have very different thermal, physical, and chemical properties than SAF and Jet A, requiring the construction of new airport storage and dispensing infrastructure and the design of new aircraft energy systems capable of mitigating heat transfer and boil-off. Cryogenic fuels offer an opportunity to diversify aviation fuel carriers from domestic energy relevant for both energy security and resilience. This means cryogenic fuels are more of a longer-term solution for aircraft but are worth exploring for potential future cost savings and emissions benefits. Jet X refers to non-drop-in liquid hydrocarbon fuels in the early stages of investigation seeking favorable properties. There are substantial barriers to non-drop-in liquid aviation fuels that are not compatible with existing aircraft and fuel infrastructure.",
+        "doe_contract_number": "AC36-08GO28308; ",
+        "doi": "10.2172/3363590",
+        "entry_date": "2026-06-10T09:52:13Z",
+        "identifier": "AC36-08GO28308",
+        "language": "English",
+        "links": [
+          {
+            "href": "https://www.osti.gov/biblio/3363590",
+            "rel": "citation"
+          },
+          {
+            "href": "https://www.osti.gov/servlets/purl/3363590",
+            "rel": "fulltext"
+          }
+        ],
+        "osti_id": "3363590",
+        "product_type": "Technical Report",
+        "publication_date": "2026-05-07T00:00:00Z",
+        "report_number": "NLR/TP-5400-100028",
+        "research_orgs": [
+          "National Laboratory of the Rockies (NLR), Golden, CO (United States)"
+        ],
+        "sponsor_orgs": [
+          "National Aeronautics and Space Administration (NASA)",
+          "USDOE Office of Critical Minerals and Energy Innovation (CMEI)"
+        ],
+        "subjects": [
+          "33 ADVANCED PROPULSION SYSTEMS",
+          "aviation",
+          "future energy carriers",
+          "hydrogen",
+          "jet fuel",
+          "liquified ethane",
+          "liquified natural gas",
+          "LNG"
+        ],
+        "title": "An Overview of Potential Future Aviation Energy Carriers"
+      },
+      {
+        "article_type": "Accepted Manuscript",
+        "authors": [
+          "Fu, Yucheng [Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)] (ORCID:0000000282570845)",
+          "Fu, Jinxia [The Second Research Institute of CAAC (CASRI), Chengdu (China)] (ORCID:0000000198813699)",
+          "Feng, Ruozhu [Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)] (ORCID:0000000314273571)",
+          "Bao, Jie [Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)] (ORCID:0000000166495921)",
+          "Sun, Shijing [Univ. of Washington, Seattle, WA (United States)] (ORCID:0000000261791390)",
+          "Kwabi, David G. [Yale Univ., New Haven, CT (United States)] (ORCID:0000000336638789)",
+          "Liu, Jingbo Louise [Texas A & M Univ., Kingsville, TX (United States); Texas A & M Univ., College Station, TX (United States)] (ORCID:0000000168989933)"
+        ],
+        "contract_number": "AC05-76RL01830",
+        "country_publication": "United States",
+        "description": "The Presidential Symposium (PRES) at the 2025 Fall Meeting, hosted by the President\u2019s Office and Energy and Fuels Division, American Chemical Society (ACS) in Washington, DC, brought together a diverse group of chemists, engineers, and materials scientists working in battery materials &amp; systems, automation and artificial intelligence from academia, industry, and national laboratories. The accelerating demand for high-performance, scalable, and sustainable energy storage has catalyzed a paradigm shift in how materials are dis-covered, devices are engineered, and systems are optimized. This Presidential Symposium, entitled \u201cRevolutionizing Energy Storage: AI, Automation, and Advanced Modeling Driving Next-Gen Breakthroughs\u201d, brings together global leaders to unveil transformative strategies anchored in the AAA framework: Artificial Intelligence, Automation, and Advanced Modeling. Artificial Intelligence is redefining the frontiers of energy storage by enabling predictive design, real-time optimization, and intelligent control across diverse chemistries and architectures. Automation is streamlining the synthesis, characterization, and testing of battery materials, dramatically accelerating innovation cycles and unlocking scalable solutions for grid and mobility applications. Advanced Modeling, spanning atomic to system-level scales, provides unprecedented insight into electrochemical dynamics, degradation pathways, and thermal behavior, particularly when coupled with physics-informed machine learning and digital twin technologies. Digital twins, in turn, leverage the AAA framework by integrating real-time data, physics-based models, and AI predictions into dynamic virtual replicas, enabling proactive diagnostics, optimization, and system resilience. Together, these synergistic pillars are not only re-shaping the scientific landscape but also forging a new era of reproducible, data-driven, and resilient energy storage innovation. In conclusion, this symposium marks a pivotal moment in the convergence of computational intelligence and experimental rigor, charting the course for next-generation breakthroughs in lithium-ion, solid-state, and flow battery technologies.",
+        "doe_contract_number": "AC05-76RL01830",
+        "doi": "10.1021/acsenergylett.5c04022",
+        "entry_date": "2026-04-07T08:24:48Z",
+        "identifier": "AC05-76RL01830",
+        "journal_issn": "ISSN 2380-8195",
+        "journal_issue": "2",
+        "journal_name": "ACS Energy Letters",
+        "journal_type": "AM",
+        "journal_volume": "11",
+        "language": "English",
+        "links": [
+          {
+            "href": "https://www.osti.gov/biblio/3020635",
+            "rel": "citation"
+          },
+          {
+            "href": "https://www.osti.gov/servlets/purl/3020635",
+            "rel": "fulltext"
+          },
+          {
+            "href": "https://www.osti.gov/pages/biblio/3020635",
+            "rel": "citation_doe_pages"
+          }
+        ],
+        "osti_id": "3020635",
+        "other_identifiers": [
+          "Journal ID: ISSN 2380-8195"
+        ],
+        "other_number": "Journal ID: ISSN 2380-8195",
+        "product_type": "Journal Article",
+        "publication_date": "2026-01-06T00:00:00Z",
+        "publisher": "American Chemical Society (ACS)",
+        "relation": "Journal Name: ACS Energy Letters Journal Issue: 2 Journal Volume: 11",
+        "report_number": "PNNL-SA--217895",
+        "research_orgs": [
+          "Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)"
+        ],
+        "sponsor_orgs": [
+          "USDOE"
+        ],
+        "subjects": [
+          "Artificial Intelligence (AI)",
+          "Automation",
+          "Energy storage",
+          "Modeling & Simulation",
+          "machine learning (ML)"
+        ],
+        "title": "Revolutionizing Energy Storage: AI, Automation, and Advanced Modeling as Catalysts for Next-Generation Breakthroughs"
+      },
+      {
+        "article_type": "Accepted Manuscript",
+        "authors": [
+          "He, Yi [National Laboratory of the Rockies, Golden, CO (United States)]",
+          "Kelly, Kenneth [National Laboratory of the Rockies, Golden, CO (United States)] (ORCID:0000000221783353)",
+          "Jeffers, Matthew [National Laboratory of the Rockies, Golden, CO (United States)] (ORCID:0000000324410197)",
+          "Vercellino, Roberto [National Laboratory of the Rockies, Golden, CO (United States)]",
+          "Ge, Yanbo [National Laboratory of the Rockies, Golden, CO (United States)]",
+          "Lunacek, Monte [National Laboratory of the Rockies, Golden, CO (United States)]"
+        ],
+        "contract_number": "AC36-08GO28308",
+        "country_publication": "United States",
+        "description": "As the airline industry seeks to reduce costs and transition to clean energy, electric ground support equipment is emerging as a favorable option. The integration of electric ground support equipment into airport operations requires careful planning for vehicle deployment, charging infrastructure, and grid impacts. We develop a flexible, bottom-up modeling framework to assess energy and infrastructure needs across more than 300 U.S. airports. Our analysis estimates site-specific power and energy demand, equipment counts by type, charger requirements, and costs. Here we quantify the magnitude of new electrical loads created by the electrification of airport ground support equipment, finding that peak power demand at the largest airports can reach up to 20 megawatts, with annual electricity consumption approaching 51,000 megawatt-hours. We further show that behind-the-meter battery energy storage systems and solar photovoltaic systems can reduce peak load and lower total system costs by as much as 10 million dollars.",
+        "doe_contract_number": "AC36-08GO28308",
+        "doi": "10.1038/s41467-026-71125-4",
+        "entry_date": "2026-06-19T05:00:19Z",
+        "identifier": "AC36-08GO28308",
+        "journal_name": "Nature Communications",
+        "journal_type": "AM",
+        "journal_volume": "17",
+        "language": "English",
+        "links": [
+          {
+            "href": "https://www.osti.gov/biblio/3367499",
+            "rel": "citation"
+          },
+          {
+            "href": "https://www.osti.gov/servlets/purl/3367499",
+            "rel": "fulltext"
+          },
+          {
+            "href": "https://www.osti.gov/pages/biblio/3367499",
+            "rel": "citation_doe_pages"
+          }
+        ],
+        "osti_id": "3367499",
+        "product_type": "Journal Article",
+        "publication_date": "2026-03-30T00:00:00Z",
+        "relation": "Journal Name: Nature Communications Journal Volume: 17",
+        "report_number": "NLR/JA-5400-95455",
+        "research_orgs": [
+          "National Laboratory of the Rockies (NLR), Golden, CO (United States)"
+        ],
+        "sponsor_orgs": [
+          "USDOE Office of Critical Minerals and Energy Innovation (CMEI), Office of Energy Technology (E-Tech). Transportation Technologies Office"
+        ],
+        "subjects": [
+          "24 POWER TRANSMISSION AND DISTRIBUTION",
+          "29 ENERGY PLANNING, POLICY, AND ECONOMY",
+          "airport ground support unit",
+          "electrification",
+          "energy and power demand"
+        ],
+        "title": "Energy, Power, and Infrastructure Demands from Electrifying Airport Ground Support Equipment at United States Airports"
+      },
+      {
+        "authors": [
+          "Meintz, Andrew [National Laboratory of the Rockies, Golden, CO (United States)] (ORCID:0000000185150988)"
+        ],
+        "conference_info": "Presented at the 2025 Airport Energy Management Symposium, 3-5 December 2025, Denver, Colorado",
+        "contract_number": "AC36-08GO28308; ",
+        "country_publication": "United States",
+        "description": "Part of Session 9 of the 2025 Airport Energy Management Symposium: Energy Technology Futures - When Technology is Changing Faster than Planning, How Do You Prepare? This session will look at the current state of novel technologies and how airports might prepare to just the right amount to be prepared for the uncertainties. This presentation will focus on de-risking megawatt-scale charging for airport and aviation applications.",
+        "doe_contract_number": "AC36-08GO28308; ",
+        "doi": "10.2172/3028980",
+        "entry_date": "2026-04-14T10:57:29Z",
+        "identifier": "AC36-08GO28308",
+        "language": "English",
+        "links": [
+          {
+            "href": "https://www.osti.gov/biblio/3028980",
+            "rel": "citation"
+          },
+          {
+            "href": "https://www.osti.gov/servlets/purl/3028980",
+            "rel": "fulltext"
+          }
+        ],
+        "osti_id": "3028980",
+        "product_type": "Conference",
+        "publication_date": "2026-04-07T00:00:00Z",
+        "relation": "Presented at the 2025 Airport Energy Management Symposium, 3-5 December 2025, Denver, Colorado",
+        "report_number": "NLR/PR-5400-98240",
+        "research_orgs": [
+          "National Laboratory of the Rockies (NLR), Golden, CO (United States)"
+        ],
+        "sponsor_orgs": [
+          "USDOE National Laboratory of the Rockies (NLR)"
+        ],
+        "subjects": [
+          "24 POWER TRANSMISSION AND DISTRIBUTION",
+          "29 ENERGY PLANNING, POLICY, AND ECONOMY",
+          "33 ADVANCED PROPULSION SYSTEMS",
+          "advanced aircraft",
+          "airport energy management",
+          "airports",
+          "aviation",
+          "electrification",
+          "energy management technologies",
+          "energy security",
+          "megawatt",
+          "megawatt scale charging",
+          "ports",
+          "resilience",
+          "risk"
+        ],
+        "title": "De-Risking Megawatt-Scale Charging"
+      },
+      {
+        "authors": [
+          "Applegate, Heidi [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Espinosa, Kate [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Smolinski, Sharon [National Laboratory of the Rockies (NLR), Golden, CO (United States)] (ORCID:0000000329573067)",
+          "Leddy, Laura [National Laboratory of the Rockies (NLR), Golden, CO (United States)] (ORCID:000900016860405X)"
+        ],
+        "contract_number": "AC36-08GO28308; ",
+        "country_publication": "United States",
+        "description": "Advanced energy technologies have the potential to enhance energy security and resilience; however, they can introduce new vulnerabilities even as they mitigate existing ones. This dichotomy highlights that both action and inaction carry strategic risks in a contested and logistically complex operating environment. Regardless of U.S. civilian or military adoption of such technologies, key allies and adversaries are on adoption paths that will impact the U.S. military at the tactical, operational, and strategic level. The global adoption of advanced energy technologies presents the potential for both positive and negative consequences for U.S. Department of Defense (DOD) missions in the next 10-20 years. Three categories of risk drivers are presented in this analysis: infrastructure-related, adoption-related, and response-related. Each risk type can generate consequences for DOD, including power disruptions, suboptimal DOD mission performance and operational effectiveness, higher costs and shortages for both legacy and advanced energy technologies, and loss of U.S. influence and strategic deterrent value. Specific impacts could include tactical impacts, operational impacts, and strategic impacts. Mitigation strategies could include energy resource and technology planning, cybersecurity, supply chain resilience, workforce development, exercises and simulations, investments in commercialized technology, operational testing and pilot programs, research into emerging technologies, partnerships and working groups, common standards, budget planning, and repurposing infrastructure.",
+        "doe_contract_number": "AC36-08GO28308; ",
+        "doi": "10.2172/3023194",
+        "entry_date": "2026-04-29T09:05:36Z",
+        "identifier": "AC36-08GO28308",
+        "language": "English",
+        "links": [
+          {
+            "href": "https://www.osti.gov/biblio/3023194",
+            "rel": "citation"
+          },
+          {
+            "href": "https://www.osti.gov/servlets/purl/3023194",
+            "rel": "fulltext"
+          }
+        ],
+        "osti_id": "3023194",
+        "product_type": "Technical Report",
+        "publication_date": "2026-03-10T00:00:00Z",
+        "report_number": "NLR/TP--5R00-93180",
+        "research_orgs": [
+          "National Laboratory of the Rockies (NLR), Golden, CO (United States)"
+        ],
+        "sponsor_orgs": [
+          "USDOD",
+          "USDOE Office of Critical Minerals and Energy Innovation (CMEI)"
+        ],
+        "subjects": [
+          "29 ENERGY PLANNING, POLICY, AND ECONOMY",
+          "45 MILITARY TECHNOLOGY, WEAPONRY, AND NATIONAL DEFENSE",
+          "adoption",
+          "defense",
+          "mitigation",
+          "operational",
+          "risk"
+        ],
+        "title": "Risks to the DOW Mission From Global Advanced Energy Adoption"
+      },
+      {
+        "authors": [
+          "Joshi, Prateek [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Gokhale-Welch, Carishma [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Crouse, Maddy [National Laboratory of the Rockies (NLR), Golden, CO (United States)]"
+        ],
+        "contract_number": "AC36-08GO28308; ",
+        "country_publication": "United States",
+        "description": "The Energy 101: Transportation presentation, developed for the Energy Technology Innovation Partnership Project (ETIPP), provides an overview of transportation. It covers fundamental concepts, technologies, considerations, case studies, and additional resources.",
+        "doe_contract_number": "AC36-08GO28308; ",
+        "doi": "10.2172/3030828",
+        "entry_date": "2026-05-26T09:49:30Z",
+        "identifier": "AC36-08GO28308",
+        "language": "English",
+        "links": [
+          {
+            "href": "https://www.osti.gov/biblio/3030828",
+            "rel": "citation"
+          },
+          {
+            "href": "https://www.osti.gov/servlets/purl/3030828",
+            "rel": "fulltext"
+          }
+        ],
+        "osti_id": "3030828",
+        "product_type": "Technical Report",
+        "publication_date": "2026-04-17T00:00:00Z",
+        "report_number": "NLR/PR-7A40-93273",
+        "research_orgs": [
+          "National Laboratory of the Rockies (NLR), Golden, CO (United States)"
+        ],
+        "sponsor_orgs": [
+          "USDOE Office of Energy Efficiency and Renewable Energy (EERE)",
+          "USDOE Office of Critical Minerals and Energy Innovation (CMEI)"
+        ],
+        "subjects": [
+          "29 ENERGY PLANNING, POLICY, AND ECONOMY",
+          "33 ADVANCED PROPULSION SYSTEMS",
+          "charging",
+          "electric vehicles",
+          "EV",
+          "personal electric vehicle",
+          "vehicle charging"
+        ],
+        "title": "Energy 101 Transportation [Slides]"
+      },
+      {
+        "article_type": "Accepted Manuscript",
+        "authors": [
+          "Salucci, Francesco",
+          "Prabhakar, Nirmit",
+          "Karbowski, Dominik"
+        ],
+        "contract_number": "AC02-06CH11357",
+        "country_publication": "United States",
+        "description": "This paper analyzes the impact of two solutions tailored at increasing fuel efficiency and\r\nreducing emissions of commercial aircraft on US domestic flights: hybridization and using\r\ndrop-in synthetic aviation fuels (SAFs). Flight performance models are used to analyze range\u2013\r\npayload relationships for hybrid-electric and SAF-fueled aircraft. Traffic demand models\r\nanalyze the types and lengths of flights that can be replaced by this new aircraft fleet, and\r\nresulting fuel, energy, and emissions are compared with those of a conventional fleet.",
+        "doe_contract_number": "AC02-06CH11357",
+        "doi": "10.2514/1.C038427",
+        "entry_date": "2026-06-11T12:40:23Z",
+        "identifier": "AC02-06CH11357",
+        "journal_name": "Journal of Aircraft",
+        "journal_type": "AM",
+        "language": "English",
+        "links": [
+          {
+            "href": "https://www.osti.gov/biblio/3367669",
+            "rel": "citation"
+          },
+          {
+            "href": "https://www.osti.gov/servlets/purl/3367669",
+            "rel": "fulltext"
+          },
+          {
+            "href": "https://www.osti.gov/pages/biblio/3367669",
+            "rel": "citation_doe_pages"
+          }
+        ],
+        "osti_id": "3367669",
+        "other_identifiers": [
+          "194272"
+        ],
+        "other_number": "194272",
+        "product_type": "Journal Article",
+        "publication_date": "2026-03-01T00:00:00Z",
+        "relation": "Journal Name: Journal of Aircraft ",
+        "research_orgs": [
+          "Argonne National Laboratory (ANL)"
+        ],
+        "sponsor_orgs": [
+          "US Department of Energy",
+          "USDOE Office of Energy Efficiency and Renewable Energy (EERE) - Bioenergy Technologies Office (BETO)",
+          "USDOE Office of Energy Efficiency and Renewable Energy (EERE) - Hydrogen and Fuel Cell Technologies Office (HFTO)",
+          "USDOE Office of Energy Efficiency and Renewable Energy (EERE) - Office of Vehicle Technologies (VTO)"
+        ],
+        "subjects": [
+          "SAF",
+          "aviation decarbonization",
+          "aviation electrification",
+          "hybrid-electric aircraft",
+          "hybrid-electric propulsion"
+        ],
+        "title": "Fleet-Level Fuel Impact of Hybrid-Electric Aircraft in United States"
+      },
+      {
+        "authors": [
+          "Bracci, Justin [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Martens, Logan [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Tran, Son [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Hartmann, Kevin [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Fernandes Tomon Avelino, Andre [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Franco, Alberto [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Miller, Eric [National Laboratory of the Rockies (NLR), Golden, CO (United States)] (ORCID:0000000184331410)",
+          "Akhtar, Saad [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Simpson, Lin [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Collins, Elizabeth [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Solanki, Bharatkumar [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Cary, Scott [National Laboratory of the Rockies (NLR), Golden, CO (United States)]",
+          "Nagasawa, Kazunori [National Laboratory of the Rockies (NLR), Golden, CO (United States)] (ORCID:0000000270162342)"
+        ],
+        "contract_number": "AC36-08GO28308; ",
+        "country_publication": "United States",
+        "description": "While aircraft account for less than 10% of United States (U.S.) transportation energy consumption, it is the only mode expected to see sustained growth in energy demand through 2050. Currently, commercially available aircraft rely heavily on either jet fuel or leaded aviation gasoline. Over the past few decades, concerns have grown over the contributing effects that greenhouse gases, which are produced from fossil fuels, have on the environment.",
+        "doe_contract_number": "AC36-08GO28308; ",
+        "doi": "10.2172/3017992",
+        "entry_date": "2026-04-16T10:13:40Z",
+        "identifier": "AC36-08GO28308",
+        "language": "English",
+        "links": [
+          {
+            "href": "https://www.osti.gov/biblio/3017992",
+            "rel": "citation"
+          },
+          {
+            "href": "https://www.osti.gov/servlets/purl/3017992",
+            "rel": "fulltext"
+          }
+        ],
+        "osti_id": "3017992",
+        "product_type": "Technical Report",
+        "publication_date": "2026-02-06T00:00:00Z",
+        "report_number": "NLR/TP--5700-91612",
+        "research_orgs": [
+          "National Laboratory of the Rockies (NLR), Golden, CO (United States)"
+        ],
+        "sponsor_orgs": [
+          "Federal Aviation Administration (FAA)",
+          "USDOE Office of Critical Minerals and Energy Innovation (CMEI)"
+        ],
+        "subjects": [
+          "08 HYDROGEN",
+          "29 ENERGY PLANNING, POLICY, AND ECONOMY",
+          "aviation",
+          "geospatial analysis",
+          "hydrogen infrastructure",
+          "levelized cost of hydrogen",
+          "safety assessment"
+        ],
+        "title": "Hydrogen Infrastructure Analysis Frameworks for Aviation Applications"
+      },
+      {
+        "authors": [],
+        "contract_number": "IE0000128",
+        "country_publication": "United States",
+        "description": "The objective of the project was to improve the resilience of the non-regional-grid-connected electrical generation system at Grand Canyon West (GCW) to withstand short-term disruptions and rising energy costs by installing an 885-kW solar photovoltaic (PV) array and 750-kilowatts (kW)/2,145-kilowatt hour (kWh) battery energy storage system (BESS). The system is designed to provide 50% of the annual energy needed for the essential facilities at GCW, supplementing the existing diesel generators, saving approximately $\\$$463,339 per year and an estimated $\\$$11,583,475 over the 25-year life of the system. The project aligns with the Tribe\u2019s conservation ethic and self-determination in the area of energy development.",
+        "doe_contract_number": "IE0000128",
+        "doi": "10.2172/3000902",
+        "entry_date": "2025-12-04T10:14:28Z",
+        "identifier": "IE0000128",
+        "language": "English",
+        "links": [
+          {
+            "href": "https://www.osti.gov/biblio/3000902",
+            "rel": "citation"
+          },
+          {
+            "href": "https://www.osti.gov/servlets/purl/3000902",
+            "rel": "fulltext"
+          }
+        ],
+        "osti_id": "3000902",
+        "other_identifiers": [
+          "IE0000128"
+        ],
+        "other_number": "IE0000128",
+        "product_type": "Technical Report",
+        "publication_date": "2025-11-04T04:00:00Z",
+        "report_number": "None",
+        "research_orgs": [
+          "Hualapai Tribal Council, Peach Springs, AZ (United States)"
+        ],
+        "sponsor_orgs": [
+          "USDOE Office of Indian Energy Policy & Programs (IE)"
+        ],
+        "subjects": [
+          "14 SOLAR ENERGY",
+          "25 ENERGY STORAGE",
+          "Energy Storage",
+          "Microgrid",
+          "Solar",
+          "Tribal Energy"
+        ],
+        "title": "Building Resiliency into Grand Canyon West Micro-Grid"
+      }
+    ],
+    "request": {
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "GET",
+      "query": "aviation battery energy storage",
+      "rows": 10,
+      "url": "https://www.osti.gov/api/v1/records?q=aviation+battery+energy+storage&rows=10"
+    },
+    "requested_rows": 10,
+    "requires_key": false,
+    "response_sha256": "e9adcc8df790085cb6d3a1b6f377454133dd52f913e1d8d39f558f6041f95505",
+    "source": "DOE Office of Scientific and Technical Information",
+    "source_id": "datasource.osti",
+    "status": "fetched",
+    "trusted_publication": false
+  },
+  "retrieved_at_utc": "2026-06-22T16:16:34.485589+00:00",
+  "row_count": 10,
+  "source": "DOE Office of Scientific and Technical Information",
+  "source_id": "datasource.osti",
+  "status": "fetched",
+  "trusted_publication": false
+}

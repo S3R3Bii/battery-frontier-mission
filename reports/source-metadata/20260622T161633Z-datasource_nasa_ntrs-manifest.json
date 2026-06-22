@@ -1,0 +1,66 @@
+{
+  "artifact_type": "source_snapshot_manifest",
+  "created_at_utc": "2026-06-22T16:16:33.810796+00:00",
+  "ingestion_status": "metadata_ready",
+  "license_status": "item_specific",
+  "limitations": "Repository records span different evidence levels and publication types.",
+  "metadata_only": true,
+  "payload_sha256": "a0519b555461931565d17794111b9bd753b8e90f4a07d3060534cf26fc41481e",
+  "query": "electric aircraft battery energy storage",
+  "ranking_evidence": false,
+  "request": {
+    "headers": {
+      "Accept": "application/json"
+    },
+    "method": "GET",
+    "query": "electric aircraft battery energy storage",
+    "rows": 10,
+    "url": "https://ntrs.nasa.gov/api/citations/search?keyword=electric+aircraft+battery+energy+storage&size=10"
+  },
+  "requested_rows": 10,
+  "result": {
+    "connector": "NASA NTRS metadata search",
+    "credential_available": true,
+    "execute_requested": true,
+    "executed": true,
+    "execution_supported": true,
+    "generated_at_utc": "2026-06-22T16:16:33.190174+00:00",
+    "ingestion_status": "metadata_ready",
+    "key_env": null,
+    "license_note": "Follow NASA terms and each record's public-availability and distribution markings.",
+    "license_status": "item_specific",
+    "limitations": "Repository records span different evidence levels and publication types.",
+    "metadata_only": true,
+    "notes": [
+      "Metadata-only connector output is not battery performance evidence.",
+      "Chemistry ranking remains blocked until audited measurements exist.",
+      "Source license is not approved for trusted published snapshots."
+    ],
+    "query": "electric aircraft battery energy storage",
+    "ranking_evidence": false,
+    "record_count": 0,
+    "records": [],
+    "request": {
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "GET",
+      "query": "electric aircraft battery energy storage",
+      "rows": 10,
+      "url": "https://ntrs.nasa.gov/api/citations/search?keyword=electric+aircraft+battery+energy+storage&size=10"
+    },
+    "requested_rows": 10,
+    "requires_key": false,
+    "response_sha256": "6611d047b3ed6e84e08fa31e25ce954e5fc5b15331ed39567440a80fe9251279",
+    "source": "NASA Technical Reports Server",
+    "source_id": "datasource.nasa_ntrs",
+    "status": "fetched",
+    "trusted_publication": false
+  },
+  "retrieved_at_utc": "2026-06-22T16:16:33.190174+00:00",
+  "row_count": 0,
+  "source": "NASA Technical Reports Server",
+  "source_id": "datasource.nasa_ntrs",
+  "status": "fetched",
+  "trusted_publication": false
+}
