@@ -2,7 +2,7 @@
   "artifact_hashes": {
     "candidate_dossiers": {
       "path": "reports/candidates/candidate_dossiers.json",
-      "sha256": "678a4b68d7d7b95d6cff679490bba079c21fb0e3932c060b59a657ce25a78ae1",
+      "sha256": "a6ba0905e3d9abc2a6a5c6bcb4e555b728a6d6e1cfc83ebeaf3b2f287795e711",
       "size_bytes": 70479
     },
     "cmu_measurement_summary": {
@@ -22,7 +22,7 @@
     },
     "simulation_campaign": {
       "path": "reports/simulations/simulation_campaign_summary.json",
-      "sha256": "92e538bdf2d3fea18571aa9a1d62a4db597c0ae68900d2c5141337d3fbca432d",
+      "sha256": "6e2164146a642fb40d60cca6fdb677c8e22425a5cb729334beb507c5b32deb5e",
       "size_bytes": 6797881
     }
   },
@@ -87,7 +87,7 @@
     "pack-overhead and cell-to-pack translation",
     "missing uncertainty and safety evidence"
   ],
-  "generated_at_utc": "2026-07-01T13:40:45.137075+00:00",
+  "generated_at_utc": "2026-07-02T13:06:41.121391+00:00",
   "manufacturer_example_table": [
     {
       "aircraft_class": "eVTOL utility aircraft",
