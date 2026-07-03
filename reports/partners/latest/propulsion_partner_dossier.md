@@ -33,8 +33,8 @@
 
 ## Artifact Hashes
 
-- `simulation_campaign`: `6e2164146a642fb40d60cca6fdb677c8e22425a5cb729334beb507c5b32deb5e` (`reports/simulations/simulation_campaign_summary.json`)
+- `simulation_campaign`: `de78bfcc95eca0ab907fc27711fed75094f72a2d1881f013d5b34e55e0bf1723` (`reports/simulations/simulation_campaign_summary.json`)
 - `long_haul_feasibility`: `c799ca6825e7f5ba69f443f4faabfecd3377cd66bf6c3d496bf46dbd56f1256d` (`reports/simulations/long_haul_feasibility.json`)
-- `candidate_dossiers`: `a6ba0905e3d9abc2a6a5c6bcb4e555b728a6d6e1cfc83ebeaf3b2f287795e711` (`reports/candidates/candidate_dossiers.json`)
+- `candidate_dossiers`: `519101b195e141b6c86abfc4d7e60c845d6b7aae4d019f031fa6fa3d3080bd2b` (`reports/candidates/candidate_dossiers.json`)
 - `cmu_raw_manifest`: `e5f999ee1a71983a79600b7f6400eb93b9609a6b51362a9b42552a4249f0daa4` (`reports/measurements/cmu_evtol_raw_file_manifest.json`)
 - `cmu_measurement_summary`: `071929fc910141de21d2fb6e15a8a36af10e28b2620420c177490d496b25d222` (`reports/measurements/cmu_evtol_measurement_summary.json`)
