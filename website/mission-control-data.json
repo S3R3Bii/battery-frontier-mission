@@ -7,7 +7,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/reference/phase2_reference_cases.json",
-      "sha256": "5317f2e5d27949dfc139fc0db2d3cb06386526a2d464796a27bfdae9a020e504",
+      "sha256": "b542e02ed3d1e5a873c67ba509788b7e15e23c036fcaec59c864b5c552a41e5e",
       "type": "json_results"
     },
     {
@@ -17,7 +17,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/aviation/phase3_mission_cases.json",
-      "sha256": "4d24308ba7507fccf2fd0c0900c9bf7cd5855d89caa243e7a9330bea93014494",
+      "sha256": "6244fc1e44cb8aa477fd430de347143a0a24469d0606dcfc046cadc7b419bc90",
       "type": "json_results"
     },
     {
@@ -27,7 +27,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
-      "sha256": "309f0e8b294b6a2e8ea93aba614ba0aef869f2db6795d48967afad8db243e49f",
+      "sha256": "daa3e57db6f5b0fbc8197689930008152858d88312aa18b85ff2b70113188e41",
       "type": "method_card"
     },
     {
@@ -37,7 +37,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
-      "sha256": "9b4ff590c60393733c59ad2d78525f731d012ce20b7e0dbc3ab1c4b379307be6",
+      "sha256": "cfca693eaca59639325365ed007356ba5ee45953d17d609583889a98ce9f8324",
       "type": "method_card"
     }
   ],
@@ -9779,9 +9779,9 @@
       "performance_evidence": false,
       "query_count": 9,
       "ranking_evidence": false,
-      "record_count": 18,
+      "record_count": 0,
       "status_counts": {
-        "fetched": 9
+        "api_error": 9
       }
     },
     "ranking_blocked_candidate_count": 11,
@@ -9820,14 +9820,7 @@
         "cycle_life",
         "thermal_runaway"
       ],
-      "materials_project_material_ids": [
-        "mp-aaabrspi",
-        "mp-aaacltzu",
-        "mp-aaacrolq",
-        "mp-aaadpfwc",
-        "mp-aaadpgko",
-        "mp-aaafkmdf"
-      ],
+      "materials_project_material_ids": [],
       "metadata_query_ids": [
         "mp.li_oxide",
         "mp.lfp",
@@ -9901,10 +9894,7 @@
         "cycle_life",
         "abuse_response"
       ],
-      "materials_project_material_ids": [
-        "mp-aaabrspi",
-        "mp-aaafkmdf"
-      ],
+      "materials_project_material_ids": [],
       "metadata_query_ids": [
         "mp.li_oxide"
       ],
@@ -9977,10 +9967,7 @@
         "cycle_life",
         "safety"
       ],
-      "materials_project_material_ids": [
-        "mp-aaacccut",
-        "mp-aaafuprn"
-      ],
+      "materials_project_material_ids": [],
       "metadata_query_ids": [
         "mp.solid_electrolyte_sulfides"
       ],
@@ -10055,10 +10042,7 @@
         "full_cell_specific_energy",
         "cycle_life"
       ],
-      "materials_project_material_ids": [
-        "mp-aaadlqvq",
-        "mp-aaadlrfg"
-      ],
+      "materials_project_material_ids": [],
       "metadata_query_ids": [
         "mp.li_sulfur"
       ],
@@ -10131,10 +10115,7 @@
         "cycle_life",
         "safety"
       ],
-      "materials_project_material_ids": [
-        "mp-aaabrspi",
-        "mp-aaafkmdf"
-      ],
+      "materials_project_material_ids": [],
       "metadata_query_ids": [
         "mp.li_oxide"
       ],
@@ -10207,10 +10188,7 @@
         "abundance",
         "cost"
       ],
-      "materials_project_material_ids": [
-        "mp-aaahikll",
-        "mp-aaahikmq"
-      ],
+      "materials_project_material_ids": [],
       "metadata_query_ids": [
         "mp.sodium_oxides"
       ],
@@ -10283,10 +10261,7 @@
         "cycle_life",
         "electrolyte_stability"
       ],
-      "materials_project_material_ids": [
-        "mp-aaacgufe",
-        "mp-aaacgufr"
-      ],
+      "materials_project_material_ids": [],
       "metadata_query_ids": [
         "mp.multivalent_oxides"
       ],
@@ -10357,10 +10332,7 @@
         "cycle_life",
         "power_density"
       ],
-      "materials_project_material_ids": [
-        "mp-aaaieipq",
-        "mp-aaaieipr"
-      ],
+      "materials_project_material_ids": [],
       "metadata_query_ids": [
         "mp.zinc_oxides"
       ],
@@ -10432,10 +10404,7 @@
         "cycle_life",
         "damage_response"
       ],
-      "materials_project_material_ids": [
-        "mp-aaahikmi",
-        "mp-aaahikwu"
-      ],
+      "materials_project_material_ids": [],
       "metadata_query_ids": [
         "mp.carbon_allotropes"
       ],
@@ -10586,10 +10555,7 @@
         "carbonization_energy",
         "aviation_pack_specific_energy"
       ],
-      "materials_project_material_ids": [
-        "mp-aaahikmi",
-        "mp-aaahikwu"
-      ],
+      "materials_project_material_ids": [],
       "metadata_query_ids": [
         "mp.carbon_allotropes"
       ],
@@ -11537,7 +11503,7 @@
         "evidence_status": "verified_present",
         "path": "reports/reference/phase2_reference_cases.json",
         "public_claim_boundary": "calculation fixtures; not experimental benchmarks",
-        "sha256": "5317f2e5d27949dfc139fc0db2d3cb06386526a2d464796a27bfdae9a020e504",
+        "sha256": "b542e02ed3d1e5a873c67ba509788b7e15e23c036fcaec59c864b5c552a41e5e",
         "title": "Phase 2 physics reference results"
       },
       {
@@ -11546,7 +11512,7 @@
         "evidence_status": "verified_present",
         "path": "reports/aviation/phase3_mission_cases.json",
         "public_claim_boundary": "simulation estimates from speculative inputs",
-        "sha256": "4d24308ba7507fccf2fd0c0900c9bf7cd5855d89caa243e7a9330bea93014494",
+        "sha256": "6244fc1e44cb8aa477fd430de347143a0a24469d0606dcfc046cadc7b419bc90",
         "title": "Phase 3 aviation mission results"
       },
       {
@@ -11555,7 +11521,7 @@
         "evidence_status": "public_method_document",
         "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
         "public_claim_boundary": "documents equations, guardrails, and limitations",
-        "sha256": "309f0e8b294b6a2e8ea93aba614ba0aef869f2db6795d48967afad8db243e49f",
+        "sha256": "daa3e57db6f5b0fbc8197689930008152858d88312aa18b85ff2b70113188e41",
         "title": "Phase 2 physics method card"
       },
       {
@@ -11564,14 +11530,14 @@
         "evidence_status": "public_method_document",
         "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
         "public_claim_boundary": "documents equations, guardrails, and limitations",
-        "sha256": "9b4ff590c60393733c59ad2d78525f731d012ce20b7e0dbc3ab1c4b379307be6",
+        "sha256": "cfca693eaca59639325365ed007356ba5ee45953d17d609583889a98ce9f8324",
         "title": "Phase 3 aviation method card"
       }
     ],
     "chemistry_ranking_enabled": false,
     "dashboard_status": "prototype with traceable local simulation artifacts",
     "experimental_measurements": 0,
-    "generated_at_utc": "2026-07-19T12:06:23.571232+00:00",
+    "generated_at_utc": "2026-07-20T13:22:05.046127+00:00",
     "package_version": "0.4.0",
     "phase": "4"
   },
@@ -12010,7 +11976,7 @@
     "title": "Frontier Gap to Aviation-Grade Pack Energy",
     "unknown_region_note": "The audited-measurement lane is empty; fixture values cannot be used as evidence of achieved aviation-grade storage."
   },
-  "generated_at_utc": "2026-07-19T12:06:23.613710+00:00",
+  "generated_at_utc": "2026-07-20T13:22:05.089025+00:00",
   "infeasible_region_ledger": [
     {
       "base_case_id": "mission.regional_demonstrator",
@@ -12122,7 +12088,7 @@
     }
   ],
   "latest_daily_manifest": {
-    "candidate_dossier_sha256": "420242cb84f4081cd6070b620428a5481dd41db0d60436f822521857b8acb860",
+    "candidate_dossier_sha256": "e51e8ae1dd751b8ba1481344a363202eb60142da0f5696e60b31a25e87312750",
     "candidate_dossiers": 11,
     "cmu_measurement_summary_sha256": "071929fc910141de21d2fb6e15a8a36af10e28b2620420c177490d496b25d222",
     "cmu_raw_manifest_sha256": "e5f999ee1a71983a79600b7f6400eb93b9609a6b51362a9b42552a4249f0daa4",
@@ -12189,18 +12155,18 @@
       "configs/segmented_mission_cases.yaml": "6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2"
     },
     "dashboard_artifacts": 4,
-    "dashboard_manifest_sha256": "520e7b78996a8647963047021ce5e764bc5035690665f58bf0e2ea5962214ffb",
+    "dashboard_manifest_sha256": "f3145475cdd80a2aa7b2323b1589617e5bf35a994ca95d3bc803fd827b63af78",
     "experimental_measurements": 0,
-    "generated_at_utc": "2026-07-19T12:06:22.524540+00:00",
+    "generated_at_utc": "2026-07-20T13:22:04.037786+00:00",
     "materials_campaign_rows": {
       "material_candidates": 14,
       "material_frontier_gap": 84
     },
-    "materials_campaign_sha256": "0da984f9c2ce974cd9c8fb50a82593bbc89e1368cf5dafb0580257a6ecbba18b",
+    "materials_campaign_sha256": "32bc09632d56a41b3f946d443805380afdb82cb079b9044a2c55eba55cef082e",
     "measurement_quality_status": "blocked",
     "package_version": "0.4.0",
     "partner_dossier_count": 5,
-    "partner_dossier_manifest_sha256": "1b1ba98288d1122797f34489cca5238a77343bd71113d8374820c435f2b66ad3",
+    "partner_dossier_manifest_sha256": "46a7067ecd6469d624ed6c863af652c41cfee018b842302f65dcfc8807f96b8f",
     "python_version": "3.11.15 (main, Jun 16 2026, 21:41:52) [GCC 13.3.0]",
     "ranking_enabled": false,
     "registry_counts": {
@@ -12216,18 +12182,18 @@
       "scenarios": 4,
       "segmented_mission_cases": 2
     },
-    "report_date": "2026-07-19",
-    "report_sha256": "3e07c7f84a9ffc31bb96e639bf73afd9dabe52b0627d2dc5907eb0410da4c0b1",
+    "report_date": "2026-07-20",
+    "report_sha256": "49dffc7ad809722f6accfa5ecd9557c1ad4b29a124859365871cb8e1a2417288",
     "simulation_campaign_rows": {
       "aviation_requirement_grid": 270,
       "candidate_envelopes": 11,
       "long_haul_feasibility": 6,
       "pack_trade_space": 8748
     },
-    "simulation_campaign_sha256": "e29032ceb7f37b72ee239cf823a5cf3f6ae732f77b239dbd3898801c68fd8ce5",
+    "simulation_campaign_sha256": "304dfdc8c0dead6485f0d4e20225b10029681a30db0a7501dd55a963273bfea5",
     "simulations_completed": 2,
-    "summary_path": "reports/daily/2026-07-19-mission-summary.json",
-    "summary_sha256": "0fbdbb413e9c489f69bddb4cbfe37c928b31b91e576265484afd59beb62822f4"
+    "summary_path": "reports/daily/2026-07-20-mission-summary.json",
+    "summary_sha256": "a768ddba5028dd9406b332fd0d72d369fef43421c674958f0ff6bcd6085a88cd"
   },
   "long_haul_feasibility": {
     "claim_boundary": "simulation diagnostic only, not an aircraft design.",
@@ -14888,9 +14854,9 @@
     "artifact_type": "materials_project_material_screening_metadata_snapshot",
     "audited_measurement": false,
     "credential_available": true,
-    "error_message": null,
+    "error_message": "The read operation timed out",
     "execute_requested": true,
-    "executed": true,
+    "executed": false,
     "key_env": "MP_API_KEY",
     "license_status": "review_required",
     "limitations": [
@@ -14902,127 +14868,7 @@
     "performance_evidence": false,
     "query": "Li O",
     "ranking_evidence": false,
-    "records": [
-      {
-        "chemsys": "B-Li-O",
-        "density": 1.8041686563718107,
-        "elements": [
-          "B",
-          "Li",
-          "O"
-        ],
-        "energy_above_hull": 0.029330214096150442,
-        "evidence_class": "simulation_estimate",
-        "formation_energy_per_atom": -0.41602970897435926,
-        "formula_pretty": "Li7B18O",
-        "is_stable": false,
-        "last_updated": "2023-10-07T22:59:58.041000",
-        "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
-        "material_id": "mp-aaafkmdf",
-        "metadata_only": true,
-        "performance_evidence": false,
-        "ranking_evidence": false,
-        "record_type": "computed_material_metadata",
-        "system_boundary": "computed material metadata, not cell or pack performance",
-        "theoretical": true
-      },
-      {
-        "chemsys": "F-Li-Mn-O",
-        "density": 3.6125475962232616,
-        "elements": [
-          "F",
-          "Li",
-          "Mn",
-          "O"
-        ],
-        "energy_above_hull": 0.08468099120369654,
-        "evidence_class": "simulation_estimate",
-        "formation_energy_per_atom": -2.669187779077267,
-        "formula_pretty": "LiMn2OF5",
-        "is_stable": false,
-        "last_updated": "2021-02-16T18:09:58.366000",
-        "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
-        "material_id": "mp-aaabrspi",
-        "metadata_only": true,
-        "performance_evidence": false,
-        "ranking_evidence": false,
-        "record_type": "computed_material_metadata",
-        "system_boundary": "computed material metadata, not cell or pack performance",
-        "theoretical": true
-      },
-      {
-        "chemsys": "Cl-Cu-Li-O",
-        "density": 2.771437451374369,
-        "elements": [
-          "Cl",
-          "Cu",
-          "Li",
-          "O"
-        ],
-        "energy_above_hull": 0.40870539078947354,
-        "evidence_class": "simulation_estimate",
-        "formation_energy_per_atom": -1.0261943275438596,
-        "formula_pretty": "Li4Cu4Cl10O",
-        "is_stable": false,
-        "last_updated": "2021-02-09T06:19:43.190000",
-        "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
-        "material_id": "mp-aaabrtyu",
-        "metadata_only": true,
-        "performance_evidence": false,
-        "ranking_evidence": false,
-        "record_type": "computed_material_metadata",
-        "system_boundary": "computed material metadata, not cell or pack performance",
-        "theoretical": true
-      },
-      {
-        "chemsys": "Li-O-S-Ti",
-        "density": 2.2800698884507478,
-        "elements": [
-          "Li",
-          "O",
-          "S",
-          "Ti"
-        ],
-        "energy_above_hull": 0.027613073564816126,
-        "evidence_class": "simulation_estimate",
-        "formation_energy_per_atom": -2.0103958154166666,
-        "formula_pretty": "Li2TiS2O",
-        "is_stable": false,
-        "last_updated": "2021-02-24T13:20:57.242000",
-        "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
-        "material_id": "mp-aaabrtzz",
-        "metadata_only": true,
-        "performance_evidence": false,
-        "ranking_evidence": false,
-        "record_type": "computed_material_metadata",
-        "system_boundary": "computed material metadata, not cell or pack performance",
-        "theoretical": true
-      },
-      {
-        "chemsys": "F-Li-Nb-O",
-        "density": 3.231829523887079,
-        "elements": [
-          "F",
-          "Li",
-          "Nb",
-          "O"
-        ],
-        "energy_above_hull": 0.08530720152777693,
-        "evidence_class": "simulation_estimate",
-        "formation_energy_per_atom": -3.2496008863580244,
-        "formula_pretty": "Li5Nb3OF18",
-        "is_stable": false,
-        "last_updated": "2021-02-22T22:23:43.075000",
-        "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
-        "material_id": "mp-aaabrubc",
-        "metadata_only": true,
-        "performance_evidence": false,
-        "ranking_evidence": false,
-        "record_type": "computed_material_metadata",
-        "system_boundary": "computed material metadata, not cell or pack performance",
-        "theoretical": true
-      }
-    ],
+    "records": [],
     "request": {
       "headers": {
         "Accept": "application/json",
@@ -15034,9 +14880,9 @@
       "url": "https://api.materialsproject.org/materials/summary/?elements=Li%2CO&_fields=material_id%2Cformula_pretty%2Cchemsys%2Celements%2Cdensity%2Cenergy_above_hull%2Cformation_energy_per_atom%2Cis_stable%2Ctheoretical%2Clast_updated&_limit=5"
     },
     "requires_key": true,
-    "row_count": 5,
+    "row_count": 0,
     "source_id": "datasource.materials_project",
-    "status": "fetched"
+    "status": "api_error"
   },
   "material_mission_requirements": [
     {
@@ -15107,8 +14953,8 @@
     "highest_engineering_bounded_pack_Wh_kg": 1214.136,
     "highest_theoretical_only_pack_Wh_kg": 17344.8,
     "material_candidate_count": 14,
-    "materials_project_record_count": 5,
-    "materials_project_status": "fetched",
+    "materials_project_record_count": 0,
+    "materials_project_status": "api_error",
     "performance_evidence": false,
     "phase": "4.6",
     "phase_status": "material hypothesis screening active",
@@ -15138,144 +14984,117 @@
           "candidate.lithium_metal",
           "candidate.lithium_oxygen"
         ],
-        "error_message": null,
+        "error_message": "The read operation timed out",
         "label": "lithium oxide and oxide electrolyte discovery",
-        "material_ids": [
-          "mp-aaafkmdf",
-          "mp-aaabrspi"
-        ],
+        "material_ids": [],
         "query": "Li,O",
         "query_id": "mp.li_oxide",
-        "record_count": 2,
-        "status": "fetched"
+        "record_count": 0,
+        "status": "api_error"
       },
       {
         "candidate_ids": [
           "candidate.lithium_sulfur"
         ],
-        "error_message": null,
+        "error_message": "The read operation timed out",
         "label": "lithium sulfur and sulfide discovery",
-        "material_ids": [
-          "mp-aaadlqvq",
-          "mp-aaadlrfg"
-        ],
+        "material_ids": [],
         "query": "Li,S",
         "query_id": "mp.li_sulfur",
-        "record_count": 2,
-        "status": "fetched"
+        "record_count": 0,
+        "status": "api_error"
       },
       {
         "candidate_ids": [
           "candidate.solid_state_lithium"
         ],
-        "error_message": null,
+        "error_message": "The read operation timed out",
         "label": "lithium thiophosphate solid-electrolyte discovery",
-        "material_ids": [
-          "mp-aaafuprn",
-          "mp-aaacccut"
-        ],
+        "material_ids": [],
         "query": "Li,P,S",
         "query_id": "mp.solid_electrolyte_sulfides",
-        "record_count": 2,
-        "status": "fetched"
+        "record_count": 0,
+        "status": "api_error"
       },
       {
         "candidate_ids": [
           "candidate.lithium_ion_intercalation"
         ],
-        "error_message": null,
+        "error_message": "The read operation timed out",
         "label": "lithium iron phosphate and phosphate discovery",
-        "material_ids": [
-          "mp-aaadpfwc",
-          "mp-aaadpgko"
-        ],
+        "material_ids": [],
         "query": "Li,Fe,P,O",
         "query_id": "mp.lfp",
-        "record_count": 2,
-        "status": "fetched"
+        "record_count": 0,
+        "status": "api_error"
       },
       {
         "candidate_ids": [
           "candidate.lithium_ion_intercalation"
         ],
-        "error_message": null,
+        "error_message": "The read operation timed out",
         "label": "layered oxide cathode discovery",
-        "material_ids": [
-          "mp-aaacltzu",
-          "mp-aaacrolq"
-        ],
+        "material_ids": [],
         "query": "Li,Ni,Mn,Co,O",
         "query_id": "mp.layered_oxides",
-        "record_count": 2,
-        "status": "fetched"
+        "record_count": 0,
+        "status": "api_error"
       },
       {
         "candidate_ids": [
           "candidate.sodium_ion"
         ],
-        "error_message": null,
+        "error_message": "The read operation timed out",
         "label": "sodium oxide and sodium-ion host discovery",
-        "material_ids": [
-          "mp-aaahikll",
-          "mp-aaahikmq"
-        ],
+        "material_ids": [],
         "query": "Na,O",
         "query_id": "mp.sodium_oxides",
-        "record_count": 2,
-        "status": "fetched"
+        "record_count": 0,
+        "status": "api_error"
       },
       {
         "candidate_ids": [
           "candidate.multivalent"
         ],
-        "error_message": null,
+        "error_message": "The read operation timed out",
         "label": "multivalent oxide host discovery",
-        "material_ids": [
-          "mp-aaacgufe",
-          "mp-aaacgufr"
-        ],
+        "material_ids": [],
         "query": "Mg,Al,Ca,O",
         "query_id": "mp.multivalent_oxides",
-        "record_count": 2,
-        "status": "fetched"
+        "record_count": 0,
+        "status": "api_error"
       },
       {
         "candidate_ids": [
           "candidate.zinc_air"
         ],
-        "error_message": null,
+        "error_message": "The read operation timed out",
         "label": "zinc oxide and air-cathode context discovery",
-        "material_ids": [
-          "mp-aaaieipr",
-          "mp-aaaieipq"
-        ],
+        "material_ids": [],
         "query": "Zn,O",
         "query_id": "mp.zinc_oxides",
-        "record_count": 2,
-        "status": "fetched"
+        "record_count": 0,
+        "status": "api_error"
       },
       {
         "candidate_ids": [
           "candidate.structural_battery",
           "candidate.hemp_bast_graphitic_carbon"
         ],
-        "error_message": null,
+        "error_message": "The read operation timed out",
         "label": "carbon allotrope metadata proxy; does not encode biomass origin",
-        "material_ids": [
-          "mp-aaahikmi",
-          "mp-aaahikwu"
-        ],
+        "material_ids": [],
         "query": "C",
         "query_id": "mp.carbon_allotropes",
-        "record_count": 2,
-        "status": "fetched"
+        "record_count": 0,
+        "status": "api_error"
       }
     ],
     "query_count": 9,
     "ranking_evidence": false,
-    "record_count": 18,
+    "record_count": 0,
     "status_counts": {
-      "fetched": 9
+      "api_error": 9
     }
   },
   "measurement_pipeline": {
@@ -19342,8 +19161,8 @@
     "artifact_hashes": {
       "candidate_dossiers": {
         "path": "reports/candidates/candidate_dossiers.json",
-        "sha256": "420242cb84f4081cd6070b620428a5481dd41db0d60436f822521857b8acb860",
-        "size_bytes": 70479
+        "sha256": "e51e8ae1dd751b8ba1481344a363202eb60142da0f5696e60b31a25e87312750",
+        "size_bytes": 50592
       },
       "cmu_measurement_summary": {
         "path": "reports/measurements/cmu_evtol_measurement_summary.json",
@@ -19362,7 +19181,7 @@
       },
       "simulation_campaign": {
         "path": "reports/simulations/simulation_campaign_summary.json",
-        "sha256": "e29032ceb7f37b72ee239cf823a5cf3f6ae732f77b239dbd3898801c68fd8ce5",
+        "sha256": "304dfdc8c0dead6485f0d4e20225b10029681a30db0a7501dd55a963273bfea5",
         "size_bytes": 6797881
       }
     },
@@ -19373,8 +19192,8 @@
         "artifact_hashes": {
           "candidate_dossiers": {
             "path": "reports/candidates/candidate_dossiers.json",
-            "sha256": "420242cb84f4081cd6070b620428a5481dd41db0d60436f822521857b8acb860",
-            "size_bytes": 70479
+            "sha256": "e51e8ae1dd751b8ba1481344a363202eb60142da0f5696e60b31a25e87312750",
+            "size_bytes": 50592
           },
           "cmu_measurement_summary": {
             "path": "reports/measurements/cmu_evtol_measurement_summary.json",
@@ -19393,7 +19212,7 @@
           },
           "simulation_campaign": {
             "path": "reports/simulations/simulation_campaign_summary.json",
-            "sha256": "e29032ceb7f37b72ee239cf823a5cf3f6ae732f77b239dbd3898801c68fd8ce5",
+            "sha256": "304dfdc8c0dead6485f0d4e20225b10029681a30db0a7501dd55a963273bfea5",
             "size_bytes": 6797881
           }
         },
@@ -19458,7 +19277,7 @@
           "pack-overhead and cell-to-pack translation",
           "missing uncertainty and safety evidence"
         ],
-        "generated_at_utc": "2026-07-19T12:06:21.194668+00:00",
+        "generated_at_utc": "2026-07-20T13:22:02.700107+00:00",
         "manufacturer_example_table": [
           {
             "aircraft_class": "eVTOL utility aircraft",
@@ -20876,8 +20695,8 @@
         "artifact_hashes": {
           "candidate_dossiers": {
             "path": "reports/candidates/candidate_dossiers.json",
-            "sha256": "420242cb84f4081cd6070b620428a5481dd41db0d60436f822521857b8acb860",
-            "size_bytes": 70479
+            "sha256": "e51e8ae1dd751b8ba1481344a363202eb60142da0f5696e60b31a25e87312750",
+            "size_bytes": 50592
           },
           "cmu_measurement_summary": {
             "path": "reports/measurements/cmu_evtol_measurement_summary.json",
@@ -20896,7 +20715,7 @@
           },
           "simulation_campaign": {
             "path": "reports/simulations/simulation_campaign_summary.json",
-            "sha256": "e29032ceb7f37b72ee239cf823a5cf3f6ae732f77b239dbd3898801c68fd8ce5",
+            "sha256": "304dfdc8c0dead6485f0d4e20225b10029681a30db0a7501dd55a963273bfea5",
             "size_bytes": 6797881
           }
         },
@@ -20961,7 +20780,7 @@
           "evidence blockers",
           "automation and reporting readiness"
         ],
-        "generated_at_utc": "2026-07-19T12:06:21.194668+00:00",
+        "generated_at_utc": "2026-07-20T13:22:02.700107+00:00",
         "manufacturer_example_table": [
           {
             "aircraft_class": "eVTOL utility aircraft",
@@ -22379,8 +22198,8 @@
         "artifact_hashes": {
           "candidate_dossiers": {
             "path": "reports/candidates/candidate_dossiers.json",
-            "sha256": "420242cb84f4081cd6070b620428a5481dd41db0d60436f822521857b8acb860",
-            "size_bytes": 70479
+            "sha256": "e51e8ae1dd751b8ba1481344a363202eb60142da0f5696e60b31a25e87312750",
+            "size_bytes": 50592
           },
           "cmu_measurement_summary": {
             "path": "reports/measurements/cmu_evtol_measurement_summary.json",
@@ -22399,7 +22218,7 @@
           },
           "simulation_campaign": {
             "path": "reports/simulations/simulation_campaign_summary.json",
-            "sha256": "e29032ceb7f37b72ee239cf823a5cf3f6ae732f77b239dbd3898801c68fd8ce5",
+            "sha256": "304dfdc8c0dead6485f0d4e20225b10029681a30db0a7501dd55a963273bfea5",
             "size_bytes": 6797881
           }
         },
@@ -22464,7 +22283,7 @@
           "long-haul infeasibility reasons",
           "manufacturer example boundaries"
         ],
-        "generated_at_utc": "2026-07-19T12:06:21.194668+00:00",
+        "generated_at_utc": "2026-07-20T13:22:02.700107+00:00",
         "manufacturer_example_table": [
           {
             "aircraft_class": "eVTOL utility aircraft",
@@ -23882,8 +23701,8 @@
         "artifact_hashes": {
           "candidate_dossiers": {
             "path": "reports/candidates/candidate_dossiers.json",
-            "sha256": "420242cb84f4081cd6070b620428a5481dd41db0d60436f822521857b8acb860",
-            "size_bytes": 70479
+            "sha256": "e51e8ae1dd751b8ba1481344a363202eb60142da0f5696e60b31a25e87312750",
+            "size_bytes": 50592
           },
           "cmu_measurement_summary": {
             "path": "reports/measurements/cmu_evtol_measurement_summary.json",
@@ -23902,7 +23721,7 @@
           },
           "simulation_campaign": {
             "path": "reports/simulations/simulation_campaign_summary.json",
-            "sha256": "e29032ceb7f37b72ee239cf823a5cf3f6ae732f77b239dbd3898801c68fd8ce5",
+            "sha256": "304dfdc8c0dead6485f0d4e20225b10029681a30db0a7501dd55a963273bfea5",
             "size_bytes": 6797881
           }
         },
@@ -23967,7 +23786,7 @@
           "power and C-rate diagnostics",
           "battery sufficiency under mission loads"
         ],
-        "generated_at_utc": "2026-07-19T12:06:21.194668+00:00",
+        "generated_at_utc": "2026-07-20T13:22:02.700107+00:00",
         "manufacturer_example_table": [
           {
             "aircraft_class": "eVTOL utility aircraft",
@@ -25385,8 +25204,8 @@
         "artifact_hashes": {
           "candidate_dossiers": {
             "path": "reports/candidates/candidate_dossiers.json",
-            "sha256": "420242cb84f4081cd6070b620428a5481dd41db0d60436f822521857b8acb860",
-            "size_bytes": 70479
+            "sha256": "e51e8ae1dd751b8ba1481344a363202eb60142da0f5696e60b31a25e87312750",
+            "size_bytes": 50592
           },
           "cmu_measurement_summary": {
             "path": "reports/measurements/cmu_evtol_measurement_summary.json",
@@ -25405,7 +25224,7 @@
           },
           "simulation_campaign": {
             "path": "reports/simulations/simulation_campaign_summary.json",
-            "sha256": "e29032ceb7f37b72ee239cf823a5cf3f6ae732f77b239dbd3898801c68fd8ce5",
+            "sha256": "304dfdc8c0dead6485f0d4e20225b10029681a30db0a7501dd55a963273bfea5",
             "size_bytes": 6797881
           }
         },
@@ -25470,7 +25289,7 @@
           "measurement schema and quality checks",
           "license and provenance requirements"
         ],
-        "generated_at_utc": "2026-07-19T12:06:21.194668+00:00",
+        "generated_at_utc": "2026-07-20T13:22:02.700107+00:00",
         "manufacturer_example_table": [
           {
             "aircraft_class": "eVTOL utility aircraft",
@@ -26885,7 +26704,7 @@
         }
       }
     },
-    "generated_at_utc": "2026-07-19T12:06:21.194668+00:00",
+    "generated_at_utc": "2026-07-20T13:22:02.700107+00:00",
     "input_signature_sha256": "86b8907aa5ffd43279e905d278e67b6f3aa5cd57bd6b983848af67cc4638bd8c",
     "long_haul_status": {
       "claim_boundary": "simulation diagnostic only",
@@ -26932,60 +26751,60 @@
       "battery_manufacturer_dossier": {
         "json": {
           "path": "reports/partners/latest/battery_manufacturer_dossier.json",
-          "sha256": "25d170570ec39addfa4f892fa6773f0f19ce424e059992fb6d8623c5b1466151",
+          "sha256": "61fb9bb22bb7cb75d96fc5e13f08fa7d12dade1f2da2860166f30c16aba5dd18",
           "size_bytes": 65848
         },
         "markdown": {
           "path": "reports/partners/latest/battery_manufacturer_dossier.md",
-          "sha256": "f2aaa0b5c9bf564bbbc614c84c3994d78942c0599796b6bd6c2d068a73d1a01f",
+          "sha256": "db5af30a05bcfa939d58cb4171841c2a242c9a9e9d7380e0b40c2640b03eafc8",
           "size_bytes": 2090
         }
       },
       "investor_or_program_manager_brief": {
         "json": {
           "path": "reports/partners/latest/investor_or_program_manager_brief.json",
-          "sha256": "fdc907791af6b9a8b0c84ba96657062f8fb01e3617878d63ccb57917334d46b5",
+          "sha256": "bb04cd9e49f54977de112b5896a1bb48525b74b9ef6e1101386f541c5398439f",
           "size_bytes": 65823
         },
         "markdown": {
           "path": "reports/partners/latest/investor_or_program_manager_brief.md",
-          "sha256": "78266e1d2c5fa4edbc1e5d8722584da9429fc2e24c8f36aaa618060cea641ea4",
+          "sha256": "38c8fe1b8ac6d84291a40497ab24df37829b027fd5c68128e46c318a28e8509b",
           "size_bytes": 2111
         }
       },
       "plane_manufacturer_dossier": {
         "json": {
           "path": "reports/partners/latest/plane_manufacturer_dossier.json",
-          "sha256": "cc7f3281ebd15b1bbfe957b61d5868ca95b85ce311d2837fa8dbd3816311ebff",
+          "sha256": "28f51c6a83a3eef58596f19d676161a564f7c19f1923377b4432a1f0e5fa86b2",
           "size_bytes": 65831
         },
         "markdown": {
           "path": "reports/partners/latest/plane_manufacturer_dossier.md",
-          "sha256": "ce65e53ec2b4bcce6d297c74b3f33145ba7020cac51da0f71de37ed97dc38476",
+          "sha256": "83e0aaaea4b3fb3b0c50840010fb9c4d25755f61b5d15f6f31d898bb8f478c26",
           "size_bytes": 2103
         }
       },
       "propulsion_partner_dossier": {
         "json": {
           "path": "reports/partners/latest/propulsion_partner_dossier.json",
-          "sha256": "426a2bbdad0dfd1340e4fc94541c5968d25431b3128dd2b5c6c7f0544be4718e",
+          "sha256": "2cc3ccecaba05a3f9179cf15bb508b84a8c653a2d80d4579af6ad8d389306793",
           "size_bytes": 65817
         },
         "markdown": {
           "path": "reports/partners/latest/propulsion_partner_dossier.md",
-          "sha256": "24faabe58142b488dc6b33066893d877009b003559879866db1d39777ca7f730",
+          "sha256": "5026264af35c14be97e1b71b48f8e67086a0c7c1e1b12e1f7e6ba6e083f3dd01",
           "size_bytes": 2082
         }
       },
       "research_partner_dossier": {
         "json": {
           "path": "reports/partners/latest/research_partner_dossier.json",
-          "sha256": "c7933c25bc574ab281b88873b884ee65da32e5c4177b03bef2aa5f2105e15ab2",
+          "sha256": "05ffeab3e39726ac115ad1de564895e5cf39cdce26adbe62a5b519bdbcf5af47",
           "size_bytes": 65826
         },
         "markdown": {
           "path": "reports/partners/latest/research_partner_dossier.md",
-          "sha256": "448404547d1530fde88f3b11e6ce2331601ab0ea27707cacbbc3be2e59ec60f2",
+          "sha256": "123b3e3fa87a7308782afaa0dcbabff03527f1e289ce74d12b41110f94a252a9",
           "size_bytes": 2094
         }
       }

@@ -12,7 +12,7 @@
 - Frontier gap rows: 84
 - Highest theoretical-only pack estimate: 17344.8 Wh/kg
 - Highest engineering-bounded pack estimate: 1214.136 Wh/kg
-- Materials Project status: fetched
+- Materials Project status: api_error
 - Ranking enabled: False
 
 ## Evidence Lanes
