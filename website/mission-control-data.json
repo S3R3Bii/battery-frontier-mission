@@ -7,7 +7,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/reference/phase2_reference_cases.json",
-      "sha256": "b542e02ed3d1e5a873c67ba509788b7e15e23c036fcaec59c864b5c552a41e5e",
+      "sha256": "d1df9ce8a0448fd5555cf096a61807cdca86461ae34ea6c0e582d9cdc8bfe90b",
       "type": "json_results"
     },
     {
@@ -17,7 +17,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/aviation/phase3_mission_cases.json",
-      "sha256": "6244fc1e44cb8aa477fd430de347143a0a24469d0606dcfc046cadc7b419bc90",
+      "sha256": "d352ea44eafd4d0c16fa79d4fd3a58947b2dd54686148bf980c4aec5c0478dd9",
       "type": "json_results"
     },
     {
@@ -27,7 +27,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
-      "sha256": "daa3e57db6f5b0fbc8197689930008152858d88312aa18b85ff2b70113188e41",
+      "sha256": "f53631d9710a1d140917f10769f45e837c02418ab2ccfdd298f0771c90969c83",
       "type": "method_card"
     },
     {
@@ -37,7 +37,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
-      "sha256": "cfca693eaca59639325365ed007356ba5ee45953d17d609583889a98ce9f8324",
+      "sha256": "6dd41144839a80c64a262828a7b1f8742b4d17781541c8bfcaac9a030fe551e4",
       "type": "method_card"
     }
   ],
@@ -9779,9 +9779,10 @@
       "performance_evidence": false,
       "query_count": 9,
       "ranking_evidence": false,
-      "record_count": 0,
+      "record_count": 8,
       "status_counts": {
-        "api_error": 9
+        "api_error": 5,
+        "fetched": 4
       }
     },
     "ranking_blocked_candidate_count": 11,
@@ -9820,7 +9821,10 @@
         "cycle_life",
         "thermal_runaway"
       ],
-      "materials_project_material_ids": [],
+      "materials_project_material_ids": [
+        "mp-aaadpfwc",
+        "mp-aaadpgko"
+      ],
       "metadata_query_ids": [
         "mp.li_oxide",
         "mp.lfp",
@@ -10188,7 +10192,10 @@
         "abundance",
         "cost"
       ],
-      "materials_project_material_ids": [],
+      "materials_project_material_ids": [
+        "mp-aaahikll",
+        "mp-aaahikmq"
+      ],
       "metadata_query_ids": [
         "mp.sodium_oxides"
       ],
@@ -10332,7 +10339,10 @@
         "cycle_life",
         "power_density"
       ],
-      "materials_project_material_ids": [],
+      "materials_project_material_ids": [
+        "mp-aaaieipk",
+        "mp-aaaieipl"
+      ],
       "metadata_query_ids": [
         "mp.zinc_oxides"
       ],
@@ -10404,7 +10414,10 @@
         "cycle_life",
         "damage_response"
       ],
-      "materials_project_material_ids": [],
+      "materials_project_material_ids": [
+        "mp-aaahikmi",
+        "mp-aaahikwu"
+      ],
       "metadata_query_ids": [
         "mp.carbon_allotropes"
       ],
@@ -10555,7 +10568,10 @@
         "carbonization_energy",
         "aviation_pack_specific_energy"
       ],
-      "materials_project_material_ids": [],
+      "materials_project_material_ids": [
+        "mp-aaahikmi",
+        "mp-aaahikwu"
+      ],
       "metadata_query_ids": [
         "mp.carbon_allotropes"
       ],
@@ -11376,14 +11392,14 @@
   "connector_readiness": [
     {
       "connector": "Materials Project summary metadata API",
-      "credential_available": false,
+      "credential_available": true,
       "execution_supported": true,
       "ingestion_status": "blocked_by_license_review",
       "key_env": "MP_API_KEY",
       "license_status": "review_required",
       "limitations": "Computed properties are model-dependent and are not experimental validation.",
       "metadata_only": true,
-      "readiness": "requires `MP_API_KEY` before API execution",
+      "readiness": "ready for optional metadata fetch",
       "requires_key": true,
       "source": "Materials Project",
       "source_id": "datasource.materials_project",
@@ -11503,7 +11519,7 @@
         "evidence_status": "verified_present",
         "path": "reports/reference/phase2_reference_cases.json",
         "public_claim_boundary": "calculation fixtures; not experimental benchmarks",
-        "sha256": "b542e02ed3d1e5a873c67ba509788b7e15e23c036fcaec59c864b5c552a41e5e",
+        "sha256": "d1df9ce8a0448fd5555cf096a61807cdca86461ae34ea6c0e582d9cdc8bfe90b",
         "title": "Phase 2 physics reference results"
       },
       {
@@ -11512,7 +11528,7 @@
         "evidence_status": "verified_present",
         "path": "reports/aviation/phase3_mission_cases.json",
         "public_claim_boundary": "simulation estimates from speculative inputs",
-        "sha256": "6244fc1e44cb8aa477fd430de347143a0a24469d0606dcfc046cadc7b419bc90",
+        "sha256": "d352ea44eafd4d0c16fa79d4fd3a58947b2dd54686148bf980c4aec5c0478dd9",
         "title": "Phase 3 aviation mission results"
       },
       {
@@ -11521,7 +11537,7 @@
         "evidence_status": "public_method_document",
         "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
         "public_claim_boundary": "documents equations, guardrails, and limitations",
-        "sha256": "daa3e57db6f5b0fbc8197689930008152858d88312aa18b85ff2b70113188e41",
+        "sha256": "f53631d9710a1d140917f10769f45e837c02418ab2ccfdd298f0771c90969c83",
         "title": "Phase 2 physics method card"
       },
       {
@@ -11530,14 +11546,14 @@
         "evidence_status": "public_method_document",
         "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
         "public_claim_boundary": "documents equations, guardrails, and limitations",
-        "sha256": "cfca693eaca59639325365ed007356ba5ee45953d17d609583889a98ce9f8324",
+        "sha256": "6dd41144839a80c64a262828a7b1f8742b4d17781541c8bfcaac9a030fe551e4",
         "title": "Phase 3 aviation method card"
       }
     ],
     "chemistry_ranking_enabled": false,
     "dashboard_status": "prototype with traceable local simulation artifacts",
     "experimental_measurements": 0,
-    "generated_at_utc": "2026-07-20T13:22:05.046127+00:00",
+    "generated_at_utc": "2026-07-20T13:32:39.372057+00:00",
     "package_version": "0.4.0",
     "phase": "4"
   },
@@ -11976,7 +11992,7 @@
     "title": "Frontier Gap to Aviation-Grade Pack Energy",
     "unknown_region_note": "The audited-measurement lane is empty; fixture values cannot be used as evidence of achieved aviation-grade storage."
   },
-  "generated_at_utc": "2026-07-20T13:22:05.089025+00:00",
+  "generated_at_utc": "2026-07-20T13:32:39.415110+00:00",
   "infeasible_region_ledger": [
     {
       "base_case_id": "mission.regional_demonstrator",
@@ -12088,7 +12104,7 @@
     }
   ],
   "latest_daily_manifest": {
-    "candidate_dossier_sha256": "e51e8ae1dd751b8ba1481344a363202eb60142da0f5696e60b31a25e87312750",
+    "candidate_dossier_sha256": "e7381fde012425cfad93007df9f64e76e6ef663f1cd824b4c5b8b2f1582c182c",
     "candidate_dossiers": 11,
     "cmu_measurement_summary_sha256": "071929fc910141de21d2fb6e15a8a36af10e28b2620420c177490d496b25d222",
     "cmu_raw_manifest_sha256": "e5f999ee1a71983a79600b7f6400eb93b9609a6b51362a9b42552a4249f0daa4",
@@ -12155,9 +12171,9 @@
       "configs/segmented_mission_cases.yaml": "6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2"
     },
     "dashboard_artifacts": 4,
-    "dashboard_manifest_sha256": "f3145475cdd80a2aa7b2323b1589617e5bf35a994ca95d3bc803fd827b63af78",
+    "dashboard_manifest_sha256": "99beb0a3d6e52ee7ff5fae84f6350ee1ec665d724d2e47f6f573be81ccb5417e",
     "experimental_measurements": 0,
-    "generated_at_utc": "2026-07-20T13:22:04.037786+00:00",
+    "generated_at_utc": "2026-07-20T13:32:38.325815+00:00",
     "materials_campaign_rows": {
       "material_candidates": 14,
       "material_frontier_gap": 84
@@ -12183,17 +12199,17 @@
       "segmented_mission_cases": 2
     },
     "report_date": "2026-07-20",
-    "report_sha256": "49dffc7ad809722f6accfa5ecd9557c1ad4b29a124859365871cb8e1a2417288",
+    "report_sha256": "908041c3c512da621101729d896c8cd0fedc8d67d2edb9235351280fa1e265ff",
     "simulation_campaign_rows": {
       "aviation_requirement_grid": 270,
       "candidate_envelopes": 11,
       "long_haul_feasibility": 6,
       "pack_trade_space": 8748
     },
-    "simulation_campaign_sha256": "304dfdc8c0dead6485f0d4e20225b10029681a30db0a7501dd55a963273bfea5",
+    "simulation_campaign_sha256": "996fbf885836de2ccdec71730b9bc10cac8b54cd2899fe64b55be4d9417089c0",
     "simulations_completed": 2,
     "summary_path": "reports/daily/2026-07-20-mission-summary.json",
-    "summary_sha256": "a768ddba5028dd9406b332fd0d72d369fef43421c674958f0ff6bcd6085a88cd"
+    "summary_sha256": "c53fbd970474e735860ae0f0c315f83c6355040dd6fe644b7441a2765afd5b3a"
   },
   "long_haul_feasibility": {
     "claim_boundary": "simulation diagnostic only, not an aircraft design.",
@@ -15020,13 +15036,16 @@
         "candidate_ids": [
           "candidate.lithium_ion_intercalation"
         ],
-        "error_message": "The read operation timed out",
+        "error_message": null,
         "label": "lithium iron phosphate and phosphate discovery",
-        "material_ids": [],
+        "material_ids": [
+          "mp-aaadpfwc",
+          "mp-aaadpgko"
+        ],
         "query": "Li,Fe,P,O",
         "query_id": "mp.lfp",
-        "record_count": 0,
-        "status": "api_error"
+        "record_count": 2,
+        "status": "fetched"
       },
       {
         "candidate_ids": [
@@ -15044,13 +15063,16 @@
         "candidate_ids": [
           "candidate.sodium_ion"
         ],
-        "error_message": "The read operation timed out",
+        "error_message": null,
         "label": "sodium oxide and sodium-ion host discovery",
-        "material_ids": [],
+        "material_ids": [
+          "mp-aaahikll",
+          "mp-aaahikmq"
+        ],
         "query": "Na,O",
         "query_id": "mp.sodium_oxides",
-        "record_count": 0,
-        "status": "api_error"
+        "record_count": 2,
+        "status": "fetched"
       },
       {
         "candidate_ids": [
@@ -15068,33 +15090,40 @@
         "candidate_ids": [
           "candidate.zinc_air"
         ],
-        "error_message": "The read operation timed out",
+        "error_message": null,
         "label": "zinc oxide and air-cathode context discovery",
-        "material_ids": [],
+        "material_ids": [
+          "mp-aaaieipk",
+          "mp-aaaieipl"
+        ],
         "query": "Zn,O",
         "query_id": "mp.zinc_oxides",
-        "record_count": 0,
-        "status": "api_error"
+        "record_count": 2,
+        "status": "fetched"
       },
       {
         "candidate_ids": [
           "candidate.structural_battery",
           "candidate.hemp_bast_graphitic_carbon"
         ],
-        "error_message": "The read operation timed out",
+        "error_message": null,
         "label": "carbon allotrope metadata proxy; does not encode biomass origin",
-        "material_ids": [],
+        "material_ids": [
+          "mp-aaahikmi",
+          "mp-aaahikwu"
+        ],
         "query": "C",
         "query_id": "mp.carbon_allotropes",
-        "record_count": 0,
-        "status": "api_error"
+        "record_count": 2,
+        "status": "fetched"
       }
     ],
     "query_count": 9,
     "ranking_evidence": false,
-    "record_count": 0,
+    "record_count": 8,
     "status_counts": {
-      "api_error": 9
+      "api_error": 5,
+      "fetched": 4
     }
   },
   "measurement_pipeline": {

@@ -83,7 +83,7 @@ rankings remain blocked because pack-level comparable evidence is not available.
 
 - Metadata connectors with optional execution paths: 4
 - Sources approved for trusted published snapshots: 1
-- Materials Project status: requires `MP_API_KEY` before API execution.
+- Materials Project status: ready for optional metadata fetch.
 - CMU eVTOL battery status: approved CC BY 4.0 cell-level experimental source;
   raw snapshot status: {'already_present': 3, 'downloaded': 41};
   parsed measurement status: blocked.
@@ -92,10 +92,10 @@ rankings remain blocked because pack-level comparable evidence is not available.
 
 ## Dashboard Artifact Hashes
 
-- `artifact.phase2.results`: `7f9f32c083aa61ce6121f097a91cfaa2245d41ccc4d8dfec7af1b4725b515070`
-- `artifact.phase3.results`: `3f2fe6ffb8aff0e910e597c465216f2fa134bdbf5a6daf0efc4c54ef8d3dd77e`
-- `artifact.phase2.method_card`: `cc401133df1690c9e78ac7dbabc3fe60a11c22ed04ba368b32c19e90cc2b1f67`
-- `artifact.phase3.method_card`: `3212d0928ae5cee133acc6e4537596f3031e73bd163429b7ffe3be2e2227a817`
+- `artifact.phase2.results`: `5dfd2107d290003397b94cee229e589ca1946bd50ec853ec9aeedf9a875f0c7d`
+- `artifact.phase3.results`: `17cc8bcd844f094181c6f1c8e2ff2af962b21245e32aadb654f4d09944e27e51`
+- `artifact.phase2.method_card`: `ff3f4213e413ab82e5b10a4de40967f263678f576db1b3e0be16fc64d1ed2dfb`
+- `artifact.phase3.method_card`: `c3e77056d8ad653a517a596621380a41dfaa6c1fe06818a271ecd71317f48570`
 
 ## Assumption Changes
 
@@ -109,7 +109,7 @@ hashes; it does not upgrade simulations into facts.
 - Ranking enabled: False
 - Ranking gate: Ranking blocked: required comparable evidence or uncertainty is missing.
 - Candidates blocked by missing ranking fields: 11
-- Materials Project metadata records linked as discovery context: 0
+- Materials Project metadata records linked as discovery context: 8
 - Hemp bast-fiber graphitic carbon status: speculative material lead only; no
   audited full-cell, pack, cycle-life, safety, or aviation performance evidence.
 
@@ -183,7 +183,7 @@ negative results remain public and reproducible.
 - Code snapshot SHA-256: `706c4e26d6356f1dbe807902cfadb02fb1d7ef3e0cb7695648a65472186cb96e`
 - Python: `3.11.15`
 - Platform: `Linux-6.17.0-1020-azure-x86_64-with-glibc2.39`
-- Generated UTC: `2026-07-20T13:22:04.037015+00:00`
+- Generated UTC: `2026-07-20T13:32:38.324981+00:00`
 - Configuration hashes:
 - `configs/aircraft_systems.yaml`: `f28336c50e7777958acb96b0f0b48298b984c9c27a86c1f3cb258b35c6d10e23`
 - `configs/assumptions.yaml`: `63c51f3fbd90e4582d5b334b1552c006d63b89576d01f7f903ba1763ffbf45b8`
@@ -198,9 +198,9 @@ negative results remain public and reproducible.
 - `configs/segmented_mission_cases.yaml`: `6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2`
 - Dashboard manifest: `reports/dashboard/phase4_dashboard_manifest.json`
 - Candidate dossier artifact: `reports/candidates/candidate_dossiers.json`
-- Candidate dossier SHA-256: `e51e8ae1dd751b8ba1481344a363202eb60142da0f5696e60b31a25e87312750`
+- Candidate dossier SHA-256: `e7381fde012425cfad93007df9f64e76e6ef663f1cd824b4c5b8b2f1582c182c`
 - Simulation campaign artifact: `reports/simulations/simulation_campaign_summary.json`
-- Simulation campaign SHA-256: `304dfdc8c0dead6485f0d4e20225b10029681a30db0a7501dd55a963273bfea5`
+- Simulation campaign SHA-256: `996fbf885836de2ccdec71730b9bc10cac8b54cd2899fe64b55be4d9417089c0`
 - Materials campaign artifact: `reports/materials/material_screening_summary.json`
 - Materials campaign SHA-256: `32bc09632d56a41b3f946d443805380afdb82cb079b9044a2c55eba55cef082e`
 - CMU raw manifest SHA-256: `e5f999ee1a71983a79600b7f6400eb93b9609a6b51362a9b42552a4249f0daa4`
