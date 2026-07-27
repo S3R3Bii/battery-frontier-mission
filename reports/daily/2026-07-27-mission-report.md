@@ -83,7 +83,7 @@ rankings remain blocked because pack-level comparable evidence is not available.
 
 - Metadata connectors with optional execution paths: 4
 - Sources approved for trusted published snapshots: 1
-- Materials Project status: requires `MP_API_KEY` before API execution.
+- Materials Project status: ready for optional metadata fetch.
 - CMU eVTOL battery status: approved CC BY 4.0 cell-level experimental source;
   raw snapshot status: {'already_present': 3, 'downloaded': 41};
   parsed measurement status: blocked.
@@ -92,10 +92,10 @@ rankings remain blocked because pack-level comparable evidence is not available.
 
 ## Dashboard Artifact Hashes
 
-- `artifact.phase2.results`: `7d3e95f2d135b9806aebded758f402229bd4712932f10b4d925d8bc822a88f5e`
-- `artifact.phase3.results`: `623abb25597ded832e269501758f34b6188fe0a3901903a13f339bbcab1e86a2`
-- `artifact.phase2.method_card`: `f878771c4c42c79237747ab99e4af6f499fefcd412b8ad03078b45632e7ac4ce`
-- `artifact.phase3.method_card`: `30b7e97f4bb8492c45782bda420238caa1e0c122f97845a0efd8530038be2f6a`
+- `artifact.phase2.results`: `1d0fdf1c385dc383e2a7b77e4c02d62fb0aa5e3f46b981d6294b8703859244a6`
+- `artifact.phase3.results`: `3c78390a437d02726155957f462c4203d0185cb3e63ca2e4af4957337280a956`
+- `artifact.phase2.method_card`: `9fa64fbebe6bbc4495a6743cc8f7fe89315d0993e360eae34f92e433be293658`
+- `artifact.phase3.method_card`: `1e425b4fb3da728afa4d1047422d14cca48c45de042cc11ead3600d5aa8ca30d`
 
 ## Assumption Changes
 
@@ -183,7 +183,7 @@ negative results remain public and reproducible.
 - Code snapshot SHA-256: `706c4e26d6356f1dbe807902cfadb02fb1d7ef3e0cb7695648a65472186cb96e`
 - Python: `3.11.15`
 - Platform: `Linux-6.17.0-1020-azure-x86_64-with-glibc2.39`
-- Generated UTC: `2026-07-27T13:44:28.268313+00:00`
+- Generated UTC: `2026-07-27T13:56:43.514062+00:00`
 - Configuration hashes:
 - `configs/aircraft_systems.yaml`: `f28336c50e7777958acb96b0f0b48298b984c9c27a86c1f3cb258b35c6d10e23`
 - `configs/assumptions.yaml`: `63c51f3fbd90e4582d5b334b1552c006d63b89576d01f7f903ba1763ffbf45b8`
@@ -198,9 +198,9 @@ negative results remain public and reproducible.
 - `configs/segmented_mission_cases.yaml`: `6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2`
 - Dashboard manifest: `reports/dashboard/phase4_dashboard_manifest.json`
 - Candidate dossier artifact: `reports/candidates/candidate_dossiers.json`
-- Candidate dossier SHA-256: `1d75be0a1a3bc1e0d709f4e7570fa744243486db154792a562a6a2c743c26936`
+- Candidate dossier SHA-256: `7f8a7d99d6e3eb92e4a5b7a674e5463a4c7e170e6e67feb71efab488d517b854`
 - Simulation campaign artifact: `reports/simulations/simulation_campaign_summary.json`
-- Simulation campaign SHA-256: `5d850e8f7100467ca53e48a8c5d8f6ff5a1c1adfc28e1df039aadb59be32179d`
+- Simulation campaign SHA-256: `158caa527d12df47379b52176213c744015d362577b9b1d77ec6a283a245e4c0`
 - Materials campaign artifact: `reports/materials/material_screening_summary.json`
 - Materials campaign SHA-256: `9c26e88f2665867e1638b7ff6b23a0f55bb5439d75c7f805b9cb0a01e3856679`
 - CMU raw manifest SHA-256: `e5f999ee1a71983a79600b7f6400eb93b9609a6b51362a9b42552a4249f0daa4`
