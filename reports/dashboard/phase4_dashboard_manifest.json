@@ -6,7 +6,7 @@
       "evidence_status": "verified_present",
       "path": "reports/reference/phase2_reference_cases.json",
       "public_claim_boundary": "calculation fixtures; not experimental benchmarks",
-      "sha256": "da22bcf770b75965c5016c2215688ea7057a8d0c16217a181d2223a274ddb3a4",
+      "sha256": "677337c37cea65dec307207b6539a888b80c8764eeb556e02b6915b037ea4b7b",
       "title": "Phase 2 physics reference results"
     },
     {
@@ -15,7 +15,7 @@
       "evidence_status": "verified_present",
       "path": "reports/aviation/phase3_mission_cases.json",
       "public_claim_boundary": "simulation estimates from speculative inputs",
-      "sha256": "045e7d7efefc4a0c891a044fcbdc76dc34c894020c6f583057fe0357f9ddd3b6",
+      "sha256": "6e6327bbfadd4aed6ec919e49e1de25fafe85592b168c1905ce6165d43990550",
       "title": "Phase 3 aviation mission results"
     },
     {
@@ -24,7 +24,7 @@
       "evidence_status": "public_method_document",
       "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
       "public_claim_boundary": "documents equations, guardrails, and limitations",
-      "sha256": "964e9d9863cadc1ca246cac63c6a3a2604f697b9b63b0fe9f982049b5e513ede",
+      "sha256": "34f1425862f38733e767c3417ed1b02c240ee06d938da659deec5ce5bfeec918",
       "title": "Phase 2 physics method card"
     },
     {
@@ -33,14 +33,14 @@
       "evidence_status": "public_method_document",
       "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
       "public_claim_boundary": "documents equations, guardrails, and limitations",
-      "sha256": "ef3be29d4b883bef194ab6ca0b838ff7e711a25804cd9245cf0816d34093f0d1",
+      "sha256": "494ace8ab2a5e70a87ee20d622eb7cee7a43aabdc868478f1a68096215705d68",
       "title": "Phase 3 aviation method card"
     }
   ],
   "chemistry_ranking_enabled": false,
   "dashboard_status": "prototype with traceable local simulation artifacts",
   "experimental_measurements": 0,
-  "generated_at_utc": "2026-08-05T13:02:54.505721+00:00",
+  "generated_at_utc": "2026-08-06T13:03:06.608241+00:00",
   "package_version": "0.4.0",
   "phase": "4"
 }

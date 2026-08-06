@@ -2,7 +2,7 @@
 
 > Metadata-only discovery output. This is not experimental battery evidence.
 
-- Generated UTC: `2026-08-05T13:02:48.536183+00:00`
+- Generated UTC: `2026-08-06T13:02:59.921340+00:00`
 - Query count: 9
 - Record count: 18
 - Status counts: `{"fetched": 9}`

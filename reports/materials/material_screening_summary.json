@@ -18,7 +18,7 @@
     }
   },
   "claim_boundary": "Material screening is assumption-based hypothesis triage only. It is not experimental validation, DFT proof, pack proof, aircraft design, or candidate ranking.",
-  "generated_at_utc": "2026-08-05T13:02:51.841177+00:00",
+  "generated_at_utc": "2026-08-06T13:03:03.288456+00:00",
   "limitations": [
     "No material card is an audited measurement.",
     "Rows missing voltage or capacity are intentionally blocked from energy estimates.",
@@ -2497,7 +2497,7 @@
     }
   ],
   "package_version": "0.4.0",
-  "payload_sha256": "7bac53bf50b943911f40e53128dcee6ec1020c009b4aa4e6960a5edeba2d154e",
+  "payload_sha256": "ba169b6e3297878c8ca6f0963982440b00ece15d397777d6ba1b14813e897a8c",
   "summary": {
     "artifact_type": "material_screening_summary",
     "audited_measurements": 0,
