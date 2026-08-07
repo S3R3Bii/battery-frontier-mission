@@ -571,8 +571,8 @@
         "power_density"
       ],
       "materials_project_material_ids": [
-        "mp-aaaieipk",
-        "mp-aaaieipl"
+        "mp-aaaieipq",
+        "mp-aaaieipr"
       ],
       "metadata_query_ids": [
         "mp.zinc_oxides"
@@ -847,7 +847,7 @@
       "system_boundary": "bio-derived carbon electrode or conductive scaffold concept; not a complete battery cell, not a pack, and not an aircraft design input"
     }
   ],
-  "generated_at_utc": "2026-08-06T13:02:59.921656+00:00",
+  "generated_at_utc": "2026-08-07T11:56:06.666710+00:00",
   "limitations": [
     "Candidate dossiers are research triage records, not validated findings.",
     "Fixtures and metadata cannot appear as audited measurements.",
@@ -856,7 +856,7 @@
   "materials_project_appendix": {
     "artifact_type": "materials_project_metadata_appendix",
     "execute_if_available": true,
-    "generated_at_utc": "2026-08-06T13:02:59.921340+00:00",
+    "generated_at_utc": "2026-08-07T11:56:06.666404+00:00",
     "limitations": [
       "Materials Project records are computed material metadata, not battery performance.",
       "Carbon-only metadata does not validate biomass-derived graphitic nanosheets.",
@@ -864,7 +864,7 @@
     ],
     "metadata_only": true,
     "package_version": "0.4.0",
-    "payload_sha256": "74b5d4ddcdab56b65bd2922a1dad690db22c092817f57ff94d204535da94028c",
+    "payload_sha256": "ac9f4504e2eed7e8d7a2ced5ad9cd8c6d47e8e9b29afc26be48f6aa0f68f72a9",
     "performance_evidence": false,
     "queries": [
       {
@@ -1448,8 +1448,8 @@
         "license_status": "review_required",
         "limitations": "Computed properties are model-dependent and are not experimental validation.",
         "material_ids": [
-          "mp-aaaieipk",
-          "mp-aaaieipl"
+          "mp-aaaieipr",
+          "mp-aaaieipq"
         ],
         "metadata_only": true,
         "query": "Zn,O",
@@ -1458,22 +1458,22 @@
         "record_count": 2,
         "records": [
           {
-            "chemsys": "Ge-Lu-O-Zn",
-            "density": 9.052018708854757,
+            "chemsys": "Bi-O-Zn-Zr",
+            "density": 8.546323937608557,
             "elements": [
-              "Ge",
-              "Lu",
+              "Bi",
               "O",
-              "Zn"
+              "Zn",
+              "Zr"
             ],
-            "energy_above_hull": 0.49328570512499503,
+            "energy_above_hull": 0.43156580824999224,
             "evidence_class": "simulation_estimate",
-            "formation_energy_per_atom": -2.4690200080833336,
-            "formula_pretty": "Lu2ZnGeO6",
+            "formation_energy_per_atom": -1.6903625452500024,
+            "formula_pretty": "ZrZn(BiO3)2",
             "is_stable": false,
-            "last_updated": "2026-01-30T01:01:18.985000",
+            "last_updated": "2026-01-30T01:01:23.693000",
             "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
-            "material_id": "mp-aaaieipk",
+            "material_id": "mp-aaaieipr",
             "metadata_only": true,
             "performance_evidence": false,
             "ranking_evidence": false,
@@ -1482,22 +1482,21 @@
             "theoretical": true
           },
           {
-            "chemsys": "Lu-O-Sn-Zn",
-            "density": 8.704603116827878,
+            "chemsys": "O-Zn-Zr",
+            "density": 5.818711730416606,
             "elements": [
-              "Lu",
               "O",
-              "Sn",
-              "Zn"
+              "Zn",
+              "Zr"
             ],
-            "energy_above_hull": 0.7111962835833232,
+            "energy_above_hull": 0.1264650200000048,
             "evidence_class": "simulation_estimate",
-            "formation_energy_per_atom": -2.217568501083335,
-            "formula_pretty": "Lu2ZnSnO6",
+            "formation_energy_per_atom": -2.7978244472499996,
+            "formula_pretty": "ZrZnO3",
             "is_stable": false,
-            "last_updated": "2026-01-30T01:01:14.160000",
+            "last_updated": "2026-01-30T01:01:22.254000",
             "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
-            "material_id": "mp-aaaieipl",
+            "material_id": "mp-aaaieipq",
             "metadata_only": true,
             "performance_evidence": false,
             "ranking_evidence": false,
@@ -1611,9 +1610,9 @@
     },
     "trusted_publication": false
   },
-  "materials_project_appendix_sha256": "74b5d4ddcdab56b65bd2922a1dad690db22c092817f57ff94d204535da94028c",
+  "materials_project_appendix_sha256": "ac9f4504e2eed7e8d7a2ced5ad9cd8c6d47e8e9b29afc26be48f6aa0f68f72a9",
   "package_version": "0.4.0",
-  "payload_sha256": "e085ee9da47df13557f1ef9a7093e4e65543b16ace79427bd2f6acd05c240779",
+  "payload_sha256": "64b1b11f7c26fbf5b37d40dd910983cf7254ea5cb65057ba795b6533676560b7",
   "phase": "4",
   "ranking_enabled": false,
   "ranking_gate_reason": "Ranking blocked: required comparable evidence or uncertainty is missing.",
