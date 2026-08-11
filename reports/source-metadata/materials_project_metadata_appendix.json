@@ -1,7 +1,7 @@
 {
   "artifact_type": "materials_project_metadata_appendix",
   "execute_if_available": true,
-  "generated_at_utc": "2026-08-10T12:29:01.279648+00:00",
+  "generated_at_utc": "2026-08-11T11:55:42.302604+00:00",
   "limitations": [
     "Materials Project records are computed material metadata, not battery performance.",
     "Carbon-only metadata does not validate biomass-derived graphitic nanosheets.",
@@ -9,7 +9,7 @@
   ],
   "metadata_only": true,
   "package_version": "0.4.0",
-  "payload_sha256": "72c6286d1a21b808042280586874e0364bb08e581a249c9132b4733b1fef8249",
+  "payload_sha256": "74d12c0bdeadaaa3edfd7d6c68352e491f1be8689be84f1e7b9290a096f1ea9a",
   "performance_evidence": false,
   "queries": [
     {
@@ -593,8 +593,8 @@
       "license_status": "review_required",
       "limitations": "Computed properties are model-dependent and are not experimental validation.",
       "material_ids": [
-        "mp-aaaieipr",
-        "mp-aaaieipq"
+        "mp-aaaieipk",
+        "mp-aaaieipl"
       ],
       "metadata_only": true,
       "query": "Zn,O",
@@ -603,22 +603,22 @@
       "record_count": 2,
       "records": [
         {
-          "chemsys": "Bi-O-Zn-Zr",
-          "density": 8.546323937608557,
+          "chemsys": "Ge-Lu-O-Zn",
+          "density": 9.052018708854757,
           "elements": [
-            "Bi",
+            "Ge",
+            "Lu",
             "O",
-            "Zn",
-            "Zr"
+            "Zn"
           ],
-          "energy_above_hull": 0.43156580824999224,
+          "energy_above_hull": 0.49328570512499503,
           "evidence_class": "simulation_estimate",
-          "formation_energy_per_atom": -1.6903625452500024,
-          "formula_pretty": "ZrZn(BiO3)2",
+          "formation_energy_per_atom": -2.4690200080833336,
+          "formula_pretty": "Lu2ZnGeO6",
           "is_stable": false,
-          "last_updated": "2026-01-30T01:01:23.693000",
+          "last_updated": "2026-01-30T01:01:18.985000",
           "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
-          "material_id": "mp-aaaieipr",
+          "material_id": "mp-aaaieipk",
           "metadata_only": true,
           "performance_evidence": false,
           "ranking_evidence": false,
@@ -627,21 +627,22 @@
           "theoretical": true
         },
         {
-          "chemsys": "O-Zn-Zr",
-          "density": 5.818711730416606,
+          "chemsys": "Lu-O-Sn-Zn",
+          "density": 8.704603116827878,
           "elements": [
+            "Lu",
             "O",
-            "Zn",
-            "Zr"
+            "Sn",
+            "Zn"
           ],
-          "energy_above_hull": 0.1264650200000048,
+          "energy_above_hull": 0.7111962835833232,
           "evidence_class": "simulation_estimate",
-          "formation_energy_per_atom": -2.7978244472499996,
-          "formula_pretty": "ZrZnO3",
+          "formation_energy_per_atom": -2.217568501083335,
+          "formula_pretty": "Lu2ZnSnO6",
           "is_stable": false,
-          "last_updated": "2026-01-30T01:01:22.254000",
+          "last_updated": "2026-01-30T01:01:14.160000",
           "limitations": "Materials Project values are computed/material metadata. They do not validate battery performance, cycle life, manufacturability, safety, or aviation usefulness.",
-          "material_id": "mp-aaaieipq",
+          "material_id": "mp-aaaieipl",
           "metadata_only": true,
           "performance_evidence": false,
           "ranking_evidence": false,
