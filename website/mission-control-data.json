@@ -7,7 +7,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/reference/phase2_reference_cases.json",
-      "sha256": "a9fec7d5ba885e96096c4cb4a45a7831dde997d1f501404c9f9cf1f2466f56af",
+      "sha256": "5fee1a1f10c15513bf8282501c7ab97016c29cfad66e62a4c4eda2af62b8b36d",
       "type": "json_results"
     },
     {
@@ -17,7 +17,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/aviation/phase3_mission_cases.json",
-      "sha256": "54bd3c27c05093b020c432fced8209d7ee0ade54fb50a74cd544c3e678a949dd",
+      "sha256": "8650ab4420cba2aa9037382c43595e9e096d20013e16abd921839e65b32bdd09",
       "type": "json_results"
     },
     {
@@ -27,7 +27,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
-      "sha256": "686eb9b931b622dbb9705754f808a0858a06e8f6997cb19a7ff4faa49ec3250b",
+      "sha256": "9a2c5f5d808e736f4aae1e4bc494959836a8ca3cd22620e02955ba23a132bdd4",
       "type": "method_card"
     },
     {
@@ -37,7 +37,7 @@
       "exists": true,
       "hash_matches": true,
       "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
-      "sha256": "e9e3c1daba2ef5f3bb95edf4d57755dfbe27eb78fdf7c965192469937b884fd5",
+      "sha256": "17a13913e087ac71bc99f3a72fe789c5c7d09da06d00c1a540ceed00c43aab0e",
       "type": "method_card"
     }
   ],
@@ -11410,14 +11410,14 @@
   "connector_readiness": [
     {
       "connector": "Materials Project summary metadata API",
-      "credential_available": false,
+      "credential_available": true,
       "execution_supported": true,
       "ingestion_status": "blocked_by_license_review",
       "key_env": "MP_API_KEY",
       "license_status": "review_required",
       "limitations": "Computed properties are model-dependent and are not experimental validation.",
       "metadata_only": true,
-      "readiness": "requires `MP_API_KEY` before API execution",
+      "readiness": "ready for optional metadata fetch",
       "requires_key": true,
       "source": "Materials Project",
       "source_id": "datasource.materials_project",
@@ -11537,7 +11537,7 @@
         "evidence_status": "verified_present",
         "path": "reports/reference/phase2_reference_cases.json",
         "public_claim_boundary": "calculation fixtures; not experimental benchmarks",
-        "sha256": "a9fec7d5ba885e96096c4cb4a45a7831dde997d1f501404c9f9cf1f2466f56af",
+        "sha256": "5fee1a1f10c15513bf8282501c7ab97016c29cfad66e62a4c4eda2af62b8b36d",
         "title": "Phase 2 physics reference results"
       },
       {
@@ -11546,7 +11546,7 @@
         "evidence_status": "verified_present",
         "path": "reports/aviation/phase3_mission_cases.json",
         "public_claim_boundary": "simulation estimates from speculative inputs",
-        "sha256": "54bd3c27c05093b020c432fced8209d7ee0ade54fb50a74cd544c3e678a949dd",
+        "sha256": "8650ab4420cba2aa9037382c43595e9e096d20013e16abd921839e65b32bdd09",
         "title": "Phase 3 aviation mission results"
       },
       {
@@ -11555,7 +11555,7 @@
         "evidence_status": "public_method_document",
         "path": "reports/dashboard/method_cards/phase2_physics_method_card.md",
         "public_claim_boundary": "documents equations, guardrails, and limitations",
-        "sha256": "686eb9b931b622dbb9705754f808a0858a06e8f6997cb19a7ff4faa49ec3250b",
+        "sha256": "9a2c5f5d808e736f4aae1e4bc494959836a8ca3cd22620e02955ba23a132bdd4",
         "title": "Phase 2 physics method card"
       },
       {
@@ -11564,14 +11564,14 @@
         "evidence_status": "public_method_document",
         "path": "reports/dashboard/method_cards/phase3_aviation_method_card.md",
         "public_claim_boundary": "documents equations, guardrails, and limitations",
-        "sha256": "e9e3c1daba2ef5f3bb95edf4d57755dfbe27eb78fdf7c965192469937b884fd5",
+        "sha256": "17a13913e087ac71bc99f3a72fe789c5c7d09da06d00c1a540ceed00c43aab0e",
         "title": "Phase 3 aviation method card"
       }
     ],
     "chemistry_ranking_enabled": false,
     "dashboard_status": "prototype with traceable local simulation artifacts",
     "experimental_measurements": 0,
-    "generated_at_utc": "2026-08-17T11:39:09.635367+00:00",
+    "generated_at_utc": "2026-08-17T11:56:22.921862+00:00",
     "package_version": "0.4.0",
     "phase": "4"
   },
@@ -12010,7 +12010,7 @@
     "title": "Frontier Gap to Aviation-Grade Pack Energy",
     "unknown_region_note": "The audited-measurement lane is empty; fixture values cannot be used as evidence of achieved aviation-grade storage."
   },
-  "generated_at_utc": "2026-08-17T11:39:09.677102+00:00",
+  "generated_at_utc": "2026-08-17T11:56:22.965481+00:00",
   "infeasible_region_ledger": [
     {
       "base_case_id": "mission.regional_demonstrator",
@@ -12122,7 +12122,7 @@
     }
   ],
   "latest_daily_manifest": {
-    "candidate_dossier_sha256": "14987411e0acfb896b96e040fef8c9c044a68130c912e595384f9a1c61fd4c1c",
+    "candidate_dossier_sha256": "7834454f5d1fc340da44b5935b52c1f4bae1108c61a8ddd8900ad3c9b3cce156",
     "candidate_dossiers": 11,
     "cmu_measurement_summary_sha256": "071929fc910141de21d2fb6e15a8a36af10e28b2620420c177490d496b25d222",
     "cmu_raw_manifest_sha256": "e5f999ee1a71983a79600b7f6400eb93b9609a6b51362a9b42552a4249f0daa4",
@@ -12189,9 +12189,9 @@
       "configs/segmented_mission_cases.yaml": "6c75580c122655c6fe3b6b9292c2e9ebfe40fa4163772d73d830307d2a7753b2"
     },
     "dashboard_artifacts": 4,
-    "dashboard_manifest_sha256": "1b005aba4ef935fa50b08f52a0720206ed3fa92a8036dd56355bf92389ee1f27",
+    "dashboard_manifest_sha256": "13c4f2e5ac615df5bc5ea94ee163a3aa29672ed0a25fb28ffa97ca6acac4751f",
     "experimental_measurements": 0,
-    "generated_at_utc": "2026-08-17T11:39:08.599703+00:00",
+    "generated_at_utc": "2026-08-17T11:56:21.866783+00:00",
     "materials_campaign_rows": {
       "material_candidates": 14,
       "material_frontier_gap": 84
@@ -12217,17 +12217,17 @@
       "segmented_mission_cases": 2
     },
     "report_date": "2026-08-17",
-    "report_sha256": "de3dab6520cec04d723cf15c18b1f3296b8f5d0ec421004c3f1c81ac070d5052",
+    "report_sha256": "1dc388c5d9975e9baeee648432717c2f8536c807aee89819993b2f630c7020f1",
     "simulation_campaign_rows": {
       "aviation_requirement_grid": 270,
       "candidate_envelopes": 11,
       "long_haul_feasibility": 6,
       "pack_trade_space": 8748
     },
-    "simulation_campaign_sha256": "c1a72f6cd386721dc2d98016a29c2b119a4fc9f93956c5e44ac03edc70582d5c",
+    "simulation_campaign_sha256": "bb90166688eb1dc36f5c6a0f6251881fc783d9670343b89c15d5e6124b084861",
     "simulations_completed": 2,
     "summary_path": "reports/daily/2026-08-17-mission-summary.json",
-    "summary_sha256": "430617b1b673f1a4803e50fdd64386c7d89b08f6c0925e90d7a4af73e1032fd3"
+    "summary_sha256": "b85eb6811f6126df420b26d0cf9775943f3265e818ab29994021dcfcb029ec3a"
   },
   "long_haul_feasibility": {
     "claim_boundary": "simulation diagnostic only, not an aircraft design.",
