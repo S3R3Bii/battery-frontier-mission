@@ -10329,7 +10329,7 @@
     }
   ],
   "claim_boundary": "Deterministic parameter sweeps and what-if envelopes only. These outputs are not experimental validation, candidate rankings, aircraft designs, or certification evidence.",
-  "generated_at_utc": "2026-08-17T11:56:20.095324+00:00",
+  "generated_at_utc": "2026-08-18T11:39:01.100286+00:00",
   "limitations": [
     "No row is an audited battery measurement.",
     "No candidate envelope enables chemistry ranking.",
@@ -176741,7 +176741,7 @@
     }
   ],
   "package_version": "0.4.0",
-  "payload_sha256": "2de50153d1577c2e01aa60d8704bf92ca58578a2606ed1dea9a5c3090209c83d",
+  "payload_sha256": "b8c63d2f3af5944549d8c91003a29b3b16a09225ddf0a9d876840d855aa3ae9e",
   "summary": {
     "artifact_type": "simulation_campaign_summary",
     "audited_measurements": 0,
