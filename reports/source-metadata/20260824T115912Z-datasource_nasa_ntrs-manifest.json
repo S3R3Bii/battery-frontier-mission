@@ -1,0 +1,66 @@
+{
+  "artifact_type": "source_snapshot_manifest",
+  "created_at_utc": "2026-08-24T11:59:12.455667+00:00",
+  "ingestion_status": "metadata_ready",
+  "license_status": "item_specific",
+  "limitations": "Repository records span different evidence levels and publication types.",
+  "metadata_only": true,
+  "payload_sha256": "7ba7af062747d63fc72b89f1486c6a49f2fad348e165593d18c47b5c992bf0af",
+  "query": "electric aircraft battery energy storage",
+  "ranking_evidence": false,
+  "request": {
+    "headers": {
+      "Accept": "application/json"
+    },
+    "method": "GET",
+    "query": "electric aircraft battery energy storage",
+    "rows": 10,
+    "url": "https://ntrs.nasa.gov/api/citations/search?keyword=electric+aircraft+battery+energy+storage&size=10"
+  },
+  "requested_rows": 10,
+  "result": {
+    "connector": "NASA NTRS metadata search",
+    "credential_available": true,
+    "error_message": "The read operation timed out",
+    "execute_requested": true,
+    "executed": false,
+    "execution_supported": true,
+    "generated_at_utc": "2026-08-24T11:58:42.037991+00:00",
+    "ingestion_status": "metadata_ready",
+    "key_env": null,
+    "license_note": "Follow NASA terms and each record's public-availability and distribution markings.",
+    "license_status": "item_specific",
+    "limitations": "Repository records span different evidence levels and publication types.",
+    "metadata_only": true,
+    "notes": [
+      "Metadata-only connector output is not battery performance evidence.",
+      "Chemistry ranking remains blocked until audited measurements exist.",
+      "Source license is not approved for trusted published snapshots."
+    ],
+    "query": "electric aircraft battery energy storage",
+    "ranking_evidence": false,
+    "record_count": 0,
+    "records": [],
+    "request": {
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "GET",
+      "query": "electric aircraft battery energy storage",
+      "rows": 10,
+      "url": "https://ntrs.nasa.gov/api/citations/search?keyword=electric+aircraft+battery+energy+storage&size=10"
+    },
+    "requested_rows": 10,
+    "requires_key": false,
+    "source": "NASA Technical Reports Server",
+    "source_id": "datasource.nasa_ntrs",
+    "status": "api_error",
+    "trusted_publication": false
+  },
+  "retrieved_at_utc": "2026-08-24T11:58:42.037991+00:00",
+  "row_count": 0,
+  "source": "NASA Technical Reports Server",
+  "source_id": "datasource.nasa_ntrs",
+  "status": "api_error",
+  "trusted_publication": false
+}
