@@ -847,7 +847,7 @@
       "system_boundary": "bio-derived carbon electrode or conductive scaffold concept; not a complete battery cell, not a pack, and not an aircraft design input"
     }
   ],
-  "generated_at_utc": "2026-09-03T14:59:27.695592+00:00",
+  "generated_at_utc": "2026-09-04T14:57:41.485496+00:00",
   "limitations": [
     "Candidate dossiers are research triage records, not validated findings.",
     "Fixtures and metadata cannot appear as audited measurements.",
@@ -856,7 +856,7 @@
   "materials_project_appendix": {
     "artifact_type": "materials_project_metadata_appendix",
     "execute_if_available": true,
-    "generated_at_utc": "2026-09-03T14:59:27.695303+00:00",
+    "generated_at_utc": "2026-09-04T14:57:41.485194+00:00",
     "limitations": [
       "Materials Project records are computed material metadata, not battery performance.",
       "Carbon-only metadata does not validate biomass-derived graphitic nanosheets.",
@@ -864,7 +864,7 @@
     ],
     "metadata_only": true,
     "package_version": "0.4.0",
-    "payload_sha256": "d6eb9b7faefd0285b3261ca0a14c3eb0b4e7798d59cc00479d0edfd4ffd2a9d5",
+    "payload_sha256": "20797a40693058e4f7a032708344b6f220d59533bbb104a9035d97537cd14c2e",
     "performance_evidence": false,
     "queries": [
       {
@@ -1611,9 +1611,9 @@
     },
     "trusted_publication": false
   },
-  "materials_project_appendix_sha256": "d6eb9b7faefd0285b3261ca0a14c3eb0b4e7798d59cc00479d0edfd4ffd2a9d5",
+  "materials_project_appendix_sha256": "20797a40693058e4f7a032708344b6f220d59533bbb104a9035d97537cd14c2e",
   "package_version": "0.4.0",
-  "payload_sha256": "5fe13c6d5beaf184ba3d0833a41a8559e2eaab34abe5e344a5bb328107a24908",
+  "payload_sha256": "6419673a4d98a90a44ec43be991f1844ee51b385601fbc1c5bed2b64882cbe81",
   "phase": "4",
   "ranking_enabled": false,
   "ranking_gate_reason": "Ranking blocked: required comparable evidence or uncertainty is missing.",
