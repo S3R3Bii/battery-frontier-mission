@@ -1,7 +1,7 @@
 {
   "artifact_type": "materials_project_metadata_appendix",
   "execute_if_available": true,
-  "generated_at_utc": "2026-09-07T16:26:53.678128+00:00",
+  "generated_at_utc": "2026-09-07T16:39:11.153312+00:00",
   "limitations": [
     "Materials Project records are computed material metadata, not battery performance.",
     "Carbon-only metadata does not validate biomass-derived graphitic nanosheets.",
@@ -9,7 +9,7 @@
   ],
   "metadata_only": true,
   "package_version": "0.4.0",
-  "payload_sha256": "24f67114f265c4601538edff413efefb006508eb8877ea1a0af86d1267731bc9",
+  "payload_sha256": "442903fc656f3054cda77cee72932c75837c5c9fe45b4477431727ec40ee1d98",
   "performance_evidence": false,
   "queries": [
     {

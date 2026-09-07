@@ -55,5 +55,5 @@ python -m battery_frontier.cli physics-reference
 ## Result Artifact
 
 - Path: `reports/reference/phase2_reference_cases.json`
-- SHA-256: `a6c2d63ee12cc452efc9c4be0ae4c9b97b2121d29c1f89ab57925e8e32dcb0c8`
+- SHA-256: `ecc0ce300fd565cbfbe4f669f03b22f3eacf00b79358c63e14772d676720187e`
 - Package version: `0.4.0`
