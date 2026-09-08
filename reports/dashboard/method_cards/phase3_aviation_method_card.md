@@ -51,5 +51,5 @@ python -m battery_frontier.cli aviation-reference
 ## Result Artifact
 
 - Path: `reports/aviation/phase3_mission_cases.json`
-- SHA-256: `1419e5338fc0bc8c50bd788876273769278e58708b87feca3ecb11036d417834`
+- SHA-256: `40e27699f383674f90ca7eca71390fd74cdef5aa6e619aff3bfc496e3dc235c3`
 - Package version: `0.4.0`
